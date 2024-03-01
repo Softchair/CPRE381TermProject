@@ -1,8 +1,10 @@
 m255
 K4
 z2
-!s12c _opt1
+!s12c _opt2
 Z0 !s99 nomlopt
+!s12c _opt1
+R0
 !s12c _opt
 R0
 !s11e MIXED_VERSIONS
@@ -37,6 +39,19 @@ R3
 R4
 R5
 n@_opt1
+R6
+R1
+T_opt2
+!s110 1709328145
+VjV_bQCio?J_]UHJkR_gKR0
+04 8 8 work tb_pcreg behavior 1
+=1-0050569b1969-65e24711-2222a-55f6
+R0
+R2
+R3
+o-quiet -auto_acc_if_foreign -work work +acc
+R5
+n@_opt2
 R6
 Edffg
 Z7 w1577987096
@@ -158,6 +173,47 @@ R29
 R30
 R31
 R32
+!i113 0
+R17
+R18
+Etb_pcreg
+Z33 w1709328126
+R8
+R9
+!i122 32
+R1
+Z34 8/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_pcreg.vhd
+Z35 F/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_pcreg.vhd
+l0
+L14 1
+V@MBMVWNgf1n8Uj5ilf``Q3
+!s100 OP:i>jb_HfnY@zIB`P9g33
+R12
+33
+Z36 !s110 1709328134
+!i10b 1
+Z37 !s108 1709328134.000000
+Z38 !s90 -reportprogress|300|-work|work|/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_pcreg.vhd|
+Z39 !s107 /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_pcreg.vhd|
+!i113 0
+R17
+R18
+Abehavior
+R8
+R9
+DEx4 work 8 tb_pcreg 0 22 @MBMVWNgf1n8Uj5ilf``Q3
+!i122 32
+l35
+L17 60
+Va;2;g7kgWcbXY`SNQHdgD3
+!s100 h:7GGGI_F9EoJG29BfzK71
+R12
+33
+R36
+!i10b 1
+R37
+R38
+R39
 !i113 0
 R17
 R18
