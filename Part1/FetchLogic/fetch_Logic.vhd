@@ -36,14 +36,27 @@ end fetch_Logic;
 
 architecture mixed of fetch_logic is
 
-    -- PCReg file
+    -- PCReg
     component PCReg is
         port (
             i_CLK       : IN STD_LOGIC; -- Clock
             i_RST       : IN STD_LOGIC; -- Reset
             i_PC        : IN STD_LOGIC_VECTOR(31 downto 0); -- PC in
             o_PC        : OUT STD_LOGIC_VECTOR(31 downto 0) -- PC Out
-        )
+        );
+    end component;
+
+    -- Adder
+    entity rippleCarryAdderN is
+        generic (N : integer := 32); -- Generic of type integer for input/output data width. Default value is 32.
+        port (
+            i_A          : in std_logic_vector(N-1 downto 0);
+            i_B          : in std_logic_vector(N-1 downto 0);
+            i_Cin        : in std_logic;
+            o_Cout       : out std_logic;
+            o_S          : out std_logic_vector(N-1 downto 0)
+        );
+    end component;
     
     -- Generic Mux
     component mux2t1N is
