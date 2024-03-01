@@ -16,7 +16,7 @@ END tb_PCReg;
 
 ARCHITECTURE behavior OF tb_PCReg IS
     -- Define a constant for the clock period
-    CONSTANT cCLK_PER : TIME := 50 ns;
+    CONSTANT cCLK_PER : TIME := 10 ns;
 
     -- Component declaration for the PCReg
     COMPONENT PCReg IS

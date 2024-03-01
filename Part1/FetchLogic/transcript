@@ -140,3 +140,485 @@ vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Suppo
 # -- Compiling architecture behavior of tb_PCReg
 # End time: 15:29:15 on Mar 01,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:33:50 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity shiftleft2
+# -- Compiling architecture Behavioral of shiftleft2
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd(35): Illegal target for signal assignment.
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd(35): (vcom-1136) Unknown identifier "output28".
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd(37): VHDL Compiler exiting
+# End time: 15:33:51 on Mar 01,2024, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:34:18 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shiftleft2
+# -- Compiling architecture Behavioral of shiftleft2
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd(34): (vcom-1136) Unknown identifier "input26".
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd(36): VHDL Compiler exiting
+# End time: 15:34:18 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:34:25 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shiftleft2
+# -- Compiling architecture Behavioral of shiftleft2
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd(34): (vcom-1272) Length of expected is 28; length of actual is 26.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd(36): VHDL Compiler exiting
+# End time: 15:34:25 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:37:07 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_shiftleft2
+# -- Compiling architecture behavior of tb_shiftleft2
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(42): Illegal target for signal assignment.
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(42): (vcom-1136) Unknown identifier "s_CLK".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(43): (vcom-1136) Unknown identifier "cCLK_PER".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(43): Type error resolving infix expression "/" as type std.STANDARD.TIME.
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(44): Illegal target for signal assignment.
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(44): (vcom-1136) Unknown identifier "s_CLK".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(45): (vcom-1136) Unknown identifier "cCLK_PER".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(45): Type error resolving infix expression "/" as type std.STANDARD.TIME.
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(53): (vcom-1136) Unknown identifier "cCLK_PER".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(57): (vcom-1136) Unknown identifier "cCLK_PER".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(57): Type error resolving infix expression "*" as type std.STANDARD.TIME.
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(52): (vcom-1272) Length of expected is 26; length of actual is 32.
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(56): (vcom-1272) Length of expected is 26; length of actual is 32.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(62): VHDL Compiler exiting
+# End time: 15:37:08 on Mar 01,2024, Elapsed time: 0:00:01
+# Errors: 13, Warnings: 0
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:37:49 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_shiftleft2
+# -- Compiling architecture behavior of tb_shiftleft2
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(44): (vcom-1136) Unknown identifier "cCLK_PER".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(44): Type error resolving infix expression "/" as type std.STANDARD.TIME.
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(46): (vcom-1136) Unknown identifier "cCLK_PER".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(46): Type error resolving infix expression "/" as type std.STANDARD.TIME.
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(54): (vcom-1136) Unknown identifier "cCLK_PER".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(58): (vcom-1136) Unknown identifier "cCLK_PER".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(58): Type error resolving infix expression "*" as type std.STANDARD.TIME.
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(53): (vcom-1272) Length of expected is 26; length of actual is 32.
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(57): (vcom-1272) Length of expected is 26; length of actual is 32.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(63): VHDL Compiler exiting
+# End time: 15:37:50 on Mar 01,2024, Elapsed time: 0:00:01
+# Errors: 9, Warnings: 0
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:38:10 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_shiftleft2
+# -- Compiling architecture behavior of tb_shiftleft2
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(44): (vcom-1136) Unknown identifier "cCLK_PER".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(44): Type error resolving infix expression "/" as type std.STANDARD.TIME.
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(46): (vcom-1136) Unknown identifier "cCLK_PER".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(46): Type error resolving infix expression "/" as type std.STANDARD.TIME.
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(54): (vcom-1136) Unknown identifier "cCLK_PER".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(58): (vcom-1136) Unknown identifier "cCLK_PER".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(58): Type error resolving infix expression "*" as type std.STANDARD.TIME.
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(57): (vcom-1272) Length of expected is 26; length of actual is 32.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(63): VHDL Compiler exiting
+# End time: 15:38:10 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 8, Warnings: 0
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:38:16 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_shiftleft2
+# -- Compiling architecture behavior of tb_shiftleft2
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(44): (vcom-1136) Unknown identifier "cCLK_PER".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(44): Type error resolving infix expression "/" as type std.STANDARD.TIME.
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(46): (vcom-1136) Unknown identifier "cCLK_PER".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(46): Type error resolving infix expression "/" as type std.STANDARD.TIME.
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(54): (vcom-1136) Unknown identifier "cCLK_PER".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(58): (vcom-1136) Unknown identifier "cCLK_PER".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(58): Type error resolving infix expression "*" as type std.STANDARD.TIME.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(63): VHDL Compiler exiting
+# End time: 15:38:17 on Mar 01,2024, Elapsed time: 0:00:01
+# Errors: 7, Warnings: 0
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:38:29 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_shiftleft2
+# -- Compiling architecture behavior of tb_shiftleft2
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(44): (vcom-1136) Unknown identifier "cCLK_PER".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(44): Type error resolving infix expression "/" as type std.STANDARD.TIME.
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(46): (vcom-1136) Unknown identifier "cCLK_PER".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(46): Type error resolving infix expression "/" as type std.STANDARD.TIME.
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(54): (vcom-1136) Unknown identifier "cCLK_PER".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(58): (vcom-1136) Unknown identifier "cCLK_PER".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(58): Type error resolving infix expression "*" as type std.STANDARD.TIME.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(63): VHDL Compiler exiting
+# End time: 15:38:29 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 7, Warnings: 0
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:39:02 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_shiftleft2
+# -- Compiling architecture behavior of tb_shiftleft2
+# End time: 15:39:02 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_pcreg.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:39:04 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_pcreg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_PCReg
+# -- Compiling architecture behavior of tb_PCReg
+# End time: 15:39:04 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:39:17 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shiftleft2
+# -- Compiling architecture Behavioral of shiftleft2
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd(34): (vcom-1272) Length of expected is 28; length of actual is 26.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd(36): VHDL Compiler exiting
+# End time: 15:39:17 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:40:27 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shiftleft2
+# -- Compiling architecture Behavioral of shiftleft2
+# End time: 15:40:27 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_shiftleft2 -voptargs=+acc
+# vsim work.tb_shiftleft2 -voptargs="+acc" 
+# Start time: 15:40:38 on Mar 01,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_shiftleft2(behavior)#1
+# Loading work.shiftleft2(behavioral)#1
+add wave -position insertpoint  \
+sim:/tb_shiftleft2/s_In \
+sim:/tb_shiftleft2/s_Out
+run
+run
+quit -sim
+# End time: 15:41:27 on Mar 01,2024, Elapsed time: 0:00:49
+# Errors: 0, Warnings: 1
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:41:39 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shiftleft2
+# -- Compiling architecture Behavioral of shiftleft2
+# End time: 15:41:39 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc work.tb_shiftleft2
+# vsim -voptargs="+acc" work.tb_shiftleft2 
+# Start time: 15:41:41 on Mar 01,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_shiftleft2(behavior)#1
+# Loading work.shiftleft2(behavioral)#1
+add wave -position insertpoint  \
+sim:/tb_shiftleft2/s_In \
+sim:/tb_shiftleft2/s_Out
+run
+run
+quit -sim
+# End time: 15:42:10 on Mar 01,2024, Elapsed time: 0:00:29
+# Errors: 0, Warnings: 1
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:42:13 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shiftleft2
+# -- Compiling architecture Behavioral of shiftleft2
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd(35): (vcom-1272) Length of expected is 28; length of actual is 26.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd(37): VHDL Compiler exiting
+# End time: 15:42:13 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:42:39 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shiftleft2
+# -- Compiling architecture Behavioral of shiftleft2
+# End time: 15:42:39 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:42:51 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shiftleft2
+# -- Compiling architecture Behavioral of shiftleft2
+# End time: 15:42:51 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc work.tb_shiftleft2
+# vsim -voptargs="+acc" work.tb_shiftleft2 
+# Start time: 15:42:53 on Mar 01,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_shiftleft2(behavior)#1
+# Loading work.shiftleft2(behavioral)#1
+add wave -position insertpoint  \
+sim:/tb_shiftleft2/s_In \
+sim:/tb_shiftleft2/s_Out
+run
+run
+quit -sim
+# End time: 15:43:16 on Mar 01,2024, Elapsed time: 0:00:23
+# Errors: 0, Warnings: 1
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:46:28 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shiftleft2
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd(24): near "port": (vcom-1576) expecting ';'.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd(24): VHDL Compiler exiting
+# End time: 15:46:28 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:46:42 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shiftleft2
+# -- Compiling architecture Behavioral of shiftleft2
+# End time: 15:46:42 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:46:45 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_shiftleft2
+# -- Compiling architecture behavior of tb_shiftleft2
+# ** Warning: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd(36): (vcom-1624) Component instance tb_shiftleft2(behavior).DUT has a generic map clause and the component shiftleft2 has no generics.
+# Generic map will be ignored.
+# End time: 15:46:45 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:47:07 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_shiftleft2
+# -- Compiling architecture behavior of tb_shiftleft2
+# End time: 15:47:07 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc work.tb_shiftleft2
+# vsim -voptargs="+acc" work.tb_shiftleft2 
+# Start time: 15:47:09 on Mar 01,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_shiftleft2(behavior)#1
+# Loading work.shiftleft2(behavioral)#1
+add wave -position insertpoint  \
+sim:/tb_shiftleft2/s_In \
+sim:/tb_shiftleft2/s_Out
+run
+quit -sim
+# End time: 15:47:37 on Mar 01,2024, Elapsed time: 0:00:28
+# Errors: 0, Warnings: 1
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:48:09 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd 
+# ** Error: (vcom-7) Failed to open design unit file "/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 15:48:09 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:48:23 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd 
+# ** Error: (vcom-7) Failed to open design unit file "/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 15:48:23 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:48:32 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd 
+# ** Error: (vcom-7) Failed to open design unit file "/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2.vhd" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 15:48:32 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:48:32 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd 
+# ** Error: (vcom-7) Failed to open design unit file "/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2.vhd" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 15:48:32 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2N.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:48:42 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shiftleft2N
+# -- Compiling architecture Behavioral of shiftleft2N
+# End time: 15:48:42 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2N.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:48:42 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_shiftleft2N
+# -- Compiling architecture behavior of tb_shiftleft2N
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2N.vhd(37): (vcom-1141) Identifier "shiftleft2" does not identify a component declaration.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2N.vhd(67): VHDL Compiler exiting
+# End time: 15:48:42 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2N.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:48:46 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shiftleft2N
+# -- Compiling architecture Behavioral of shiftleft2N
+# End time: 15:48:46 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2N.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:48:46 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_shiftleft2N
+# -- Compiling architecture behavior of tb_shiftleft2N
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2N.vhd(37): (vcom-1141) Identifier "shiftleft2" does not identify a component declaration.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2N.vhd(67): VHDL Compiler exiting
+# End time: 15:48:46 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2N.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:49:03 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_shiftleft2N
+# -- Compiling architecture behavior of tb_shiftleft2N
+# End time: 15:49:03 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

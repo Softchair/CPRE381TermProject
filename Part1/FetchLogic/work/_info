@@ -1,6 +1,14 @@
 m255
 K4
 z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
 !s11f vlog 2023.2_2 2023.06, Jun  9 2023
 !s11e vcom 2023.2_2 2023.06, Jun  9 2023
 13
@@ -9,168 +17,267 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic
+Z2 d/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic
+T_opt
+!s110 1709329630
+VJfaTd`ZlYL5=ZhS3EBSWe0
+04 13 8 work tb_shiftleft2 behavior 1
+=1-0050569b1969-65e24cdd-e5487-6236
+R1
+!s12b OEM100
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2023.2_2;77
+R2
 Edffg
-Z1 w1577987096
-Z2 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
-Z3 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+Z3 w1577987096
+Z4 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z5 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
 !i122 4
-R0
-Z4 8/home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/dffg.vhd
-Z5 F/home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/dffg.vhd
+R2
+Z6 8/home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/dffg.vhd
+Z7 F/home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/dffg.vhd
 l0
-Z6 L23 1
+Z8 L23 1
 VaBn<3_7oIgIleFniVim733
 !s100 FJQDe;FGDG0KnNV;j4DaY2
-Z7 OL;C;2023.2_2;77
+Z9 OL;C;2023.2_2;77
 32
-Z8 !s110 1709328554
+Z10 !s110 1709328554
 !i10b 1
-Z9 !s108 1709328554.000000
-Z10 !s90 -reportprogress|300|-work|work|/home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/dffg.vhd|
-Z11 !s107 /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/dffg.vhd|
+Z11 !s108 1709328554.000000
+Z12 !s90 -reportprogress|300|-work|work|/home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/dffg.vhd|
+Z13 !s107 /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/dffg.vhd|
 !i113 0
-Z12 o-work work
-Z13 tExplicit 1 CvgOpt 0
+Z14 o-work work
+Z15 tExplicit 1 CvgOpt 0
 Amixed
-R2
-R3
+R4
+R5
 DEx4 work 4 dffg 0 22 aBn<3_7oIgIleFniVim733
 !i122 4
 l37
 L33 29
 VS_P?KDWPHzz@YT_fABo?Z0
 !s100 GR5ff]ZD1Yiz`>ZFVE>Hg1
-R7
-32
-R8
-!i10b 1
 R9
+32
 R10
+!i10b 1
 R11
-!i113 0
 R12
 R13
+!i113 0
+R14
+R15
 Enbitregister
-Z14 w1708994606
-R2
-R3
+Z16 w1708994606
+R4
+R5
 !i122 5
-R0
-Z15 8/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Gates/NbitRegister.vhd
-Z16 F/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Gates/NbitRegister.vhd
+R2
+Z17 8/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Gates/NbitRegister.vhd
+Z18 F/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Gates/NbitRegister.vhd
 l0
 L8 1
 V2obbXJUc44Rm5D6<n4U;=0
 !s100 SIB:LEAgO49Qd2PXLKPEG0
-R7
-32
-R8
-!i10b 1
 R9
-Z17 !s90 -reportprogress|300|-work|work|/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Gates/NbitRegister.vhd|
-Z18 !s107 /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Gates/NbitRegister.vhd|
+32
+R10
+!i10b 1
+R11
+Z19 !s90 -reportprogress|300|-work|work|/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Gates/NbitRegister.vhd|
+Z20 !s107 /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Gates/NbitRegister.vhd|
 !i113 0
-R12
-R13
+R14
+R15
 Astructural
-R2
-R3
+R4
+R5
 DEx4 work 12 nbitregister 0 22 2obbXJUc44Rm5D6<n4U;=0
 !i122 5
 l29
 L19 23
 VGLl0R=XIPIfX538IXjjLP1
 !s100 gzZ^h0WbVmngbcPKT1Z^00
-R7
-32
-R8
-!i10b 1
 R9
-R17
-R18
+32
+R10
+!i10b 1
+R11
+R19
+R20
 !i113 0
-R12
-R13
+R14
+R15
 Epcreg
-Z19 w1709328181
-R2
-R3
+Z21 w1709328181
+R4
+R5
 !i122 6
-R0
-Z20 8/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/PCReg.vhd
-Z21 F/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/PCReg.vhd
+R2
+Z22 8/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/PCReg.vhd
+Z23 F/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/PCReg.vhd
 l0
-R6
+R8
 VYVAFf:[O3UU]RF4>JZb:F1
 !s100 6m1zc[BGZ@[7i]aLMa_4W1
-R7
-32
-R8
-!i10b 1
 R9
-Z22 !s90 -reportprogress|300|-work|work|/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/PCReg.vhd|
-Z23 !s107 /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/PCReg.vhd|
+32
+R10
+!i10b 1
+R11
+Z24 !s90 -reportprogress|300|-work|work|/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/PCReg.vhd|
+Z25 !s107 /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/PCReg.vhd|
 !i113 0
-R12
-R13
+R14
+R15
 Astructural
-R2
-R3
+R4
+R5
 DEx4 work 5 pcreg 0 22 YVAFf:[O3UU]RF4>JZb:F1
 !i122 6
 l47
 L34 26
 VJ4QE?T><nn3CjF6@nZR?=3
 !s100 WP8P8=gc<cnT4jhobX<FM3
-R7
-32
-R8
-!i10b 1
 R9
-R22
-R23
+32
+R10
+!i10b 1
+R11
+R24
+R25
 !i113 0
-R12
-R13
-Etb_pcreg
-Z24 w1709328126
+R14
+R15
+Eshiftleft2n
+Z26 w1709329700
+Z27 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
+R4
+R5
+!i122 20
 R2
-R3
-!i122 7
-R0
-Z25 8/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_pcreg.vhd
-Z26 F/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_pcreg.vhd
+Z28 8/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2N.vhd
+Z29 F/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2N.vhd
+l0
+L22 1
+V`7gPoUcDWCEFDGIOdZPT21
+!s100 Ib@@A;Ua`^M66<:lMn<dT1
+R9
+32
+Z30 !s110 1709329726
+!i10b 1
+Z31 !s108 1709329726.000000
+Z32 !s90 -reportprogress|300|-work|work|/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2N.vhd|
+Z33 !s107 /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2N.vhd|
+!i113 0
+R14
+R15
+Abehavioral
+R27
+R4
+R5
+DEx4 work 11 shiftleft2n 0 22 `7gPoUcDWCEFDGIOdZPT21
+!i122 20
+l32
+L30 8
+VZX9d4LcVKWDn07<Ki`jLg0
+!s100 K`;E=Oj@2?[9dF^Cj076g1
+R9
+32
+R30
+!i10b 1
+R31
+R32
+R33
+!i113 0
+R14
+R15
+Etb_pcreg
+Z34 w1709329140
+R4
+R5
+!i122 17
+R2
+Z35 8/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_pcreg.vhd
+Z36 F/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_pcreg.vhd
 l0
 L14 1
 V]iEEO3Rh0mUU]YV`YWJi<3
 !s100 OP:i>jb_HfnY@zIB`P9g33
-R7
-32
-Z27 !s110 1709328555
-!i10b 1
 R9
-Z28 !s90 -reportprogress|300|-work|work|/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_pcreg.vhd|
-Z29 !s107 /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_pcreg.vhd|
+32
+Z37 !s110 1709329144
+!i10b 1
+Z38 !s108 1709329144.000000
+Z39 !s90 -reportprogress|300|-work|work|/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_pcreg.vhd|
+Z40 !s107 /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_pcreg.vhd|
 !i113 0
-R12
-R13
+R14
+R15
 Abehavior
-R2
-R3
-Z30 DEx4 work 8 tb_pcreg 0 22 ]iEEO3Rh0mUU]YV`YWJi<3
-!i122 7
+R4
+R5
+DEx4 work 8 tb_pcreg 0 22 ]iEEO3Rh0mUU]YV`YWJi<3
+!i122 17
 l35
-Z31 L17 60
-Z32 VlibBnkVO3a5ok6eWWCgBb3
-Z33 !s100 h:7GGGI_F9EoJG29BfzK71
-R7
-32
-R27
-!i10b 1
+L17 60
+VGZ95bKc9[<gMV`DD17lOm3
+!s100 PSPMBb5h_587:hk9nl>hd2
 R9
-R28
-R29
+32
+R37
+!i10b 1
+R38
+R39
+R40
 !i113 0
-R12
-R13
+R14
+R15
+Etb_shiftleft2n
+Z41 w1709329741
+R27
+R4
+R5
+!i122 22
+R2
+Z42 8/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2N.vhd
+Z43 F/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2N.vhd
+l0
+L15 1
+VjPm8VeN8`?0P>Zh2MSn6A1
+!s100 VO@jhSC6?_DT?G72BPHN11
+R9
+32
+Z44 !s110 1709329743
+!i10b 1
+Z45 !s108 1709329743.000000
+Z46 !s90 -reportprogress|300|-work|work|/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2N.vhd|
+!s107 /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2N.vhd|
+!i113 0
+R14
+R15
+Abehavior
+R27
+R4
+R5
+DEx4 work 14 tb_shiftleft2n 0 22 jPm8VeN8`?0P>Zh2MSn6A1
+!i122 22
+l35
+L18 50
+VA_Mo4=z^MDGf_o8c7LHCH0
+!s100 aYcOU@OPYL<gdR1jdNU@J2
+R9
+32
+R44
+!i10b 1
+R45
+R46
+Z47 !s107 /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2N.vhd|
+!i113 0
+R14
+R15
