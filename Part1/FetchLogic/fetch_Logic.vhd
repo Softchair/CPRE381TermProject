@@ -35,14 +35,23 @@ entity fetch_Logic is
 end fetch_Logic;
 
 architecture mixed of fetch_logic is
+
+    -- PCReg file
+    component PCReg is
+        port (
+            i_CLK       : IN STD_LOGIC; -- Clock
+            i_RST       : IN STD_LOGIC; -- Reset
+            i_PC        : IN STD_LOGIC_VECTOR(31 downto 0); -- PC in
+            o_PC        : OUT STD_LOGIC_VECTOR(31 downto 0) -- PC Out
+        )
     
     -- Generic Mux
     component mux2t1N is
         generic (N : integer := 32);
         port (
-            i_Sel     : IN STD_LOGIC;
-            i_A       : IN STD_LOGIC_VECTOR(N-1 downto 0);
-            i_B       : IN STD_LOGIC_VECTOR(N-1 downto 0);
+            i_Sel     : IN STD_LOGIC; -- Select bit
+            i_A       : IN STD_LOGIC_VECTOR(N-1 downto 0); -- When sel 0
+            i_B       : IN STD_LOGIC_VECTOR(N-1 downto 0); -- When sel 1
             o_Out     : OUT STD_LOGIC_VECTOR(N-1 downto 0);
         );
     end component;

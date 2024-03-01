@@ -62,12 +62,19 @@ BEGIN
         -- Test 1
         -- Release reset and set PC to a specific value
         s_RST <= '0';
-        s_PC_IN <= x"00000040"; -- Set PC to 0x0040
-        WAIT FOR cCLK_PER;
+        s_PC_IN <= x"00000080"; -- Set PC to 0x0040
+        WAIT FOR cCLK_PER*2;
 
         -- Test 2
         -- Change the PC value to something new
-        s_PC_IN <= x"00000080"; -- Set PC to 0x0080
+        s_RST <= '0';
+        s_PC_IN <= x"00000120"; -- Set PC to 0x0080
+        WAIT FOR cCLK_PER*2;
+
+        -- Test 3
+        -- Try reset
+        s_RST <= '1'; -- Reset, value should be x"0040"
+        s_PC_IN <= x"00000088";
         WAIT FOR cCLK_PER*2;
 
         WAIT;
