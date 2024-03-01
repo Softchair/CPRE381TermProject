@@ -12,187 +12,131 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd
+vlib work
+vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
 # QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
-# Start time: 15:14:15 on Mar 01,2024
-# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd 
+# Start time: 15:28:44 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fetch_Logic
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(33): near ")": (vcom-1576) expecting IDENTIFIER.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(33): VHDL Compiler exiting
+# End time: 15:28:44 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/PCReg.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:28:49 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/PCReg.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity PCReg
 # -- Compiling architecture structural of PCReg
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(49): near "port": syntax error
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(48): (vcom-1035) Formal port "i_CLK" has OPEN or no actual associated with it.
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(48): (vcom-1035) Formal port "i_RST" has OPEN or no actual associated with it.
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(48): (vcom-1035) Formal port "i_WE" has OPEN or no actual associated with it.
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(48): (vcom-1035) Formal port "i_DataIn" has OPEN or no actual associated with it.
-# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(57): VHDL Compiler exiting
-# End time: 15:14:15 on Mar 01,2024, Elapsed time: 0:00:00
-# Errors: 5, Warnings: 0
-vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd
-# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
-# Start time: 15:14:44 on Mar 01,2024
-# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity PCReg
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(24): near "i_CLKs": (vcom-1576) expecting ':'.
-# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(24): VHDL Compiler exiting
-# End time: 15:14:44 on Mar 01,2024, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd
-# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
-# Start time: 15:15:06 on Mar 01,2024
-# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity PCReg
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(24): near "i_CLKs": (vcom-1576) expecting ':'.
-# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(24): VHDL Compiler exiting
-# End time: 15:15:06 on Mar 01,2024, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd
-# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
-# Start time: 15:15:12 on Mar 01,2024
-# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity PCReg
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(24): near "i_CLKs": (vcom-1576) expecting ':'.
-# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(24): VHDL Compiler exiting
-# End time: 15:15:12 on Mar 01,2024, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd
-# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
-# Start time: 15:15:21 on Mar 01,2024
-# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity PCReg
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(24): near "i_CLKs": (vcom-1576) expecting ':'.
-# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(24): VHDL Compiler exiting
-# End time: 15:15:21 on Mar 01,2024, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd
-# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
-# Start time: 15:15:28 on Mar 01,2024
-# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity PCReg
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(24): near "i_CLKs": (vcom-1576) expecting ':'.
-# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(24): VHDL Compiler exiting
-# End time: 15:15:28 on Mar 01,2024, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd
-# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
-# Start time: 15:15:36 on Mar 01,2024
-# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity PCReg
-# -- Compiling architecture structural of PCReg
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(49): near "port": syntax error
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(48): (vcom-1035) Formal port "i_CLK" has OPEN or no actual associated with it.
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(48): (vcom-1035) Formal port "i_RST" has OPEN or no actual associated with it.
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(48): (vcom-1035) Formal port "i_WE" has OPEN or no actual associated with it.
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(48): (vcom-1035) Formal port "i_DataIn" has OPEN or no actual associated with it.
-# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(57): VHDL Compiler exiting
-# End time: 15:15:36 on Mar 01,2024, Elapsed time: 0:00:00
-# Errors: 5, Warnings: 0
-vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd
-# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
-# Start time: 15:15:41 on Mar 01,2024
-# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity PCReg
-# -- Compiling architecture structural of PCReg
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(49): near "port": syntax error
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(48): (vcom-1035) Formal port "i_CLK" has OPEN or no actual associated with it.
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(48): (vcom-1035) Formal port "i_RST" has OPEN or no actual associated with it.
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(48): (vcom-1035) Formal port "i_WE" has OPEN or no actual associated with it.
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(48): (vcom-1035) Formal port "i_DataIn" has OPEN or no actual associated with it.
-# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(57): VHDL Compiler exiting
-# End time: 15:15:41 on Mar 01,2024, Elapsed time: 0:00:00
-# Errors: 5, Warnings: 0
-vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd
-# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
-# Start time: 15:15:56 on Mar 01,2024
-# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity PCReg
-# -- Compiling architecture structural of PCReg
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(49): near "port": syntax error
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(48): (vcom-1035) Formal port "i_CLK" has OPEN or no actual associated with it.
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(48): (vcom-1035) Formal port "i_RST" has OPEN or no actual associated with it.
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(48): (vcom-1035) Formal port "i_WE" has OPEN or no actual associated with it.
-# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(48): (vcom-1035) Formal port "i_DataIn" has OPEN or no actual associated with it.
-# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd(57): VHDL Compiler exiting
-# End time: 15:15:56 on Mar 01,2024, Elapsed time: 0:00:00
-# Errors: 5, Warnings: 0
-vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd
-# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
-# Start time: 15:17:46 on Mar 01,2024
-# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/PCReg.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity PCReg
-# -- Compiling architecture structural of PCReg
-# End time: 15:17:46 on Mar 01,2024, Elapsed time: 0:00:00
+# End time: 15:28:49 on Mar 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.pcreg(structural)
-# vsim work.pcreg(structural) 
-# Start time: 15:18:22 on Mar 01,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.pcreg(structural)#1
-quit -sim
-# End time: 15:18:28 on Mar 01,2024, Elapsed time: 0:00:06
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_pcreg.vhd
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_pcreg.vhd}
 # QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
-# Start time: 15:22:14 on Mar 01,2024
-# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_pcreg.vhd 
+# Start time: 15:28:49 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_pcreg.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity tb_PCReg
 # -- Compiling architecture behavior of tb_PCReg
-# End time: 15:22:14 on Mar 01,2024, Elapsed time: 0:00:00
+# End time: 15:28:49 on Mar 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.tb_pcreg -voptargs=+acc
-# vsim work.tb_pcreg -voptargs="+acc" 
-# Start time: 15:22:24 on Mar 01,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.tb_pcreg(behavior)#1
-# Loading work.pcreg(structural)#1
-# Loading work.nbitregister(structural)#1
-# Loading work.dffg(mixed)#1
-add wave -position insertpoint  \
-sim:/tb_pcreg/s_CLK \
-sim:/tb_pcreg/s_RST \
-sim:/tb_pcreg/s_PC_IN \
-sim:/tb_pcreg/s_PC_OUT
-run
-run
-quit -sim
-# End time: 15:22:47 on Mar 01,2024, Elapsed time: 0:00:23
-# Errors: 0, Warnings: 1
+vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Gates/NbitRegister.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:28:58 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Gates/NbitRegister.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity nbitregister
+# -- Compiling architecture structural of nbitregister
+# End time: 15:28:58 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/dffg.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:29:02 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/dffg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dffg
+# -- Compiling architecture mixed of dffg
+# End time: 15:29:02 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/work -refresh -force_refresh
+# QuestaSim-64 vlog 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:29:11 on Mar 01,2024
+# vlog -reportprogress 300 -work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/work -refresh -force_refresh 
+# -- Skipping entity dffg
+# -- Skipping entity nbitregister
+# -- Skipping entity pcreg
+# -- Skipping entity tb_pcreg
+# End time: 15:29:12 on Mar 01,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/work -refresh -force_refresh
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:29:12 on Mar 01,2024
+# vcom -reportprogress 300 -work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/work -refresh -force_refresh 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dffg
+# -- Compiling architecture mixed of dffg
+# -- Compiling entity nbitregister
+# -- Compiling architecture structural of nbitregister
+# -- Compiling entity PCReg
+# -- Compiling architecture structural of PCReg
+# -- Compiling entity tb_PCReg
+# -- Compiling architecture behavior of tb_PCReg
+# End time: 15:29:12 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/dffg.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:29:14 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/dffg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dffg
+# -- Compiling architecture mixed of dffg
+# End time: 15:29:14 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Gates/NbitRegister.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:29:14 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Gates/NbitRegister.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity nbitregister
+# -- Compiling architecture structural of nbitregister
+# End time: 15:29:14 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/PCReg.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:29:14 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/PCReg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PCReg
+# -- Compiling architecture structural of PCReg
+# End time: 15:29:14 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_pcreg.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 15:29:14 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_pcreg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_PCReg
+# -- Compiling architecture behavior of tb_PCReg
+# End time: 15:29:15 on Mar 01,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
