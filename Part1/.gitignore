@@ -1,0 +1,9 @@
+# Ignore temporary files
+.tmp
+
+# Ignore QuestaSim files
+.wlf
+.opt
+.ini
+transcript
+work
