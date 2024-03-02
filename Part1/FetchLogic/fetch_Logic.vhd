@@ -63,8 +63,16 @@ architecture mixed of fetch_logic is
     component shiftLeft2N is
         generic (N : integer := 32);
         port(
-            i_In    : IN STD_LOGIC_VECTOR(N-1 downto 0);
-            o_Out   : OUT STD_LOGIC_VECTOR(N-1 downto 0)
+            i_In        : IN STD_LOGIC_VECTOR(N-1 downto 0);
+            o_Out       : OUT STD_LOGIC_VECTOR(N-1 downto 0)
+        );
+    end component;
+
+    component bit16_extender is
+        port(
+            i_Sel       : IN STD_LOGIC;
+            i_Din       : IN STD_LOGIC_VECTOR(15 downto 0);
+            o_Out       : OUT STD_LOGIC_VECTOR(31 downto 0)
         );
     end component;
 
@@ -72,27 +80,43 @@ architecture mixed of fetch_logic is
     component mux2t1N is
         generic (N : integer := 32);
         port (
-            i_Sel     : IN STD_LOGIC; -- Select bit
-            i_A       : IN STD_LOGIC_VECTOR(N-1 downto 0); -- When sel 0
-            i_B       : IN STD_LOGIC_VECTOR(N-1 downto 0); -- When sel 1
-            o_Out     : OUT STD_LOGIC_VECTOR(N-1 downto 0)
+            i_Sel       : IN STD_LOGIC; -- Select bit
+            i_A         : IN STD_LOGIC_VECTOR(N-1 downto 0); -- When sel 0
+            i_B         : IN STD_LOGIC_VECTOR(N-1 downto 0); -- When sel 1
+            o_Out       : OUT STD_LOGIC_VECTOR(N-1 downto 0)
         );
     end component;
 
-    -- Signals
-
     -- Signal to hold the PC address out of the PC register
     signal s_PCAddressOut       : STD_LOGIC_VECTOR(31 downto 0);
+
+    -- General Signals
     -- Next PC address
     signal s_PCNext             : STD_LOGIC_VECTOR(31 downto 0);
-    -- To store top 4 bits of PCNext
-    signal s_PCNextTop4         : STD_LOGIC_VECTOR(31 downto 0);
     -- Signal to carry the instruction out
     signal s_InstructionOut     : STD_LOGIC_VECTOR(31 downto 0);
+
+    -- Jump Signals
+    -- To store top 4 bits of PCNext
+    signal s_PCNextTop4         : STD_LOGIC_VECTOR(31 downto 0);
     -- Jump address without top 4 bits
     signal s_JumpAddressPreAdd  : STD_LOGIC_VECTOR(27 downto 0);
     -- Calculated jump address
     signal s_JumpAddress        : STD_LOGIC_VECTOR(31 downto 0);
+
+    -- Branching Signals
+    -- Signal to hold the bottom 16 bits of instruction
+    signal s_Bottom16Instruct   : STD_LOGIC_VECTOR(15 downto 0);
+    -- Signal to carry the output of the bit extender
+    signal s_BitExtendOut       : STD_LOGIC_VECTOR(31 downto 0);
+    -- Signal to carry output of shift left on branch address
+    signal s_BranchShiftLeft    : STD_LOGIC_VECTOR(31 downto 0);
+    -- Signal to carry location to branch to
+    signal s_BranchLocation     : STD_LOGIC_VECTOR(31 downto 0);
+    -- Signal to carry output of branch mux to jump mux
+    signal s_BranchMuxOut       : STD_LOGIC_VECTOR(31 downto 0);
+
+    -- Ending Signals
     -- Signal to carry the jump address mux output
     signal s_JumpAddMuxOut      : STD_LOGIC_VECTOR(31 downto 0);
     -- Signal to carry the jump register mux output
@@ -108,8 +132,8 @@ architecture mixed of fetch_logic is
             port map(
                 i_CLK   => i_CLK,
                 i_RST   => i_RST,
-                i_PC    => s_JumpRegMuxOut,
-                o_PC    => s_PCAddressOut
+                i_PC    => s_JumpRegMuxOut, -- New PC
+                o_PC    => s_PCAddressOut -- Cur PC
             );
 
         -- Get next PC address
@@ -121,7 +145,7 @@ architecture mixed of fetch_logic is
                 i_B     => x"0004",
                 i_Cin   => '0', -- No input
                 o_Cout  => open, -- Output to nothing
-                o_S     => s_PCNext
+                o_S     => s_PCNext -- Next PC
             );
 
         -- Instruction memory
@@ -137,8 +161,8 @@ architecture mixed of fetch_logic is
             generic map(N => 26)
             port map(
                 -- Take only 26 bits
-                i_In    => s_InstructionOut(25 downto 0),
-                o_Out   => s_JumpAddressPreAdd
+                i_In    => s_InstructionOut(25 downto 0), -- Bottom 25 of instruction
+                o_Out   => s_JumpAddressPreAdd -- To ripple carry
             );
 
         -- Grabbing only the top 4
@@ -148,19 +172,55 @@ architecture mixed of fetch_logic is
         g_jAdd: rippleCarryAdderN
             generic map(N => 32)
             port map(
-                i_A     => s_JumpAddressPreAdd,
+                i_A     => s_JumpAddressPreAdd, -- Jump address before adding top 4
                 i_B     => s_PCNextTop4, -- Take top 4 bits
                 i_Cin   => '0', -- No input
                 o_Cout  => open, -- Output to nothing
-                o_S     => s_JumpAddress
+                o_S     => s_JumpAddress -- Send to jump control mux
             );
 
         -- -------- END JUMP LOGIC CONTROL -------- --
 
         -- ------ START BRANCH LOGIC CONTROL ------ --
 
+        s_Bottom16Instruct <= s_InstructionOut(15 downto 0);
 
-        
+        -- Extender to make it 32 bits
+        g_bitExtender: bit16_extender
+            port map(
+                i_Sel   => '0', -- TEMP
+                i_Din   => s_Bottom16Instruct, -- Take bottom 16 bits
+                o_Out   => s_BitExtendOut -- Send to left shift 2
+            );
+
+        -- Shift left address by 2
+        g_bShiftLeft: shiftLeft2N
+            generic map(N => 29)
+            port map(
+                i_In    => s_BitExtendOut(29 downto 0), -- Little hack to not have to remake the shiftLeft2
+                o_Out   => s_BranchShiftLeft
+            );
+
+        -- Add branch location and PC, as branch is relative
+        g_bAddPC: rippleCarryAdderN
+            generic map(N => 32)
+            port map(
+                i_A     => s_PCNext, -- Adding PC location
+                i_B     => s_BranchShiftLeft, -- Relative location
+                i_Cin   => '0', -- No input
+                o_Cout  => open,
+                o_S     => s_BranchLocation -- Location to branch to
+            );
+
+        g_branchMuxControl: mux2t1N
+            generic map(N => 32)
+            port map(
+                i_A     => s_PCNext, -- Next PC location (0)
+                i_B     => s_BranchLocation, -- Branching location (1)
+                i_Sel   => i_BranchLogic, -- From control
+                o_Out   => s_BranchMuxOut -- To jump mux
+            );
+
         -- ------- END BRANCH LOGIC CONTROL ------- --
 
         -- ------ START ENDING LOGIC CONTROL ------ --
@@ -169,20 +229,20 @@ architecture mixed of fetch_logic is
         g_jumpMuxControl: mux2t1N
             generic map(N => 32)
             port map(
-                i_A     => placeholder, -- From branch logic (0)
+                i_A     => s_BranchMuxOut, -- From branch logic (0)
                 i_B     => s_JumpAddress, -- From jump logic (1)
                 i_Sel   => i_JumpLogic, -- From control
-                o_Out   => s_JumpAddMuxOut
+                o_Out   => s_JumpAddMuxOut -- To jump reg control
             );
 
         -- Mux to control jump register address
         g_jumpRegControl: mux2t1N
             generic map(N => 32)
             port map(
-                i_A     => s_JumpAddMuxOut, -- (0)
+                i_A     => s_JumpAddMuxOut, -- From output of jump mux (0)
                 i_B     => i_JReg, -- Jump register output (1)
                 i_Sel   => i_JRegLogic, -- From control
-                o_Out   => s_JumpRegMuxOut
+                o_Out   => s_JumpRegMuxOut -- To PC reg
             );
 
         -- Also assign the out of PC address to the result of jump reg control

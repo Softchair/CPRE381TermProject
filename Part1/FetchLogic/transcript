@@ -245,3 +245,188 @@ vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_
 # -- Compiling architecture mixed of fetch_logic
 # End time: 18:55:17 on Mar 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 19:13:01 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fetch_Logic
+# -- Compiling architecture mixed of fetch_logic
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(76): near ")": (vcom-1576) expecting IDENTIFIER.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(77): VHDL Compiler exiting
+# End time: 19:13:01 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 19:13:19 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fetch_Logic
+# -- Compiling architecture mixed of fetch_logic
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(182): (vcom-1141) Identifier "bit16_extender" does not identify a component declaration.
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(193): (vcom-1136) Unknown identifier "s_BranchShiftLeft".
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(225): VHDL Compiler exiting
+# End time: 19:13:19 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 19:15:28 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fetch_Logic
+# -- Compiling architecture mixed of fetch_logic
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(184): (vcom-1141) Identifier "bit16_extender" does not identify a component declaration.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(227): VHDL Compiler exiting
+# End time: 19:15:28 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 19:15:38 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Error: (vcom-11) Could not find work.register_package.
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd(14): (vcom-1195) Cannot find expanded name "work.register_package".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd(14): Unknown expanded name.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd(16): VHDL Compiler exiting
+# End time: 19:15:38 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 19:15:50 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bit16_extender
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd(18): (vcom-1136) Unknown identifier "i_Din".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd(18): Bad resolution function (STD_LOGIC) for type (error).
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd(18): near ":": (vcom-1576) expecting ';' or ')'.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd(18): VHDL Compiler exiting
+# End time: 19:15:50 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 19:16:15 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bit16_extender
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd(22): Labels do not match: 'bit16_extender' and 'bit16_extenders'.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd(22): VHDL Compiler exiting
+# End time: 19:16:15 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 19:16:26 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bit16_extender
+# -- Compiling architecture flow of bit16_extender
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd(34): (vcom-1136) Unknown identifier "SEL".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd(35): Enumeration literal '0' is not of type (error).
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd(36): Enumeration literal '1' is not of type (error).
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd(39): VHDL Compiler exiting
+# End time: 19:16:26 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 19:16:32 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bit16_extender
+# -- Compiling architecture flow of bit16_extender
+# End time: 19:16:32 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 19:16:36 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fetch_Logic
+# -- Compiling architecture mixed of fetch_logic
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(184): (vcom-1141) Identifier "bit16_extender" does not identify a component declaration.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(227): VHDL Compiler exiting
+# End time: 19:16:36 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 19:16:51 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fetch_Logic
+# -- Compiling architecture mixed of fetch_logic
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(186): Signal "placeholder" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.std_logic_1164.STD_LOGIC.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(227): VHDL Compiler exiting
+# End time: 19:16:51 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 19:17:06 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fetch_Logic
+# -- Compiling architecture mixed of fetch_logic
+# End time: 19:17:06 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 19:24:01 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fetch_Logic
+# -- Compiling architecture mixed of fetch_logic
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(208): (vcom-1136) Unknown identifier "s_NextPC".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(229): near "g_jumpMuxControl": (vcom-1576) expecting ';'.
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(239): Statement cannot be labeled.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(253): VHDL Compiler exiting
+# End time: 19:24:01 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 19:24:18 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fetch_Logic
+# -- Compiling architecture mixed of fetch_logic
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(229): near "g_jumpMuxControl": (vcom-1576) expecting ';'.
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(239): Statement cannot be labeled.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(253): VHDL Compiler exiting
+# End time: 19:24:18 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 19:24:25 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fetch_Logic
+# -- Compiling architecture mixed of fetch_logic
+# End time: 19:24:25 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
