@@ -194,3 +194,54 @@ vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_
 # -- Compiling architecture mixed of fetch_logic
 # End time: 18:05:14 on Mar 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 18:42:51 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fetch_Logic
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(34): (vcom-1136) Unknown identifier "o_PCAddress".
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(34): Bad resolution function (STD_LOGIC_VECTOR) for type (error).
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(34): near ":": (vcom-1576) expecting ';' or ')'.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(34): VHDL Compiler exiting
+# End time: 18:42:51 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 18:43:11 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fetch_Logic
+# -- Compiling architecture mixed of fetch_logic
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(175): (vcom-1023) Positional association (signal [mode OUT port] "o_PCAddress") found after named association.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(184): VHDL Compiler exiting
+# End time: 18:43:11 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 18:43:51 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fetch_Logic
+# -- Compiling architecture mixed of fetch_logic
+# End time: 18:43:51 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 18:55:17 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fetch_Logic
+# -- Compiling architecture mixed of fetch_logic
+# End time: 18:55:17 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

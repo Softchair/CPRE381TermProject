@@ -24,14 +24,14 @@ entity fetch_Logic is
         i_RST           : IN STD_LOGIC; -- Reset
         -- Register inputs
         i_JReg          : IN STD_LOGIC_VECTOR(31 downto 0); -- Jump register input
-        i_JalReg        : IN STD_LOGIC_VECTOR(31 downto 0); -- Jump and link register input
         -- Control logic inputs
         i_BranchLogic   : IN STD_LOGIC; -- Branch logic control, 1 if branch
         i_JumpLogic     : IN STD_LOGIC; -- Jump logic control, 1 if jump
         i_JRegLogic     : IN STD_LOGIC; -- Jump register logic control, 1 if jump reg
         i_JalLogic      : IN STD_LOGIC; -- Jump and link logic control, 0 if jump and link CHECK THIS
         -- Ouputs
-        o_Instruction   : OUT STD_LOGIC_VECTOR(31 downto 0) -- Instruction output
+        o_Instruction   : OUT STD_LOGIC_VECTOR(31 downto 0); -- Instruction output
+        o_PCAddress     : OUT STD_LOGIC_VECTOR(31 downto 0) -- PC Address for JAL box
     );
       
 end fetch_Logic;
@@ -97,8 +97,6 @@ architecture mixed of fetch_logic is
     signal s_JumpAddMuxOut      : STD_LOGIC_VECTOR(31 downto 0);
     -- Signal to carry the jump register mux output
     signal s_JumpRegMuxOut      : STD_LOGIC_VECTOR(31 downto 0);
-    -- Signal to carry the jal register mux output
-    signal s_JalMuxOut          : STD_LOGIC_VECTOR(31 downto 0);
 
     signal placeholder          : std_logic_vector(31 downto 0) := (others => '0');
 
@@ -110,7 +108,7 @@ architecture mixed of fetch_logic is
             port map(
                 i_CLK   => i_CLK,
                 i_RST   => i_RST,
-                i_PC    => s_JalMuxOut,
+                i_PC    => s_JumpRegMuxOut,
                 o_PC    => s_PCAddressOut
             );
 
@@ -157,12 +155,22 @@ architecture mixed of fetch_logic is
                 o_S     => s_JumpAddress
             );
 
+        -- -------- END JUMP LOGIC CONTROL -------- --
+
+        -- ------ START BRANCH LOGIC CONTROL ------ --
+
+
+        
+        -- ------- END BRANCH LOGIC CONTROL ------- --
+
+        -- ------ START ENDING LOGIC CONTROL ------ --
+
         -- Mux to control jump address for next PC
         g_jumpMuxControl: mux2t1N
             generic map(N => 32)
             port map(
                 i_A     => placeholder, -- From branch logic (0)
-                i_B     => s_JumpAddress, -- TEMP (1)
+                i_B     => s_JumpAddress, -- From jump logic (1)
                 i_Sel   => i_JumpLogic, -- From control
                 o_Out   => s_JumpAddMuxOut
             );
@@ -177,20 +185,9 @@ architecture mixed of fetch_logic is
                 o_Out   => s_JumpRegMuxOut
             );
 
-        -- Mux to control jump and link address
-        g_jalControl: mux2t1N
-            generic map(N => 32)
-            port map(
-                i_A     => i_JalReg, -- Jump and link register (0)
-                i_B     => s_JumpRegMuxOut, -- Jump reg mux output (1)
-                i_Sel   => i_JalLogic, -- From control
-                o_Out   => s_JalMuxOut
-            );
+        -- Also assign the out of PC address to the result of jump reg control
+        o_PCAddress <= s_JumpRegMuxOut;
 
-        -- -------- END JUMP LOGIC CONTROL -------- --
-
-        -- ------ START BRANCH LOGIC CONTROL ------ --
-
-
+        -- ------- END ENDING LOGIC CONTROL ------- --
 
 end mixed;
