@@ -31,7 +31,7 @@ entity fetch_Logic is
         i_JRegLogic     : IN STD_LOGIC; -- Jump register logic control, 1 if jump reg
         i_JalLogic      : IN STD_LOGIC; -- Jump and link logic control, 0 if jump and link CHECK THIS
         -- Ouputs
-        o_Instruction   : OUT STD_LOGIC_VECTOR(31 downto 0); -- Instruction output
+        o_Instruction   : OUT STD_LOGIC_VECTOR(31 downto 0) -- Instruction output
     );
       
 end fetch_Logic;
@@ -75,7 +75,7 @@ architecture mixed of fetch_logic is
             i_Sel     : IN STD_LOGIC; -- Select bit
             i_A       : IN STD_LOGIC_VECTOR(N-1 downto 0); -- When sel 0
             i_B       : IN STD_LOGIC_VECTOR(N-1 downto 0); -- When sel 1
-            o_Out     : OUT STD_LOGIC_VECTOR(N-1 downto 0);
+            o_Out     : OUT STD_LOGIC_VECTOR(N-1 downto 0)
         );
     end component;
 
@@ -85,17 +85,22 @@ architecture mixed of fetch_logic is
     signal s_PCAddressOut       : STD_LOGIC_VECTOR(31 downto 0);
     -- Next PC address
     signal s_PCNext             : STD_LOGIC_VECTOR(31 downto 0);
+    -- To store top 4 bits of PCNext
+    signal s_PCNextTop4         : STD_LOGIC_VECTOR(31 downto 0);
     -- Signal to carry the instruction out
     signal s_InstructionOut     : STD_LOGIC_VECTOR(31 downto 0);
     -- Jump address without top 4 bits
     signal s_JumpAddressPreAdd  : STD_LOGIC_VECTOR(27 downto 0);
     -- Calculated jump address
     signal s_JumpAddress        : STD_LOGIC_VECTOR(31 downto 0);
-    -- Signal to carray the jump address mux output
+    -- Signal to carry the jump address mux output
     signal s_JumpAddMuxOut      : STD_LOGIC_VECTOR(31 downto 0);
-    -- Signal to carray the jump register mux output
+    -- Signal to carry the jump register mux output
     signal s_JumpRegMuxOut      : STD_LOGIC_VECTOR(31 downto 0);
+    -- Signal to carry the jal register mux output
+    signal s_JalMuxOut          : STD_LOGIC_VECTOR(31 downto 0);
 
+    signal placeholder          : std_logic_vector(31 downto 0) := (others => '0');
 
 
     begin
@@ -105,24 +110,23 @@ architecture mixed of fetch_logic is
             port map(
                 i_CLK   => i_CLK,
                 i_RST   => i_RST,
-                i_PC    => '-', -- TEMP
+                i_PC    => s_JalMuxOut,
                 o_PC    => s_PCAddressOut
             );
 
         -- Get next PC address
         -- Adding 4
-        g_NextPC: rippleCarrayAdderN
+        g_NextPC: rippleCarryAdderN
             generic map(N => 32)
             port map(
                 i_A     => s_PCAddressOut,
                 i_B     => x"0004",
                 i_Cin   => '0', -- No input
-                o_Cout  => '-', -- Output to nothing
-                o_S     => s_PCNext;
+                o_Cout  => open, -- Output to nothing
+                o_S     => s_PCNext
             );
 
         -- Instruction memory
-
         -- INSERT HERE
 
         -- Shift left 2 for jump address
@@ -135,14 +139,17 @@ architecture mixed of fetch_logic is
                 o_Out   => s_JumpAddressPreAdd
             );
 
+        -- Grabbing only the top 4
+        s_PCNextTop4 <= s_PCNext(31 downto 28) & "0000000000000000000000000000";
+
         -- Adder to add top 4 bits of PC to get full jump address
         g_jAdd: rippleCarryAdderN
             generic map(N => 32)
             port map(
                 i_A     => s_JumpAddressPreAdd,
-                i_B     => s_PCNext(31 downto 26) & "0000000000000000000000000", -- Take top 4 bits
+                i_B     => s_PCNextTop4, -- Take top 4 bits
                 i_Cin   => '0', -- No input
-                o_Cout  => '-', -- Output to nothing
+                o_Cout  => open, -- Output to nothing
                 o_S     => s_JumpAddress
             );
 
@@ -150,17 +157,30 @@ architecture mixed of fetch_logic is
         g_jumpMuxControl: mux2t1N
             generic map(N => 32)
             port map(
-                i_A     => s_JumpAddress,
-                i_B     => '-', -- TEMP
+                i_A     => s_JumpAddress, -- (0)
+                i_B     => placeholder, -- TEMP (1)
                 i_Sel   => i_JumpLogic, -- From control
                 o_Out   => s_JumpAddMuxOut
             );
 
+        -- Mux to control jump register address
         g_jumpRegControl: mux2t1N
             generic map(N => 32)
             port map(
-                i_A     => s_JumpAddMuxOut,
-                i_B     => i_JReg, -- Jump register output
+                i_A     => s_JumpAddMuxOut, -- (0)
+                i_B     => i_JReg, -- Jump register output (1)
                 i_Sel   => i_JRegLogic, -- From control
                 o_Out   => s_JumpRegMuxOut
-            )
+            );
+
+        -- Mux to control jump and link address
+        g_jalControl: mux2t1N
+            generic map(N => 32)
+            port map(
+                i_A     => i_JalReg, -- Jump and link register (0)
+                i_B     => s_JumpRegMuxOut, -- Jump reg mux output (1)
+                i_Sel   => i_JalLogic, -- From control
+                o_Out   => s_JalMuxOut
+            );
+
+end mixed;
