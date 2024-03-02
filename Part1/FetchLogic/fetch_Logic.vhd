@@ -129,6 +129,10 @@ architecture mixed of fetch_logic is
         -- Instruction memory
         -- INSERT HERE
 
+
+
+        -- -------- START JUMP LOGIC CONTROL -------- --
+
         -- Shift left 2 for jump address
         -- In 26 bits, out 28 bits
         g_jShiftLeft: shiftLeft2N
@@ -157,8 +161,8 @@ architecture mixed of fetch_logic is
         g_jumpMuxControl: mux2t1N
             generic map(N => 32)
             port map(
-                i_A     => s_JumpAddress, -- (0)
-                i_B     => placeholder, -- TEMP (1)
+                i_A     => placeholder, -- From branch logic (0)
+                i_B     => s_JumpAddress, -- TEMP (1)
                 i_Sel   => i_JumpLogic, -- From control
                 o_Out   => s_JumpAddMuxOut
             );
@@ -182,5 +186,11 @@ architecture mixed of fetch_logic is
                 i_Sel   => i_JalLogic, -- From control
                 o_Out   => s_JalMuxOut
             );
+
+        -- -------- END JUMP LOGIC CONTROL -------- --
+
+        -- ------ START BRANCH LOGIC CONTROL ------ --
+
+
 
 end mixed;
