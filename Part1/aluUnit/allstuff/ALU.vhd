@@ -104,6 +104,18 @@ port ( D0, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11,
 end component;
 
 
+-----------------------------------------
+-- LUI
+-----------------------------------------
+
+
+component lui
+
+ port ( 
+         i_Din : in std_logic_vector(15 downto 0);
+         o_OUT : out std_logic_vector(31 downto 0));
+
+end component;
 
 
 
@@ -150,6 +162,7 @@ end component;
 
 --signals
 
+
 -- after extender before arithmetic/logic
 signal s_bitExtended : std_logic_vector(31 downto 0); -- signal coming from bit extender
 signal s_muxToLogicGates : std_logic_vector(31 downto 0); -- signal from 2t1 mux to AND/OR/XOR/NOR for imme values or B
@@ -163,6 +176,7 @@ signal s_AndDataOut : std_logic_vector(31 downto 0); -- signal data output from 
 signal s_OrDataOut : std_logic_vector(31 downto 0); -- signal data output from OR gate to 16t1 mux
 signal s_XorDataOut : std_logic_vector(31 downto 0); -- signal data output from XOR gate to 16t1 mux
 signal s_NorDataOut : std_logic_vector(31 downto 0); -- signal data output from Nor gate to 16t1 mux
+signal s_LuiDataOut : std_logic_vector(31 downto 0); -- signal data output from LUI to 16t1 mux
 
 
 
@@ -172,7 +186,7 @@ begin
 
 
 
--- level 0: (extender / mux)
+-- level 0: (extender / mux / LUI)
 g_bitExtender01 : bit_extenders
   port MAP(i_Din  => i_imme,
            o_Out  => s_bitExtended,
@@ -185,6 +199,12 @@ g_muxGate01 : mux2t1_N
            i_D0    => i_B,
 	   i_S    => ALUSrc,
            o_O    => s_muxToLogicGates);
+
+
+g_lui01 : lui
+  port MAP(
+            i_Din => i_imme,
+            o_OUT => s_LuiDataOut);
 
 
 -- level 1: (Add/Sub and Logic Gates)
@@ -228,7 +248,7 @@ g_NOR32 : norG_N
 g_16t1Mux : mux16_1
    port MAP(D0 => s_AddSubDataOut,
            D1 => s_AndDataOut, 
-           D2 => x"00000000", 
+           D2 => s_LuiDataOut, 
            D3 => s_NorDataOut, 
            D4 => s_XorDataOut, 
            D5 => s_OrDataOut, 
