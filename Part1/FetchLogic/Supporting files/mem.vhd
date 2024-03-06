@@ -1,48 +1,50 @@
 -- Quartus Prime VHDL Template
 -- Single-port RAM with single read/write address
 
-LIBRARY ieee;
-USE ieee.std_logic_1164.ALL;
-USE ieee.numeric_std.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
-ENTITY mem IS
+entity mem is
 
-    GENERIC (
-        DATA_WIDTH : NATURAL := 32;
-        ADDR_WIDTH : NATURAL := 10
-    );
+	generic 
+	(
+		DATA_WIDTH : natural := 32;
+		ADDR_WIDTH : natural := 10
+	);
 
-    PORT (
-        clk : IN STD_LOGIC;
-        addr : IN STD_LOGIC_VECTOR((ADDR_WIDTH - 1) DOWNTO 0);
-        data : IN STD_LOGIC_VECTOR((DATA_WIDTH - 1) DOWNTO 0);
-        we : IN STD_LOGIC := '1';
-        q : OUT STD_LOGIC_VECTOR((DATA_WIDTH - 1) DOWNTO 0)
-    );
+	port 
+	(
+		clk		: in std_logic;
+		addr	        : in std_logic_vector((ADDR_WIDTH-1) downto 0);
+		data	        : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		we		: in std_logic := '1';
+		q		: out std_logic_vector((DATA_WIDTH -1) downto 0)
+	);
 
-END mem;
+end mem;
 
-ARCHITECTURE rtl OF mem IS
+architecture rtl of mem is
 
-    -- Build a 2-D array type for the RAM
-    SUBTYPE word_t IS STD_LOGIC_VECTOR((DATA_WIDTH - 1) DOWNTO 0);
-    TYPE memory_t IS ARRAY(2 ** ADDR_WIDTH - 1 DOWNTO 0) OF word_t;
+	-- Build a 2-D array type for the RAM
+	subtype word_t is std_logic_vector((DATA_WIDTH-1) downto 0);
+	type memory_t is array(2**ADDR_WIDTH-1 downto 0) of word_t;
 
-    -- Declare the RAM signal and specify a default value.    Quartus Prime
-    -- will load the provided memory initialization file (.mif).
-    SIGNAL ram : memory_t;
+	-- Declare the RAM signal and specify a default value.	Quartus Prime
+	-- will load the provided memory initialization file (.mif).
+	signal ram : memory_t;
 
-BEGIN
+begin
 
-    PROCESS (clk)
-    BEGIN
-        IF (rising_edge(clk)) THEN
-            IF (we = '1') THEN
-                ram(to_integer(unsigned(addr))) <= data;
-            END IF;
-        END IF;
-    END PROCESS;
+	process(clk)
+	begin
+	if(rising_edge(clk)) then
+		if(we = '1') then
+			ram(to_integer(unsigned(addr))) <= data;
+		end if;
+	end if;
+	end process;
 
-    q <= ram(to_integer(unsigned(addr)));
+	q <= ram(to_integer(unsigned(addr)));
 
-END rtl;
+end rtl;
