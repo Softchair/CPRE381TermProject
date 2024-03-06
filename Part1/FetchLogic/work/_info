@@ -1,19 +1,19 @@
 m255
 K4
 z2
-Z0 !s12c _opt
+Z0 !s12c _opt2
 Z1 !s99 nomlopt
-R0
-R1
-R0
-R1
-R0
-R1
-Z2 !s12c _opt1
-R1
-Z3 !s12c _opt2
+Z2 !s12c _opt
 R1
 R2
+R1
+R2
+R1
+R2
+R1
+Z3 !s12c _opt1
+R1
+R0
 R1
 R3
 R1
@@ -21,9 +21,17 @@ R0
 R1
 R2
 R1
-R2
+R3
 R1
-R2
+R3
+R1
+R3
+R1
+R0
+R1
+R3
+R1
+R3
 R1
 R3
 R1
@@ -33,13 +41,7 @@ R2
 R1
 R2
 R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
+R2
 R1
 !s11f vlog 2023.2_2 2023.06, Jun  9 2023
 !s11e vcom 2023.2_2 2023.06, Jun  9 2023
@@ -53,41 +55,41 @@ Z4 d/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic
 T_opt
 !s110 1709710099
 VMh^hVoJJWkjVLMZe5CBS^2
-04 14 8 work tb_fetch_logic behavior 1
+Z5 04 14 8 work tb_fetch_logic behavior 1
 =1-0050569b998c-65e81b12-93805-10080
 R1
-Z5 !s12b OEM100
-Z6 !s124 OEM100
-Z7 o-quiet -auto_acc_if_foreign -work work
+Z6 !s12b OEM100
+Z7 !s124 OEM100
+o-quiet -auto_acc_if_foreign -work work
 Z8 tCvgOpt 0
 n@_opt
 Z9 OL;O;2023.2_2;77
+R4
 T_opt1
 !s110 1709708722
 Vjn[CAl>R2[A012fjVo5=<1
-Z10 04 14 8 work tb_shiftleft2n behavior 1
+04 14 8 work tb_shiftleft2n behavior 1
 =1-0050569b998c-65e815b2-af391-f05b
 R1
-R5
 R6
-o-quiet -auto_acc_if_foreign -work work +acc
+R7
+Z10 o-quiet -auto_acc_if_foreign -work work +acc
 R8
 n@_opt1
 R9
 R4
 T_opt2
-!s110 1709708689
-VhUM`]8CCRcO^_C;cCBWCB3
-R10
-=1-0050569b998c-65e81591-7438f-eff2
-R1
+!s110 1709763708
+VUl0o_:UlezUjm7O0h@6Vb2
 R5
+=1-7486e22834bc-65e8ec7c-681a3-7863
+R1
 R6
 R7
+R10
 R8
 n@_opt2
 R9
-R4
 Eadder1b
 Z11 w1709331014
 Z12 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2

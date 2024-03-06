@@ -30,8 +30,9 @@ entity fetch_Logic is
         i_JumpLogic     : IN STD_LOGIC; -- Jump logic control, 1 if jump
         i_JRegLogic     : IN STD_LOGIC; -- Jump register logic control, 1 if jump reg
         i_JalLogic      : IN STD_LOGIC; -- Jump and link logic control, 0 if jump and link CHECK THIS
-        -- Ouputs
-        o_Instruction   : OUT STD_LOGIC_VECTOR(31 downto 0); -- Instruction output
+        -- Instruction input
+        i_Instruction   : OUT STD_LOGIC_VECTOR(31 downto 0); -- Instruction output
+        -- Ouput
         o_PCAddress     : OUT STD_LOGIC_VECTOR(31 downto 0) -- PC Address for JAL box
     );
       
@@ -46,21 +47,6 @@ architecture mixed of fetch_logic is
             i_RST       : IN STD_LOGIC; -- Reset
             i_PC        : IN STD_LOGIC_VECTOR(31 downto 0); -- PC in
             o_PC        : OUT STD_LOGIC_VECTOR(31 downto 0) -- PC Out
-        );
-    end component;
-
-    -- Mem
-    component mem is
-        generic (
-            DATA_WIDTH : NATURAL := 32;
-            ADDR_WIDTH : NATURAL := 9
-        );
-        port (
-            clk         : IN STD_LOGIC; -- Clock
-            addr        : IN STD_LOGIC_VECTOR((ADDR_WIDTH-1) downto 0); -- Address
-            data        : IN STD_LOGIC_VECTOR((DATA_WIDTH-1) downto 0); -- Data input
-            we          : IN STD_LOGIC; -- Write enable
-            q           : OUT STD_LOGIC_VECTOR((DATA_WIDTH-1) downto 0) -- Instruction
         );
     end component;
 
@@ -112,8 +98,6 @@ architecture mixed of fetch_logic is
     -- General Signals
     -- Next PC address
     signal s_PCNext             : STD_LOGIC_VECTOR(31 downto 0);
-    -- Signal to carry the instruction out
-    signal s_InstructionOut     : STD_LOGIC_VECTOR(31 downto 0);
 
     -- Jump Signals
     -- To store top 4 bits of PCNext
@@ -143,9 +127,6 @@ architecture mixed of fetch_logic is
     -- Signal to carry the jump register mux output
     signal s_JumpRegMuxOut      : STD_LOGIC_VECTOR(31 downto 0);
 
-    signal placeholder          : std_logic_vector(31 downto 0) := (others => '0');
-
-
     begin
         
         -- PCReg file
@@ -169,22 +150,6 @@ architecture mixed of fetch_logic is
                 o_S     => s_PCNext -- Next PC
             );
 
-        -- Instruction memory
-        mem_mem: mem
-            generic map(
-                DATA_WIDTH => 32,
-                ADDR_WIDTH => 9
-            )
-            port map(
-                clk     => i_CLK,
-                addr    => s_PCAddressOut(8 downto 0), -- Temp as vhdl cant support all
-                data    => (others => '0'), -- Input nothing
-                we      => '0', -- Always write
-                q       => s_InstructionOut
-            );
-
-        o_Instruction <= s_InstructionOut; -- Set the instruction out to cur instruction
-
         -- -------- START JUMP LOGIC CONTROL -------- --
 
         -- Shift left 2 for jump address
@@ -196,7 +161,7 @@ architecture mixed of fetch_logic is
             )
             port map(
                 -- Take only 26 bits
-                i_In    => s_InstructionOut(25 downto 0), -- Bottom 25 of instruction
+                i_In    => i_Instruction(25 downto 0), -- Bottom 25 of instruction
                 o_Out   => s_JumpAddressPreAdd(27 downto 0) -- To ripple carry
             );
 
@@ -222,7 +187,7 @@ architecture mixed of fetch_logic is
 
         -- ------ START BRANCH LOGIC CONTROL ------ --
 
-        s_Bottom16Instruct <= s_InstructionOut(15 downto 0);
+        s_Bottom16Instruct <= i_Instruction(15 downto 0);
 
         -- Extender to make it 32 bits
         g_bitExtender: bit16_extender
