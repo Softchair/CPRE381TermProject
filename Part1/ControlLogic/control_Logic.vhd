@@ -4,7 +4,6 @@
 -- Iowa State University
 -------------------------------------------------------------------------
 
-
 -- control_Logic.vhd
 -------------------------------------------------------------------------
 -- DESCRIPTION: This file contains an implementation of a test bench for 
