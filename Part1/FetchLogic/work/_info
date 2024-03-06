@@ -90,6 +90,7 @@ R10
 R8
 n@_opt2
 R9
+R4
 Eadder1b
 Z11 w1709331014
 Z12 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
@@ -255,22 +256,22 @@ R40
 R21
 R22
 Efetch_logic
-Z41 w1709710093
+Z41 w1709764694
 R12
 R13
-!i122 199
+!i122 201
 R4
 Z42 8/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
 Z43 F/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
 l0
-Z44 L21 1
-VS`h9NZm`^>Q<R0@30IO193
-!s100 8VN`<h=HfO0XE=FYne83@2
+Z44 L22 1
+VH[k@zVFz]=2O4nJ5<2SYZ2
+!s100 @:[NG1=fdfN?MHMi<S<Fc0
 R16
 32
-Z45 !s110 1709710097
+Z45 !s110 1709764699
 !i10b 1
-Z46 !s108 1709710097.000000
+Z46 !s108 1709764699.000000
 Z47 !s90 -reportprogress|300|-work|work|/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd|
 Z48 !s107 /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd|
 !i113 0
@@ -279,12 +280,12 @@ R22
 Amixed
 R12
 R13
-DEx4 work 11 fetch_logic 0 22 S`h9NZm`^>Q<R0@30IO193
-!i122 199
-l148
-L39 256
-VYK=M@JVO=`B@C;I>n_8db2
-!s100 b]Tc77o<ajV:P?BzXW<aS1
+DEx4 work 11 fetch_logic 0 22 H[k@zVFz]=2O4nJ5<2SYZ2
+!i122 201
+l130
+L41 220
+Vn`>>z;A?TBkZAI@g;kZ6D1
+!s100 I3AIX6IRAca^FzWFm^F9c2
 R16
 32
 R45
@@ -429,7 +430,7 @@ R4
 Z67 8/home/cfergen/cpre381/CPRE381TermProject/Part1/LogicGates/mux2t1N.vhd
 Z68 F/home/cfergen/cpre381/CPRE381TermProject/Part1/LogicGates/mux2t1N.vhd
 l0
-R44
+L21 1
 VYEcL5R1VJ;i=Ee@_7:EAV3
 !s100 kl>AfKa>FIBOXY3UAQ@1?1
 R16
@@ -635,7 +636,7 @@ R4
 Z93 8/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2N.vhd
 Z94 F/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2N.vhd
 l0
-L22 1
+R44
 V@<W@?J=E>zU7d@JANXn[h1
 !s100 =<4anbO9iI`ToY5jCcDW<3
 R16

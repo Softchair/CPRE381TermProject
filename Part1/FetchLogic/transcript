@@ -69,3 +69,36 @@ run
 #    Time: 35 ns  Iteration: 3  Instance: /tb_fetch_logic/DUT/mem_mem
 run
 run
+quit -sim
+# End time: 16:38:02 on Mar 06,2024, Elapsed time: 0:16:14
+# Errors: 0, Warnings: 3
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:38:06 on Mar 06,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fetch_Logic
+# -- Compiling architecture mixed of fetch_logic
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(166): Cannot read output "i_Instruction".
+# 	VHDL 2008 allows reading outputs.
+# 	This facility is enabled by compiling with -2008.
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(190): Cannot read output "i_Instruction".
+# 	VHDL 2008 allows reading outputs.
+# 	This facility is enabled by compiling with -2008.
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(260): VHDL Compiler exiting
+# End time: 16:38:06 on Mar 06,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:38:19 on Mar 06,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fetch_Logic
+# -- Compiling architecture mixed of fetch_logic
+# End time: 16:38:19 on Mar 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
