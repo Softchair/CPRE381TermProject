@@ -100,6 +100,55 @@ BEGIN
         s_JReg <= x"00000080"; -- Set JReg to a specific value
         WAIT FOR cCLK_PER;
 
+        -- Reset the fetch_Logic
+        s_RST <= '1';
+        s_JReg <= (OTHERS => '0'); -- Initialize JReg to 0
+        s_BranchLogic <= '0';
+        s_JumpLogic <= '0';
+        s_JRegLogic <= '0';
+        s_JalLogic <= '0';
+        WAIT FOR cCLK_PER;
+
+        -- Normal operation test
+        s_RST <= '0';
+        WAIT FOR cCLK_PER*2;
+
+        -- Simulate addi $a0, $0, 1
+        s_Instruction <= x"20040001";
+        WAIT FOR cCLK_PER*2;
+
+        -- Simulate j next (jump to addr 0x0008)
+        s_JumpLogic <= '1';
+        WAIT FOR cCLK_PER*2;
+
+        -- Simulate j skip1 (jump to addr 0x0010)
+        s_JumpLogic <= '1';
+        WAIT FOR cCLK_PER*2;
+
+        -- Simulate add $a0, $a0, $a0
+        s_Instruction <= x"00842020";
+        WAIT FOR cCLK_PER*2;
+
+        -- Simulate j skip2 (jump to addr 0x001C)
+        s_JumpLogic <= '1';
+        WAIT FOR cCLK_PER*2;
+
+        -- Simulate add $a0, $a0, $a0
+        s_Instruction <= x"00842020";
+        WAIT FOR cCLK_PER*2;
+
+        -- Simulate j skip3 (jump to addr 0x002C)
+        s_JumpLogic <= '1';
+        WAIT FOR cCLK_PER*2;
+
+        -- Simulate add $a0, $a0, $a0
+        s_Instruction <= x"00842020";
+        WAIT FOR cCLK_PER*2;
+
+        -- Simulate j loop (jump to addr 0x0020)
+        s_JumpLogic <= '1';
+        WAIT FOR cCLK_PER*2;
+
         WAIT;
     END PROCESS;
 

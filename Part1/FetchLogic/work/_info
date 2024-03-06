@@ -5,6 +5,8 @@ Z0 !s12c _opt2
 Z1 !s99 nomlopt
 R0
 R1
+R0
+R1
 Z2 !s12c _opt
 R1
 R2
@@ -81,10 +83,10 @@ n@_opt1
 R9
 R4
 T_opt2
-!s110 1709765027
-V_Q>?Zk47fQ<SLWA2_n4SH3
+!s110 1709765177
+V>bh3Xm9zHAZdhzj:U^27?1
 R5
-=1-7486e22834bc-65e8f1a2-dfe3d-8079
+=1-7486e22834bc-65e8f239-982bd-8208
 R1
 R6
 R7
@@ -671,10 +673,10 @@ R96
 R21
 R22
 Etb_fetch_logic
-Z97 w1709765009
+Z97 w1709765170
 R12
 R13
-!i122 202
+!i122 203
 R4
 Z98 8/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
 Z99 F/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
@@ -684,9 +686,9 @@ Vk@V3OZheN53J3^GV]dfSX3
 !s100 fgD9@HUI@Ac_d4h=?ZhFS3
 R16
 32
-Z100 !s110 1709765018
+Z100 !s110 1709765175
 !i10b 1
-Z101 !s108 1709765018.000000
+Z101 !s108 1709765175.000000
 Z102 !s90 -reportprogress|300|-work|work|/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd|
 Z103 !s107 /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd|
 !i113 0
@@ -696,11 +698,11 @@ Abehavior
 R12
 R13
 DEx4 work 14 tb_fetch_logic 0 22 k@V3OZheN53J3^GV]dfSX3
-!i122 202
+!i122 203
 l42
-L16 92
-Vj[Y4;_<<JO7`aPA5R=><S3
-!s100 B;ogj_J>IH[T^d3BJKfUQ2
+L16 141
+V[lVRAoLPdSjIa84n;7CHo3
+!s100 @kECma;;cQT@gJIl28FhB2
 R16
 32
 R100
