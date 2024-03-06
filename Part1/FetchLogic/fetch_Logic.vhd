@@ -12,6 +12,7 @@
 --
 -- NOTES:
 -- Created file - 3/1/24
+-- Finished file - 3/6/24
 -------------------------------------------------------------------------
 
 library IEEE;
@@ -48,6 +49,21 @@ architecture mixed of fetch_logic is
         );
     end component;
 
+    -- Mem
+    component mem is
+        generic (
+            DATA_WIDTH : NATURAL := 32;
+            ADDR_WIDTH : NATURAL := 9
+        );
+        port (
+            clk         : IN STD_LOGIC; -- Clock
+            addr        : IN STD_LOGIC_VECTOR((ADDR_WIDTH-1) downto 0); -- Address
+            data        : IN STD_LOGIC_VECTOR((DATA_WIDTH-1) downto 0); -- Data input
+            we          : IN STD_LOGIC; -- Write enable
+            q           : OUT STD_LOGIC_VECTOR((DATA_WIDTH-1) downto 0) -- Instruction
+        );
+    end component;
+
     -- Adder
     component rippleCarryAdderN is
         generic (N : integer := 32);
@@ -61,10 +77,13 @@ architecture mixed of fetch_logic is
     end component;
 
     component shiftLeft2N is
-        generic (N : integer := 32);
+        generic (
+            NIn     : integer := 30;
+            NOut    : integer := 32
+        );
         port(
-            i_In        : IN STD_LOGIC_VECTOR(N-1 downto 0);
-            o_Out       : OUT STD_LOGIC_VECTOR(N-1 downto 0)
+            i_In        : IN STD_LOGIC_VECTOR(NIn-1 downto 0);
+            o_Out       : OUT STD_LOGIC_VECTOR(NOut-1 downto 0)
         );
     end component;
 
@@ -101,6 +120,8 @@ architecture mixed of fetch_logic is
     signal s_PCNextTop4         : STD_LOGIC_VECTOR(31 downto 0);
     -- Jump address without top 4 bits
     signal s_JumpAddressPreAdd  : STD_LOGIC_VECTOR(27 downto 0);
+    -- 32 bit of above
+    signal s_JumpAddressPreAdd32  : STD_LOGIC_VECTOR(31 downto 0);
     -- Calculated jump address
     signal s_JumpAddress        : STD_LOGIC_VECTOR(31 downto 0);
 
@@ -142,37 +163,55 @@ architecture mixed of fetch_logic is
             generic map(N => 32)
             port map(
                 i_A     => s_PCAddressOut,
-                i_B     => x"0004",
+                i_B     => x"00000004",
                 i_Cin   => '0', -- No input
                 o_Cout  => open, -- Output to nothing
                 o_S     => s_PCNext -- Next PC
             );
 
         -- Instruction memory
-        -- INSERT HERE
+        mem_mem: mem
+            generic map(
+                DATA_WIDTH => 32,
+                ADDR_WIDTH => 9
+            )
+            port map(
+                clk     => i_CLK,
+                addr    => s_PCAddressOut(8 downto 0), -- Temp as vhdl cant support all
+                data    => (others => '0'), -- Input nothing
+                we      => '0', -- Always write
+                q       => s_InstructionOut
+            );
 
-
+        o_Instruction <= s_InstructionOut; -- Set the instruction out to cur instruction
 
         -- -------- START JUMP LOGIC CONTROL -------- --
 
         -- Shift left 2 for jump address
         -- In 26 bits, out 28 bits
         g_jShiftLeft: shiftLeft2N
-            generic map(N => 26)
+            generic map(
+                NIn     => 26,
+                NOut    => 28
+            )
             port map(
                 -- Take only 26 bits
                 i_In    => s_InstructionOut(25 downto 0), -- Bottom 25 of instruction
-                o_Out   => s_JumpAddressPreAdd -- To ripple carry
+                o_Out   => s_JumpAddressPreAdd(27 downto 0) -- To ripple carry
             );
 
         -- Grabbing only the top 4
         s_PCNextTop4 <= s_PCNext(31 downto 28) & "0000000000000000000000000000";
 
+        -- To fill to 32
+        s_JumpAddressPreAdd32 <= "0000" & s_JumpAddressPreAdd;
+
         -- Adder to add top 4 bits of PC to get full jump address
         g_jAdd: rippleCarryAdderN
             generic map(N => 32)
             port map(
-                i_A     => s_JumpAddressPreAdd, -- Jump address before adding top 4
+                -- Add zeros to top
+                i_A     => s_JumpAddressPreAdd32, -- Jump address before adding top 4
                 i_B     => s_PCNextTop4, -- Take top 4 bits
                 i_Cin   => '0', -- No input
                 o_Cout  => open, -- Output to nothing
@@ -195,7 +234,10 @@ architecture mixed of fetch_logic is
 
         -- Shift left address by 2
         g_bShiftLeft: shiftLeft2N
-            generic map(N => 29)
+            generic map(
+                NIn     => 30,
+                NOut    => 32
+            )
             port map(
                 i_In    => s_BitExtendOut(29 downto 0), -- Little hack to not have to remake the shiftLeft2
                 o_Out   => s_BranchShiftLeft
