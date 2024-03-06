@@ -13,6 +13,7 @@
 -- NOTES:
 -- Created file - 3/1/24
 -- Finished file - 3/6/24
+-- Removed memory to be moved outside of fetch - 3/6/24
 -------------------------------------------------------------------------
 
 library IEEE;
