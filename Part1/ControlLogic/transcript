@@ -12,49 +12,121 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-vlib work
-vcom -reportprogress 300 -work work /home/kosice/cpre381/Project1/control_Logic.vhd
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/ControlLogic/tb_control_Logic.vhd
 # QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
-# Start time: 18:14:19 on Feb 28,2024
-# vcom -reportprogress 300 -work work /home/kosice/cpre381/Project1/control_Logic.vhd 
+# Start time: 17:39:43 on Mar 06,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/ControlLogic/tb_control_Logic.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Loading package std_logic_textio
-# -- Loading package ENV
-# ** Warning: /home/kosice/cpre381/Project1/control_Logic.vhd(21): (vcom-1516) Package "STD.ENV" does not exist in this language version.
-# -- Compiling entity control_Logic
-# -- Compiling architecture behavioral of control_Logic
-# ** Error: /home/kosice/cpre381/Project1/control_Logic.vhd(48): near ",": syntax error
-# End time: 18:14:19 on Feb 28,2024, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 1
-vcom -reportprogress 300 -work work /home/kosice/cpre381/Project1/control_Logic.vhd
+# -- Compiling entity tb_control_Logic
+# -- Compiling architecture behavior of tb_control_Logic
+# End time: 17:39:43 on Mar 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_control_logic
+# vsim work.tb_control_logic 
+# Start time: 17:39:44 on Mar 06,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading std.env(body)
+# Loading work.tb_control_logic(behavior)#1
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Error: sllv correct dfunc failed
+#    Time: 1320 ns  Iteration: 0  Instance: /tb_control_logic
+run
+# ** Note: Testbench of control logic completely successfully!
+#    Time: 1440 ns  Iteration: 0  Instance: /tb_control_logic
+run
+add wave -position insertpoint  \
+sim:/tb_control_logic/s_signalsOut
+add wave -position insertpoint  \
+sim:/tb_control_logic/s_Dfunc
+add wave -position insertpoint  \
+sim:/tb_control_logic/s_opcode
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+run
+run
+# ** Error: sllv correct dfunc failed
+#    Time: 1320 ns  Iteration: 0  Instance: /tb_control_logic
+# ** Note: Testbench of control logic completely successfully!
+#    Time: 1440 ns  Iteration: 0  Instance: /tb_control_logic
+quit -sim
+# End time: 17:42:23 on Mar 06,2024, Elapsed time: 0:02:39
+# Errors: 1, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/ControlLogic/tb_control_Logic.vhd
 # QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
-# Start time: 18:14:20 on Feb 28,2024
-# vcom -reportprogress 300 -work work /home/kosice/cpre381/Project1/control_Logic.vhd 
+# Start time: 17:42:25 on Mar 06,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/ControlLogic/tb_control_Logic.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Loading package std_logic_textio
-# -- Loading package ENV
-# ** Warning: /home/kosice/cpre381/Project1/control_Logic.vhd(21): (vcom-1516) Package "STD.ENV" does not exist in this language version.
-# -- Compiling entity control_Logic
-# -- Compiling architecture behavioral of control_Logic
-# ** Error: /home/kosice/cpre381/Project1/control_Logic.vhd(48): near ",": syntax error
-# End time: 18:14:20 on Feb 28,2024, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 1
-vcom -reportprogress 300 -work work /home/kosice/cpre381/Project1/control_Logic.vhd
+# -- Compiling entity tb_control_Logic
+# -- Compiling architecture behavior of tb_control_Logic
+# End time: 17:42:25 on Mar 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_control_logic
+# vsim work.tb_control_logic 
+# Start time: 17:42:26 on Mar 06,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading std.env(body)
+# Loading work.tb_control_logic(behavior)#1
+add wave -position insertpoint  \
+sim:/tb_control_logic/s_opcode \
+sim:/tb_control_logic/s_Dfunc \
+sim:/tb_control_logic/s_signalsOut
+run
+run
+# ** Note: Testbench of control logic completely successfully!
+#    Time: 1440 ns  Iteration: 0  Instance: /tb_control_logic
+quit -sim
+# End time: 17:43:10 on Mar 06,2024, Elapsed time: 0:00:44
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/ControlLogic/tb_control_Logic.vhd
 # QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
-# Start time: 18:14:32 on Feb 28,2024
-# vcom -reportprogress 300 -work work /home/kosice/cpre381/Project1/control_Logic.vhd 
+# Start time: 17:43:12 on Mar 06,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/ControlLogic/tb_control_Logic.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Loading package std_logic_textio
-# -- Loading package ENV
-# ** Warning: /home/kosice/cpre381/Project1/control_Logic.vhd(21): (vcom-1516) Package "STD.ENV" does not exist in this language version.
-# -- Compiling entity control_Logic
-# -- Compiling architecture behavioral of control_Logic
-# ** Error: /home/kosice/cpre381/Project1/control_Logic.vhd(48): near ",": syntax error
-# End time: 18:14:32 on Feb 28,2024, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 1
+# -- Compiling entity tb_control_Logic
+# -- Compiling architecture behavior of tb_control_Logic
+# End time: 17:43:12 on Mar 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_control_logic
+# vsim work.tb_control_logic 
+# Start time: 17:43:13 on Mar 06,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading std.env(body)
+# Loading work.tb_control_logic(behavior)#1
+run
+run
+# ** Note: Testbench of control logic completely successfully!
+#    Time: 1440 ns  Iteration: 0  Instance: /tb_control_logic
+# End time: 17:43:26 on Mar 06,2024, Elapsed time: 0:00:13
+# Errors: 0, Warnings: 0

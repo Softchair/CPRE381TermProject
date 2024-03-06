@@ -32,6 +32,8 @@ end control_Logic;
 
 architecture flow of control_Logic is
 
+      -- Dont care is a 0, dont forget!!
+
       begin  
  	o_signals <= "100011000000000110" when i_DOpcode = "001000" else                          --                    | addi
                    "000010000000000110" when i_DOpcode = "000000" and i_DFunc = "010100" else   --                    | add
