@@ -142,7 +142,7 @@ architecture mixed of fetch_logic is
             generic map(N => 32)
             port map(
                 i_A     => s_PCAddressOut,
-                i_B     => x"0004",
+                i_B     => x"00000004",
                 i_Cin   => '0', -- No input
                 o_Cout  => open, -- Output to nothing
                 o_S     => s_PCNext -- Next PC

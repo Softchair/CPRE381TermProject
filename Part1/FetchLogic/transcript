@@ -430,3 +430,103 @@ vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Par
 # -- Compiling architecture mixed of fetch_logic
 # End time: 19:24:25 on Mar 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 19:28:48 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# End time: 19:28:48 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_fetch_logic -voptargs=+acc
+# vsim work.tb_fetch_logic -voptargs="+acc" 
+# Start time: 19:29:01 on Mar 01,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Warning: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(145): (vopt-1549) At instance g_NextPC the actual expression and the port 'i_B' of component 'work.fetch_Logic(mixed).rippleCarryAdderN' have different sizes:  ([16,32]).
+#         Region: /tb_fetch_Logic/DUT/g_NextPC
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(145): (vopt-1549) At instance g_NextPC the actual expression and the port 'i_B' of entity 'work.rippleCarryAdderN' have different sizes:  ([16,32]).
+#         Region: /tb_fetch_Logic/DUT/g_NextPC
+# ** Warning: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(165): (vopt-1549) At instance g_jShiftLeft the actual expression and the port 'o_Out' of component 'work.fetch_Logic(mixed).shiftLeft2N' have different sizes:  ([28,26]).
+#         Region: /tb_fetch_Logic/DUT/g_jShiftLeft
+# ** Warning: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(175): (vopt-1549) At instance g_jAdd the actual expression and the port 'i_A' of component 'work.fetch_Logic(mixed).rippleCarryAdderN' have different sizes:  ([28,32]).
+#         Region: /tb_fetch_Logic/DUT/g_jAdd
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(175): (vopt-1549) At instance g_jAdd the actual expression and the port 'i_A' of entity 'work.rippleCarryAdderN' have different sizes:  ([28,32]).
+#         Region: /tb_fetch_Logic/DUT/g_jAdd
+# ** Warning: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(200): (vopt-1549) At instance g_bShiftLeft the actual expression and the port 'i_In' of component 'work.fetch_Logic(mixed).shiftLeft2N' have different sizes:  ([30,29]).
+#         Region: /tb_fetch_Logic/DUT/g_bShiftLeft
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(200): (vopt-1549) At instance g_bShiftLeft the actual expression and the port 'i_In' of entity 'work.shiftleft2N' have different sizes:  ([30,29]).
+#         Region: /tb_fetch_Logic/DUT/g_bShiftLeft
+# ** Warning: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(201): (vopt-1549) At instance g_bShiftLeft the actual expression and the port 'o_Out' of component 'work.fetch_Logic(mixed).shiftLeft2N' have different sizes:  ([32,29]).
+#         Region: /tb_fetch_Logic/DUT/g_bShiftLeft
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(201): (vopt-1549) At instance g_bShiftLeft the actual expression and the port 'o_Out' of entity 'work.shiftleft2N' have different sizes:  ([32,31]).
+#         Region: /tb_fetch_Logic/DUT/g_bShiftLeft
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=4, Warnings=6.
+# Error loading design
+# End time: 19:29:02 on Mar 01,2024, Elapsed time: 0:00:01
+# Errors: 4, Warnings: 6
+vsim work.fetch_logic
+# vsim work.fetch_logic 
+# Start time: 19:29:12 on Mar 01,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(145): (vopt-1549) At instance g_NextPC the actual expression and the port 'i_B' of component 'work.fetch_Logic(mixed).rippleCarryAdderN' have different sizes:  ([16,32]).
+#         Region: /fetch_Logic/g_NextPC
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(145): (vopt-1549) At instance g_NextPC the actual expression and the port 'i_B' of entity 'work.rippleCarryAdderN' have different sizes:  ([16,32]).
+#         Region: /fetch_Logic/g_NextPC
+# ** Warning: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(165): (vopt-1549) At instance g_jShiftLeft the actual expression and the port 'o_Out' of component 'work.fetch_Logic(mixed).shiftLeft2N' have different sizes:  ([28,26]).
+#         Region: /fetch_Logic/g_jShiftLeft
+# ** Warning: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(175): (vopt-1549) At instance g_jAdd the actual expression and the port 'i_A' of component 'work.fetch_Logic(mixed).rippleCarryAdderN' have different sizes:  ([28,32]).
+#         Region: /fetch_Logic/g_jAdd
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(175): (vopt-1549) At instance g_jAdd the actual expression and the port 'i_A' of entity 'work.rippleCarryAdderN' have different sizes:  ([28,32]).
+#         Region: /fetch_Logic/g_jAdd
+# ** Warning: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(200): (vopt-1549) At instance g_bShiftLeft the actual expression and the port 'i_In' of component 'work.fetch_Logic(mixed).shiftLeft2N' have different sizes:  ([30,29]).
+#         Region: /fetch_Logic/g_bShiftLeft
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(200): (vopt-1549) At instance g_bShiftLeft the actual expression and the port 'i_In' of entity 'work.shiftleft2N' have different sizes:  ([30,29]).
+#         Region: /fetch_Logic/g_bShiftLeft
+# ** Warning: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(201): (vopt-1549) At instance g_bShiftLeft the actual expression and the port 'o_Out' of component 'work.fetch_Logic(mixed).shiftLeft2N' have different sizes:  ([32,29]).
+#         Region: /fetch_Logic/g_bShiftLeft
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(201): (vopt-1549) At instance g_bShiftLeft the actual expression and the port 'o_Out' of entity 'work.shiftleft2N' have different sizes:  ([32,31]).
+#         Region: /fetch_Logic/g_bShiftLeft
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=4, Warnings=5.
+# Error loading design
+# End time: 19:29:12 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 5
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 19:29:58 on Mar 01,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fetch_Logic
+# -- Compiling architecture mixed of fetch_logic
+# End time: 19:29:58 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.fetch_logic
+# vsim work.fetch_logic 
+# Start time: 19:29:59 on Mar 01,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(165): (vopt-1549) At instance g_jShiftLeft the actual expression and the port 'o_Out' of component 'work.fetch_Logic(mixed).shiftLeft2N' have different sizes:  ([28,26]).
+#         Region: /fetch_Logic/g_jShiftLeft
+# ** Warning: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(175): (vopt-1549) At instance g_jAdd the actual expression and the port 'i_A' of component 'work.fetch_Logic(mixed).rippleCarryAdderN' have different sizes:  ([28,32]).
+#         Region: /fetch_Logic/g_jAdd
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(175): (vopt-1549) At instance g_jAdd the actual expression and the port 'i_A' of entity 'work.rippleCarryAdderN' have different sizes:  ([28,32]).
+#         Region: /fetch_Logic/g_jAdd
+# ** Warning: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(200): (vopt-1549) At instance g_bShiftLeft the actual expression and the port 'i_In' of component 'work.fetch_Logic(mixed).shiftLeft2N' have different sizes:  ([30,29]).
+#         Region: /fetch_Logic/g_bShiftLeft
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(200): (vopt-1549) At instance g_bShiftLeft the actual expression and the port 'i_In' of entity 'work.shiftleft2N' have different sizes:  ([30,29]).
+#         Region: /fetch_Logic/g_bShiftLeft
+# ** Warning: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(201): (vopt-1549) At instance g_bShiftLeft the actual expression and the port 'o_Out' of component 'work.fetch_Logic(mixed).shiftLeft2N' have different sizes:  ([32,29]).
+#         Region: /fetch_Logic/g_bShiftLeft
+# ** Error (suppressible): /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd(201): (vopt-1549) At instance g_bShiftLeft the actual expression and the port 'o_Out' of entity 'work.shiftleft2N' have different sizes:  ([32,31]).
+#         Region: /fetch_Logic/g_bShiftLeft
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=3, Warnings=4.
+# Error loading design
+# End time: 19:29:59 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 4
