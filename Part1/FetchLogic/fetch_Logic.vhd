@@ -48,6 +48,21 @@ architecture mixed of fetch_logic is
         );
     end component;
 
+    -- Mem
+    component mem is
+        generic (
+        DATA_WIDTH : NATURAL := 32;
+        ADDR_WIDTH : NATURAL := 32
+        );
+        port (
+            clk         : IN STD_LOGIC; -- Clock
+            addr        : IN STD_LOGIC_VECTOR((ADDR_WIDTH-1) downto 0); -- Address
+            data        : IN STD_LOGIC_VECTOR((DATA_WIDTH-1) downto 0); -- Data input
+            we          : IN STD_LOGIC; -- Write enable
+            q           : OUT STD_LOGIC_VECTOR((DATA_WIDTH-1) downto 0) -- Instruction
+        );
+    end component;
+
     -- Adder
     component rippleCarryAdderN is
         generic (N : integer := 32);
@@ -149,9 +164,20 @@ architecture mixed of fetch_logic is
             );
 
         -- Instruction memory
-        -- INSERT HERE
+        mem_mem: mem
+            generic map(
+                DATA_WIDTH => 32,
+                ADDR_WIDTH => 32
+            )
+            port map(
+                clk     => i_CLK,
+                addr    => s_PCAddressOut,
+                data    => (others => '0'), -- Input nothing
+                we      => '0', -- Always write
+                q       => s_InstructionOut
+            );
 
-
+        o_Instruction <= s_InstructionOut; -- Set the instruction out to cur instruction
 
         -- -------- START JUMP LOGIC CONTROL -------- --
 
