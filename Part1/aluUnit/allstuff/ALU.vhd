@@ -117,6 +117,18 @@ component lui
 
 end component;
 
+-----------------------------------------
+-- SLT/SLTI
+-----------------------------------------
+
+
+component slt
+ port ( 
+         i_Din : in std_logic_vector(31 downto 0);
+         o_OUT : out std_logic_vector(31 downto 0));
+
+      
+end component;
 
 
 -----------------------------------------
@@ -177,7 +189,7 @@ signal s_OrDataOut : std_logic_vector(31 downto 0); -- signal data output from O
 signal s_XorDataOut : std_logic_vector(31 downto 0); -- signal data output from XOR gate to 16t1 mux
 signal s_NorDataOut : std_logic_vector(31 downto 0); -- signal data output from Nor gate to 16t1 mux
 signal s_LuiDataOut : std_logic_vector(31 downto 0); -- signal data output from LUI to 16t1 mux
-
+signal s_sltDataOut : std_logic_vector(31 downto 0); -- signal for output of SLT/SLTI to 16t1 mux
 
 
 begin
@@ -242,8 +254,14 @@ g_NOR32 : norG_N
 
 
 
+-- level 2:(slt/slti gates)
+g_slt : slt
+   port MAP(i_Din => s_AddSubDataOut,
+            o_OUT => s_sltDataOut);
 
--- level 2: (16t1 mux and overflow mux)
+
+
+-- level 3: (16t1 mux and overflow mux)
 
 g_16t1Mux : mux16_1
    port MAP(D0 => s_AddSubDataOut,
@@ -252,7 +270,7 @@ g_16t1Mux : mux16_1
            D3 => s_NorDataOut, 
            D4 => s_XorDataOut, 
            D5 => s_OrDataOut, 
-           D6 => x"00000000", 
+           D6 => s_sltDataOut, 
            D7 => x"00000000", 
            D8 => x"00000000", 
            D9 => x"00000000", 

@@ -318,6 +318,55 @@ wait for gCLK_HPER*2;
 -- 00000000
 -- 47a60000
 
+-----------------------------------------------
+-- SLT
+-----------------------------------------------
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+
+
+-- values to slt
+    s_A <= x"00000000"; -- rs
+    s_B <= x"00000000"; -- rt
+    s_imme <= "0000000000001010";
+              
+    --signals
+    s_ALUSrc  <= '0'; --  (0) A+B, (1) A+imme
+    s_SEL     <= '1'; -- sel (add(0)-sub(1))
+    s_ALUOpSel  <= "0110"; -- ALUOpSel signal
+    s_sOverFlow <= '0'; -- overflow mux logic
+    s_zeroSignSEL <= '0'; -- select 0/1 infront of immediate
+
+
+wait for gCLK_HPER*2;
+    s_A <= x"000F0000"; -- rs
+    s_B <= x"0F00041A"; -- rt
+    s_imme <= "1111111111111111";
+
+wait for gCLK_HPER*2;
+    s_A <= x"FF0F0000"; -- rs
+    s_B <= x"0F00041A"; -- rt
+    s_imme <= "0000100100100110";
+
+wait for gCLK_HPER*2;
+    s_A <= x"0FF0F000"; -- rs
+    s_B <= x"0F00041A"; -- rt
+    s_imme <= "0000000000000000";
+
+wait for gCLK_HPER*2;
+    s_A <= x"0F00041A"; -- rs
+    s_B <= x"0F00041A"; -- rt
+    s_imme <= "0100011110100110";
+
+
+-- expecting
+-- 00000000
+-- 00000001
+-- 00000001
+-- 00000000
+-- 00000000
+
 wait;
 
   end process;
