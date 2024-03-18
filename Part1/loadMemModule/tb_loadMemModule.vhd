@@ -109,7 +109,59 @@ DUT0: loadMemModule
   wait for gCLK_HPER*2;
   wait for gCLK_HPER*2;
 
+    s_memData <= x"12345678"; -- rs
+    s_addrData <= "01"; -- rt
+    
+    -- Expected outputs:
+    -- LB : x00000056
+    -- LBU : x00000056
+    -- LH : x00005678
+    -- LHU : x00005678
 
+
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+
+    s_memData <= x"12345678"; -- rs
+    s_addrData <= "10"; -- rt
+    
+    -- Expected outputs:
+    -- LB : x00000034
+    -- LBU : x00000034
+    -- LH : x00001234
+    -- LHU : x00001234
+
+
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+
+
+    s_memData <= x"12345678"; -- rs
+    s_addrData <= "11"; -- rt
+    
+    -- Expected outputs:
+    -- LB : x00000012
+    -- LBU : x00000012
+    -- LH : x00001234
+    -- LHU : x00001234
+
+
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+
+
+   s_memData <= x"F2345678"; -- rs
+    s_addrData <= "11"; -- rt
+    
+    -- Expected outputs:
+    -- LB : xFFFFFFF2
+    -- LBU : x000000F2
+    -- LH : xFFFFF234
+    -- LHU : x0000F234
+
+
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
 
 
 wait;

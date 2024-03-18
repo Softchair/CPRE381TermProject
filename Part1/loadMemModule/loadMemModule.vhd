@@ -92,7 +92,7 @@ g_16b2t1mux01 : mux16b2t1
    port MAP(D0 => i_memData(15 downto 0),
             D1 => i_memData(31 downto 16),
             o_OUT => s_16bmuxtoext,
-            SEL => i_addrData(0));
+            SEL => i_addrData(1)); -- error is coming from here
 
 
 -- level 1: ( all bit extenders)
