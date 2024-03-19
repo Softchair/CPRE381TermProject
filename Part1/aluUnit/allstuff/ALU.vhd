@@ -35,8 +35,8 @@ port(
      i_ALUOpSel : in std_logic_vector(3 downto 0); -- s_ALUOPSel
      o_DataOut : out std_logic_vector(31 downto 0); -- dataOut
      i_sOverFlow : in std_logic; -- overflow signal
-     o_overFlow : out std_logic -- overflow output
-     
+     o_overFlow : out std_logic; -- overflow output
+     o_zero : out std_logic -- zero output that goes to branch logic
      
 );
 
@@ -169,9 +169,27 @@ port(
 
 end component;
 
+-----------------------------------------
+-- Zero output gates
+-----------------------------------------
+
+component orG32b
+
+port(
+       D0, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, D14, D15, D16,
+   D17, D18, D19, D20, D21, D22, D23, D24, D25, D26, D27, D28, D29, D30, D31 : in std_logic;
+   o_Out : out std_logic);
+
+end component;
 
 
+component invg
 
+port(
+       i_A          : in std_logic;
+       o_F          : out std_logic);
+
+end component;
 --signals
 
 
@@ -190,7 +208,7 @@ signal s_XorDataOut : std_logic_vector(31 downto 0); -- signal data output from 
 signal s_NorDataOut : std_logic_vector(31 downto 0); -- signal data output from Nor gate to 16t1 mux
 signal s_LuiDataOut : std_logic_vector(31 downto 0); -- signal data output from LUI to 16t1 mux
 signal s_sltDataOut : std_logic_vector(31 downto 0); -- signal for output of SLT/SLTI to 16t1 mux
-
+signal s_orGateZeroOut : std_logic; --signal from or gate to inverter for zero logic
 
 begin
 
@@ -261,7 +279,7 @@ g_slt : slt
 
 
 
--- level 3: (16t1 mux and overflow mux)
+-- level 3: (16t1 mux and overflow mux and Zero output)
 
 g_16t1Mux : mux16_1
    port MAP(D0 => s_AddSubDataOut,
@@ -290,6 +308,47 @@ g_ovrFlowMux : mux2t1Flow
            m_OUT    => o_overFLow);
 
 
+g_orG32b01 : orG32b
+  port MAP(
+    D0 => s_AddSubDataOut(0),
+    D1 => s_AddSubDataOut(1), 
+    D2 => s_AddSubDataOut(2), 
+    D3 => s_AddSubDataOut(3), 
+    D4 => s_AddSubDataOut(4), 
+    D5 => s_AddSubDataOut(5), 
+    D6 => s_AddSubDataOut(6), 
+    D7 => s_AddSubDataOut(7), 
+    D8 => s_AddSubDataOut(8), 
+    D9 => s_AddSubDataOut(9), 
+    D10 => s_AddSubDataOut(10), 
+    D11 => s_AddSubDataOut(11), 
+    D12 => s_AddSubDataOut(12), 
+    D13 => s_AddSubDataOut(13), 
+    D14 => s_AddSubDataOut(14), 
+    D15 => s_AddSubDataOut(15), 
+    D16 => s_AddSubDataOut(16),
+    D17 => s_AddSubDataOut(17), 
+    D18 => s_AddSubDataOut(18),
+          D19 => s_AddSubDataOut(19),
+           D20 => s_AddSubDataOut(20),
+           D21 => s_AddSubDataOut(21), 
+           D22 => s_AddSubDataOut(22),
+           D23 => s_AddSubDataOut(23),
+           D24 => s_AddSubDataOut(24),
+           D25 => s_AddSubDataOut(25),
+           D26 => s_AddSubDataOut(26),
+           D27 => s_AddSubDataOut(27),
+           D28 => s_AddSubDataOut(28), 
+           D29 => s_AddSubDataOut(29),
+           D30 => s_AddSubDataOut(30),
+           D31 => s_AddSubDataOut(31),
+           o_Out        => s_orGateZeroOut);
+
+
+g_invgG01 : invg 
+  port MAP(
+         i_A   => s_orGateZeroOut,
+         o_F   => o_Zero);
 
 end structure;
 

@@ -42,7 +42,8 @@ port(
      i_ALUOpSel : in std_logic_vector(3 downto 0); -- s_ALUOPSel
      o_DataOut : out std_logic_vector(31 downto 0); -- dataOut
      i_sOverFlow : in std_logic; -- overflow signal
-     o_overFlow : out std_logic -- overflow output
+     o_overFlow : out std_logic; -- overflow output
+     o_zero : out std_logic -- zero output
      
      
      
@@ -65,7 +66,7 @@ signal s_ALUOpSel : std_logic_vector(3 downto 0); -- ALUOpSel signal
 signal s_DataOut            : std_logic_vector(31 downto 0); -- ALU data output
 signal s_sOverFlow : std_logic; -- overflow mux logic
 signal s_overFlow : std_logic; -- overflow output
-
+signal s_zero : std_logic; -- zero output
 
 
 
@@ -84,7 +85,8 @@ DUT0: ALU
             i_ALUOpSel   => s_ALUOpSel,
             o_DataOut  => s_DataOut,
             i_sOverFlow => s_sOverFlow,
-            o_overFLow => s_overFlow);
+            o_overFLow => s_overFlow,
+            o_zero     => s_zero);
 
   
     
@@ -366,6 +368,56 @@ wait for gCLK_HPER*2;
 -- 00000001
 -- 00000000
 -- 00000000
+
+
+-----------------------------------------------
+-- ZERO logic testing for BNE/BEQ
+-----------------------------------------------
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+
+
+-- values to slt
+    s_A <= x"00000000"; -- rs
+    s_B <= x"00000000"; -- rt
+    s_imme <= "0000000000001010";
+              
+    --signals
+    s_ALUSrc  <= '0'; --  (0) A+B, (1) A+imme
+    s_SEL     <= '1'; -- sel (add(0)-sub(1))
+    s_ALUOpSel  <= "0000"; -- ALUOpSel signal
+    s_sOverFlow <= '0'; -- overflow mux logic
+    s_zeroSignSEL <= '0'; -- select 0/1 infront of immediate
+
+
+wait for gCLK_HPER*2;
+    s_A <= x"000F0000"; -- rs
+    s_B <= x"0F00041A"; -- rt
+    s_imme <= "1111111111111111";
+
+wait for gCLK_HPER*2;
+    s_A <= x"FF0F0000"; -- rs
+    s_B <= x"0F00041A"; -- rt
+    s_imme <= "0000100100100110";
+
+wait for gCLK_HPER*2;
+    s_A <= x"0FF0F000"; -- rs
+    s_B <= x"0FF0F000"; -- rt
+    s_imme <= "0000000000000000";
+
+wait for gCLK_HPER*2;
+    s_A <= x"F00F0310"; -- rs
+    s_B <= x"F00F0310"; -- rt
+    s_imme <= "0100011110100110";
+
+
+-- expecting
+-- 1
+-- 0
+-- 0
+-- 1
+-- 1
 
 wait;
 
