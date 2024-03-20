@@ -26,7 +26,6 @@ ARCHITECTURE behavior OF tb_fetch_Logic IS
             i_BranchLogic : IN STD_LOGIC;
             i_JumpLogic : IN STD_LOGIC;
             i_JRegLogic : IN STD_LOGIC;
-            i_JalLogic : IN STD_LOGIC;
             i_Instruction : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
             o_PCAddress : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
         );
@@ -35,7 +34,7 @@ ARCHITECTURE behavior OF tb_fetch_Logic IS
     -- Signals to connect to the fetch_Logic component
     SIGNAL s_CLK, s_RST : STD_LOGIC;
     SIGNAL s_JReg : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    SIGNAL s_BranchLogic, s_JumpLogic, s_JRegLogic, s_JalLogic : STD_LOGIC;
+    SIGNAL s_BranchLogic, s_JumpLogic, s_JRegLogic : STD_LOGIC;
     SIGNAL s_Instruction : STD_LOGIC_VECTOR(31 DOWNTO 0);
     SIGNAL s_PCAddress : STD_LOGIC_VECTOR(31 DOWNTO 0);
 
@@ -49,7 +48,6 @@ BEGIN
         i_BranchLogic => s_BranchLogic,
         i_JumpLogic => s_JumpLogic,
         i_JRegLogic => s_JRegLogic,
-        i_JalLogic => s_JalLogic,
         i_Instruction => s_Instruction,
         o_PCAddress => s_PCAddress
     );
@@ -72,33 +70,36 @@ BEGIN
         s_BranchLogic <= '0';
         s_JumpLogic <= '0';
         s_JRegLogic <= '0';
-        s_JalLogic <= '0';
-        WAIT FOR cCLK_PER;
-
-        -- Normal operation test
-        s_RST <= '0';
         WAIT FOR cCLK_PER*2;
 
-        -- Branch logic activated test
-        s_BranchLogic <= '1';
-        WAIT FOR cCLK_PER*2;
+        -- Testing PC + 4
+        assert (s_PCAddress=x"00000044") report "Basic PC + 4 failed" severity error;
 
-        -- Jump logic activated test
+        -- Basic jump logic test
         s_JumpLogic <= '1';
-        WAIT FOR cCLK_PER*2;
+        s_Instruction <= "00000000110000000000000000000000";
+        WAIT FOR cCLK_PER;
+        assert (s_PCAddress=x"03000000") report "Basic jump test failed" severity error;
+
+        -- Reset
+        s_Instruction <= (OTHERS => '0');
+        s_JumpLogic <= '0';
 
         -- Jump register logic activated test
         s_JRegLogic <= '1';
+        s_JReg <= x"00000088";
         WAIT FOR cCLK_PER*2;
+        assert (s_PCAddress=x"00000088") report "Basic jump register test failed" severity error;
 
-        -- Jal logic activated test
-        s_JalLogic <= '1';
+        -- Reset
+        s_JReg <= (OTHERS => '0');
+        s_JRegLogic <= '0';
+
+        -- Branch logic activated test
+        s_BranchLogic <= '1';
+        s_Instruction <= "00000000000000000000000000001100";
         WAIT FOR cCLK_PER*2;
-
-        -- Reset and change JReg value test
-        s_RST <= '1';
-        s_JReg <= x"00000080"; -- Set JReg to a specific value
-        WAIT FOR cCLK_PER;
+        assert (s_PCAddress="00000000000000000000000001110100") report "Basic jump register test failed" severity error;
 
         -- Reset the fetch_Logic
         s_RST <= '1';
@@ -106,48 +107,50 @@ BEGIN
         s_BranchLogic <= '0';
         s_JumpLogic <= '0';
         s_JRegLogic <= '0';
-        s_JalLogic <= '0';
         WAIT FOR cCLK_PER;
 
-        -- Normal operation test
-        s_RST <= '0';
-        WAIT FOR cCLK_PER*2;
+        -- -- Normal operation test
+        -- s_RST <= '0';
+        -- WAIT FOR cCLK_PER*2;
 
-        -- Simulate addi $a0, $0, 1
-        s_Instruction <= x"20040001";
-        WAIT FOR cCLK_PER*2;
+        -- -- Simulate addi $a0, $0, 1
+        -- s_Instruction <= x"20040001";
+        -- WAIT FOR cCLK_PER*2;
 
-        -- Simulate j next (jump to addr 0x0008)
-        s_JumpLogic <= '1';
-        WAIT FOR cCLK_PER*2;
+        -- -- Simulate j next (jump to addr 0x0008)
+        -- s_JumpLogic <= '1';
+        -- WAIT FOR cCLK_PER*2;
 
-        -- Simulate j skip1 (jump to addr 0x0010)
-        s_JumpLogic <= '1';
-        WAIT FOR cCLK_PER*2;
+        -- -- Simulate j skip1 (jump to addr 0x0010)
+        -- s_JumpLogic <= '1';
+        -- WAIT FOR cCLK_PER*2;
 
-        -- Simulate add $a0, $a0, $a0
-        s_Instruction <= x"00842020";
-        WAIT FOR cCLK_PER*2;
+        -- -- Simulate add $a0, $a0, $a0
+        -- s_Instruction <= x"00842020";
+        -- WAIT FOR cCLK_PER*2;
 
-        -- Simulate j skip2 (jump to addr 0x001C)
-        s_JumpLogic <= '1';
-        WAIT FOR cCLK_PER*2;
+        -- -- Simulate j skip2 (jump to addr 0x001C)
+        -- s_JumpLogic <= '1';
+        -- WAIT FOR cCLK_PER*2;
 
-        -- Simulate add $a0, $a0, $a0
-        s_Instruction <= x"00842020";
-        WAIT FOR cCLK_PER*2;
+        -- -- Simulate add $a0, $a0, $a0
+        -- s_Instruction <= x"00842020";
+        -- WAIT FOR cCLK_PER*2;
 
-        -- Simulate j skip3 (jump to addr 0x002C)
-        s_JumpLogic <= '1';
-        WAIT FOR cCLK_PER*2;
+        -- -- Simulate j skip3 (jump to addr 0x002C)
+        -- s_JumpLogic <= '1';
+        -- WAIT FOR cCLK_PER*2;
 
-        -- Simulate add $a0, $a0, $a0
-        s_Instruction <= x"00842020";
-        WAIT FOR cCLK_PER*2;
+        -- -- Simulate add $a0, $a0, $a0
+        -- s_Instruction <= x"00842020";
+        -- WAIT FOR cCLK_PER*2;
 
-        -- Simulate j loop (jump to addr 0x0020)
-        s_JumpLogic <= '1';
-        WAIT FOR cCLK_PER*2;
+        -- -- Simulate j loop (jump to addr 0x0020)
+        -- s_JumpLogic <= '1';
+        -- WAIT FOR cCLK_PER*2;
+
+        report "Testbench of fetch logic completely successfully!" severity note;
+
 
         WAIT;
     END PROCESS;

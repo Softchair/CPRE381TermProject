@@ -68,3 +68,5 @@ run
 # ** Note: Testbench of control logic completely successfully!
 #    Time: 1440 ns  Iteration: 0  Instance: /tb_control_logic
 run
+# End time: 16:47:14 on Mar 20,2024, Elapsed time: 0:22:09
+# Errors: 0, Warnings: 0
