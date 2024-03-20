@@ -1225,3 +1225,5 @@ run
 # ** Note: Testbench of fetch logic completely successfully!
 #    Time: 160 ns  Iteration: 0  Instance: /tb_fetch_logic
 run
+# End time: 17:54:48 on Mar 20,2024, Elapsed time: 0:26:43
+# Errors: 0, Warnings: 0
