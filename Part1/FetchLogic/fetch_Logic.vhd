@@ -30,7 +30,6 @@ entity fetch_Logic is
         i_BranchLogic   : IN STD_LOGIC; -- Branch logic control, 1 if branch
         i_JumpLogic     : IN STD_LOGIC; -- Jump logic control, 1 if jump
         i_JRegLogic     : IN STD_LOGIC; -- Jump register logic control, 1 if jump reg
-        i_JalLogic      : IN STD_LOGIC; -- Jump and link logic control, 0 if jump and link CHECK THIS
         -- Instruction input
         i_Instruction   : IN STD_LOGIC_VECTOR(31 downto 0); -- Instruction output
         -- Ouput
