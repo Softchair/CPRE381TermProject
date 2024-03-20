@@ -95,8 +95,6 @@ BEGIN
     wait for cClk_per*2;
     assert (s_signalsOut="100010000000000010") report "addu basic failed" severity error;
 
-    -- AI
-
     -- Testing and - correct dfunc
     s_opcode <= "000000";
     s_dfunc <= "011000";

@@ -12,3 +12,121 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
+vlog -work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/work -refresh -force_refresh
+# QuestaSim-64 vlog 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:18:01 on Mar 20,2024
+# vlog -reportprogress 300 -work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/work -refresh -force_refresh 
+# -- Skipping entity adder1b
+# -- Skipping entity andg2
+# -- Skipping entity bit16_extender
+# -- Skipping entity dffg
+# -- Skipping entity fetch_logic
+# -- Skipping entity invg
+# -- Skipping entity mem
+# -- Skipping entity mux2t1
+# -- Skipping entity mux2t1n
+# -- Skipping entity nbitregister
+# -- Skipping entity org2
+# -- Skipping entity pcreg
+# -- Skipping entity ripplecarryaddern
+# -- Skipping entity shiftleft2n
+# -- Skipping entity tb_fetch_logic
+# -- Skipping entity tb_pcreg
+# -- Skipping entity tb_shiftleft2n
+# -- Skipping entity xorg2
+# End time: 16:18:02 on Mar 20,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/work -refresh -force_refresh
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:18:02 on Mar 20,2024
+# vcom -reportprogress 300 -work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/work -refresh -force_refresh 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Adder1b
+# -- Compiling architecture structural of Adder1b
+# -- Compiling entity andg2
+# -- Compiling architecture dataflow of andg2
+# -- Compiling entity bit16_extender
+# -- Compiling architecture flow of bit16_extender
+# -- Compiling entity dffg
+# -- Compiling architecture mixed of dffg
+# -- Compiling entity fetch_Logic
+# -- Compiling architecture mixed of fetch_logic
+# -- Compiling entity invg
+# -- Compiling architecture dataflow of invg
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mem
+# -- Compiling architecture rtl of mem
+# -- Compiling entity mux2t1
+# -- Compiling architecture structure of mux2t1
+# -- Compiling entity mux2t1N
+# -- Compiling architecture structural of mux2t1N
+# -- Compiling entity nbitregister
+# -- Compiling architecture structural of nbitregister
+# -- Compiling entity org2
+# -- Compiling architecture dataflow of org2
+# -- Compiling entity PCReg
+# -- Compiling architecture structural of PCReg
+# -- Compiling entity rippleCarryAdderN
+# -- Compiling architecture structural of rippleCarryAdderN
+# -- Compiling entity shiftleft2N
+# -- Compiling architecture Behavioral of shiftleft2N
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# -- Compiling entity tb_PCReg
+# -- Compiling architecture behavior of tb_PCReg
+# -- Compiling entity tb_shiftleft2N
+# -- Compiling architecture behavior of tb_shiftleft2N
+# -- Compiling entity xorg2
+# -- Compiling architecture dataflow of xorg2
+# End time: 16:18:02 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_fetch_logic -voptargs=+acc
+# vsim work.tb_fetch_logic -voptargs="+acc" 
+# Start time: 16:18:19 on Mar 20,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_fetch_logic(behavior)#1
+# Loading work.fetch_logic(mixed)#1
+# Loading work.pcreg(structural)#1
+# Loading work.mux2t1n(structural)#1
+# Loading work.mux2t1(structure)#1
+# Loading work.invg(dataflow)#1
+# Loading work.andg2(dataflow)#1
+# Loading work.org2(dataflow)#1
+# Loading work.nbitregister(structural)#1
+# Loading work.dffg(mixed)#1
+# Loading work.ripplecarryaddern(structural)#1
+# Loading work.adder1b(structural)#1
+# Loading work.xorg2(dataflow)#1
+# Loading ieee.numeric_std(body)
+# Loading work.shiftleft2n(behavioral)#1
+# Loading work.bit16_extender(flow)#1
+# Loading work.shiftleft2n(behavioral)#2
+add wave -position insertpoint  \
+sim:/tb_fetch_logic/s_CLK \
+sim:/tb_fetch_logic/s_RST \
+sim:/tb_fetch_logic/s_JReg \
+sim:/tb_fetch_logic/s_BranchLogic \
+sim:/tb_fetch_logic/s_JumpLogic \
+sim:/tb_fetch_logic/s_JRegLogic \
+sim:/tb_fetch_logic/s_JalLogic \
+sim:/tb_fetch_logic/s_Instruction \
+sim:/tb_fetch_logic/s_PCAddress
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# End time: 16:18:57 on Mar 20,2024, Elapsed time: 0:00:38
+# Errors: 0, Warnings: 0
