@@ -70,6 +70,45 @@ architecture structure of MIPS_Processor is
   -- TODO: You may add any additional signals or components your implementation 
   --       requires below this comment
 
+-----------------------------------------------
+--SIGNALS
+-----------------------------------------------
+
+-------------------
+--Fetch related signals
+------------------
+signal s_branchUnit : std_logic -- branch unit logic output to mux of fetch
+
+
+-------------------
+--control logic
+-------------------
+signal s_controlOut : std_logic_vector(21 downto 0); -- control output signals
+
+-------------------
+--signals from iMEM
+-------------------
+
+signal s_opcode : std_logic_vector(5 downto 0); -- Opcode signal
+signal s_rs : std_logic_vector(4 downto 0); -- rs signal
+signal s_rt : std_logic_vector(4 downto 0); -- rt signal
+signal s_rd : std_logic_vector(4 downto 0); -- rd signal
+signal s_jump : std_logic_vector(25 downto 0); -- rd signal
+signal s_imme : std_logic_vector(15 downto 0); -- immediate signal
+signal s_func : std_logic_vector(5 downto 0); -- func signal
+-------------------
+--signals between register and ALU
+-------------------
+signal s_rsOut: std_logic_vector(31 downto 0); -- rs out of reg
+signal s_rtOut: std_logic_vector(31 downto 0); -- rt out of reg
+signal s_extender : std_logic_vector(31 downto 0); -- extended value going into mux
+signal s_regSelMuxOut : std_logic_vector(4 downto 0); -- mux out
+
+-----------------------
+--Large components
+-----------------------
+
+
   component control_Logic is -- control unit 
     port ( 
       i_DOpcode : in std_logic_vector(5 downto 0);
@@ -108,6 +147,42 @@ architecture structure of MIPS_Processor is
 
      end component;
 
+
+
+
+component fetch_logic is 
+port (
+  i_CLK           : IN STD_LOGIC; -- Clock
+  i_RST           : IN STD_LOGIC; -- Reset
+  -- Register inputs
+  i_JReg          : IN STD_LOGIC_VECTOR(31 downto 0); -- Jump register input
+  -- Control logic inputs
+  i_BranchLogic   : IN STD_LOGIC; -- Branch logic control, 1 if branch
+  i_JumpLogic     : IN STD_LOGIC; -- Jump logic control, 1 if jump
+  i_JRegLogic     : IN STD_LOGIC; -- Jump register logic control, 1 if jump reg
+  i_JalLogic      : IN STD_LOGIC; -- Jump and link logic control, 0 if jump and link CHECK THIS
+  -- Instruction input
+  i_Instruction   : IN STD_LOGIC_VECTOR(31 downto 0); -- Instruction output
+  -- Ouput
+  o_PCAddress     : OUT STD_LOGIC_VECTOR(31 downto 0) -- PC Address for JAL box
+);
+  end component
+
+
+
+
+
+
+
+
+
+
+------------------------
+-- bit extender
+------------------------
+
+
+
   component bit_extenders is
     port ( 
       i_Din : in std_logic_vector(15 downto 0);
@@ -116,8 +191,81 @@ architecture structure of MIPS_Processor is
       end component;
 
 
+  component 
+
+-----------------------
+--mux's
+-----------------------
+
+   component mux2t1_5b is -- 5 bit wide 2t1 mux
+   port(i_S          : in std_logic;
+   i_D0         : in std_logic_vector(N-1 downto 0);
+   i_D1         : in std_logic_vector(N-1 downto 0);
+   o_O          : out std_logic_vector(N-1 downto 0));
+     end component;
+
+
+     component mux2t1_N is -- 32 bit wide 2t1 mux
+   port(i_S          : in std_logic;
+   i_D0         : in std_logic_vector(N-1 downto 0);
+   i_D1         : in std_logic_vector(N-1 downto 0);
+   o_O          : out std_logic_vector(N-1 downto 0));
+     end component;
   
-  
+
+     component mux32b3t1 is -- 32 bit 3t1 mux
+     port ( D0, D1, D2, D3, D4, D5, D6, D7: in std_logic_vector(31 downto 0);
+     o_OUT : out std_logic_vector(31 downto 0);
+     SEL : in std_logic_vector(2 downto 0));
+     end component;
+
+
+---------------------
+--load mem module
+--------------------
+
+
+component loadMemModule is 
+port(
+     i_memData    : in std_logic_vector(31 downto 0); -- data from memory address from dmem 
+     i_addrData   : in std_logic_vector(1 downto 0); -- last 2 bit of the memory address
+     o_LB    : out std_logic_vector(31 downto 0);
+     o_LBU    : out std_logic_vector(31 downto 0);
+     o_LH    : out std_logic_vector(31 downto 0);
+     o_LHU    : out std_logic_vector(31 downto 0)
+        
+);
+
+  end component;
+
+----------------------
+--branching "unit"
+----------------------
+
+component andg2 is 
+
+port(i_A          : in std_logic;
+i_B          : in std_logic;
+o_F          : out std_logic);
+
+  end component;
+
+
+component invg is 
+port(i_A          : in std_logic;
+o_F          : out std_logic);
+
+  end component;
+
+component org2 is 
+
+port(i_A          : in std_logic;
+i_B          : in std_logic;
+o_F          : out std_logic);
+
+  end component;
+
+
 
 begin
 
@@ -145,8 +293,74 @@ begin
              we   => s_DMemWr,
              q    => s_DMemOut);
 
+
   -- TODO: Ensure that s_Halt is connected to an output control signal produced from decoding the Halt instruction (Opcode: 01 0100)
   -- TODO: Ensure that s_Ovfl is connected to the overflow output of your ALU
+
+-----------------------
+--Fetch logic
+-----------------------
+
+fetchUnit : fetch_logic
+port map(
+  i_CLK  => iCLK,       
+  i_RST  => iRST,        
+  -- Register inputs
+  i_JReg =>  s_rsOut,
+  -- Control logic inputs
+  i_BranchLogic => s_branchUnit,
+  i_JumpLogic   => s_     : IN STD_LOGIC; -- Jump logic control, 1 if jump
+  i_JRegLogic     : IN STD_LOGIC; -- Jump register logic control, 1 if jump reg
+  i_JalLogic      : IN STD_LOGIC; -- Jump and link logic control, 0 if jump and link CHECK THIS
+  -- Instruction input
+  i_Instruction   : IN STD_LOGIC_VECTOR(31 downto 0); -- Instruction output
+  -- Ouput
+  o_PCAddress     : OUT STD_LOGIC_VECTOR(31 downto 0) -- PC Address for JAL box
+
+
+)
+
+
+------------------
+--
+------------------
+
+
+muxWrAddr : mux2t1_N
+
+port map(
+             i_S  => s_controlOut(17 downto 17), 
+             i_D0 => s_rd, 
+             i_D1 => s_rt,   
+             o_O  => s_RegWrAddr);
+
+
+
+
+ Register: MIPSregister 
+
+ port map(i_CLK => iCLK,
+          i_enable  => s_RegWr,
+          i_rd      => s_RegWrAddr, 
+          i_rs      => s_rs, 
+          i_rt      => s_rt, 
+          i_rdindata => s_RegWrData,
+          i_reset    => iRST, 
+          o_rsOUT    => s_rsOut,
+          o_rtOUT    => s_rtOut);
+
+
+  controlUnit : control_logic 
+
+  port map(i_DOpcode   => s_opcode,
+           i_DFunc     => s_func,
+           o_signals =>  s_controlOut);
+
+
+  
+  
+
+
 
   -- TODO: Implement the rest of your processor below this comment! 
 
