@@ -426,20 +426,23 @@ ALUmod : ALU
       o_overFlow    => s_Ovfl);
 
 
-s_DMemAddr <= s_aluDataOut ;
-oALUOut <= s_aluDataOut  ;
+s_DMemAddr      <= s_aluDataOut ;
+oALUOut         <= s_aluDataOut  ;
 s_DMemData       <= s_rtOut  ;
-s_DMemWr <= s_controlOut(18);
+s_DMemWr        <= s_controlOut(18);
 s_rd            <= s_Inst(15 downto 11);
 s_rt            <= s_Inst(20 downto 16);
 s_rs            <= s_Inst(25 downto 21);
+s_Halt          <= s_controlOut(0);
+s_regWr         <= s_controlOut(17);
+
 
 muxmemToReg : mux2t1_N
 
 port map(
              i_S  => s_controlOut(19), 
-             i_D0 => s_rtOut, 
-             i_D1 => s_aluDataOut,   
+             i_D0 => s_aluDataOut, 
+             i_D1 => s_DMemOut,   
              o_O  => s_memRegMuxOut);
 
  loadMemModuleMod : loadMemModule
