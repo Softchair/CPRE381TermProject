@@ -104,6 +104,25 @@ signal s_rtOut: std_logic_vector(31 downto 0); -- rt out of reg
 signal s_extender : std_logic_vector(31 downto 0); -- extended value going into mux
 signal s_regSelMuxOut : std_logic_vector(4 downto 0); -- mux out
 
+-------------------
+--signals from data
+-------------------
+
+signal s_databeforeMux: std_logic_vector(31 downto 0); -- signal from load byte mux
+
+-------------------
+--signals after ALU
+-------------------
+signal s_aluDataOut : std_logic_vector(31 downto 0); -- signal for data output of ALU
+signal s_memRegMuxOut : std_logic_vector(31 downto 0); -- signal for data output of memtoregmux
+signal s_lb :  std_logic_vector(31 downto 0); -- lb signal from load module
+signal s_lbu :  std_logic_vector(31 downto 0); -- lbu signal from load module
+signal s_lh :  std_logic_vector(31 downto 0); -- lh signal from load module
+signal s_lhu :  std_logic_vector(31 downto 0); -- lhu signal from load module
+signal s_zero : std_logic; -- for branching 
+signal s_afterBEAnd : std_logic; -- signal going into branch OR
+signal s_afterBNEINV : std_logic; -- signal after inv for BNE
+signal s_afterBNEAnd : std_logic; -- signal going into OR for branch
 -----------------------
 --Large components
 -----------------------
@@ -143,6 +162,7 @@ signal s_regSelMuxOut : std_logic_vector(4 downto 0); -- mux out
      o_DataOut : out std_logic_vector(31 downto 0); -- dataOut
      i_sOverFlow : in std_logic; -- overflow signal
      o_overFlow : out std_logic -- overflow output
+     o_zero : out std_logic -- zero output that goes to branch logic
      );
 
      end component;
@@ -160,7 +180,7 @@ port (
   i_BranchLogic   : IN STD_LOGIC; -- Branch logic control, 1 if branch
   i_JumpLogic     : IN STD_LOGIC; -- Jump logic control, 1 if jump
   i_JRegLogic     : IN STD_LOGIC; -- Jump register logic control, 1 if jump reg
-  i_JalLogic      : IN STD_LOGIC; -- Jump and link logic control, 0 if jump and link CHECK THIS
+  
   -- Instruction input
   i_Instruction   : IN STD_LOGIC_VECTOR(31 downto 0); -- Instruction output
   -- Ouput
@@ -309,20 +329,42 @@ port map(
   i_JReg =>  s_rsOut,
   -- Control logic inputs
   i_BranchLogic => s_branchUnit,
-  i_JumpLogic   => s_     : IN STD_LOGIC; -- Jump logic control, 1 if jump
-  i_JRegLogic     : IN STD_LOGIC; -- Jump register logic control, 1 if jump reg
-  i_JalLogic      : IN STD_LOGIC; -- Jump and link logic control, 0 if jump and link CHECK THIS
+  i_JumpLogic   => s_controlOut(14 downto 14),
+  i_JRegLogic   => s_controlOut(12 downto 12),   
+ 
   -- Instruction input
-  i_Instruction   : IN STD_LOGIC_VECTOR(31 downto 0); -- Instruction output
+  i_Instruction => s_Inst, : IN STD_LOGIC_VECTOR(31 downto 0); -- Instruction output
   -- Ouput
-  o_PCAddress     : OUT STD_LOGIC_VECTOR(31 downto 0) -- PC Address for JAL box
+  o_PCAddress   => s_NextInstAddr):
 
 
-)
+  BranchEqualAnd : andg2
+  port map(
+    i_A     =>  s_controlOut(15 downto 15),
+    i_B     =>  s_zero,
+    o_F     => s_afterBEAnd);
 
+    BranchNotEqualAnd : andg2
+    port map(
+      i_A     =>  s_controlOut(14 downto 14),
+      i_B     =>  s_afterBNEINV,
+      o_F     => s_afterBNEAnd);
+
+
+   BranchInv : invg 
+   port map(
+    i_A  => s_zero,     
+    o_F  =>  s_afterBNEINV);
+   
+
+    BranchOr : org2
+    port map(
+      i_A    => s_afterBEAnd,
+      i_B    => s_afterBNEAnd,
+      o_F    => s_branchUnit);
 
 ------------------
---
+--between imem and reg
 ------------------
 
 
@@ -334,6 +376,13 @@ port map(
              i_D1 => s_rt,   
              o_O  => s_RegWrAddr);
 
+muxjal : mux2t1_N
+
+port map(
+             i_S  => s_controlOut(13 downto 13), 
+             i_D0 => s_databeforeMux, 
+             i_D1 => s_NextInstAddr,   
+             o_O  => s_RegWrData);
 
 
 
@@ -341,9 +390,9 @@ port map(
 
  port map(i_CLK => iCLK,
           i_enable  => s_RegWr,
-          i_rd      => s_RegWrAddr, 
-          i_rs      => s_rs, 
-          i_rt      => s_rt, 
+          i_rd      => s_Inst(15 downto 11), 
+          i_rs      => s_Inst(25 downto 21), 
+          i_rt      => s_Inst(20 downto 16), 
           i_rdindata => s_RegWrData,
           i_reset    => iRST, 
           o_rsOUT    => s_rsOut,
@@ -352,13 +401,77 @@ port map(
 
   controlUnit : control_logic 
 
-  port map(i_DOpcode   => s_opcode,
-           i_DFunc     => s_func,
+  port map(i_DOpcode   => s_Inst(31 downto 26),
+           i_DFunc     => s_Inst(5 downto 0),
            o_signals =>  s_controlOut);
 
 
   
+------------------
+--between reg and ALU
+------------------
+
+ALU : ALU
+ 
+ port map(
+      i_A => s_rs,  
+      i_B => s_rt,   
+      i_imme => s_Inst(15 downto 0),
+      i_zeroSignSEL => s_controlOut(5 downto 5),  
+      i_SEL         => s_controlOut(20 downto 20),
+      ALUSrc        => s_controlOut(21 downto 21),
+      i_ALUOpSel    => s_controlOut(10 downto 7), 
+      o_DataOut     => s_aluDataOut,
+      i_sOverFlow   => s_controlOut(6 downto 6),
+      o_overFlow    => s_Ovfl);
+
+
+      s_aluDataOut  => s_RegWrAddr;
+      s_aluDataOut  => oALUOut;
+      s_rt          => s_RegWrData;
+      s_controlOut(18 downto 18) => s_DMemWr;
+
+
+
+muxmemToReg : mux2t1_N
+
+port map(
+             i_S  => s_controlOut(19 downto 19), 
+             i_D0 => s_rd, 
+             i_D1 => s_aluDataOut,   
+             o_O  => s_memRegMuxOut);
+
+
+
+ loadMemModule : loadMemModule
+ 
+ port map(
+     i_memData   =>  s_memRegMuxOut,
+     i_addrData  =>  s_aluDataOut(1 downto 0),
+     o_LB        => s_lb, 
+     o_LBU       => s_lbu,
+     o_LH        => s_lh,
+     o_LHU       => s_lhu);
+ 
+
+  muxFinalData : mux32b3t1
+
+  port map(
+    D0 => s_memRegMuxOut, 
+    D1 => s_lb, 
+    D2 => s_lbu, 
+    D3 => s_lh, 
+    D4 => s_lhu, 
+    D5 => s_memRegMuxOut, --not used
+    D6 => s_memRegMuxOut, --not used
+    D7 => s_memRegMuxOut, -- not used
+    o_OUT => s_databeforeMux,
+    SEL => s_controlOut(3 downto 1));
+
   
+
+ 
+
 
 
 
