@@ -7,7 +7,7 @@
 
 -- norG32b.vhd
 -------------------------------------------------------------------------
--- DESCRIPTION: This file contains an implementation of a 32 bit wide AND gate
+-- DESCRIPTION: This file contains an implementation of a 32 bit wide OR gate
 --
 -- NOTES:
 -- 3/19/24
