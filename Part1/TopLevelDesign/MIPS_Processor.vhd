@@ -426,10 +426,10 @@ ALUmod : ALU
       o_overFlow    => s_Ovfl);
 
 
-      s_aluDataOut  => s_DMemAddr;
-      s_aluDataOut  => oALUOut;
-      s_rtOut         => s_DMemData;
-      s_controlOut(18) => s_DMemWr;
+      s_aluDataOut  <= s_DMemAddr;
+      s_aluDataOut  <= oALUOut;
+      s_rtOut         <= s_DMemData;
+      s_controlOut(18) <= s_DMemWr;
 
 
 
