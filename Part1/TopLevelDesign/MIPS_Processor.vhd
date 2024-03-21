@@ -132,7 +132,7 @@ signal s_afterBNEAnd : std_logic; -- signal going into OR for branch
     port ( 
       i_DOpcode : in std_logic_vector(5 downto 0);
       i_DFunc : in std_logic_vector(5 downto 0);
-      o_signals : out std_logic_vector(17 downto 0));
+      o_signals : out std_logic_vector(21 downto 0));
       end component;
 
   component MIPSregister is 
@@ -186,7 +186,7 @@ port (
   -- Ouput
   o_PCAddress     : OUT STD_LOGIC_VECTOR(31 downto 0) -- PC Address for JAL box
 );
-  end component
+  end component;
 
 
 
@@ -211,7 +211,7 @@ port (
       end component;
 
 
-  component 
+ 
 
 -----------------------
 --mux's
@@ -329,24 +329,24 @@ port map(
   i_JReg =>  s_rsOut,
   -- Control logic inputs
   i_BranchLogic => s_branchUnit,
-  i_JumpLogic   => s_controlOut(14 downto 14),
-  i_JRegLogic   => s_controlOut(12 downto 12),   
+  i_JumpLogic   => s_controlOut(14),
+  i_JRegLogic   => s_controlOut(12),   
  
   -- Instruction input
-  i_Instruction => s_Inst, : IN STD_LOGIC_VECTOR(31 downto 0); -- Instruction output
+  i_Instruction => s_Inst,-- Instruction output
   -- Ouput
-  o_PCAddress   => s_NextInstAddr):
+  o_PCAddress   => s_NextInstAddr);
 
 
   BranchEqualAnd : andg2
   port map(
-    i_A     =>  s_controlOut(15 downto 15),
+    i_A     =>  s_controlOut(15),
     i_B     =>  s_zero,
     o_F     => s_afterBEAnd);
 
     BranchNotEqualAnd : andg2
     port map(
-      i_A     =>  s_controlOut(14 downto 14),
+      i_A     =>  s_controlOut(14),
       i_B     =>  s_afterBNEINV,
       o_F     => s_afterBNEAnd);
 
@@ -371,7 +371,7 @@ port map(
 muxWrAddr : mux2t1_N
 
 port map(
-             i_S  => s_controlOut(17 downto 17), 
+             i_S  => s_controlOut(17), 
              i_D0 => s_rd, 
              i_D1 => s_rt,   
              o_O  => s_RegWrAddr);
@@ -379,14 +379,14 @@ port map(
 muxjal : mux2t1_N
 
 port map(
-             i_S  => s_controlOut(13 downto 13), 
+             i_S  => s_controlOut(13), 
              i_D0 => s_databeforeMux, 
              i_D1 => s_NextInstAddr,   
              o_O  => s_RegWrData);
 
 
 
- Register: MIPSregister 
+ RegisterMod : MIPSregister 
 
  port map(i_CLK => iCLK,
           i_enable  => s_RegWr,
@@ -411,39 +411,37 @@ port map(
 --between reg and ALU
 ------------------
 
-ALU : ALU
+ALUmod : ALU
  
  port map(
-      i_A => s_rs,  
-      i_B => s_rt,   
+      i_A => s_rsOut,  
+      i_B => s_rtOut,   
       i_imme => s_Inst(15 downto 0),
-      i_zeroSignSEL => s_controlOut(5 downto 5),  
-      i_SEL         => s_controlOut(20 downto 20),
-      ALUSrc        => s_controlOut(21 downto 21),
+      i_zeroSignSEL => s_controlOut(5),  
+      i_SEL         => s_controlOut(20),
+      ALUSrc        => s_controlOut(21),
       i_ALUOpSel    => s_controlOut(10 downto 7), 
       o_DataOut     => s_aluDataOut,
-      i_sOverFlow   => s_controlOut(6 downto 6),
+      i_sOverFlow   => s_controlOut(6),
       o_overFlow    => s_Ovfl);
 
 
-      s_aluDataOut  => s_RegWrAddr;
+      s_aluDataOut  => s_DMemAddr;
       s_aluDataOut  => oALUOut;
-      s_rt          => s_RegWrData;
-      s_controlOut(18 downto 18) => s_DMemWr;
+      s_rtOut         => s_DMemData;
+      s_controlOut(18) => s_DMemWr;
 
 
 
 muxmemToReg : mux2t1_N
 
 port map(
-             i_S  => s_controlOut(19 downto 19), 
+             i_S  => s_controlOut(19), 
              i_D0 => s_rd, 
              i_D1 => s_aluDataOut,   
              o_O  => s_memRegMuxOut);
 
-
-
- loadMemModule : loadMemModule
+ loadMemModuleMod : loadMemModule
  
  port map(
      i_memData   =>  s_memRegMuxOut,
