@@ -219,9 +219,9 @@ port (
 
    component mux2t1_5b is -- 5 bit wide 2t1 mux
    port(i_S          : in std_logic;
-   i_D0         : in std_logic_vector(N-1 downto 0);
-   i_D1         : in std_logic_vector(N-1 downto 0);
-   o_O          : out std_logic_vector(N-1 downto 0));
+   i_D0         : in std_logic_vector(4 downto 0);
+   i_D1         : in std_logic_vector(4 downto 0);
+   o_O          : out std_logic_vector(4 downto 0));
      end component;
 
 
@@ -368,12 +368,12 @@ port map(
 ------------------
 
 
-muxWrAddr : mux2t1_N
+muxWrAddr : mux2t1_5b
 
 port map(
              i_S  => s_controlOut(17), 
-             i_D0 => s_rd, 
-             i_D1 => s_rt,   
+             i_D0 => s_Inst(15 downto 11), 
+             i_D1 => s_Inst(20 downto 16),   
              o_O  => s_RegWrAddr);
 
 muxjal : mux2t1_N
@@ -426,18 +426,19 @@ ALUmod : ALU
       o_overFlow    => s_Ovfl);
 
 
-      s_aluDataOut  <= s_DMemAddr;
-      s_aluDataOut  <= oALUOut;
-      s_rtOut         <= s_DMemData;
-      s_controlOut(18) <= s_DMemWr;
-
-
+s_DMemAddr <= s_aluDataOut ;
+oALUOut <= s_aluDataOut  ;
+s_DMemData       <= s_rtOut  ;
+s_DMemWr <= s_controlOut(18);
+s_rd            <= s_Inst(15 downto 11);
+s_rt            <= s_Inst(20 downto 16);
+s_rs            <= s_Inst(25 downto 21);
 
 muxmemToReg : mux2t1_N
 
 port map(
              i_S  => s_controlOut(19), 
-             i_D0 => s_rd, 
+             i_D0 => s_rtOut, 
              i_D1 => s_aluDataOut,   
              o_O  => s_memRegMuxOut);
 
