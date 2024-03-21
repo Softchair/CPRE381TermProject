@@ -77,7 +77,7 @@ architecture structure of MIPS_Processor is
 -------------------
 --Fetch related signals
 ------------------
-signal s_branchUnit : std_logic -- branch unit logic output to mux of fetch
+signal s_branchUnit : std_logic; -- branch unit logic output to mux of fetch
 
 
 -------------------
@@ -161,7 +161,7 @@ signal s_afterBNEAnd : std_logic; -- signal going into OR for branch
      i_ALUOpSel : in std_logic_vector(3 downto 0); -- s_ALUOPSel
      o_DataOut : out std_logic_vector(31 downto 0); -- dataOut
      i_sOverFlow : in std_logic; -- overflow signal
-     o_overFlow : out std_logic -- overflow output
+     o_overFlow : out std_logic; -- overflow output
      o_zero : out std_logic -- zero output that goes to branch logic
      );
 
