@@ -1,0 +1,42 @@
+QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+Start time: 19:45:07 on Mar 20,2024
+vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd internal/testpy/tb.vhd proj/src/MIPS_types.vhd proj/src/TopLevel/mem.vhd proj/src/TopLevel/MIPS_Processor.vhd proj/src/TopLevel/LogicGates/mux2t1.vhd proj/src/TopLevel/LogicGates/mux2t1N.vhd proj/src/TopLevel/aluUnit/allstuff/mux2t1_N.vhd proj/src/TopLevel/aluUnit/allstuff/mux16_1.vhd proj/src/TopLevel/aluUnit/allstuff/bit_extenders24b.vhd proj/src/TopLevel/aluUnit/allstuff/invg.vhd proj/src/TopLevel/aluUnit/allstuff/tb_orG32b.vhd proj/src/TopLevel/aluUnit/allstuff/tb_lui.vhd proj/src/TopLevel/aluUnit/allstuff/fullAdderStructN.vhd proj/src/TopLevel/aluUnit/allstuff/tb_onesCompN.vhd proj/src/TopLevel/aluUnit/allstuff/onesCompN.vhd proj/src/TopLevel/aluUnit/allstuff/andG32b.vhd proj/src/TopLevel/aluUnit/allstuff/adderSubS.vhd proj/src/TopLevel/aluUnit/allstuff/tb_mux16b2t1.vhd proj/src/TopLevel/aluUnit/allstuff/firstALU.vhd proj/src/TopLevel/aluUnit/allstuff/andG_N.vhd proj/src/TopLevel/aluUnit/allstuff/mux16b2t1.vhd proj/src/TopLevel/aluUnit/allstuff/xorg2.vhd proj/src/TopLevel/aluUnit/allstuff/mux2t1.vhd proj/src/TopLevel/aluUnit/allstuff/lui.vhd proj/src/TopLevel/aluUnit/allstuff/tb_andG_N.vhd proj/src/TopLevel/aluUnit/allstuff/tb_andg32b.vhd proj/src/TopLevel/aluUnit/allstuff/tb_bit_extenders.vhd proj/src/TopLevel/aluUnit/allstuff/orG32b.vhd proj/src/TopLevel/aluUnit/allstuff/tb_mux8b4t1.vhd proj/src/TopLevel/aluUnit/allstuff/tb_orG_N.vhd proj/src/TopLevel/aluUnit/allstuff/tb_slt.vhd proj/src/TopLevel/aluUnit/allstuff/norG_N.vhd proj/src/TopLevel/aluUnit/allstuff/bit_extenders.vhd proj/src/TopLevel/aluUnit/allstuff/andg2.vhd proj/src/TopLevel/aluUnit/allstuff/mux32_1.vhd proj/src/TopLevel/aluUnit/allstuff/xorG_N.vhd proj/src/TopLevel/aluUnit/allstuff/ALU.vhd proj/src/TopLevel/aluUnit/allstuff/mux32b3t1.vhd proj/src/TopLevel/aluUnit/allstuff/mux8b4t1.vhd proj/src/TopLevel/aluUnit/allstuff/tb_ALU.vhd proj/src/TopLevel/aluUnit/allstuff/tb_bit_extenders24b.vhd proj/src/TopLevel/aluUnit/allstuff/mux2t1_5b.vhd proj/src/TopLevel/aluUnit/allstuff/tb_xorG_N.vhd proj/src/TopLevel/aluUnit/allstuff/mux2t1Flow.vhd proj/src/TopLevel/aluUnit/allstuff/org2.vhd proj/src/TopLevel/aluUnit/allstuff/fullAdderStruct.vhd proj/src/TopLevel/aluUnit/allstuff/orG_N.vhd proj/src/TopLevel/aluUnit/allstuff/tb_norG_N.vhd proj/src/TopLevel/aluUnit/allstuff/slt.vhd proj/src/TopLevel/FetchLogic/fetch_Logic.vhd proj/src/TopLevel/FetchLogic/tb_fetch_logic.vhd proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd proj/src/TopLevel/FetchLogic/Supporting files/tb_pcreg.vhd proj/src/TopLevel/FetchLogic/Supporting files/tb_shiftleft2N.vhd proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd proj/src/TopLevel/BasicGates/dffg.vhd proj/src/TopLevel/BasicGates/org2.vhd proj/src/TopLevel/BasicGates/xorg2.vhd proj/src/TopLevel/BasicGates/andg2.vhd proj/src/TopLevel/BasicGates/invg.vhd proj/src/TopLevel/BasicGates/Adder/adder1b.vhd proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd proj/src/TopLevel/loadMemModule/loadMemModule.vhd proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd proj/src/TopLevel/ControlLogic/control_Logic.vhd proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package MIPS_types
+-- Compiling package body MIPS_types
+-- Loading package MIPS_types
+-- Loading package std_logic_textio
+-- Loading package ENV
+-- Compiling entity tb
+-- Compiling architecture mixed of tb
+** Warning: proj/src/MIPS_types.vhd(15): (vcom-1615) Existing package 'MIPS_types' at line 15 will be overwritten.
+-- Compiling package MIPS_types
+** Warning: proj/src/MIPS_types.vhd(29): (vcom-1615) Existing package body 'MIPS_types(body)' at line 29 will be overwritten.
+-- Compiling package body MIPS_types
+-- Loading package MIPS_types
+-- Loading package NUMERIC_STD
+-- Compiling entity mem
+-- Compiling architecture rtl of mem
+-- Loading package MIPS_types
+-- Compiling entity MIPS_Processor
+-- Compiling architecture structure of MIPS_Processor
+** Error: proj/src/TopLevel/MIPS_Processor.vhd(329): Cannot resolve slice name as type ieee.std_logic_1164.STD_LOGIC.
+** Error: proj/src/TopLevel/MIPS_Processor.vhd(330): Cannot resolve slice name as type ieee.std_logic_1164.STD_LOGIC.
+** Error: proj/src/TopLevel/MIPS_Processor.vhd(340): Cannot resolve slice name as type ieee.std_logic_1164.STD_LOGIC.
+** Error: proj/src/TopLevel/MIPS_Processor.vhd(346): Cannot resolve slice name as type ieee.std_logic_1164.STD_LOGIC.
+** Error: proj/src/TopLevel/MIPS_Processor.vhd(371): Cannot resolve slice name as type ieee.std_logic_1164.STD_LOGIC.
+** Error: proj/src/TopLevel/MIPS_Processor.vhd(379): Cannot resolve slice name as type ieee.std_logic_1164.STD_LOGIC.
+** Error: proj/src/TopLevel/MIPS_Processor.vhd(386): near "Register": syntax error
+** Error: proj/src/TopLevel/MIPS_Processor.vhd(411): Symbol "ALU" has already been declared in this region.
+** Error (suppressible): proj/src/TopLevel/MIPS_Processor.vhd(411): (vcom-1141) Identifier "ALU" does not identify a component declaration.
+** Error: proj/src/TopLevel/MIPS_Processor.vhd(426): near "=>": (vcom-1576) expecting == or '+' or '-' or '&'.
+** Error: proj/src/TopLevel/MIPS_Processor.vhd(429): near "=>": (vcom-1576) expecting == or '+' or '-' or '&'.
+** Error: proj/src/TopLevel/MIPS_Processor.vhd(436): Cannot resolve slice name as type ieee.std_logic_1164.STD_LOGIC.
+** Error: proj/src/TopLevel/MIPS_Processor.vhd(443): Symbol "loadMemModule" has already been declared in this region.
+** Error (suppressible): proj/src/TopLevel/MIPS_Processor.vhd(443): (vcom-1141) Identifier "loadMemModule" does not identify a component declaration.
+** Error (suppressible): proj/src/TopLevel/MIPS_Processor.vhd(403): (vcom-1272) Length of formal "o_signals" is 18; length of actual is 22.
+** Note: proj/src/TopLevel/MIPS_Processor.vhd(477): VHDL Compiler exiting
+End time: 19:45:07 on Mar 20,2024, Elapsed time: 0:00:00
+Errors: 15, Warnings: 2
