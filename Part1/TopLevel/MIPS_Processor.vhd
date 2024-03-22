@@ -371,7 +371,7 @@ port map(
 muxWrAddr : mux2t1_5b
 
 port map(
-             i_S  => s_controlOut(17), 
+             i_S  => s_controlOut(16), 
              i_D0 => s_Inst(15 downto 11), 
              i_D1 => s_Inst(20 downto 16),   
              o_O  => s_RegWrAddr);
