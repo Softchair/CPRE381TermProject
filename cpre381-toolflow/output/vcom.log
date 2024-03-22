@@ -1,6 +1,6 @@
 QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
-Start time: 15:43:45 on Mar 22,2024
-vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd internal/testpy/tb.vhd proj/src/MIPS_types.vhd proj/src/TopLevel/mem.vhd proj/src/TopLevel/MIPS_Processor.vhd proj/src/TopLevel/barrelShifter/barrelShifter.vhd proj/src/TopLevel/LogicGates/mux2t1.vhd proj/src/TopLevel/LogicGates/mux2t1N.vhd proj/src/TopLevel/aluUnit/allstuff/mux2t1_N.vhd proj/src/TopLevel/aluUnit/allstuff/mux16_1.vhd proj/src/TopLevel/aluUnit/allstuff/bit_extenders24b.vhd proj/src/TopLevel/aluUnit/allstuff/invg.vhd proj/src/TopLevel/aluUnit/allstuff/tb_orG32b.vhd proj/src/TopLevel/aluUnit/allstuff/tb_lui.vhd proj/src/TopLevel/aluUnit/allstuff/fullAdderStructN.vhd proj/src/TopLevel/aluUnit/allstuff/tb_onesCompN.vhd proj/src/TopLevel/aluUnit/allstuff/onesCompN.vhd proj/src/TopLevel/aluUnit/allstuff/andG32b.vhd proj/src/TopLevel/aluUnit/allstuff/adderSubS.vhd proj/src/TopLevel/aluUnit/allstuff/tb_mux16b2t1.vhd proj/src/TopLevel/aluUnit/allstuff/firstALU.vhd proj/src/TopLevel/aluUnit/allstuff/andG_N.vhd proj/src/TopLevel/aluUnit/allstuff/mux16b2t1.vhd proj/src/TopLevel/aluUnit/allstuff/xorg2.vhd proj/src/TopLevel/aluUnit/allstuff/mux2t1.vhd proj/src/TopLevel/aluUnit/allstuff/lui.vhd proj/src/TopLevel/aluUnit/allstuff/tb_andG_N.vhd proj/src/TopLevel/aluUnit/allstuff/tb_andg32b.vhd proj/src/TopLevel/aluUnit/allstuff/tb_bit_extenders.vhd proj/src/TopLevel/aluUnit/allstuff/orG32b.vhd proj/src/TopLevel/aluUnit/allstuff/tb_mux8b4t1.vhd proj/src/TopLevel/aluUnit/allstuff/tb_orG_N.vhd proj/src/TopLevel/aluUnit/allstuff/tb_slt.vhd proj/src/TopLevel/aluUnit/allstuff/norG_N.vhd proj/src/TopLevel/aluUnit/allstuff/bit_extenders.vhd proj/src/TopLevel/aluUnit/allstuff/andg2.vhd proj/src/TopLevel/aluUnit/allstuff/mux32_1.vhd proj/src/TopLevel/aluUnit/allstuff/xorG_N.vhd proj/src/TopLevel/aluUnit/allstuff/ALU.vhd proj/src/TopLevel/aluUnit/allstuff/mux32b3t1.vhd proj/src/TopLevel/aluUnit/allstuff/mux8b4t1.vhd proj/src/TopLevel/aluUnit/allstuff/tb_ALU.vhd proj/src/TopLevel/aluUnit/allstuff/tb_bit_extenders24b.vhd proj/src/TopLevel/aluUnit/allstuff/mux2t1_5b.vhd proj/src/TopLevel/aluUnit/allstuff/tb_xorG_N.vhd proj/src/TopLevel/aluUnit/allstuff/mux2t1Flow.vhd proj/src/TopLevel/aluUnit/allstuff/org2.vhd proj/src/TopLevel/aluUnit/allstuff/fullAdderStruct.vhd proj/src/TopLevel/aluUnit/allstuff/orG_N.vhd proj/src/TopLevel/aluUnit/allstuff/tb_norG_N.vhd proj/src/TopLevel/aluUnit/allstuff/slt.vhd proj/src/TopLevel/FetchLogic/fetch_Logic.vhd proj/src/TopLevel/FetchLogic/tb_fetch_logic.vhd proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd proj/src/TopLevel/FetchLogic/Supporting files/tb_pcreg.vhd proj/src/TopLevel/FetchLogic/Supporting files/tb_shiftleft2N.vhd proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd proj/src/TopLevel/BasicGates/dffg.vhd proj/src/TopLevel/BasicGates/org2.vhd proj/src/TopLevel/BasicGates/xorg2.vhd proj/src/TopLevel/BasicGates/andg2.vhd proj/src/TopLevel/BasicGates/invg.vhd proj/src/TopLevel/BasicGates/Adder/adder1b.vhd proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd proj/src/TopLevel/BasicGates/register/tb_dffg.vhd proj/src/TopLevel/BasicGates/register/tb_dffgN.vhd proj/src/TopLevel/BasicGates/register/dffgN.vhd proj/src/TopLevel/BasicGates/register/tb_MIPSregister.vhd proj/src/TopLevel/BasicGates/register/dffg.vhd proj/src/TopLevel/BasicGates/register/MIPSregister.vhd proj/src/TopLevel/BasicGates/register/tb_decoder5_32.vhd proj/src/TopLevel/BasicGates/register/decoder5_32.vhd proj/src/TopLevel/BasicGates/register/tb_mux32_1.vhd proj/src/TopLevel/BasicGates/register/mux32_1.vhd proj/src/TopLevel/BasicGates/register/register_package.vhd proj/src/TopLevel/loadMemModule/loadMemModule.vhd proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd proj/src/TopLevel/ControlLogic/control_Logic.vhd proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd 
+Start time: 15:50:23 on Mar 22,2024
+vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd internal/testpy/tb.vhd proj/src/MIPS_types.vhd proj/src/TopLevel/mem.vhd proj/src/TopLevel/MIPS_Processor.vhd proj/src/TopLevel/LogicGates/mux2t1.vhd proj/src/TopLevel/LogicGates/mux2t1N.vhd proj/src/TopLevel/aluUnit/allstuff/mux2t1_N.vhd proj/src/TopLevel/aluUnit/allstuff/mux16_1.vhd proj/src/TopLevel/aluUnit/allstuff/bit_extenders24b.vhd proj/src/TopLevel/aluUnit/allstuff/tb_orG32b.vhd proj/src/TopLevel/aluUnit/allstuff/tb_lui.vhd proj/src/TopLevel/aluUnit/allstuff/fullAdderStructN.vhd proj/src/TopLevel/aluUnit/allstuff/tb_onesCompN.vhd proj/src/TopLevel/aluUnit/allstuff/onesCompN.vhd proj/src/TopLevel/aluUnit/allstuff/andG32b.vhd proj/src/TopLevel/aluUnit/allstuff/adderSubS.vhd proj/src/TopLevel/aluUnit/allstuff/tb_mux16b2t1.vhd proj/src/TopLevel/aluUnit/allstuff/firstALU.vhd proj/src/TopLevel/aluUnit/allstuff/andG_N.vhd proj/src/TopLevel/aluUnit/allstuff/mux16b2t1.vhd proj/src/TopLevel/aluUnit/allstuff/lui.vhd proj/src/TopLevel/aluUnit/allstuff/tb_andG_N.vhd proj/src/TopLevel/aluUnit/allstuff/tb_andg32b.vhd proj/src/TopLevel/aluUnit/allstuff/tb_bit_extenders.vhd proj/src/TopLevel/aluUnit/allstuff/orG32b.vhd proj/src/TopLevel/aluUnit/allstuff/tb_mux8b4t1.vhd proj/src/TopLevel/aluUnit/allstuff/tb_orG_N.vhd proj/src/TopLevel/aluUnit/allstuff/tb_slt.vhd proj/src/TopLevel/aluUnit/allstuff/norG_N.vhd proj/src/TopLevel/aluUnit/allstuff/bit_extenders.vhd proj/src/TopLevel/aluUnit/allstuff/mux32_1.vhd proj/src/TopLevel/aluUnit/allstuff/xorG_N.vhd proj/src/TopLevel/aluUnit/allstuff/ALU.vhd proj/src/TopLevel/aluUnit/allstuff/mux32b3t1.vhd proj/src/TopLevel/aluUnit/allstuff/mux8b4t1.vhd proj/src/TopLevel/aluUnit/allstuff/tb_ALU.vhd proj/src/TopLevel/aluUnit/allstuff/tb_bit_extenders24b.vhd proj/src/TopLevel/aluUnit/allstuff/mux2t1_5b.vhd proj/src/TopLevel/aluUnit/allstuff/tb_xorG_N.vhd proj/src/TopLevel/aluUnit/allstuff/mux2t1Flow.vhd proj/src/TopLevel/aluUnit/allstuff/fullAdderStruct.vhd proj/src/TopLevel/aluUnit/allstuff/orG_N.vhd proj/src/TopLevel/aluUnit/allstuff/tb_norG_N.vhd proj/src/TopLevel/aluUnit/allstuff/slt.vhd proj/src/TopLevel/FetchLogic/fetch_Logic.vhd proj/src/TopLevel/FetchLogic/tb_fetch_logic.vhd proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd proj/src/TopLevel/FetchLogic/Supporting files/tb_pcreg.vhd proj/src/TopLevel/FetchLogic/Supporting files/tb_shiftleft2N.vhd proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd proj/src/TopLevel/BasicGates/org2.vhd proj/src/TopLevel/BasicGates/xorg2.vhd proj/src/TopLevel/BasicGates/andg2.vhd proj/src/TopLevel/BasicGates/invg.vhd proj/src/TopLevel/BasicGates/Adder/adder1b.vhd proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd proj/src/TopLevel/BasicGates/register/tb_dffg.vhd proj/src/TopLevel/BasicGates/register/tb_dffgN.vhd proj/src/TopLevel/BasicGates/register/dffgN.vhd proj/src/TopLevel/BasicGates/register/tb_MIPSregister.vhd proj/src/TopLevel/BasicGates/register/dffg.vhd proj/src/TopLevel/BasicGates/register/MIPSregister.vhd proj/src/TopLevel/BasicGates/register/tb_decoder5_32.vhd proj/src/TopLevel/BasicGates/register/decoder5_32.vhd proj/src/TopLevel/BasicGates/register/tb_mux32_1.vhd proj/src/TopLevel/BasicGates/register/mux32_1.vhd proj/src/TopLevel/BasicGates/register/register_package.vhd proj/src/TopLevel/loadMemModule/loadMemModule.vhd proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd proj/src/TopLevel/ControlLogic/control_Logic.vhd proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -22,8 +22,127 @@ vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd interna
 -- Loading package MIPS_types
 -- Compiling entity MIPS_Processor
 -- Compiling architecture structure of MIPS_Processor
--- Compiling entity barrelShifter
-** Error: proj/src/TopLevel/barrelShifter/barrelShifter.vhd(23): near ")": (vcom-1576) expecting IDENTIFIER.
-** Note: proj/src/TopLevel/barrelShifter/barrelShifter.vhd(23): VHDL Compiler exiting
-End time: 15:43:45 on Mar 22,2024, Elapsed time: 0:00:00
-Errors: 1, Warnings: 2
+-- Compiling entity mux2t1
+-- Compiling architecture structure of mux2t1
+-- Compiling entity mux2t1N
+-- Compiling architecture structural of mux2t1N
+-- Compiling entity mux2t1_N
+-- Compiling architecture structural of mux2t1_N
+-- Compiling entity mux16_1
+-- Compiling architecture mux of mux16_1
+-- Compiling entity bit_extenders24b
+-- Compiling architecture flow of bit_extenders24b
+-- Compiling entity tb_orG32b
+-- Compiling architecture mixed of tb_orG32b
+-- Compiling entity tb_lui
+-- Compiling architecture mixed of tb_lui
+-- Compiling entity fullAdderStructN
+-- Compiling architecture structural of fullAdderStructN
+-- Compiling entity tb_onesCompN
+-- Compiling architecture mixed of tb_onesCompN
+-- Compiling entity onesCompN
+-- Compiling architecture structural of onesCompN
+-- Compiling entity andG32b
+-- Compiling architecture dataflow of andG32b
+-- Compiling entity adderSubS
+-- Compiling architecture structure of adderSubS
+-- Compiling entity tb_mux16b2t1
+-- Compiling architecture mixed of tb_mux16b2t1
+-- Compiling entity firstALU
+-- Compiling architecture structure of firstALU
+-- Compiling entity andG_N
+-- Compiling architecture structural of andG_N
+-- Compiling entity mux16b2t1
+-- Compiling architecture mux of mux16b2t1
+-- Compiling entity lui
+-- Compiling architecture flow of lui
+-- Compiling entity tb_andG_N
+-- Compiling architecture mixed of tb_andG_N
+-- Compiling entity tb_andG32b
+-- Compiling architecture mixed of tb_andG32b
+-- Compiling entity tb_bit_extenders
+-- Compiling architecture behavior of tb_bit_extenders
+-- Compiling entity orG32b
+-- Compiling architecture dataflow of orG32b
+-- Compiling entity tb_mux8b4t1
+-- Compiling architecture mixed of tb_mux8b4t1
+-- Compiling entity tb_orG_N
+-- Compiling architecture mixed of tb_orG_N
+-- Compiling entity tb_slt
+-- Compiling architecture mixed of tb_slt
+-- Compiling entity norG_N
+-- Compiling architecture structure of norG_N
+-- Compiling entity bit_extenders
+-- Compiling architecture flow of bit_extenders
+-- Compiling entity mux32_1
+-- Compiling architecture mux of mux32_1
+-- Compiling entity xorG_N
+-- Compiling architecture structural of xorG_N
+-- Compiling entity ALU
+-- Compiling architecture structure of ALU
+-- Compiling entity mux32b3t1
+-- Compiling architecture mux of mux32b3t1
+-- Compiling entity mux8b4t1
+-- Compiling architecture mux of mux8b4t1
+-- Compiling entity tb_ALU
+-- Compiling architecture mixed of tb_ALU
+-- Compiling entity tb_bit_extenders24b
+-- Compiling architecture behavior of tb_bit_extenders24b
+-- Compiling entity mux2t1_5b
+-- Compiling architecture structural of mux2t1_5b
+-- Compiling entity tb_xorG_N
+-- Compiling architecture mixed of tb_xorG_N
+-- Compiling entity mux2t1Flow
+-- Compiling architecture mux2t1F of mux2t1Flow
+-- Compiling entity fullAdderStruct
+-- Compiling architecture structure of fullAdderStruct
+-- Compiling entity orG_N
+-- Compiling architecture structural of orG_N
+-- Compiling entity tb_norG_N
+-- Compiling architecture mixed of tb_norG_N
+-- Compiling entity slt
+-- Compiling architecture behavorial of slt
+-- Compiling entity fetch_Logic
+-- Compiling architecture mixed of fetch_logic
+-- Compiling entity tb_fetch_Logic
+-- Compiling architecture behavior of tb_fetch_Logic
+-- Compiling entity PCReg
+-- Compiling architecture structural of PCReg
+-- Compiling entity bit16_extender
+-- Compiling architecture flow of bit16_extender
+-- Compiling entity shiftleft2N
+-- Compiling architecture Behavioral of shiftleft2N
+-- Compiling entity tb_PCReg
+-- Compiling architecture behavior of tb_PCReg
+-- Compiling entity tb_shiftleft2N
+-- Compiling architecture behavior of tb_shiftleft2N
+-- Compiling entity nbitregister
+-- Compiling architecture structural of nbitregister
+-- Compiling entity org2
+-- Compiling architecture dataflow of org2
+-- Compiling entity xorg2
+-- Compiling architecture dataflow of xorg2
+-- Compiling entity andg2
+-- Compiling architecture dataflow of andg2
+-- Compiling entity invg
+-- Compiling architecture dataflow of invg
+-- Compiling entity Adder1b
+-- Compiling architecture structural of Adder1b
+-- Compiling entity rippleCarryAdderN
+-- Compiling architecture structural of rippleCarryAdderN
+-- Compiling entity tb_dffg
+-- Compiling architecture behavior of tb_dffg
+-- Compiling entity tb_dffgN
+-- Compiling architecture behavior of tb_dffgN
+-- Compiling entity dffgN
+-- Compiling architecture structural of dffgN
+-- Compiling entity tb_MIPSregister
+-- Compiling architecture mixed of tb_MIPSregister
+-- Compiling entity dffg
+-- Compiling architecture mixed of dffg
+** Error: (vcom-11) Could not find work.register_package.
+** Error (suppressible): proj/src/TopLevel/BasicGates/register/MIPSregister.vhd(18): (vcom-1195) Cannot find expanded name "work.register_package".
+** Error: proj/src/TopLevel/BasicGates/register/MIPSregister.vhd(18): Unknown expanded name.
+** Note: proj/src/TopLevel/BasicGates/register/MIPSregister.vhd(21): VHDL Compiler exiting
+End time: 15:50:23 on Mar 22,2024, Elapsed time: 0:00:00
+Errors: 3, Warnings: 2
