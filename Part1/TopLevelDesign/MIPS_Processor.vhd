@@ -390,7 +390,7 @@ port map(
 
  port map(i_CLK => iCLK,
           i_enable  => s_RegWr,
-          i_rd      => s_Inst(15 downto 11), 
+          i_rd      => s_RegWrAddr, 
           i_rs      => s_Inst(25 downto 21), 
           i_rt      => s_Inst(20 downto 16), 
           i_rdindata => s_RegWrData,
