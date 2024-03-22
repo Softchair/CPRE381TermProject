@@ -9,25 +9,25 @@ z2
 cModel Technology
 Z0 d/home/cfergen/Downloads/cpre381-toolflow
 Emem
-Z1 w1710981254
+Z1 w1711139997
 Z2 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
 Z3 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
 Z4 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
-!i122 8
-R0
-Z5 8proj/src/TopLevel/mem.vhd
-Z6 Fproj/src/TopLevel/mem.vhd
+!i122 9
+Z5 d/home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow
+Z6 8proj/src/TopLevel/mem.vhd
+Z7 Fproj/src/TopLevel/mem.vhd
 l0
 L8 1
 V72U5Be5H]J^_hIf>:2SgQ2
 !s100 GF_U?1mjKdlzTC==@Eoi@2
-Z7 OL;C;2023.2_2;77
+Z8 OL;C;2023.2_2;77
 33
-Z8 !s110 1710981907
+Z9 !s110 1711140225
 !i10b 1
-Z9 !s108 1710981907.000000
-Z10 !s90 -2008|-work|internal/ModelSimContainer/work|proj/src/MIPS_types.vhd|internal/testpy/tb.vhd|proj/src/MIPS_types.vhd|proj/src/TopLevel/mem.vhd|proj/src/TopLevel/MIPS_Processor.vhd|proj/src/TopLevel/LogicGates/mux2t1.vhd|proj/src/TopLevel/LogicGates/mux2t1N.vhd|proj/src/TopLevel/aluUnit/allstuff/mux2t1_N.vhd|proj/src/TopLevel/aluUnit/allstuff/mux16_1.vhd|proj/src/TopLevel/aluUnit/allstuff/bit_extenders24b.vhd|proj/src/TopLevel/aluUnit/allstuff/invg.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_orG32b.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_lui.vhd|proj/src/TopLevel/aluUnit/allstuff/fullAdderStructN.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_onesCompN.vhd|proj/src/TopLevel/aluUnit/allstuff/onesCompN.vhd|proj/src/TopLevel/aluUnit/allstuff/andG32b.vhd|proj/src/TopLevel/aluUnit/allstuff/adderSubS.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_mux16b2t1.vhd|proj/src/TopLevel/aluUnit/allstuff/firstALU.vhd|proj/src/TopLevel/aluUnit/allstuff/andG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/mux16b2t1.vhd|proj/src/TopLevel/aluUnit/allstuff/xorg2.vhd|proj/src/TopLevel/aluUnit/allstuff/mux2t1.vhd|proj/src/TopLevel/aluUnit/allstuff/lui.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_andG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_andg32b.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_bit_extenders.vhd|proj/src/TopLevel/aluUnit/allstuff/orG32b.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_mux8b4t1.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_orG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_slt.vhd|proj/src/TopLevel/aluUnit/allstuff/norG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/bit_extenders.vhd|proj/src/TopLevel/aluUnit/allstuff/andg2.vhd|proj/src/TopLevel/aluUnit/allstuff/mux32_1.vhd|proj/src/TopLevel/aluUnit/allstuff/xorG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/ALU.vhd|proj/src/TopLevel/aluUnit/allstuff/mux32b3t1.vhd|proj/src/TopLevel/aluUnit/allstuff/mux8b4t1.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_ALU.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_bit_extenders24b.vhd|proj/src/TopLevel/aluUnit/allstuff/mux2t1_5b.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_xorG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/mux2t1Flow.vhd|proj/src/TopLevel/aluUnit/allstuff/org2.vhd|proj/src/TopLevel/aluUnit/allstuff/fullAdderStruct.vhd|proj/src/TopLevel/aluUnit/allstuff/orG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_norG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/slt.vhd|proj/src/TopLevel/FetchLogic/fetch_Logic.vhd|proj/src/TopLevel/FetchLogic/tb_fetch_logic.vhd|proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd|proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd|proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd|proj/src/TopLevel/FetchLogic/Supporting files/tb_pcreg.vhd|proj/src/TopLevel/FetchLogic/Supporting files/tb_shiftleft2N.vhd|proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd|proj/src/TopLevel/BasicGates/dffg.vhd|proj/src/TopLevel/BasicGates/org2.vhd|proj/src/TopLevel/BasicGates/xorg2.vhd|proj/src/TopLevel/BasicGates/andg2.vhd|proj/src/TopLevel/BasicGates/invg.vhd|proj/src/TopLevel/BasicGates/Adder/adder1b.vhd|proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd|proj/src/TopLevel/loadMemModule/loadMemModule.vhd|proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd|proj/src/TopLevel/ControlLogic/control_Logic.vhd|proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd|
-Z11 !s107 proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd|proj/src/TopLevel/ControlLogic/control_Logic.vhd|proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd|proj/src/TopLevel/loadMemModule/loadMemModule.vhd|proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd|proj/src/TopLevel/BasicGates/Adder/adder1b.vhd|proj/src/TopLevel/BasicGates/invg.vhd|proj/src/TopLevel/BasicGates/andg2.vhd|proj/src/TopLevel/BasicGates/xorg2.vhd|proj/src/TopLevel/BasicGates/org2.vhd|proj/src/TopLevel/BasicGates/dffg.vhd|proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd|proj/src/TopLevel/FetchLogic/Supporting files/tb_shiftleft2N.vhd|proj/src/TopLevel/FetchLogic/Supporting files/tb_pcreg.vhd|proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd|proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd|proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd|proj/src/TopLevel/FetchLogic/tb_fetch_logic.vhd|proj/src/TopLevel/FetchLogic/fetch_Logic.vhd|proj/src/TopLevel/aluUnit/allstuff/slt.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_norG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/orG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/fullAdderStruct.vhd|proj/src/TopLevel/aluUnit/allstuff/org2.vhd|proj/src/TopLevel/aluUnit/allstuff/mux2t1Flow.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_xorG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/mux2t1_5b.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_bit_extenders24b.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_ALU.vhd|proj/src/TopLevel/aluUnit/allstuff/mux8b4t1.vhd|proj/src/TopLevel/aluUnit/allstuff/mux32b3t1.vhd|proj/src/TopLevel/aluUnit/allstuff/ALU.vhd|proj/src/TopLevel/aluUnit/allstuff/xorG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/mux32_1.vhd|proj/src/TopLevel/aluUnit/allstuff/andg2.vhd|proj/src/TopLevel/aluUnit/allstuff/bit_extenders.vhd|proj/src/TopLevel/aluUnit/allstuff/norG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_slt.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_orG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_mux8b4t1.vhd|proj/src/TopLevel/aluUnit/allstuff/orG32b.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_bit_extenders.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_andg32b.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_andG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/lui.vhd|proj/src/TopLevel/aluUnit/allstuff/mux2t1.vhd|proj/src/TopLevel/aluUnit/allstuff/xorg2.vhd|proj/src/TopLevel/aluUnit/allstuff/mux16b2t1.vhd|proj/src/TopLevel/aluUnit/allstuff/andG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/firstALU.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_mux16b2t1.vhd|proj/src/TopLevel/aluUnit/allstuff/adderSubS.vhd|proj/src/TopLevel/aluUnit/allstuff/andG32b.vhd|proj/src/TopLevel/aluUnit/allstuff/onesCompN.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_onesCompN.vhd|proj/src/TopLevel/aluUnit/allstuff/fullAdderStructN.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_lui.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_orG32b.vhd|proj/src/TopLevel/aluUnit/allstuff/invg.vhd|proj/src/TopLevel/aluUnit/allstuff/bit_extenders24b.vhd|proj/src/TopLevel/aluUnit/allstuff/mux16_1.vhd|proj/src/TopLevel/aluUnit/allstuff/mux2t1_N.vhd|proj/src/TopLevel/LogicGates/mux2t1N.vhd|proj/src/TopLevel/LogicGates/mux2t1.vhd|proj/src/TopLevel/MIPS_Processor.vhd|proj/src/TopLevel/mem.vhd|internal/testpy/tb.vhd|proj/src/MIPS_types.vhd|
+Z10 !s108 1711140225.000000
+Z11 !s90 -2008|-work|internal/ModelSimContainer/work|proj/src/MIPS_types.vhd|internal/testpy/tb.vhd|proj/src/MIPS_types.vhd|proj/src/TopLevel/mem.vhd|proj/src/TopLevel/MIPS_Processor.vhd|proj/src/TopLevel/barrelShifter/barrelShifter.vhd|proj/src/TopLevel/LogicGates/mux2t1.vhd|proj/src/TopLevel/LogicGates/mux2t1N.vhd|proj/src/TopLevel/aluUnit/allstuff/mux2t1_N.vhd|proj/src/TopLevel/aluUnit/allstuff/mux16_1.vhd|proj/src/TopLevel/aluUnit/allstuff/bit_extenders24b.vhd|proj/src/TopLevel/aluUnit/allstuff/invg.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_orG32b.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_lui.vhd|proj/src/TopLevel/aluUnit/allstuff/fullAdderStructN.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_onesCompN.vhd|proj/src/TopLevel/aluUnit/allstuff/onesCompN.vhd|proj/src/TopLevel/aluUnit/allstuff/andG32b.vhd|proj/src/TopLevel/aluUnit/allstuff/adderSubS.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_mux16b2t1.vhd|proj/src/TopLevel/aluUnit/allstuff/firstALU.vhd|proj/src/TopLevel/aluUnit/allstuff/andG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/mux16b2t1.vhd|proj/src/TopLevel/aluUnit/allstuff/xorg2.vhd|proj/src/TopLevel/aluUnit/allstuff/mux2t1.vhd|proj/src/TopLevel/aluUnit/allstuff/lui.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_andG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_andg32b.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_bit_extenders.vhd|proj/src/TopLevel/aluUnit/allstuff/orG32b.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_mux8b4t1.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_orG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_slt.vhd|proj/src/TopLevel/aluUnit/allstuff/norG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/bit_extenders.vhd|proj/src/TopLevel/aluUnit/allstuff/andg2.vhd|proj/src/TopLevel/aluUnit/allstuff/mux32_1.vhd|proj/src/TopLevel/aluUnit/allstuff/xorG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/ALU.vhd|proj/src/TopLevel/aluUnit/allstuff/mux32b3t1.vhd|proj/src/TopLevel/aluUnit/allstuff/mux8b4t1.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_ALU.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_bit_extenders24b.vhd|proj/src/TopLevel/aluUnit/allstuff/mux2t1_5b.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_xorG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/mux2t1Flow.vhd|proj/src/TopLevel/aluUnit/allstuff/org2.vhd|proj/src/TopLevel/aluUnit/allstuff/fullAdderStruct.vhd|proj/src/TopLevel/aluUnit/allstuff/orG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_norG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/slt.vhd|proj/src/TopLevel/FetchLogic/fetch_Logic.vhd|proj/src/TopLevel/FetchLogic/tb_fetch_logic.vhd|proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd|proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd|proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd|proj/src/TopLevel/FetchLogic/Supporting files/tb_pcreg.vhd|proj/src/TopLevel/FetchLogic/Supporting files/tb_shiftleft2N.vhd|proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd|proj/src/TopLevel/BasicGates/dffg.vhd|proj/src/TopLevel/BasicGates/org2.vhd|proj/src/TopLevel/BasicGates/xorg2.vhd|proj/src/TopLevel/BasicGates/andg2.vhd|proj/src/TopLevel/BasicGates/invg.vhd|proj/src/TopLevel/BasicGates/Adder/adder1b.vhd|proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd|proj/src/TopLevel/BasicGates/register/tb_dffg.vhd|proj/src/TopLevel/BasicGates/register/tb_dffgN.vhd|proj/src/TopLevel/BasicGates/register/dffgN.vhd|proj/src/TopLevel/BasicGates/register/tb_MIPSregister.vhd|proj/src/TopLevel/BasicGates/register/dffg.vhd|proj/src/TopLevel/BasicGates/register/MIPSregister.vhd|proj/src/TopLevel/BasicGates/register/tb_decoder5_32.vhd|proj/src/TopLevel/BasicGates/register/decoder5_32.vhd|proj/src/TopLevel/BasicGates/register/tb_mux32_1.vhd|proj/src/TopLevel/BasicGates/register/mux32_1.vhd|proj/src/TopLevel/BasicGates/register/register_package.vhd|proj/src/TopLevel/loadMemModule/loadMemModule.vhd|proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd|proj/src/TopLevel/ControlLogic/control_Logic.vhd|proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd|
+!s107 proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd|proj/src/TopLevel/ControlLogic/control_Logic.vhd|proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd|proj/src/TopLevel/loadMemModule/loadMemModule.vhd|proj/src/TopLevel/BasicGates/register/register_package.vhd|proj/src/TopLevel/BasicGates/register/mux32_1.vhd|proj/src/TopLevel/BasicGates/register/tb_mux32_1.vhd|proj/src/TopLevel/BasicGates/register/decoder5_32.vhd|proj/src/TopLevel/BasicGates/register/tb_decoder5_32.vhd|proj/src/TopLevel/BasicGates/register/MIPSregister.vhd|proj/src/TopLevel/BasicGates/register/dffg.vhd|proj/src/TopLevel/BasicGates/register/tb_MIPSregister.vhd|proj/src/TopLevel/BasicGates/register/dffgN.vhd|proj/src/TopLevel/BasicGates/register/tb_dffgN.vhd|proj/src/TopLevel/BasicGates/register/tb_dffg.vhd|proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd|proj/src/TopLevel/BasicGates/Adder/adder1b.vhd|proj/src/TopLevel/BasicGates/invg.vhd|proj/src/TopLevel/BasicGates/andg2.vhd|proj/src/TopLevel/BasicGates/xorg2.vhd|proj/src/TopLevel/BasicGates/org2.vhd|proj/src/TopLevel/BasicGates/dffg.vhd|proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd|proj/src/TopLevel/FetchLogic/Supporting files/tb_shiftleft2N.vhd|proj/src/TopLevel/FetchLogic/Supporting files/tb_pcreg.vhd|proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd|proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd|proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd|proj/src/TopLevel/FetchLogic/tb_fetch_logic.vhd|proj/src/TopLevel/FetchLogic/fetch_Logic.vhd|proj/src/TopLevel/aluUnit/allstuff/slt.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_norG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/orG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/fullAdderStruct.vhd|proj/src/TopLevel/aluUnit/allstuff/org2.vhd|proj/src/TopLevel/aluUnit/allstuff/mux2t1Flow.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_xorG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/mux2t1_5b.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_bit_extenders24b.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_ALU.vhd|proj/src/TopLevel/aluUnit/allstuff/mux8b4t1.vhd|proj/src/TopLevel/aluUnit/allstuff/mux32b3t1.vhd|proj/src/TopLevel/aluUnit/allstuff/ALU.vhd|proj/src/TopLevel/aluUnit/allstuff/xorG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/mux32_1.vhd|proj/src/TopLevel/aluUnit/allstuff/andg2.vhd|proj/src/TopLevel/aluUnit/allstuff/bit_extenders.vhd|proj/src/TopLevel/aluUnit/allstuff/norG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_slt.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_orG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_mux8b4t1.vhd|proj/src/TopLevel/aluUnit/allstuff/orG32b.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_bit_extenders.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_andg32b.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_andG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/lui.vhd|proj/src/TopLevel/aluUnit/allstuff/mux2t1.vhd|proj/src/TopLevel/aluUnit/allstuff/xorg2.vhd|proj/src/TopLevel/aluUnit/allstuff/mux16b2t1.vhd|proj/src/TopLevel/aluUnit/allstuff/andG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/firstALU.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_mux16b2t1.vhd|proj/src/TopLevel/aluUnit/allstuff/adderSubS.vhd|proj/src/TopLevel/aluUnit/allstuff/andG32b.vhd|proj/src/TopLevel/aluUnit/allstuff/onesCompN.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_onesCompN.vhd|proj/src/TopLevel/aluUnit/allstuff/fullAdderStructN.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_lui.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_orG32b.vhd|proj/src/TopLevel/aluUnit/allstuff/invg.vhd|proj/src/TopLevel/aluUnit/allstuff/bit_extenders24b.vhd|proj/src/TopLevel/aluUnit/allstuff/mux16_1.vhd|proj/src/TopLevel/aluUnit/allstuff/mux2t1_N.vhd|proj/src/TopLevel/LogicGates/mux2t1N.vhd|proj/src/TopLevel/LogicGates/mux2t1.vhd|proj/src/TopLevel/barrelShifter/barrelShifter.vhd|proj/src/TopLevel/MIPS_Processor.vhd|proj/src/TopLevel/mem.vhd|internal/testpy/tb.vhd|proj/src/MIPS_types.vhd|
 !i113 0
 Z12 o-2008 -work internal/ModelSimContainer/work
 Z13 tExplicit 1 CvgOpt 0
@@ -36,127 +36,147 @@ R2
 R3
 R4
 Z14 DEx4 work 3 mem 0 22 72U5Be5H]J^_hIf>:2SgQ2
-!i122 8
+!i122 9
 l37
 Z15 L27 24
 Z16 V5c?J75VGOAknnABKPF61A1
 Z17 !s100 h2oZ:n@5VDnM^B7>cA]W22
-R7
-33
 R8
-!i10b 1
+33
 R9
+!i10b 1
 R10
 R11
+Z18 !s107 proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd|proj/src/TopLevel/ControlLogic/control_Logic.vhd|proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd|proj/src/TopLevel/loadMemModule/loadMemModule.vhd|proj/src/TopLevel/BasicGates/register/register_package.vhd|proj/src/TopLevel/BasicGates/register/mux32_1.vhd|proj/src/TopLevel/BasicGates/register/tb_mux32_1.vhd|proj/src/TopLevel/BasicGates/register/decoder5_32.vhd|proj/src/TopLevel/BasicGates/register/tb_decoder5_32.vhd|proj/src/TopLevel/BasicGates/register/MIPSregister.vhd|proj/src/TopLevel/BasicGates/register/dffg.vhd|proj/src/TopLevel/BasicGates/register/tb_MIPSregister.vhd|proj/src/TopLevel/BasicGates/register/dffgN.vhd|proj/src/TopLevel/BasicGates/register/tb_dffgN.vhd|proj/src/TopLevel/BasicGates/register/tb_dffg.vhd|proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd|proj/src/TopLevel/BasicGates/Adder/adder1b.vhd|proj/src/TopLevel/BasicGates/invg.vhd|proj/src/TopLevel/BasicGates/andg2.vhd|proj/src/TopLevel/BasicGates/xorg2.vhd|proj/src/TopLevel/BasicGates/org2.vhd|proj/src/TopLevel/BasicGates/dffg.vhd|proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd|proj/src/TopLevel/FetchLogic/Supporting files/tb_shiftleft2N.vhd|proj/src/TopLevel/FetchLogic/Supporting files/tb_pcreg.vhd|proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd|proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd|proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd|proj/src/TopLevel/FetchLogic/tb_fetch_logic.vhd|proj/src/TopLevel/FetchLogic/fetch_Logic.vhd|proj/src/TopLevel/aluUnit/allstuff/slt.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_norG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/orG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/fullAdderStruct.vhd|proj/src/TopLevel/aluUnit/allstuff/org2.vhd|proj/src/TopLevel/aluUnit/allstuff/mux2t1Flow.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_xorG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/mux2t1_5b.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_bit_extenders24b.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_ALU.vhd|proj/src/TopLevel/aluUnit/allstuff/mux8b4t1.vhd|proj/src/TopLevel/aluUnit/allstuff/mux32b3t1.vhd|proj/src/TopLevel/aluUnit/allstuff/ALU.vhd|proj/src/TopLevel/aluUnit/allstuff/xorG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/mux32_1.vhd|proj/src/TopLevel/aluUnit/allstuff/andg2.vhd|proj/src/TopLevel/aluUnit/allstuff/bit_extenders.vhd|proj/src/TopLevel/aluUnit/allstuff/norG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_slt.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_orG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_mux8b4t1.vhd|proj/src/TopLevel/aluUnit/allstuff/orG32b.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_bit_extenders.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_andg32b.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_andG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/lui.vhd|proj/src/TopLevel/aluUnit/allstuff/mux2t1.vhd|proj/src/TopLevel/aluUnit/allstuff/xorg2.vhd|proj/src/TopLevel/aluUnit/allstuff/mux16b2t1.vhd|proj/src/TopLevel/aluUnit/allstuff/andG_N.vhd|proj/src/TopLevel/aluUnit/allstuff/firstALU.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_mux16b2t1.vhd|proj/src/TopLevel/aluUnit/allstuff/adderSubS.vhd|proj/src/TopLevel/aluUnit/allstuff/andG32b.vhd|proj/src/TopLevel/aluUnit/allstuff/onesCompN.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_onesCompN.vhd|proj/src/TopLevel/aluUnit/allstuff/fullAdderStructN.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_lui.vhd|proj/src/TopLevel/aluUnit/allstuff/tb_orG32b.vhd|proj/src/TopLevel/aluUnit/allstuff/invg.vhd|proj/src/TopLevel/aluUnit/allstuff/bit_extenders24b.vhd|proj/src/TopLevel/aluUnit/allstuff/mux16_1.vhd|proj/src/TopLevel/aluUnit/allstuff/mux2t1_N.vhd|proj/src/TopLevel/LogicGates/mux2t1N.vhd|proj/src/TopLevel/LogicGates/mux2t1.vhd|proj/src/TopLevel/barrelShifter/barrelShifter.vhd|proj/src/TopLevel/MIPS_Processor.vhd|proj/src/TopLevel/mem.vhd|internal/testpy/tb.vhd|proj/src/MIPS_types.vhd|
 !i113 0
 R12
 R13
 Emips_processor
-w1710981905
-Z18 DPx4 work 10 mips_types 0 22 >i]jZ9eAbXcz[cgAlXhVU2
+R1
+Z19 DPx4 work 10 mips_types 0 22 >i]jZ9eAbXcz[cgAlXhVU2
 R3
 R4
-!i122 8
-R0
-8proj/src/TopLevel/MIPS_Processor.vhd
-Fproj/src/TopLevel/MIPS_Processor.vhd
+!i122 9
+R5
+Z20 8proj/src/TopLevel/MIPS_Processor.vhd
+Z21 Fproj/src/TopLevel/MIPS_Processor.vhd
 l0
 L23 1
 Vd4PbKzUFLc_Cb46>R7C=O3
 !s100 lCRi]V>h[1VjnjUP_8`>K1
-R7
-33
 R8
-!i10b 1
+33
 R9
+!i10b 1
 R10
 R11
+R18
+!i113 0
+R12
+R13
+Astructure
+R19
+R3
+R4
+DEx4 work 14 mips_processor 0 22 d4PbKzUFLc_Cb46>R7C=O3
+!i122 9
+l290
+L35 448
+V5>^5UiO^8Yh<X@;Z[kTPo3
+!s100 7d?CPC15P75E_EKfAQl?:1
+R8
+33
+R9
+!i10b 1
+R10
+R11
+R18
 !i113 0
 R12
 R13
 Pmips_types
 R3
 R4
-!i122 8
+!i122 9
 R1
-R0
-Z19 8proj/src/MIPS_types.vhd
-Z20 Fproj/src/MIPS_types.vhd
+R5
+Z22 8proj/src/MIPS_types.vhd
+Z23 Fproj/src/MIPS_types.vhd
 l0
 L15 13
 V>i]jZ9eAbXcz[cgAlXhVU2
 !s100 Zhic[8Ck_NUcnioRmZLWb2
-R7
-33
 R8
-!i10b 1
+33
 R9
+!i10b 1
 R10
 R11
+R18
 !i113 0
 R12
 R13
 Bbody
-R18
+R19
 R3
 R4
-!i122 8
+!i122 9
 l0
-Z21 L29 3
-Z22 VH4D8`z<c`PE][_NQN2d1L2
-Z23 !s100 ;m9aHiUa@zM37M9gRzA3:0
-R7
-33
+Z24 L29 3
+Z25 VH4D8`z<c`PE][_NQN2d1L2
+Z26 !s100 ;m9aHiUa@zM37M9gRzA3:0
 R8
-!i10b 1
+33
 R9
+!i10b 1
 R10
 R11
+R18
 !i113 0
 R12
 R13
 Etb
-Z24 w1676495890
-Z25 DPx3 std 3 env 0 22 QPZJVBPkV?55nUWhDzFik0
-Z26 DPx4 ieee 16 std_logic_textio 0 22 C8j>g0lzF^EAA]5<S6PY32
+Z27 w1676495890
+Z28 DPx3 std 3 env 0 22 QPZJVBPkV?55nUWhDzFik0
+Z29 DPx4 ieee 16 std_logic_textio 0 22 C8j>g0lzF^EAA]5<S6PY32
 R3
 R4
-!i122 8
-R0
-Z27 8internal/testpy/tb.vhd
-Z28 Finternal/testpy/tb.vhd
+!i122 9
+R5
+Z30 8internal/testpy/tb.vhd
+Z31 Finternal/testpy/tb.vhd
 l0
 L24 1
 VmnW?FF:Ib87hj>e3NzoaR2
 !s100 J8cbzZD^Tj2:AHVPB^Ch:2
-R7
-33
 R8
-!i10b 1
+33
 R9
+!i10b 1
 R10
 R11
+R18
 !i113 0
 R12
 R13
 Amixed
-R25
-R26
+R28
+R29
 R3
 R4
-Z29 DEx4 work 2 tb 0 22 mnW?FF:Ib87hj>e3NzoaR2
-!i122 8
+Z32 DEx4 work 2 tb 0 22 mnW?FF:Ib87hj>e3NzoaR2
+!i122 9
 l56
-Z30 L31 127
-Z31 V8b52hZOUTz;mGPlR1XoM@1
-Z32 !s100 Q?C5mH^o;6?]2EDH4@`oS3
-R7
-33
+Z33 L31 127
+Z34 V8b52hZOUTz;mGPlR1XoM@1
+Z35 !s100 Q?C5mH^o;6?]2EDH4@`oS3
 R8
-!i10b 1
+33
 R9
+!i10b 1
 R10
 R11
+R18
 !i113 0
 R12
 R13
