@@ -1,0 +1,8 @@
+proj/mips/Tests/Tests/add_1.s
+proj/mips/Tests/Tests/add_2.s
+proj/mips/Tests/Tests/add_3.s
+proj/mips/Tests/Tests/addi_2.s
+proj/mips/Tests/Tests/addi_3.s
+proj/mips/Tests/Tests/addiu_2.s
+proj/mips/Tests/Tests/addu_1.s
+proj/mips/Tests/Tests/addu_2.s
