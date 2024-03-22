@@ -1,0 +1,5 @@
+proj/mips/tests/add_1.s
+proj/mips/tests/add_2.s
+proj/mips/tests/add_3.s
+proj/mips/tests/addi_2.s
+proj/mips/tests/addi_3.s
