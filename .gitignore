@@ -1,1 +1,4 @@
-cpre381-toolflow/internal/ModelSimContainer/vcom.log
+# Ignore the output of the toolflow
+cpre381-toolflow/output
+cpre381-toolflow/containers
+core381-toolflow/internal
