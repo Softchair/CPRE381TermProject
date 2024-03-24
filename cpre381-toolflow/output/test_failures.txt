@@ -1,4 +1,3 @@
 proj/mips/tests/add_2.s
 proj/mips/tests/addi_2.s
 proj/mips/tests/addi_3.s
-proj/mips/tests/addiu_2.s
