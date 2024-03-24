@@ -29,3 +29,6 @@ cov*/
 transcript*
 sc_dpiheader.h
 vsim.dbg
+
+# toolflow ignore
+cpre381/cpre381-toolflow/output
