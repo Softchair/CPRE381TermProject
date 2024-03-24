@@ -1,6 +1,0 @@
-# Ignore the output of the toolflow
-cpre381-toolflow/output/*
-cpre381-toolflow/containers
-cpre381-toolflow/internal/*
-cpre381-toolflow/output
-*.bak
