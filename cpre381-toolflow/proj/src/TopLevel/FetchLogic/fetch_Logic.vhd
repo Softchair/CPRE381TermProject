@@ -33,7 +33,8 @@ entity fetch_Logic is
         -- Instruction input
         i_Instruction   : IN STD_LOGIC_VECTOR(31 downto 0); -- Instruction output
         -- Ouput
-        o_PCAddress     : OUT STD_LOGIC_VECTOR(31 downto 0) -- PC Address for JAL box
+        o_PCAddress     : OUT STD_LOGIC_VECTOR(31 downto 0) -- PC Address 
+        o_JalAdd        : OUT STD_LOGIC_VECTOR(31 downto 0) -- JAL Output
     );
       
 end fetch_Logic;
@@ -149,6 +150,8 @@ architecture mixed of fetch_logic is
                 o_Cout  => open, -- Output to nothing
                 o_S     => s_PCNext -- Next PC
             );
+
+        o_jalAdd <= s_PCNext; -- For JAL add
 
         -- -------- START JUMP LOGIC CONTROL -------- --
 
