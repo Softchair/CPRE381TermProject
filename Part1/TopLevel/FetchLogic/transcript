@@ -1,0 +1,1229 @@
+# //  Questa Sim-64
+# //  Version 2023.2_2 linux_x86_64 Jun  9 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:55:07 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# End time: 16:55:07 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/work -refresh -force_refresh
+# QuestaSim-64 vlog 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:55:11 on Mar 20,2024
+# vlog -reportprogress 300 -work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/work -refresh -force_refresh 
+# -- Skipping entity adder1b
+# -- Skipping entity andg2
+# -- Skipping entity bit16_extender
+# -- Skipping entity dffg
+# -- Skipping entity fetch_logic
+# -- Skipping entity invg
+# -- Skipping entity mem
+# -- Skipping entity mux2t1
+# -- Skipping entity mux2t1n
+# -- Skipping entity nbitregister
+# -- Skipping entity org2
+# -- Skipping entity pcreg
+# -- Skipping entity ripplecarryaddern
+# -- Skipping entity shiftleft2n
+# -- Skipping entity tb_fetch_logic
+# -- Skipping entity tb_pcreg
+# -- Skipping entity tb_shiftleft2n
+# -- Skipping entity xorg2
+# End time: 16:55:11 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/work -refresh -force_refresh
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:55:11 on Mar 20,2024
+# vcom -reportprogress 300 -work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/work -refresh -force_refresh 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Adder1b
+# -- Compiling architecture structural of Adder1b
+# -- Compiling entity andg2
+# -- Compiling architecture dataflow of andg2
+# -- Compiling entity bit16_extender
+# -- Compiling architecture flow of bit16_extender
+# -- Compiling entity dffg
+# -- Compiling architecture mixed of dffg
+# -- Compiling entity fetch_Logic
+# -- Compiling architecture mixed of fetch_logic
+# -- Compiling entity invg
+# -- Compiling architecture dataflow of invg
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mem
+# -- Compiling architecture rtl of mem
+# -- Compiling entity mux2t1
+# -- Compiling architecture structure of mux2t1
+# -- Compiling entity mux2t1N
+# -- Compiling architecture structural of mux2t1N
+# -- Compiling entity nbitregister
+# -- Compiling architecture structural of nbitregister
+# -- Compiling entity org2
+# -- Compiling architecture dataflow of org2
+# -- Compiling entity PCReg
+# -- Compiling architecture structural of PCReg
+# -- Compiling entity rippleCarryAdderN
+# -- Compiling architecture structural of rippleCarryAdderN
+# -- Compiling entity shiftleft2N
+# -- Compiling architecture Behavioral of shiftleft2N
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# -- Compiling entity tb_PCReg
+# -- Compiling architecture behavior of tb_PCReg
+# -- Compiling entity tb_shiftleft2N
+# -- Compiling architecture behavior of tb_shiftleft2N
+# -- Compiling entity xorg2
+# -- Compiling architecture dataflow of xorg2
+# End time: 16:55:11 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_fetch_logic -voptargs=+acc
+# vsim work.tb_fetch_logic -voptargs="+acc" 
+# Start time: 16:55:20 on Mar 20,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_fetch_logic(behavior)#1
+# Loading work.fetch_logic(mixed)#1
+# Loading work.pcreg(structural)#1
+# Loading work.mux2t1n(structural)#1
+# Loading work.mux2t1(structure)#1
+# Loading work.invg(dataflow)#1
+# Loading work.andg2(dataflow)#1
+# Loading work.org2(dataflow)#1
+# Loading work.nbitregister(structural)#1
+# Loading work.dffg(mixed)#1
+# Loading work.ripplecarryaddern(structural)#1
+# Loading work.adder1b(structural)#1
+# Loading work.xorg2(dataflow)#1
+# Loading ieee.numeric_std(body)
+# Loading work.shiftleft2n(behavioral)#1
+# Loading work.bit16_extender(flow)#1
+# Loading work.shiftleft2n(behavioral)#2
+add wave -position insertpoint  \
+sim:/tb_fetch_logic/s_CLK \
+sim:/tb_fetch_logic/s_JReg \
+sim:/tb_fetch_logic/s_BranchLogic \
+sim:/tb_fetch_logic/s_JumpLogic \
+sim:/tb_fetch_logic/s_JRegLogic \
+sim:/tb_fetch_logic/s_JalLogic \
+sim:/tb_fetch_logic/s_Instruction \
+sim:/tb_fetch_logic/s_PCAddress
+run
+# ** Error: Basic PC + 4 failed
+#    Time: 60 ns  Iteration: 0  Instance: /tb_fetch_logic
+# ** Error: Basic PC + 4 failed
+#    Time: 100 ns  Iteration: 0  Instance: /tb_fetch_logic
+run
+run
+run
+run
+run
+run
+quit -sim
+# End time: 16:56:20 on Mar 20,2024, Elapsed time: 0:01:00
+# Errors: 2, Warnings: 1
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:56:23 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# ** Warning: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd(81): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 32 is not equal to right length 36).
+# End time: 16:56:23 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:56:34 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# End time: 16:56:34 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_fetch_logic
+# vsim work.tb_fetch_logic 
+# Start time: 16:56:37 on Mar 20,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_fetch_logic(behavior)#1
+# Loading ieee.numeric_std(body)
+# Loading work.fetch_logic(mixed)#1
+# Loading work.mux2t1n(structural)#1
+# Loading work.ripplecarryaddern(structural)#1
+add wave -position insertpoint  \
+sim:/tb_fetch_logic/s_CLK \
+sim:/tb_fetch_logic/s_RST \
+sim:/tb_fetch_logic/s_JReg \
+sim:/tb_fetch_logic/s_BranchLogic \
+sim:/tb_fetch_logic/s_JumpLogic \
+sim:/tb_fetch_logic/s_JRegLogic \
+sim:/tb_fetch_logic/s_JalLogic \
+sim:/tb_fetch_logic/s_Instruction \
+sim:/tb_fetch_logic/s_PCAddress
+run
+# ** Error: Basic PC + 4 failed
+#    Time: 60 ns  Iteration: 0  Instance: /tb_fetch_logic
+# ** Error: Basic jump test failed
+#    Time: 100 ns  Iteration: 0  Instance: /tb_fetch_logic
+run
+quit -sim
+# End time: 16:58:19 on Mar 20,2024, Elapsed time: 0:01:42
+# Errors: 2, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:58:21 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# End time: 16:58:21 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_fetch_logic
+# vsim work.tb_fetch_logic 
+# Start time: 16:58:22 on Mar 20,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_fetch_logic(behavior)#1
+# Loading ieee.numeric_std(body)
+# Loading work.fetch_logic(mixed)#1
+# Loading work.mux2t1n(structural)#1
+# Loading work.ripplecarryaddern(structural)#1
+run
+# ** Error: Basic PC + 4 failed
+#    Time: 40 ns  Iteration: 0  Instance: /tb_fetch_logic
+run
+add wave -position insertpoint  \
+sim:/tb_fetch_logic/s_JReg \
+sim:/tb_fetch_logic/s_BranchLogic \
+sim:/tb_fetch_logic/s_JumpLogic \
+sim:/tb_fetch_logic/s_JRegLogic \
+sim:/tb_fetch_logic/s_JalLogic \
+sim:/tb_fetch_logic/s_Instruction \
+sim:/tb_fetch_logic/s_PCAddress
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+# ** Error: Basic PC + 4 failed
+#    Time: 40 ns  Iteration: 0  Instance: /tb_fetch_logic
+run
+add wave -position insertpoint  \
+sim:/tb_fetch_logic/s_CLK
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+# ** Error: Basic PC + 4 failed
+#    Time: 40 ns  Iteration: 0  Instance: /tb_fetch_logic
+run
+quit -sim
+# End time: 17:01:58 on Mar 20,2024, Elapsed time: 0:03:36
+# Errors: 1, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:02:01 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# End time: 17:02:01 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_fetch_logic
+# vsim work.tb_fetch_logic 
+# Start time: 17:02:02 on Mar 20,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_fetch_logic(behavior)#1
+# Loading ieee.numeric_std(body)
+# Loading work.fetch_logic(mixed)#1
+# Loading work.mux2t1n(structural)#1
+# Loading work.ripplecarryaddern(structural)#1
+add wave -position insertpoint  \
+sim:/tb_fetch_logic/s_CLK \
+sim:/tb_fetch_logic/s_RST \
+sim:/tb_fetch_logic/s_JReg \
+sim:/tb_fetch_logic/s_BranchLogic \
+sim:/tb_fetch_logic/s_JumpLogic \
+sim:/tb_fetch_logic/s_JRegLogic \
+sim:/tb_fetch_logic/s_JalLogic \
+sim:/tb_fetch_logic/s_Instruction \
+sim:/tb_fetch_logic/s_PCAddress
+run -all
+# ** Error: Basic PC + 4 failed
+#    Time: 60 ns  Iteration: 0  Instance: /tb_fetch_logic
+# Break key hit
+# Simulation stop requested.
+quit -sim
+# End time: 17:03:03 on Mar 20,2024, Elapsed time: 0:01:01
+# Errors: 1, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:03:05 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# End time: 17:03:05 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_fetch_logic
+# vsim work.tb_fetch_logic 
+# Start time: 17:03:06 on Mar 20,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_fetch_logic(behavior)#1
+# Loading ieee.numeric_std(body)
+# Loading work.fetch_logic(mixed)#1
+# Loading work.mux2t1n(structural)#1
+# Loading work.ripplecarryaddern(structural)#1
+add wave -position insertpoint  \
+sim:/tb_fetch_logic/s_CLK \
+sim:/tb_fetch_logic/s_RST \
+sim:/tb_fetch_logic/s_JReg \
+sim:/tb_fetch_logic/s_BranchLogic \
+sim:/tb_fetch_logic/s_JumpLogic \
+sim:/tb_fetch_logic/s_JRegLogic \
+sim:/tb_fetch_logic/s_JalLogic \
+sim:/tb_fetch_logic/s_Instruction \
+sim:/tb_fetch_logic/s_PCAddress
+run
+run
+run
+run
+quit -sim
+# End time: 17:03:28 on Mar 20,2024, Elapsed time: 0:00:22
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:03:31 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# End time: 17:03:31 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_fetch_logic
+# vsim work.tb_fetch_logic 
+# Start time: 17:03:33 on Mar 20,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_fetch_logic(behavior)#1
+# Loading ieee.numeric_std(body)
+# Loading work.fetch_logic(mixed)#1
+# Loading work.mux2t1n(structural)#1
+# Loading work.ripplecarryaddern(structural)#1
+add wave -position insertpoint  \
+sim:/tb_fetch_logic/s_CLK \
+sim:/tb_fetch_logic/s_RST \
+sim:/tb_fetch_logic/s_JReg \
+sim:/tb_fetch_logic/s_BranchLogic \
+sim:/tb_fetch_logic/s_JumpLogic \
+sim:/tb_fetch_logic/s_JRegLogic \
+sim:/tb_fetch_logic/s_JalLogic \
+sim:/tb_fetch_logic/s_Instruction \
+sim:/tb_fetch_logic/s_PCAddress
+run
+run
+run
+quit -sim
+# End time: 17:04:31 on Mar 20,2024, Elapsed time: 0:00:58
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:08:25 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# End time: 17:08:25 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_fetch_logic
+# vsim work.tb_fetch_logic 
+# Start time: 17:08:26 on Mar 20,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_fetch_logic(behavior)#1
+# Loading ieee.numeric_std(body)
+# Loading work.fetch_logic(mixed)#1
+# Loading work.mux2t1n(structural)#1
+# Loading work.ripplecarryaddern(structural)#1
+add wave -position insertpoint  \
+sim:/tb_fetch_logic/s_CLK \
+sim:/tb_fetch_logic/s_RST \
+sim:/tb_fetch_logic/s_JReg \
+sim:/tb_fetch_logic/s_BranchLogic \
+sim:/tb_fetch_logic/s_JumpLogic \
+sim:/tb_fetch_logic/s_JRegLogic \
+sim:/tb_fetch_logic/s_JalLogic \
+sim:/tb_fetch_logic/s_Instruction \
+sim:/tb_fetch_logic/s_PCAddress
+run
+run
+run
+quit -sim
+# End time: 17:15:28 on Mar 20,2024, Elapsed time: 0:07:02
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/Adder/adder1b.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:32 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/Adder/adder1b.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Adder1b
+# -- Compiling architecture structural of Adder1b
+# End time: 17:15:32 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/andg2.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:32 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/andg2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity andg2
+# -- Compiling architecture dataflow of andg2
+# End time: 17:15:32 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:32 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bit16_extender
+# -- Compiling architecture flow of bit16_extender
+# End time: 17:15:32 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/dffg.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:32 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/dffg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dffg
+# -- Compiling architecture mixed of dffg
+# End time: 17:15:32 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:32 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fetch_Logic
+# -- Compiling architecture mixed of fetch_logic
+# End time: 17:15:32 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/invg.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:32 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/invg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity invg
+# -- Compiling architecture dataflow of invg
+# End time: 17:15:32 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/mem.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:32 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/mem.vhd 
+# ** Error: (vcom-7) Failed to open design unit file "/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/mem.vhd" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 17:15:32 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/LogicGates/mux2t1.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:32 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/LogicGates/mux2t1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2t1
+# -- Compiling architecture structure of mux2t1
+# End time: 17:15:32 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/LogicGates/mux2t1N.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:32 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/LogicGates/mux2t1N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2t1N
+# -- Compiling architecture structural of mux2t1N
+# End time: 17:15:33 on Mar 20,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Gates/NbitRegister.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:33 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Gates/NbitRegister.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity nbitregister
+# -- Compiling architecture structural of nbitregister
+# End time: 17:15:33 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/org2.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:33 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/org2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity org2
+# -- Compiling architecture dataflow of org2
+# End time: 17:15:33 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/PCReg.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:33 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/PCReg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PCReg
+# -- Compiling architecture structural of PCReg
+# End time: 17:15:33 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/Adder/rippleCarryAdderN.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:33 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/Adder/rippleCarryAdderN.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rippleCarryAdderN
+# -- Compiling architecture structural of rippleCarryAdderN
+# End time: 17:15:33 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2N.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:33 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shiftleft2N
+# -- Compiling architecture Behavioral of shiftleft2N
+# End time: 17:15:33 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:33 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# End time: 17:15:33 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:33 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# End time: 17:15:33 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_pcreg.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:33 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_pcreg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_PCReg
+# -- Compiling architecture behavior of tb_PCReg
+# End time: 17:15:33 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2N.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:33 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_shiftleft2N
+# -- Compiling architecture behavior of tb_shiftleft2N
+# End time: 17:15:33 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/xorg2.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:33 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/xorg2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity xorg2
+# -- Compiling architecture dataflow of xorg2
+# End time: 17:15:33 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/Adder/adder1b.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:49 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/Adder/adder1b.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Adder1b
+# -- Compiling architecture structural of Adder1b
+# End time: 17:15:49 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/andg2.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:49 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/andg2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity andg2
+# -- Compiling architecture dataflow of andg2
+# End time: 17:15:49 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:49 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bit16_extender
+# -- Compiling architecture flow of bit16_extender
+# End time: 17:15:49 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/dffg.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:49 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/dffg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dffg
+# -- Compiling architecture mixed of dffg
+# End time: 17:15:49 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:49 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fetch_Logic
+# -- Compiling architecture mixed of fetch_logic
+# End time: 17:15:49 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/invg.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:49 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/invg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity invg
+# -- Compiling architecture dataflow of invg
+# End time: 17:15:49 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/LogicGates/mux2t1.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:49 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/LogicGates/mux2t1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2t1
+# -- Compiling architecture structure of mux2t1
+# End time: 17:15:49 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/LogicGates/mux2t1N.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:49 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/LogicGates/mux2t1N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2t1N
+# -- Compiling architecture structural of mux2t1N
+# End time: 17:15:49 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Gates/NbitRegister.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:49 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Gates/NbitRegister.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity nbitregister
+# -- Compiling architecture structural of nbitregister
+# End time: 17:15:49 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/org2.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:49 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/org2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity org2
+# -- Compiling architecture dataflow of org2
+# End time: 17:15:49 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/PCReg.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:49 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/PCReg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PCReg
+# -- Compiling architecture structural of PCReg
+# End time: 17:15:49 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/Adder/rippleCarryAdderN.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:49 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/Adder/rippleCarryAdderN.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rippleCarryAdderN
+# -- Compiling architecture structural of rippleCarryAdderN
+# End time: 17:15:49 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2N.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:49 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shiftleft2N
+# -- Compiling architecture Behavioral of shiftleft2N
+# End time: 17:15:49 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:49 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# End time: 17:15:49 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:49 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# End time: 17:15:49 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_pcreg.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:49 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_pcreg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_PCReg
+# -- Compiling architecture behavior of tb_PCReg
+# End time: 17:15:50 on Mar 20,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2N.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:50 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_shiftleft2N
+# -- Compiling architecture behavior of tb_shiftleft2N
+# End time: 17:15:50 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/xorg2.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:15:50 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/xorg2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity xorg2
+# -- Compiling architecture dataflow of xorg2
+# End time: 17:15:50 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/Adder/adder1b.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:16:07 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/Adder/adder1b.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Adder1b
+# -- Compiling architecture structural of Adder1b
+# End time: 17:16:07 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/andg2.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:16:07 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/andg2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity andg2
+# -- Compiling architecture dataflow of andg2
+# End time: 17:16:07 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:16:07 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/bit16_extenders.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bit16_extender
+# -- Compiling architecture flow of bit16_extender
+# End time: 17:16:08 on Mar 20,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/dffg.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:16:08 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/dffg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dffg
+# -- Compiling architecture mixed of dffg
+# End time: 17:16:08 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:16:08 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/fetch_Logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fetch_Logic
+# -- Compiling architecture mixed of fetch_logic
+# End time: 17:16:08 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/invg.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:16:08 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/invg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity invg
+# -- Compiling architecture dataflow of invg
+# End time: 17:16:08 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/LogicGates/mux2t1.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:16:08 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/LogicGates/mux2t1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2t1
+# -- Compiling architecture structure of mux2t1
+# End time: 17:16:08 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/LogicGates/mux2t1N.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:16:08 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/LogicGates/mux2t1N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2t1N
+# -- Compiling architecture structural of mux2t1N
+# End time: 17:16:08 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Gates/NbitRegister.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:16:08 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Gates/NbitRegister.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity nbitregister
+# -- Compiling architecture structural of nbitregister
+# End time: 17:16:08 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/org2.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:16:08 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/org2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity org2
+# -- Compiling architecture dataflow of org2
+# End time: 17:16:08 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/PCReg.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:16:08 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/PCReg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PCReg
+# -- Compiling architecture structural of PCReg
+# End time: 17:16:08 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/Adder/rippleCarryAdderN.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:16:08 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/Adder/rippleCarryAdderN.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rippleCarryAdderN
+# -- Compiling architecture structural of rippleCarryAdderN
+# End time: 17:16:08 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2N.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:16:08 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/shiftleft2N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shiftleft2N
+# -- Compiling architecture Behavioral of shiftleft2N
+# End time: 17:16:08 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:16:08 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd(73): Illegal target for signal assignment.
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd(73): (vcom-1136) Unknown identifier "s_JalLogic".
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd(164): VHDL Compiler exiting
+# End time: 17:16:08 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:16:08 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd(73): Illegal target for signal assignment.
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd(73): (vcom-1136) Unknown identifier "s_JalLogic".
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd(164): VHDL Compiler exiting
+# End time: 17:16:08 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_pcreg.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:16:08 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_pcreg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_PCReg
+# -- Compiling architecture behavior of tb_PCReg
+# End time: 17:16:08 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work {/home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2N.vhd}
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:16:08 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/Supporting files/tb_shiftleft2N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_shiftleft2N
+# -- Compiling architecture behavior of tb_shiftleft2N
+# End time: 17:16:08 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/xorg2.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:16:08 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/BasicGates/xorg2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity xorg2
+# -- Compiling architecture dataflow of xorg2
+# End time: 17:16:08 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:16:24 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# End time: 17:16:24 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:22:21 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# End time: 17:22:21 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_fetch_logic
+# vsim work.tb_fetch_logic 
+# Start time: 17:22:23 on Mar 20,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_fetch_logic(behavior)#1
+# Loading ieee.numeric_std(body)
+# Loading work.fetch_logic(mixed)#1
+# Loading work.mux2t1n(structural)#1
+# Loading work.ripplecarryaddern(structural)#1
+add wave -position insertpoint  \
+sim:/tb_fetch_logic/s_CLK \
+sim:/tb_fetch_logic/s_RST \
+sim:/tb_fetch_logic/s_JReg \
+sim:/tb_fetch_logic/s_BranchLogic \
+sim:/tb_fetch_logic/s_JumpLogic \
+sim:/tb_fetch_logic/s_JRegLogic \
+sim:/tb_fetch_logic/s_Instruction \
+sim:/tb_fetch_logic/s_PCAddress
+run
+run
+# ** Error: Basic jump register test failed
+#    Time: 140 ns  Iteration: 0  Instance: /tb_fetch_logic
+add wave -position insertpoint  \
+sim:/tb_fetch_logic/DUT/s_BitExtendOut
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+run
+# ** Error: Basic jump register test failed
+#    Time: 140 ns  Iteration: 0  Instance: /tb_fetch_logic
+run
+add wave -position insertpoint  \
+sim:/tb_fetch_logic/DUT/s_BranchShiftLeft
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+run
+# ** Error: Basic jump register test failed
+#    Time: 140 ns  Iteration: 0  Instance: /tb_fetch_logic
+quit -sim
+# End time: 17:25:21 on Mar 20,2024, Elapsed time: 0:02:58
+# Errors: 1, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:25:23 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# End time: 17:25:23 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_fetch_logic
+# vsim work.tb_fetch_logic 
+# Start time: 17:25:24 on Mar 20,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_fetch_logic(behavior)#1
+# Loading ieee.numeric_std(body)
+# Loading work.fetch_logic(mixed)#1
+# Loading work.mux2t1n(structural)#1
+# Loading work.ripplecarryaddern(structural)#1
+add wave -position insertpoint  \
+sim:/tb_fetch_logic/s_CLK \
+sim:/tb_fetch_logic/s_RST \
+sim:/tb_fetch_logic/s_JReg \
+sim:/tb_fetch_logic/s_BranchLogic \
+sim:/tb_fetch_logic/s_JumpLogic \
+sim:/tb_fetch_logic/s_JRegLogic \
+sim:/tb_fetch_logic/s_Instruction \
+sim:/tb_fetch_logic/s_PCAddress
+run
+run
+# ** Error: Basic jump register test failed
+#    Time: 140 ns  Iteration: 0  Instance: /tb_fetch_logic
+quit -sim
+# End time: 17:27:16 on Mar 20,2024, Elapsed time: 0:01:52
+# Errors: 1, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:27:19 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd(110): Illegal target for signal assignment.
+# ** Error: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd(110): (vcom-1136) Unknown identifier "s_JalLogic".
+# ** Note: /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd(157): VHDL Compiler exiting
+# End time: 17:27:19 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:27:29 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# End time: 17:27:29 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_fetch_logic
+# vsim work.tb_fetch_logic 
+# Start time: 17:27:30 on Mar 20,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_fetch_logic(behavior)#1
+# Loading ieee.numeric_std(body)
+# Loading work.fetch_logic(mixed)#1
+# Loading work.mux2t1n(structural)#1
+# Loading work.ripplecarryaddern(structural)#1
+add wave -position insertpoint  \
+sim:/tb_fetch_logic/s_CLK \
+sim:/tb_fetch_logic/s_RST \
+sim:/tb_fetch_logic/s_JReg \
+sim:/tb_fetch_logic/s_BranchLogic \
+sim:/tb_fetch_logic/s_JumpLogic \
+sim:/tb_fetch_logic/s_JRegLogic \
+sim:/tb_fetch_logic/s_Instruction \
+sim:/tb_fetch_logic/s_PCAddress
+run
+run
+run
+run
+quit -sim
+# End time: 17:27:56 on Mar 20,2024, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 0
+vcom -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 17:28:01 on Mar 20,2024
+# vcom -reportprogress 300 -work work /home/cfergen/cpre381/CPRE381TermProject/Part1/FetchLogic/tb_fetch_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_fetch_Logic
+# -- Compiling architecture behavior of tb_fetch_Logic
+# End time: 17:28:01 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_fetch_logic
+# vsim work.tb_fetch_logic 
+# Start time: 17:28:05 on Mar 20,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_fetch_logic(behavior)#1
+# Loading ieee.numeric_std(body)
+# Loading work.fetch_logic(mixed)#1
+# Loading work.mux2t1n(structural)#1
+# Loading work.ripplecarryaddern(structural)#1
+add wave -position insertpoint  \
+sim:/tb_fetch_logic/s_CLK \
+sim:/tb_fetch_logic/s_RST \
+sim:/tb_fetch_logic/s_JReg \
+sim:/tb_fetch_logic/s_BranchLogic \
+sim:/tb_fetch_logic/s_JumpLogic \
+sim:/tb_fetch_logic/s_JRegLogic \
+sim:/tb_fetch_logic/s_Instruction \
+sim:/tb_fetch_logic/s_PCAddress
+run
+run
+# ** Note: Testbench of fetch logic completely successfully!
+#    Time: 160 ns  Iteration: 0  Instance: /tb_fetch_logic
+run
+# End time: 17:54:48 on Mar 20,2024, Elapsed time: 0:26:43
+# Errors: 0, Warnings: 0

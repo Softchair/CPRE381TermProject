@@ -3,7 +3,7 @@ Reading pref.tcl
 # 2023.2_2
 
 # vsim -postsimdataflow -debugdb -c -voptargs=""+acc"" tb -do "modelsim_framework.do" -gOUTPUT_TRACE=ms.trace 
-# Start time: 18:59:52 on Mar 24,2024
+# Start time: 19:03:20 on Mar 24,2024
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim-64
 # //  Version 2023.2_2 linux_x86_64 Jun  9 2023
@@ -81,11 +81,11 @@ Reading pref.tcl
 #    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/IMem
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 3  Instance: /tb/MyMips/DMem
-# ** Note: Data structure takes 60362984 bytes of memory
-#          Process time 0.05 seconds
+# ** Note: Data structure takes 60231912 bytes of memory
+#          Process time 0.06 seconds
 #          stop
 #    Time: 140 ns  Iteration: 1  Instance: /tb
-# Break in Process P_DUMP_STATE at /home/kosice/Documents/cpre381TermProjNEW-EMIL/CPRE381TermProject/cpre381-toolflow/internal/testpy/tb.vhd line 150
-# Stopped at /home/kosice/Documents/cpre381TermProjNEW-EMIL/CPRE381TermProject/cpre381-toolflow/internal/testpy/tb.vhd line 150
-# End time: 18:59:52 on Mar 24,2024, Elapsed time: 0:00:00
+# Break in Process P_DUMP_STATE at /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/internal/testpy/tb.vhd line 150
+# Stopped at /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/internal/testpy/tb.vhd line 150
+# End time: 19:03:20 on Mar 24,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 3
