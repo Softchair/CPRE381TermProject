@@ -1,2 +1,0 @@
-proj/mips/tests/jr_2.s
-proj/mips/tests/jr_3.s
