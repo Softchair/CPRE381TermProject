@@ -251,7 +251,7 @@ architecture mixed of fetch_logic is
             generic map(N => 32)
             port map(
                 i_A     => s_JumpAddMuxOut, -- From output of jump mux (0)
-                i_B     => s_JumpAddMuxOut, -- Jump register output (1)
+                i_B     => i_JReg, -- Jump register output (1)
                 i_Sel   => i_JRegLogic, -- From control
                 o_Out   => s_JumpRegMuxOut -- To PC reg
             );
