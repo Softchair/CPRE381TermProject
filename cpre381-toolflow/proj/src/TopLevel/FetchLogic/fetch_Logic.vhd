@@ -26,7 +26,7 @@ entity fetch_Logic is
         i_CLK           : IN STD_LOGIC; -- Clock
         i_RST           : IN STD_LOGIC; -- Reset
         -- Register inputs
-        i_JReg          : IN STD_LOGIC_VECTOR(31 downto 0); -- Jump register input
+        i_JReg          : IN STD_LOGIC_VECTOR(31 downto 0); -- Jump register inputz
         -- Control logic inputs
         i_BranchLogic   : IN STD_LOGIC; -- Branch logic control, 1 if branch
         i_JumpLogic     : IN STD_LOGIC; -- Jump logic control, 1 if jump
