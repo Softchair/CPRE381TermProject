@@ -333,7 +333,7 @@ port map(
   -- Control logic inputs
   i_BranchLogic => s_branchUnit,
   i_JumpLogic   => s_controlOut(13),
-  i_JRegLogic   => s_controlOut(12),   
+  i_JRegLogic   => s_controlOut(13),   
  
   -- Instruction input
   i_Instruction => s_Inst,-- Instruction output

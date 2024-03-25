@@ -26,7 +26,7 @@ entity fetch_Logic is
         i_CLK           : IN STD_LOGIC; -- Clock
         i_RST           : IN STD_LOGIC; -- Reset
         -- Register inputs
-        i_JReg          : IN STD_LOGIC_VECTOR(31 downto 0); -- Jump register input
+        i_JReg          : IN STD_LOGIC_VECTOR(31 downto 0); -- Jump register inputz
         -- Control logic inputs
         i_BranchLogic   : IN STD_LOGIC; -- Branch logic control, 1 if branch
         i_JumpLogic     : IN STD_LOGIC; -- Jump logic control, 1 if jump
@@ -250,7 +250,7 @@ architecture mixed of fetch_logic is
         g_jumpRegControl: mux2t1N
             generic map(N => 32)
             port map(
-                i_A     => s_JumpAddMuxOut, -- From output of jump mux (0)
+                i_A     => i_JReg, -- From output of jump mux (0)
                 i_B     => s_JumpAddMuxOut, -- Jump register output (1)
                 i_Sel   => i_JRegLogic, -- From control
                 o_Out   => s_JumpRegMuxOut -- To PC reg
