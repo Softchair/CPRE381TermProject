@@ -31,4 +31,4 @@ sc_dpiheader.h
 vsim.dbg
 
 # toolflow ignore
-cpre381-toolflow/internal/*
+#cpre381-toolflow/internal/*
