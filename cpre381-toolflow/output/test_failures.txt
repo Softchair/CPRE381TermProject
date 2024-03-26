@@ -1,7 +1,0 @@
-proj/mips/tests/j_3.s
-proj/mips/tests/jal_1.s
-proj/mips/tests/jal_2.s
-proj/mips/tests/jal_3.s
-proj/mips/tests/jr_1.s
-proj/mips/tests/jr_2.s
-proj/mips/tests/jr_3.s
