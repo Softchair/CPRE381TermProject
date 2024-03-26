@@ -1,21 +1,21 @@
 Oh no...
 
-Cycle: 1
-MARS instruction number: 2	Instruction: ori $1,$1,65535
-Expected:	Register Write to Reg: 0x01 Val: 0x7FFFFFFF
-Got     :	Register Write to Reg: 0x01 Val: 0x0000FFFF
+Cycle: 96
+MARS instruction number: 97	Instruction: sra $1,$1,1
+Expected:	Register Write to Reg: 0x01 Val: 0x3FFFFFFF
+Got     :	Register Write to Reg: 0x01 Val: 0x00000000
 Incorrect write
 
-Cycle: 3
-MARS instruction number: 3	Instruction: add $1,$0,$1
-Expected:	Register Write to Reg: 0x01 Val: 0x7FFFFFFF
-Got     :	Register Write to Reg: 0x01 Val: 0x7FFF0000
+Cycle: 97
+MARS instruction number: 98	Instruction: sra $2,$2,2
+Expected:	Register Write to Reg: 0x02 Val: 0x1FFFFFFF
+Got     :	Register Write to Reg: 0x02 Val: 0x00000000
 Incorrect write
 
-Cycle: 4
-MARS instruction number: 4	Instruction: lui $1,32767
-Expected:	Register Write to Reg: 0x01 Val: 0x7FFF0000
-Got     :	Register Write to Reg: 0x01 Val: 0x0000FFFF
+Cycle: 98
+MARS instruction number: 99	Instruction: sra $3,$3,3
+Expected:	Register Write to Reg: 0x03 Val: 0x0FFFFFFF
+Got     :	Register Write to Reg: 0x03 Val: 0x00000000
 Incorrect write
 
 You have reached the maximum mismatches (3)

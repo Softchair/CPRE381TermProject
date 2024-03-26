@@ -9,7 +9,7 @@ Incorrect write
 Cycle: 4
 MARS instruction number: 5	Instruction: sub $20,$9,$8
 Expected:	Register Write to Reg: 0x14 Val: 0x00000000
-Got     :	Register Write to Reg: 0x08 Val: 0x00000000
+Got     :	Register Write to Reg: 0x14 Val: 0x00007FFF
 Incorrect write
 
 Cycle: 5

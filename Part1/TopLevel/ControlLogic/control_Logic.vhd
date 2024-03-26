@@ -46,10 +46,10 @@ begin
  
 
  	o_signals <= "1000110000000001100000" when i_DOpcode = "001000" else -- addi
-                     "0000100000000001100000" when i_DOpcode = "000000" and i_DFunc = "010100" else -- add
+                     "0000100000000001100000" when i_DOpcode = "000000" and i_DFunc = "100000" else -- add
                      "1000110000000000100000" when i_DOpcode = "001001" else -- addiu
-                     "1000100000000000100000" when i_DOpcode = "000000" and i_DFunc = "010101" else --  1000100000000000X0 addu
-                     "0000100000000010000000" when i_DOpcode = "000000" and i_DFunc = "011000" else --  0X00100000000010X0 and
+                     "0000100000000000000000" when i_DOpcode = "000000" and i_DFunc = "100001" else --  1000100000000000X0 addu
+                     "0000100000000010000000" when i_DOpcode = "000000" and i_DFunc = "100100" else --  0X00100000000010X0 and
                      "1000110000000010000000" when i_DOpcode = "001100" else -- 1X0011000000001000 andi
 		     "0000110000000100000000" when i_DOpcode = "001111" else -- XX0011000000010000 lui
   		     "1010110000000000100000" when i_DOpcode = "100011" else -- 101011000000000010 lw

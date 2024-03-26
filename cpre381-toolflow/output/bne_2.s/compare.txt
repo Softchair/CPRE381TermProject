@@ -1,24 +1,12 @@
 Oh no...
 
-Cycle: 2
-MARS instruction number: 3	Instruction: add $8,$0,$1
-Expected:	Register Write to Reg: 0x08 Val: 0x80000000
-Got     :	Register Write to Reg: 0x01 Val: 0x80000000
-Incorrect write
-
-Cycle: 5
-MARS instruction number: 6	Instruction: add $9,$0,$1
-Expected:	Register Write to Reg: 0x09 Val: 0x7FFFFFFF
+Cycle: 8
+MARS instruction number: na	Instruction: na
+Expected:	Execution stopped
 Got     :	Register Write to Reg: 0x01 Val: 0x7FFFFFFF
-Incorrect write
+Student execution improperly continued
 
-Cycle: 6
-MARS instruction number: 7	Instruction: addi $10,$0,1
-Expected:	No Overflow
-Got     :	Overflow
-Overflow is incorrect
-
-You have reached the maximum mismatches (3)
+Almost! your processor completed the program with  1/3 allowed mismatches
 
 Helpful resources for Debugging:
 ms.trace : output from the VHDL testbench during program execution on your processor

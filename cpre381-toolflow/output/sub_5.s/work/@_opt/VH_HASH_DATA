@@ -20,12 +20,14 @@
 1 N
 45
 5 mixed
+1
+89 /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/containers/sim_container_0/work
 10
 12 nbitregister
 6
 3 rtl
-1
-72 /home/kosice/Documents/cpre381-toolflow/containers/sim_container_19/work
+14
+3 NIn
 31
 3 D10
 32
@@ -38,8 +40,6 @@
 3 D14
 36
 3 D15
-14
-3 NIn
 27
 3 mux
 37
@@ -438,36 +438,6 @@
 1
 26
 27
-28
-29
-1
-0
-0
-]
-[P
-1
-26
-27
-30
-29
-1
-0
-0
-]
-[P
-1
-41
-21
-42
-43
-1
-0
-0
-]
-[P
-1
-26
-27
 31
 29
 1
@@ -550,6 +520,36 @@
 27
 29
 39
+1
+0
+0
+]
+[P
+1
+26
+27
+28
+29
+1
+0
+0
+]
+[P
+1
+26
+27
+30
+29
+1
+0
+0
+]
+[P
+1
+41
+21
+42
+43
 1
 0
 0

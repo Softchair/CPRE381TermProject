@@ -1,24 +1,18 @@
 Oh no...
 
-Cycle: 1
-MARS instruction number: 2	Instruction: ori $8,$1,0
-Expected:	Register Write to Reg: 0x08 Val: 0x10010000
-Got     :	Register Write to Reg: 0x08 Val: 0x00000000
+Cycle: 6
+MARS instruction number: 7	Instruction: sllv $18,$16,$17
+Expected:	Register Write to Reg: 0x12 Val: 0xFFFFFFFC
+Got     :	Register Write to Reg: 0x12 Val: 0x00000000
 Incorrect write
 
-Cycle: 3
-MARS instruction number: 4	Instruction: ori $9,$1,20
-Expected:	Register Write to Reg: 0x09 Val: 0x10010014
-Got     :	Register Write to Reg: 0x09 Val: 0x00000014
+Cycle: 7
+MARS instruction number: 8	Instruction: sw $18,0($9)
+Expected:	Memory Write to Addr: 0x10010014 Val: 0xFFFFFFFC
+Got     :	Memory Write to Addr: 0x10010014 Val: 0x00000000
 Incorrect write
 
-Cycle: 5
-MARS instruction number: 5	Instruction: lw $16,0($8)
-Expected:	Register Write to Reg: 0x10 Val: 0xFFFFFFFF
-Got     :	Register Write to Reg: 0x11 Val: 0x00000002
-Incorrect write
-
-You have reached the maximum mismatches (3)
+Almost! your processor completed the program with  2/3 allowed mismatches
 
 Helpful resources for Debugging:
 ms.trace : output from the VHDL testbench during program execution on your processor

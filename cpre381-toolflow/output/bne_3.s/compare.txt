@@ -1,11 +1,5 @@
 Oh no...
 
-Cycle: 4
-MARS instruction number: 5	Instruction: addi $1,$0,175
-Expected:	No Overflow
-Got     :	Overflow
-Overflow is incorrect
-
 Cycle: 6
 MARS instruction number: 7	Instruction: addi $8,$0,2
 Expected:	Register Write to Reg: 0x08 Val: 0x00000002
@@ -18,7 +12,7 @@ Expected:	Execution stopped
 Got     :	Register Write to Reg: 0x01 Val: 0x000000AF
 Student execution improperly continued
 
-You have reached the maximum mismatches (3)
+Almost! your processor completed the program with  2/3 allowed mismatches
 
 Helpful resources for Debugging:
 ms.trace : output from the VHDL testbench during program execution on your processor

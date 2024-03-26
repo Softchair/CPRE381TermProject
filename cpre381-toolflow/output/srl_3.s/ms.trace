@@ -59,7 +59,7 @@ Register Write to Reg: 0x1D Val: 0xFFFFFFFF
 In clock cycle: 29
 Register Write to Reg: 0x1E Val: 0xFFFFFFFF
 In clock cycle: 30
-Register Write to Reg: 0x1F Val: 0xFFFFFFFE
+Register Write to Reg: 0x1F Val: 0xFFFFFFFF
 In clock cycle: 31
 Register Write to Reg: 0x01 Val: 0x00000000
 In clock cycle: 32

@@ -1,4 +1,4 @@
-Warning in /home/kosice/Documents/cpre381-toolflow/proj/mips/Tests/Tests/sll_2.s line 5 column 1: MARS does not recognize the .global directive.  Ignored.
+Warning in /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/mips/tests/sll_2.s line 5 column 1: MARS does not recognize the .global directive.  Ignored.
 
 [inst #1] lui $1,4097
 Register Write to Reg: 0x01 Val: 0x10010000

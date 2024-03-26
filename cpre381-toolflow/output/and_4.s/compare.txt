@@ -1,11 +1,5 @@
 Oh no...
 
-Cycle: 3
-MARS instruction number: 4	Instruction: add $9,$0,$1
-Expected:	Register Write to Reg: 0x09 Val: 0x0000FFFF
-Got     :	Register Write to Reg: 0x01 Val: 0x0000FFFF
-Incorrect write
-
 Cycle: 4
 MARS instruction number: 5	Instruction: sll $9,$9,16
 Expected:	Register Write to Reg: 0x09 Val: 0xFFFF0000
@@ -15,7 +9,13 @@ Incorrect write
 Cycle: 7
 MARS instruction number: 8	Instruction: add $9,$9,$1
 Expected:	Register Write to Reg: 0x09 Val: 0xFFFFFFFF
-Got     :	Register Write to Reg: 0x01 Val: 0x0000FFFF
+Got     :	Register Write to Reg: 0x09 Val: 0x0000FFFF
+Incorrect write
+
+Cycle: 12
+MARS instruction number: 13	Instruction: sll $8,$8,1
+Expected:	Register Write to Reg: 0x08 Val: 0x00000002
+Got     :	Register Write to Reg: 0x08 Val: 0x00000000
 Incorrect write
 
 You have reached the maximum mismatches (3)

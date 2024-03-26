@@ -1,4 +1,4 @@
-Warning in /home/kosice/Documents/cpre381-toolflow/proj/mips/Tests/Tests/lbu_4.s line 5 column 17: "0xFF" is out-of-range for a signed value and possibly truncated
+Warning in /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/mips/tests/lbu_4.s line 5 column 17: "0xFF" is out-of-range for a signed value and possibly truncated
 
 [inst #1] lui $4,4097
 Register Write to Reg: 0x04 Val: 0x10010000

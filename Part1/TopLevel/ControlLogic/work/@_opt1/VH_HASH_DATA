@@ -1,0 +1,49 @@
+[N
+5
+1
+64 /home/cfergen/cpre381/CPRE381TermProject/Part1/ControlLogic/work
+5
+1 N
+3
+8 behavior
+2
+16 tb_control_logic
+4
+9 gCLK_HPER
+]
+[G
+1
+2
+3
+1
+4
+0
+0
+0
+0
+8 8
+-128
+-106
+-104
+0
+0
+0
+0
+0
+0
+0
+]
+[G
+1
+2
+3
+1
+5
+0
+0
+32
+0
+0 0
+0
+0
+]

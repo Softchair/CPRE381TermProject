@@ -1,6 +1,6 @@
 QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
-Start time: 16:11:35 on Mar 21,2024
-vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd internal/testpy/tb.vhd proj/src/MIPS_types.vhd proj/src/TopLevel/mem.vhd proj/src/TopLevel/MIPS_Processor.vhd proj/src/aluUnit/allstuff/tb_bit_extenders24b.vhd proj/src/aluUnit/allstuff/tb_ALU.vhd proj/src/aluUnit/allstuff/invg.vhd proj/src/aluUnit/allstuff/orG_N.vhd proj/src/aluUnit/allstuff/tb_onesCompN.vhd proj/src/aluUnit/allstuff/tb_mux16b2t1.vhd proj/src/aluUnit/allstuff/mux32b3t1.vhd proj/src/aluUnit/allstuff/mux2t1_5b.vhd proj/src/aluUnit/allstuff/firstALU.vhd proj/src/aluUnit/allstuff/tb_slt.vhd proj/src/aluUnit/allstuff/tb_xorG_N.vhd proj/src/aluUnit/allstuff/andg2.vhd proj/src/aluUnit/allstuff/lui.vhd proj/src/aluUnit/allstuff/norG_N.vhd proj/src/aluUnit/allstuff/mux2t1Flow.vhd proj/src/aluUnit/allstuff/mux2t1_N.vhd proj/src/aluUnit/allstuff/xorG_N.vhd proj/src/aluUnit/allstuff/tb_norG_N.vhd proj/src/aluUnit/allstuff/mux32_1.vhd proj/src/aluUnit/allstuff/tb_orG32b.vhd proj/src/aluUnit/allstuff/mux2t1.vhd proj/src/aluUnit/allstuff/fullAdderStruct.vhd proj/src/aluUnit/allstuff/bit_extenders24b.vhd proj/src/aluUnit/allstuff/tb_mux8b4t1.vhd proj/src/aluUnit/allstuff/adderSubS.vhd proj/src/aluUnit/allstuff/onesCompN.vhd proj/src/aluUnit/allstuff/orG32b.vhd proj/src/aluUnit/allstuff/fullAdderStructN.vhd proj/src/aluUnit/allstuff/xorg2.vhd proj/src/aluUnit/allstuff/mux16b2t1.vhd proj/src/aluUnit/allstuff/ALU.vhd proj/src/aluUnit/allstuff/tb_bit_extenders.vhd proj/src/aluUnit/allstuff/mux8b4t1.vhd proj/src/aluUnit/allstuff/mux16_1.vhd proj/src/aluUnit/allstuff/tb_andG_N.vhd proj/src/aluUnit/allstuff/tb_lui.vhd proj/src/aluUnit/allstuff/bit_extenders.vhd proj/src/aluUnit/allstuff/tb_andg32b.vhd proj/src/aluUnit/allstuff/org2.vhd proj/src/aluUnit/allstuff/slt.vhd proj/src/aluUnit/allstuff/andG32b.vhd proj/src/aluUnit/allstuff/tb_orG_N.vhd proj/src/aluUnit/allstuff/andG_N.vhd proj/src/loadMemModule/tb_loadMemModule.vhd proj/src/loadMemModule/loadMemModule.vhd proj/src/LogicGates/mux2t1N.vhd proj/src/BasicGates/invg.vhd proj/src/BasicGates/xorg2.vhd proj/src/BasicGates/dffg.vhd proj/src/BasicGates/org2.vhd proj/src/BasicGates/andg2.vhd proj/src/BasicGates/Adder/rippleCarryAdderN.vhd proj/src/BasicGates/Adder/adder1b.vhd proj/src/BasicGates/register/dffg.vhd proj/src/BasicGates/register/mux32_1.vhd proj/src/BasicGates/register/tb_decoder5_32.vhd proj/src/BasicGates/register/tb_mux32_1.vhd proj/src/BasicGates/register/dffgN.vhd proj/src/BasicGates/register/decoder5_32.vhd proj/src/BasicGates/register/register_package.vhd proj/src/BasicGates/register/tb_MIPSregister.vhd proj/src/BasicGates/register/tb_dffgN.vhd proj/src/BasicGates/register/tb_dffg.vhd proj/src/BasicGates/register/MIPSregister.vhd proj/src/FetchLogic/fetch_Logic.vhd proj/src/FetchLogic/tb_fetch_logic.vhd proj/src/FetchLogic/Supporting files/tb_shiftleft2N.vhd proj/src/FetchLogic/Supporting files/PCReg.vhd proj/src/FetchLogic/Supporting files/tb_pcreg.vhd proj/src/FetchLogic/Supporting files/shiftleft2N.vhd proj/src/FetchLogic/Supporting files/bit16_extenders.vhd proj/src/FetchLogic/Gates/NbitRegister.vhd proj/src/ControlLogic/control_Logic.vhd proj/src/ControlLogic/tb_control_Logic.vhd 
+Start time: 15:47:25 on Mar 25,2024
+vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd internal/testpy/tb.vhd proj/src/mem.vhd proj/src/MIPS_Processor.vhd proj/src/MIPS_types.vhd proj/src/TopLevel/ControlLogic/control_Logic.vhd proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd proj/src/TopLevel/loadMemModule/loadMemModule.vhd proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd proj/src/TopLevel/LogicGates/mux2t1.vhd proj/src/TopLevel/LogicGates/mux2t1N.vhd proj/src/TopLevel/FetchLogic/fetch_Logic.vhd proj/src/TopLevel/FetchLogic/tb_fetch_logic.vhd proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd proj/src/TopLevel/FetchLogic/Supporting files/tb_pcreg.vhd proj/src/TopLevel/FetchLogic/Supporting files/tb_shiftleft2N.vhd proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd proj/src/TopLevel/BasicGates/xorg2.vhd proj/src/TopLevel/BasicGates/dffg.vhd proj/src/TopLevel/BasicGates/org2.vhd proj/src/TopLevel/BasicGates/invg.vhd proj/src/TopLevel/BasicGates/andg2.vhd proj/src/TopLevel/BasicGates/Adder/adder1b.vhd proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd proj/src/TopLevel/BasicGates/register/decoder5_32.vhd proj/src/TopLevel/BasicGates/register/tb_dffgN.vhd proj/src/TopLevel/BasicGates/register/dffgN.vhd proj/src/TopLevel/BasicGates/register/tb_mux32_1.vhd proj/src/TopLevel/BasicGates/register/tb_dffg.vhd proj/src/TopLevel/BasicGates/register/tb_decoder5_32.vhd proj/src/TopLevel/BasicGates/register/MIPSregister.vhd proj/src/TopLevel/BasicGates/register/dffg.vhd proj/src/TopLevel/BasicGates/register/mux32_1.vhd proj/src/TopLevel/BasicGates/register/tb_MIPSregister.vhd proj/src/TopLevel/BasicGates/register/register_package.vhd proj/src/TopLevel/aluUnit/fullAdderStructN.vhd proj/src/TopLevel/aluUnit/lui.vhd proj/src/TopLevel/aluUnit/fullAdderStruct.vhd proj/src/TopLevel/aluUnit/ALU.vhd proj/src/TopLevel/aluUnit/firstALU.vhd proj/src/TopLevel/aluUnit/onesCompN.vhd proj/src/TopLevel/aluUnit/adderSubS.vhd proj/src/TopLevel/aluUnit/slt.vhd proj/src/TopLevel/aluUnit/testBenches/tb_andG_N.vhd proj/src/TopLevel/aluUnit/testBenches/tb_orG32b.vhd proj/src/TopLevel/aluUnit/testBenches/tb_lui.vhd proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders.vhd proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders24b.vhd proj/src/TopLevel/aluUnit/testBenches/tb_ALU.vhd proj/src/TopLevel/aluUnit/testBenches/tb_andg32b.vhd proj/src/TopLevel/aluUnit/testBenches/tb_xorG_N.vhd proj/src/TopLevel/aluUnit/testBenches/tb_mux8b4t1.vhd proj/src/TopLevel/aluUnit/testBenches/tb_orG_N.vhd proj/src/TopLevel/aluUnit/testBenches/tb_norG_N.vhd proj/src/TopLevel/aluUnit/testBenches/tb_slt.vhd proj/src/TopLevel/aluUnit/testBenches/tb_onesCompN.vhd proj/src/TopLevel/aluUnit/testBenches/tb_mux16b2t1.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1Flow.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1_5b.vhd proj/src/TopLevel/aluUnit/basicGates/norG_N.vhd proj/src/TopLevel/aluUnit/basicGates/mux16_1.vhd proj/src/TopLevel/aluUnit/basicGates/invg.vhd proj/src/TopLevel/aluUnit/basicGates/mux32b3t1.vhd proj/src/TopLevel/aluUnit/basicGates/bit_extenders24b.vhd proj/src/TopLevel/aluUnit/basicGates/bit_extenders.vhd proj/src/TopLevel/aluUnit/basicGates/mux8b4t1.vhd proj/src/TopLevel/aluUnit/basicGates/xorG_N.vhd proj/src/TopLevel/aluUnit/basicGates/andG32b.vhd proj/src/TopLevel/aluUnit/basicGates/xorg2.vhd proj/src/TopLevel/aluUnit/basicGates/andg2.vhd proj/src/TopLevel/aluUnit/basicGates/org2.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1.vhd proj/src/TopLevel/aluUnit/basicGates/orG32b.vhd proj/src/TopLevel/aluUnit/basicGates/mux16b2t1.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1_N.vhd proj/src/TopLevel/aluUnit/basicGates/andG_N.vhd proj/src/TopLevel/aluUnit/basicGates/mux32_1.vhd proj/src/TopLevel/aluUnit/basicGates/orG_N.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -11,23 +11,33 @@ vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd interna
 -- Loading package ENV
 -- Compiling entity tb
 -- Compiling architecture mixed of tb
-** Warning: proj/src/MIPS_types.vhd(15): (vcom-1615) Existing package 'MIPS_types' at line 15 will be overwritten.
--- Compiling package MIPS_types
-** Warning: proj/src/MIPS_types.vhd(29): (vcom-1615) Existing package body 'MIPS_types(body)' at line 29 will be overwritten.
--- Compiling package body MIPS_types
--- Loading package MIPS_types
 -- Loading package NUMERIC_STD
 -- Compiling entity mem
 -- Compiling architecture rtl of mem
 -- Loading package MIPS_types
 -- Compiling entity MIPS_Processor
 -- Compiling architecture structure of MIPS_Processor
-** Warning: proj/src/TopLevel/MIPS_Processor.vhd(371): (vcom-1624) Component instance MIPS_Processor(structure).muxWrAddr has a generic map clause and the component mux2t1_N has no generics.
-Generic map will be ignored.
-** Error: proj/src/TopLevel/MIPS_Processor.vhd(373): near "port": syntax error
-** Error: proj/src/TopLevel/MIPS_Processor.vhd(372): (vcom-1035) Formal port "i_S" has OPEN or no actual associated with it.
-** Error: proj/src/TopLevel/MIPS_Processor.vhd(372): (vcom-1035) Formal port "i_D0" has OPEN or no actual associated with it.
-** Error: proj/src/TopLevel/MIPS_Processor.vhd(372): (vcom-1035) Formal port "i_D1" has OPEN or no actual associated with it.
-** Note: proj/src/TopLevel/MIPS_Processor.vhd(478): VHDL Compiler exiting
-End time: 16:11:35 on Mar 21,2024, Elapsed time: 0:00:00
-Errors: 4, Warnings: 3
+** Warning: proj/src/MIPS_types.vhd(15): (vcom-1615) Existing package 'MIPS_types' at line 15 will be overwritten.
+-- Compiling package MIPS_types
+** Warning: proj/src/MIPS_types.vhd(29): (vcom-1615) Existing package body 'MIPS_types(body)' at line 29 will be overwritten.
+-- Compiling package body MIPS_types
+-- Loading package MIPS_types
+-- Compiling entity control_Logic
+-- Compiling architecture flow of control_Logic
+-- Compiling entity tb_control_Logic
+-- Compiling architecture behavior of tb_control_Logic
+-- Compiling entity loadMemModule
+-- Compiling architecture structure of loadMemModule
+-- Compiling entity tb_loadMemModule
+-- Compiling architecture mixed of tb_loadMemModule
+-- Compiling entity mux2t1
+-- Compiling architecture structure of mux2t1
+-- Compiling entity mux2t1N
+-- Compiling architecture structural of mux2t1N
+-- Compiling entity fetch_Logic
+** Error: proj/src/TopLevel/FetchLogic/fetch_Logic.vhd(38): (vcom-1136) Unknown identifier "o_jaladd".
+** Error: proj/src/TopLevel/FetchLogic/fetch_Logic.vhd(38): Bad resolution function (STD_LOGIC_VECTOR) for type (error).
+** Error: proj/src/TopLevel/FetchLogic/fetch_Logic.vhd(38): near ":": (vcom-1576) expecting ';' or ')'.
+** Note: proj/src/TopLevel/FetchLogic/fetch_Logic.vhd(38): VHDL Compiler exiting
+End time: 15:47:25 on Mar 25,2024, Elapsed time: 0:00:00
+Errors: 3, Warnings: 2

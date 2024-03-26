@@ -10,8 +10,6 @@
 9 mux2t1_5b
 42
 8 iInstExt
-1
-71 /home/kosice/Documents/cpre381-toolflow/containers/sim_container_7/work
 8
 10 ADDR_WIDTH
 11
@@ -22,6 +20,8 @@
 1 N
 45
 5 mixed
+1
+89 /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/containers/sim_container_0/work
 10
 12 nbitregister
 6
@@ -94,6 +94,48 @@
 6 andg_n
 43
 9 iInstAddr
+]
+[G
+1
+12
+13
+1
+14
+1
+0
+26
+0
+0 0
+0
+0
+]
+[G
+1
+12
+13
+2
+14
+1
+0
+30
+0
+0 0
+0
+0
+]
+[G
+1
+22
+3
+1
+4
+1
+0
+32
+0
+0 0
+0
+0
 ]
 [G
 1
@@ -392,45 +434,23 @@
 0
 0
 ]
-[G
+[P
 1
-12
-13
-1
-14
-1
-0
 26
-0
-0 0
+27
+31
+29
+1
 0
 0
 ]
-[G
+[P
 1
-12
-13
-2
-14
-1
-0
-30
-0
-0 0
-0
-0
-]
-[G
-1
-22
-3
-1
-4
-1
-0
+26
+27
 32
-0
-0 0
+29
+1
 0
 0
 ]
@@ -530,26 +550,6 @@
 21
 42
 43
-1
-0
-0
-]
-[P
-1
-26
-27
-31
-29
-1
-0
-0
-]
-[P
-1
-26
-27
-32
-29
 1
 0
 0
