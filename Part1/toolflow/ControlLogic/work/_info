@@ -1,0 +1,142 @@
+m255
+K4
+z2
+!s11f vlog 2023.2_2 2023.06, Jun  9 2023
+Z0 !s12c _opt1
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+Z2 !s12c _opt
+R1
+R0
+R1
+R2
+R1
+!s11e vcom 2023.2_2 2023.06, Jun  9 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z3 d/home/kosice/cpre381/Project1
+T_opt
+!s110 1709767259
+V:86G6d]k;F8V@j`3;4Je=2
+Z4 04 16 8 work tb_control_logic behavior 1
+=1-7486e22834bc-65e8fa5b-36e60-930b
+R1
+Z5 !s12b OEM100
+Z6 !s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z7 tCvgOpt 0
+n@_opt
+Z8 OL;O;2023.2_2;77
+R3
+T_opt1
+!s110 1709768593
+VjWCg4lI4AO[=hUEg7C6K:3
+R4
+=1-7486e22834bc-65e8ff91-c013c-9ed9
+R1
+R5
+R6
+o-quiet -auto_acc_if_foreign -work work
+R7
+n@_opt1
+R8
+R3
+Econtrol_logic
+Z9 DPx3 std 3 env 0 22 QPZJVBPkV?55nUWhDzFik0
+Z10 DPx4 ieee 16 std_logic_textio 0 22 C8j>g0lzF^EAA]5<S6PY32
+Z11 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z12 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+32
+Z13 !s110 1709766795
+!i10b 1
+Z14 w1709766293
+!i122 4
+Z15 d/home/cfergen/cpre381/CPRE381TermProject/Part1/ControlLogic
+Z16 8/home/cfergen/cpre381/CPRE381TermProject/Part1/ControlLogic/control_Logic.vhd
+Z17 F/home/cfergen/cpre381/CPRE381TermProject/Part1/ControlLogic/control_Logic.vhd
+l0
+L24 1
+VER`;jTlC`T]?61oeQK4162
+!s100 ;l81:FMeP:IB9^Q31ZbV_1
+Z18 OL;C;2023.2_2;77
+Z19 !s108 1709766795.000000
+Z20 !s90 -reportprogress|300|-work|work|/home/cfergen/cpre381/CPRE381TermProject/Part1/ControlLogic/control_Logic.vhd|
+Z21 !s107 /home/cfergen/cpre381/CPRE381TermProject/Part1/ControlLogic/control_Logic.vhd|
+!i113 0
+Z22 o-work work
+Z23 tExplicit 1 CvgOpt 0
+Aflow
+R9
+R10
+R11
+R12
+DEx4 work 13 control_logic 0 22 ER`;jTlC`T]?61oeQK4162
+32
+R13
+!i10b 1
+!i122 4
+l37
+L33 41
+VS=GjL22L5P<DbhoOKJ0U?2
+!s100 lWU8kSdPa[n?K3[9QK3P81
+R18
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Etb_control_logic
+R11
+R12
+32
+Z24 !s110 1709768592
+!i10b 1
+Z25 w1709768584
+!i122 18
+R15
+Z26 8/home/cfergen/cpre381/CPRE381TermProject/Part1/ControlLogic/tb_control_Logic.vhd
+Z27 F/home/cfergen/cpre381/CPRE381TermProject/Part1/ControlLogic/tb_control_Logic.vhd
+l0
+L20 1
+Ve>QN6MRNO:PJ_N@Z92ATG2
+!s100 9jVHOO<gONfTl:6S>V`gL2
+R18
+Z28 !s108 1709768592.000000
+Z29 !s90 -reportprogress|300|-work|work|/home/cfergen/cpre381/CPRE381TermProject/Part1/ControlLogic/tb_control_Logic.vhd|
+Z30 !s107 /home/cfergen/cpre381/CPRE381TermProject/Part1/ControlLogic/tb_control_Logic.vhd|
+!i113 0
+R22
+R23
+Abehavior
+R11
+R12
+DEx4 work 16 tb_control_logic 0 22 e>QN6MRNO:PJ_N@Z92ATG2
+32
+R24
+!i10b 1
+!i122 18
+l43
+L26 276
+Vcnh2R>BYX:AhTIT^4h>8`2
+!s100 Z0mM?gP_hC2c6]844`WDQ3
+R18
+R28
+R29
+R30
+!i113 0
+R22
+R23
