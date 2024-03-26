@@ -1,8 +1,8 @@
 Oh no...
 
 Cycle: na
-MARS instruction number: 12	Instruction: addi $1,$0,1
-Expected:	Register Write to Reg: 0x01 Val: 0x00000001
+MARS instruction number: 1	Instruction: lui $1,4097
+Expected:	Register Write to Reg: 0x01 Val: 0x10010000
 Got     :	Execution stopped
 Student execution ended prematurely
 
