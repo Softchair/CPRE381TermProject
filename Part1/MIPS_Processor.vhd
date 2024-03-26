@@ -123,6 +123,8 @@ signal s_zero : std_logic; -- for branching
 signal s_afterBEAnd : std_logic; -- signal going into branch OR
 signal s_afterBNEINV : std_logic; -- signal after inv for BNE
 signal s_afterBNEAnd : std_logic; -- signal going into OR for branch
+signal s_RegWrAddrBefore : std_logic_vector(4 downto 0); -- one mux to another
+signal s_jalAddnext  :  std_logic_vector(31 downto 0); -- NEW
 -----------------------
 --Large components
 -----------------------
@@ -184,7 +186,8 @@ port (
   -- Instruction input
   i_Instruction   : IN STD_LOGIC_VECTOR(31 downto 0); -- Instruction output
   -- Ouput
-  o_PCAddress     : OUT STD_LOGIC_VECTOR(31 downto 0) -- PC Address for JAL box
+  o_PCAddress     : OUT STD_LOGIC_VECTOR(31 downto 0); -- PC Address for JAL box
+  o_jalAdd  : OUT STD_LOGIC_VECTOR(31 downto 0) -- NEW
 );
   end component;
 
@@ -329,13 +332,14 @@ port map(
   i_JReg =>  s_rsOut,
   -- Control logic inputs
   i_BranchLogic => s_branchUnit,
-  i_JumpLogic   => s_controlOut(14),
-  i_JRegLogic   => s_controlOut(12),   
+  i_JumpLogic   => s_controlOut(13),
+  i_JRegLogic   => s_controlOut(11),   
  
   -- Instruction input
   i_Instruction => s_Inst,-- Instruction output
   -- Ouput
-  o_PCAddress   => s_NextInstAddr);
+  o_PCAddress   => s_NextInstAddr,
+  o_jalAdd      => s_jalAddnext); -- NEW
 
 
   BranchEqualAnd : andg2
@@ -374,14 +378,25 @@ port map(
              i_S  => s_controlOut(16), 
              i_D0 => s_Inst(15 downto 11), 
              i_D1 => s_Inst(20 downto 16),   
+             o_O  => s_RegWrAddrBefore);
+
+
+muxWrAddr02 : mux2t1_5b
+
+port map(
+             i_S  => s_controlOut(12), 
+             i_D0 => s_RegWrAddrBefore, 
+             i_D1 => "11111",   
              o_O  => s_RegWrAddr);
+
+
 
 muxjal : mux2t1_N
 
 port map(
-             i_S  => s_controlOut(13), 
+             i_S  => s_controlOut(12), 
              i_D0 => s_databeforeMux, 
-             i_D1 => s_NextInstAddr,   
+             i_D1 => s_jalAddnext, -- was PCnextAddress   
              o_O  => s_RegWrData);
 
 
@@ -423,6 +438,7 @@ ALUmod : ALU
       i_ALUOpSel    => s_controlOut(10 downto 7), 
       o_DataOut     => s_aluDataOut,
       i_sOverFlow   => s_controlOut(6),
+      o_zero        => s_zero,
       o_overFlow    => s_Ovfl);
 
 

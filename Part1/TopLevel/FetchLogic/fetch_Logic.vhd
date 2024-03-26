@@ -14,6 +14,7 @@
 -- Created file - 3/1/24
 -- Finished file - 3/6/24
 -- Removed memory to be moved outside of fetch - 3/6/24
+-- Added PC+4 out for JAL 3/25/24
 -------------------------------------------------------------------------
 
 library IEEE;
@@ -25,7 +26,7 @@ entity fetch_Logic is
         i_CLK           : IN STD_LOGIC; -- Clock
         i_RST           : IN STD_LOGIC; -- Reset
         -- Register inputs
-        i_JReg          : IN STD_LOGIC_VECTOR(31 downto 0); -- Jump register input
+        i_JReg          : IN STD_LOGIC_VECTOR(31 downto 0); -- Jump register inputz
         -- Control logic inputs
         i_BranchLogic   : IN STD_LOGIC; -- Branch logic control, 1 if branch
         i_JumpLogic     : IN STD_LOGIC; -- Jump logic control, 1 if jump
@@ -33,7 +34,8 @@ entity fetch_Logic is
         -- Instruction input
         i_Instruction   : IN STD_LOGIC_VECTOR(31 downto 0); -- Instruction output
         -- Ouput
-        o_PCAddress     : OUT STD_LOGIC_VECTOR(31 downto 0) -- PC Address for JAL box
+        o_PCAddress     : OUT STD_LOGIC_VECTOR(31 downto 0); -- PC Address 
+        o_jalAdd        : OUT STD_LOGIC_VECTOR(31 downto 0) -- JAL Output
     );
       
 end fetch_Logic;
@@ -150,6 +152,8 @@ architecture mixed of fetch_logic is
                 o_S     => s_PCNext -- Next PC
             );
 
+        o_jalAdd <= s_PCNext; -- For JAL add
+
         -- -------- START JUMP LOGIC CONTROL -------- --
 
         -- Shift left 2 for jump address
@@ -254,7 +258,7 @@ architecture mixed of fetch_logic is
 
         -- Also assign the out of PC address to the result of jump reg control
         o_PCAddress <= s_PCaddressOut;
-
+        o_jalAdd  <= s_PCNext; -- NEW
         -- ------- END ENDING LOGIC CONTROL ------- --
 
 end mixed;

@@ -302,8 +302,8 @@ g_16t1Mux : mux16_1
            SEL => i_ALUOpSel);
 
 g_ovrFlowMux : mux2t1Flow
-  port MAP(A    => s_addSubOverFlowOut,
-           B    => '0',
+  port MAP(A    => '0',
+           B    => s_addSubOverFlowOut,
 	   SEL  => i_sOverFlow,
            m_OUT    => o_overFLow);
 

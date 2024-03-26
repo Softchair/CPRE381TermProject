@@ -35,7 +35,7 @@ begin
 slt_proc: process (i_Din, o_OUT)
 begin
   
-   if (i_Din >= x"00000000") then if (i_Din < x"F0000000") then o_OUT <= x"00000000";
+   if (i_Din >= x"00000000") then if (i_Din < "10000000000000000000000000000000") then o_OUT <= x"00000000";
    else o_OUT <= x"00000001";
    end if;
    end if;

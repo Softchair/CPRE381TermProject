@@ -24,7 +24,10 @@ entity fullAdderStructN is
        i_D0         : in std_logic_vector(N-1 downto 0);
        i_D1         : in std_logic_vector(N-1 downto 0);
        o_O          : out std_logic_vector(N-1 downto 0);
-       o_Cout       : out std_logic);
+       o_Cout31     : out std_logic;
+       o_Cout       : out std_logic
+
+);
 
 end fullAdderStructN;
 
@@ -38,13 +41,22 @@ architecture structural of fullAdderStructN is
 	 o_Cout       : out std_logic);
   end component;
 
+
+  component xorg2 is 
+  port(i_A          : in std_logic;
+       i_B          : in std_logic;
+       o_F          : out std_logic);
+  end component;
 -- signal for carry 
 signal s_carryA : std_logic_vector(N downto 0);
-
+signal s_ovrF : std_logic;
 
 
 
 begin
+
+ 
+
 s_carryA(0) <= i_Cin;
 o_Cout <= s_carryA(N);
   -- Instantiate N mux instances.
@@ -57,4 +69,6 @@ o_Cout <= s_carryA(N);
               o_O      => o_O(i));  -- ith instance's data output hooked up to ith data output.
   end generate G_NBit_ADDER;
   
+o_Cout31  <= s_carryA(31);
+
 end structural;
