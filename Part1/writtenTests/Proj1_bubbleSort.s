@@ -40,6 +40,7 @@ cond:
 
     addi $t0, $t0, 1 # Increment i
     bne $t0, $s1, outer_loop # If i != n, continue outer loop
+    li $t0, 1
 
 print_loop:
     li $v0, 1
