@@ -15,7 +15,7 @@
 
 library IEEE;
 use IEEE.std_logic_1164.all;
-use work.register_package.all;
+use work.MIPS_types.all;
 
 
 entity MIPSregister is
