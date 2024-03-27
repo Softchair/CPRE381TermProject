@@ -1,0 +1,262 @@
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
+    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Wed Mar 27 16:13:03 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off toolflow -c toolflow
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/MIPS_Processor.vhd
+    Info (12022): Found design unit 1: MIPS_Processor-structure File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/MIPS_Processor.vhd Line: 35
+    Info (12023): Found entity 1: MIPS_Processor File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/MIPS_Processor.vhd Line: 23
+Info (12021): Found 2 design units, including 0 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/MIPS_types.vhd
+    Info (12022): Found design unit 1: MIPS_types File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/MIPS_types.vhd Line: 15
+    Info (12022): Found design unit 2: MIPS_types-body File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/MIPS_types.vhd Line: 29
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd
+    Info (12022): Found design unit 1: Adder1b-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd Line: 19
+    Info (12023): Found entity 1: Adder1b File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd
+    Info (12022): Found design unit 1: rippleCarryAdderN-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd Line: 30
+    Info (12023): Found entity 1: rippleCarryAdderN File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andG32b.vhd
+    Info (12022): Found design unit 1: andG32b-dataflow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andG32b.vhd Line: 33
+    Info (12023): Found entity 1: andG32b File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andG32b.vhd Line: 24
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andg2.vhd
+    Info (12022): Found design unit 1: andg2-dataflow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andg2.vhd Line: 31
+    Info (12023): Found entity 1: andg2 File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andg2.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andgN.vhd
+    Info (12022): Found design unit 1: andgN-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andgN.vhd Line: 26
+    Info (12023): Found entity 1: andgN File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andgN.vhd Line: 17
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/dffg.vhd
+    Info (12022): Found design unit 1: dffg-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/dffg.vhd Line: 33
+    Info (12023): Found entity 1: dffg File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/dffg.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/invg.vhd
+    Info (12022): Found design unit 1: invg-dataflow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/invg.vhd Line: 30
+    Info (12023): Found entity 1: invg File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/invg.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/mux2t1.vhd
+    Info (12022): Found design unit 1: mux2t1-structure File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/mux2t1.vhd Line: 30
+    Info (12023): Found entity 1: mux2t1 File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/mux2t1.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/mux2t1_N.vhd
+    Info (12022): Found design unit 1: mux2t1_N-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/mux2t1_N.vhd Line: 30
+    Info (12023): Found entity 1: mux2t1_N File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/mux2t1_N.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/org2.vhd
+    Info (12022): Found design unit 1: org2-dataflow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/org2.vhd Line: 31
+    Info (12023): Found entity 1: org2 File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/org2.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/MIPSregister.vhd
+    Info (12022): Found design unit 1: MIPSregister-structure File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/MIPSregister.vhd Line: 42
+    Info (12023): Found entity 1: MIPSregister File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/MIPSregister.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/decoder5_32.vhd
+    Info (12022): Found design unit 1: decoder5_32-decoder File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/decoder5_32.vhd Line: 26
+    Info (12023): Found entity 1: decoder5_32 File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/decoder5_32.vhd Line: 20
+Info (15248): File "/home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/dffg.vhd" is a duplicate of already analyzed file "/home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/dffg.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/dffg.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/dffgN.vhd
+    Info (12022): Found design unit 1: dffgN-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/dffgN.vhd Line: 30
+    Info (12023): Found entity 1: dffgN File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/dffgN.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/mux32_1.vhd
+    Info (12022): Found design unit 1: mux32_1-mux File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/mux32_1.vhd Line: 29
+    Info (12023): Found entity 1: mux32_1 File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/mux32_1.vhd Line: 20
+Info (12021): Found 1 design units, including 0 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/register_package.vhd
+    Info (12022): Found design unit 1: register_package File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/register_package.vhd Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_MIPSregister.vhd
+    Info (12022): Found design unit 1: tb_MIPSregister-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_MIPSregister.vhd Line: 27
+    Info (12023): Found entity 1: tb_MIPSregister File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_MIPSregister.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_decoder5_32.vhd
+    Info (12022): Found design unit 1: tb_decoder5_32-behavior File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_decoder5_32.vhd Line: 24
+    Info (12023): Found entity 1: tb_decoder5_32 File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_decoder5_32.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_dffg.vhd
+    Info (12022): Found design unit 1: tb_dffg-behavior File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_dffg.vhd Line: 27
+    Info (12023): Found entity 1: tb_dffg File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_dffg.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_dffgN.vhd
+    Info (12022): Found design unit 1: tb_dffgN-behavior File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_dffgN.vhd Line: 24
+    Info (12023): Found entity 1: tb_dffgN File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_dffgN.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_mux32_1.vhd
+    Info (12022): Found design unit 1: tb_mux32_1-behavior File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_mux32_1.vhd Line: 24
+    Info (12023): Found entity 1: tb_mux32_1 File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_mux32_1.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/xorg2.vhd
+    Info (12022): Found design unit 1: xorg2-dataflow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/xorg2.vhd Line: 31
+    Info (12023): Found entity 1: xorg2 File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/xorg2.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/ControlLogic/control_Logic.vhd
+    Info (12022): Found design unit 1: control_Logic-flow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/ControlLogic/control_Logic.vhd Line: 40
+    Info (12023): Found entity 1: control_Logic File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/ControlLogic/control_Logic.vhd Line: 28
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd
+    Info (12022): Found design unit 1: tb_control_Logic-behavior File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd Line: 24
+    Info (12023): Found entity 1: tb_control_Logic File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd
+    Info (12022): Found design unit 1: nbitregister-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd Line: 19
+    Info (12023): Found entity 1: nbitregister File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd
+    Info (12022): Found design unit 1: PCReg-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd Line: 34
+    Info (12023): Found entity 1: PCReg File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd
+    Info (12022): Found design unit 1: bit16_extender-flow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd Line: 24
+    Info (12023): Found entity 1: bit16_extender File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd Line: 15
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd
+    Info (12022): Found design unit 1: shiftleft2N-Behavioral File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd Line: 33
+    Info (12023): Found entity 1: shiftleft2N File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/Supporting files/tb_pcreg.vhd
+    Info (12022): Found design unit 1: tb_PCReg-behavior File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/Supporting files/tb_pcreg.vhd Line: 17
+    Info (12023): Found entity 1: tb_PCReg File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/Supporting files/tb_pcreg.vhd Line: 14
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/Supporting files/tb_shiftleft2N.vhd
+    Info (12022): Found design unit 1: tb_shiftleft2N-behavior File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/Supporting files/tb_shiftleft2N.vhd Line: 18
+    Info (12023): Found entity 1: tb_shiftleft2N File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/Supporting files/tb_shiftleft2N.vhd Line: 15
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/fetch_Logic.vhd
+    Info (12022): Found design unit 1: fetch_logic-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/fetch_Logic.vhd Line: 43
+    Info (12023): Found entity 1: fetch_Logic File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/fetch_Logic.vhd Line: 24
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/tb_fetch_logic.vhd
+    Info (12022): Found design unit 1: tb_fetch_Logic-behavior File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/tb_fetch_logic.vhd Line: 16
+    Info (12023): Found entity 1: tb_fetch_Logic File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/tb_fetch_logic.vhd Line: 13
+Error (10430): VHDL Primary Unit Declaration error at mux2t1.vhd(17): primary unit "mux2t1" already exists in library "work". Compile the two primary units into different libraries or assign them unique names. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/LogicGates/mux2t1.vhd Line: 17
+Error (10784): HDL error at mux2t1.vhd(20): see declaration for object "mux2t1" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/mux2t1.vhd Line: 20
+Info (12021): Found 0 design units, including 0 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/LogicGates/mux2t1.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/LogicGates/mux2t1N.vhd
+    Info (12022): Found design unit 1: mux2t1N-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/LogicGates/mux2t1N.vhd Line: 30
+    Info (12023): Found entity 1: mux2t1N File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/LogicGates/mux2t1N.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd
+    Info (12022): Found design unit 1: ALU-structure File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 47
+    Info (12023): Found entity 1: ALU File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 26
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/adderSubS.vhd
+    Info (12022): Found design unit 1: adderSubS-structure File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/adderSubS.vhd Line: 32
+    Info (12023): Found entity 1: adderSubS File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/adderSubS.vhd Line: 17
+Info (12021): Found 0 design units, including 0 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/barrelShifter/1bitShifter.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/barrelShifter/barrelshifter.vhd
+    Info (12022): Found design unit 1: barrelShifter-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/barrelShifter/barrelshifter.vhd Line: 25
+    Info (12023): Found entity 1: barrelShifter File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/barrelShifter/barrelshifter.vhd Line: 17
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/andG_N.vhd
+    Info (12022): Found design unit 1: andG_N-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/andG_N.vhd Line: 29
+    Info (12023): Found entity 1: andG_N File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/andG_N.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/barrelShifterArithmetic.vhd
+    Info (12022): Found design unit 1: barrelShifterArithmetic-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/barrelShifterArithmetic.vhd Line: 30
+    Info (12023): Found entity 1: barrelShifterArithmetic File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/barrelShifterArithmetic.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/barrelShifterSLL.vhd
+    Info (12022): Found design unit 1: barrelShifterSLL-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/barrelShifterSLL.vhd Line: 30
+    Info (12023): Found entity 1: barrelShifterSLL File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/barrelShifterSLL.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/bit_extenders.vhd
+    Info (12022): Found design unit 1: bit_extenders-flow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/bit_extenders.vhd Line: 34
+    Info (12023): Found entity 1: bit_extenders File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/bit_extenders.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/bit_extenders24b.vhd
+    Info (12022): Found design unit 1: bit_extenders24b-flow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/bit_extenders24b.vhd Line: 34
+    Info (12023): Found entity 1: bit_extenders24b File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/bit_extenders24b.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux16_1.vhd
+    Info (12022): Found design unit 1: mux16_1-mux File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux16_1.vhd Line: 28
+    Info (12023): Found entity 1: mux16_1 File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux16_1.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux16b2t1.vhd
+    Info (12022): Found design unit 1: mux16b2t1-mux File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux16b2t1.vhd Line: 27
+    Info (12023): Found entity 1: mux16b2t1 File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux16b2t1.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux2t1Flow.vhd
+    Info (12022): Found design unit 1: mux2t1Flow-mux2t1F File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux2t1Flow.vhd Line: 27
+    Info (12023): Found entity 1: mux2t1Flow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux2t1Flow.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux2t1_5b.vhd
+    Info (12022): Found design unit 1: mux2t1_5b-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux2t1_5b.vhd Line: 30
+    Info (12023): Found entity 1: mux2t1_5b File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux2t1_5b.vhd Line: 21
+Info (15248): File "/home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux32_1.vhd" is a duplicate of already analyzed file "/home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/mux32_1.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux32_1.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux32b3t1.vhd
+    Info (12022): Found design unit 1: mux32b3t1-mux File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux32b3t1.vhd Line: 27
+    Info (12023): Found entity 1: mux32b3t1 File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux32b3t1.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux8b4t1.vhd
+    Info (12022): Found design unit 1: mux8b4t1-mux File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux8b4t1.vhd Line: 27
+    Info (12023): Found entity 1: mux8b4t1 File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux8b4t1.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/norG_N.vhd
+    Info (12022): Found design unit 1: norG_N-structure File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/norG_N.vhd Line: 30
+    Info (12023): Found entity 1: norG_N File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/norG_N.vhd Line: 17
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/orG32b.vhd
+    Info (12022): Found design unit 1: orG32b-dataflow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/orG32b.vhd Line: 33
+    Info (12023): Found entity 1: orG32b File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/orG32b.vhd Line: 24
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/orG_N.vhd
+    Info (12022): Found design unit 1: orG_N-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/orG_N.vhd Line: 29
+    Info (12023): Found entity 1: orG_N File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/orG_N.vhd Line: 21
+Info (15248): File "/home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/org2.vhd" is a duplicate of already analyzed file "/home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/org2.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/org2.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/xorG_N.vhd
+    Info (12022): Found design unit 1: xorG_N-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/xorG_N.vhd Line: 29
+    Info (12023): Found entity 1: xorG_N File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/xorG_N.vhd Line: 21
+Info (15248): File "/home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/xorg2.vhd" is a duplicate of already analyzed file "/home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/xorg2.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/xorg2.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/firstALU.vhd
+    Info (12022): Found design unit 1: firstALU-structure File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/firstALU.vhd Line: 40
+    Info (12023): Found entity 1: firstALU File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/firstALU.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/fullAdderStruct.vhd
+    Info (12022): Found design unit 1: fullAdderStruct-structure File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/fullAdderStruct.vhd Line: 31
+    Info (12023): Found entity 1: fullAdderStruct File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/fullAdderStruct.vhd Line: 17
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/fullAdderStructN.vhd
+    Info (12022): Found design unit 1: fullAdderStructN-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/fullAdderStructN.vhd Line: 34
+    Info (12023): Found entity 1: fullAdderStructN File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/fullAdderStructN.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/lui.vhd
+    Info (12022): Found design unit 1: lui-flow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/lui.vhd Line: 33
+    Info (12023): Found entity 1: lui File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/lui.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/onesCompN.vhd
+    Info (12022): Found design unit 1: onesCompN-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/onesCompN.vhd Line: 28
+    Info (12023): Found entity 1: onesCompN File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/onesCompN.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd
+    Info (12022): Found design unit 1: slt-behavorial File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 33
+    Info (12023): Found entity 1: slt File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_ALU.vhd
+    Info (12022): Found design unit 1: tb_ALU-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_ALU.vhd Line: 28
+    Info (12023): Found entity 1: tb_ALU File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_ALU.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_andG_N.vhd
+    Info (12022): Found design unit 1: tb_andG_N-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_andG_N.vhd Line: 28
+    Info (12023): Found entity 1: tb_andG_N File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_andG_N.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_andg32b.vhd
+    Info (12022): Found design unit 1: tb_andG32b-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_andg32b.vhd Line: 28
+    Info (12023): Found entity 1: tb_andG32b File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_andg32b.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders.vhd
+    Info (12022): Found design unit 1: tb_bit_extenders-behavior File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders.vhd Line: 29
+    Info (12023): Found entity 1: tb_bit_extenders File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders24b.vhd
+    Info (12022): Found design unit 1: tb_bit_extenders24b-behavior File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders24b.vhd Line: 29
+    Info (12023): Found entity 1: tb_bit_extenders24b File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders24b.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_lui.vhd
+    Info (12022): Found design unit 1: tb_lui-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_lui.vhd Line: 28
+    Info (12023): Found entity 1: tb_lui File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_lui.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_mux16b2t1.vhd
+    Info (12022): Found design unit 1: tb_mux16b2t1-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_mux16b2t1.vhd Line: 28
+    Info (12023): Found entity 1: tb_mux16b2t1 File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_mux16b2t1.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_mux8b4t1.vhd
+    Info (12022): Found design unit 1: tb_mux8b4t1-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_mux8b4t1.vhd Line: 28
+    Info (12023): Found entity 1: tb_mux8b4t1 File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_mux8b4t1.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_norG_N.vhd
+    Info (12022): Found design unit 1: tb_norG_N-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_norG_N.vhd Line: 28
+    Info (12023): Found entity 1: tb_norG_N File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_norG_N.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_onesCompN.vhd
+    Info (12022): Found design unit 1: tb_onesCompN-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_onesCompN.vhd Line: 28
+    Info (12023): Found entity 1: tb_onesCompN File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_onesCompN.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_orG32b.vhd
+    Info (12022): Found design unit 1: tb_orG32b-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_orG32b.vhd Line: 28
+    Info (12023): Found entity 1: tb_orG32b File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_orG32b.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_orG_N.vhd
+    Info (12022): Found design unit 1: tb_orG_N-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_orG_N.vhd Line: 28
+    Info (12023): Found entity 1: tb_orG_N File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_orG_N.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_slt.vhd
+    Info (12022): Found design unit 1: tb_slt-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_slt.vhd Line: 28
+    Info (12023): Found entity 1: tb_slt File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_slt.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_xorG_N.vhd
+    Info (12022): Found design unit 1: tb_xorG_N-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_xorG_N.vhd Line: 28
+    Info (12023): Found entity 1: tb_xorG_N File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/testBenches/tb_xorG_N.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/loadMemModule/loadMemModule.vhd
+    Info (12022): Found design unit 1: loadMemModule-structure File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/loadMemModule/loadMemModule.vhd Line: 32
+    Info (12023): Found entity 1: loadMemModule File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/loadMemModule/loadMemModule.vhd Line: 17
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd
+    Info (12022): Found design unit 1: tb_loadMemModule-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd Line: 28
+    Info (12023): Found entity 1: tb_loadMemModule File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/mem.vhd
+    Info (12022): Found design unit 1: mem-rtl File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/mem.vhd Line: 27
+    Info (12023): Found entity 1: mem File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/mem.vhd Line: 8
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
+    Error: Peak virtual memory: 681 megabytes
+    Error: Processing ended: Wed Mar 27 16:13:13 2024
+    Error: Elapsed time: 00:00:10
+    Error: Total CPU time (on all processors): 00:00:11
