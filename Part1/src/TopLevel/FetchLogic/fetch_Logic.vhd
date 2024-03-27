@@ -196,7 +196,7 @@ architecture mixed of fetch_logic is
         -- Extender to make it 32 bits
         g_bitExtender: bit16_extender
             port map(
-                i_Sel   => '0', -- TEMP
+                i_Sel   => '1', -- Sign extend
                 i_Din   => s_Bottom16Instruct, -- Take bottom 16 bits
                 o_Out   => s_BitExtendOut -- Send to left shift 2
             );
@@ -258,7 +258,6 @@ architecture mixed of fetch_logic is
 
         -- Also assign the out of PC address to the result of jump reg control
         o_PCAddress <= s_PCaddressOut;
-        o_jalAdd  <= s_PCNext; -- NEW
         -- ------- END ENDING LOGIC CONTROL ------- --
 
 end mixed;
