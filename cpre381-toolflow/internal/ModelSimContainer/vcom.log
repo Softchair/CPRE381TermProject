@@ -1,192 +1,332 @@
 QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
-Start time: 17:27:23 on Mar 26,2024
-vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd internal/testpy/tb.vhd proj/src/MIPS_Processor.vhd proj/src/MIPS_types.vhd proj/src/mem.vhd proj/src/TopLevel/FetchLogic/fetch_Logic.vhd proj/src/TopLevel/FetchLogic/tb_fetch_logic.vhd proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd proj/src/TopLevel/FetchLogic/Supporting files/tb_shiftleft2N.vhd proj/src/TopLevel/FetchLogic/Supporting files/tb_pcreg.vhd proj/src/TopLevel/BasicGates/xorg2.vhd proj/src/TopLevel/BasicGates/dffg.vhd proj/src/TopLevel/BasicGates/org2.vhd proj/src/TopLevel/BasicGates/invg.vhd proj/src/TopLevel/BasicGates/andg2.vhd proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd proj/src/TopLevel/BasicGates/Adder/adder1b.vhd proj/src/TopLevel/BasicGates/register/tb_dffg.vhd proj/src/TopLevel/BasicGates/register/dffgN.vhd proj/src/TopLevel/BasicGates/register/register_package.vhd proj/src/TopLevel/BasicGates/register/tb_mux32_1.vhd proj/src/TopLevel/BasicGates/register/tb_dffgN.vhd proj/src/TopLevel/BasicGates/register/mux32_1.vhd proj/src/TopLevel/BasicGates/register/dffg.vhd proj/src/TopLevel/BasicGates/register/tb_MIPSregister.vhd proj/src/TopLevel/BasicGates/register/decoder5_32.vhd proj/src/TopLevel/BasicGates/register/tb_decoder5_32.vhd proj/src/TopLevel/BasicGates/register/MIPSregister.vhd proj/src/TopLevel/LogicGates/mux2t1.vhd proj/src/TopLevel/LogicGates/mux2t1N.vhd proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd proj/src/TopLevel/ControlLogic/control_Logic.vhd proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd proj/src/TopLevel/loadMemModule/loadMemModule.vhd proj/src/TopLevel/aluUnit/ALU.vhd proj/src/TopLevel/aluUnit/adderSubS.vhd proj/src/TopLevel/aluUnit/onesCompN.vhd proj/src/TopLevel/aluUnit/slt.vhd proj/src/TopLevel/aluUnit/fullAdderStruct.vhd proj/src/TopLevel/aluUnit/firstALU.vhd proj/src/TopLevel/aluUnit/fullAdderStructN.vhd proj/src/TopLevel/aluUnit/lui.vhd proj/src/TopLevel/aluUnit/basicGates/mux32b3t1.vhd proj/src/TopLevel/aluUnit/basicGates/orG32b.vhd proj/src/TopLevel/aluUnit/basicGates/xorg2.vhd proj/src/TopLevel/aluUnit/basicGates/invg.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1_N.vhd proj/src/TopLevel/aluUnit/basicGates/andG_N.vhd proj/src/TopLevel/aluUnit/basicGates/mux32_1.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1_5b.vhd proj/src/TopLevel/aluUnit/basicGates/mux16b2t1.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1Flow.vhd proj/src/TopLevel/aluUnit/basicGates/orG_N.vhd proj/src/TopLevel/aluUnit/basicGates/bit_extenders24b.vhd proj/src/TopLevel/aluUnit/basicGates/org2.vhd proj/src/TopLevel/aluUnit/basicGates/mux16_1.vhd proj/src/TopLevel/aluUnit/basicGates/xorG_N.vhd proj/src/TopLevel/aluUnit/basicGates/andG32b.vhd proj/src/TopLevel/aluUnit/basicGates/bit_extenders.vhd proj/src/TopLevel/aluUnit/basicGates/andg2.vhd proj/src/TopLevel/aluUnit/basicGates/mux8b4t1.vhd proj/src/TopLevel/aluUnit/basicGates/norG_N.vhd proj/src/TopLevel/aluUnit/testBenches/tb_ALU.vhd proj/src/TopLevel/aluUnit/testBenches/tb_andG_N.vhd proj/src/TopLevel/aluUnit/testBenches/tb_slt.vhd proj/src/TopLevel/aluUnit/testBenches/tb_orG32b.vhd proj/src/TopLevel/aluUnit/testBenches/tb_mux8b4t1.vhd proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders24b.vhd proj/src/TopLevel/aluUnit/testBenches/tb_norG_N.vhd proj/src/TopLevel/aluUnit/testBenches/tb_andg32b.vhd proj/src/TopLevel/aluUnit/testBenches/tb_xorG_N.vhd proj/src/TopLevel/aluUnit/testBenches/tb_orG_N.vhd proj/src/TopLevel/aluUnit/testBenches/tb_mux16b2t1.vhd proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders.vhd proj/src/TopLevel/aluUnit/testBenches/tb_onesCompN.vhd proj/src/TopLevel/aluUnit/testBenches/tb_lui.vhd 
-init_auxdbinfo(): INTERNAL ERROR: Cannot open page file "/home/kosice/Documents/cpre381TermProjNEW-EMIL/CPRE381TermProject/cpre381-toolflow/internal/ModelSimContainer/work/_lib1_60.qpg" in read mode
-flat_compact(): DATABASE ERROR: cannot open auxiliary database at path=/home/kosice/Documents/cpre381TermProjNEW-EMIL/CPRE381TermProject/cpre381-toolflow/internal/ModelSimContainer/work (auxid=1, gen=60)
+Start time: 22:09:40 on Mar 26,2024
+vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd internal/testpy/tb.vhd proj/src/MIPS_Processor.vhd proj/src/mem.vhd proj/src/MIPS_types.vhd proj/src/TopLevel/LogicGates/mux2t1N.vhd proj/src/TopLevel/LogicGates/mux2t1.vhd proj/src/TopLevel/aluUnit/adderSubS.vhd proj/src/TopLevel/aluUnit/fullAdderStructN.vhd proj/src/TopLevel/aluUnit/onesCompN.vhd proj/src/TopLevel/aluUnit/lui.vhd proj/src/TopLevel/aluUnit/fullAdderStruct.vhd proj/src/TopLevel/aluUnit/ALU.vhd proj/src/TopLevel/aluUnit/slt.vhd proj/src/TopLevel/aluUnit/firstALU.vhd proj/src/TopLevel/aluUnit/testBenches/tb_andG_N.vhd proj/src/TopLevel/aluUnit/testBenches/tb_lui.vhd proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders24b.vhd proj/src/TopLevel/aluUnit/testBenches/tb_onesCompN.vhd proj/src/TopLevel/aluUnit/testBenches/tb_mux16b2t1.vhd proj/src/TopLevel/aluUnit/testBenches/tb_andg32b.vhd proj/src/TopLevel/aluUnit/testBenches/tb_orG32b.vhd proj/src/TopLevel/aluUnit/testBenches/tb_xorG_N.vhd proj/src/TopLevel/aluUnit/testBenches/tb_norG_N.vhd proj/src/TopLevel/aluUnit/testBenches/tb_slt.vhd proj/src/TopLevel/aluUnit/testBenches/tb_mux8b4t1.vhd proj/src/TopLevel/aluUnit/testBenches/tb_ALU.vhd proj/src/TopLevel/aluUnit/testBenches/tb_orG_N.vhd proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1.vhd proj/src/TopLevel/aluUnit/basicGates/org2.vhd proj/src/TopLevel/aluUnit/basicGates/orG32b.vhd proj/src/TopLevel/aluUnit/basicGates/orG_N.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1_5b.vhd proj/src/TopLevel/aluUnit/basicGates/bit_extenders.vhd proj/src/TopLevel/aluUnit/basicGates/mux32b3t1.vhd proj/src/TopLevel/aluUnit/basicGates/mux8b4t1.vhd proj/src/TopLevel/aluUnit/basicGates/andg2.vhd proj/src/TopLevel/aluUnit/basicGates/mux32_1.vhd proj/src/TopLevel/aluUnit/basicGates/andG_N.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1Flow.vhd proj/src/TopLevel/aluUnit/basicGates/xorg2.vhd proj/src/TopLevel/aluUnit/basicGates/bit_extenders24b.vhd proj/src/TopLevel/aluUnit/basicGates/norG_N.vhd proj/src/TopLevel/aluUnit/basicGates/mux16b2t1.vhd proj/src/TopLevel/aluUnit/basicGates/andG32b.vhd proj/src/TopLevel/aluUnit/basicGates/xorG_N.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1_N.vhd proj/src/TopLevel/aluUnit/basicGates/invg.vhd proj/src/TopLevel/aluUnit/basicGates/mux16_1.vhd proj/src/TopLevel/BasicGates/invg.vhd proj/src/TopLevel/BasicGates/andg2.vhd proj/src/TopLevel/BasicGates/dffg.vhd proj/src/TopLevel/BasicGates/org2.vhd proj/src/TopLevel/BasicGates/xorg2.vhd proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd proj/src/TopLevel/BasicGates/Adder/adder1b.vhd proj/src/TopLevel/BasicGates/register/mux32_1.vhd proj/src/TopLevel/BasicGates/register/dffgN.vhd proj/src/TopLevel/BasicGates/register/tb_mux32_1.vhd proj/src/TopLevel/BasicGates/register/MIPSregister.vhd proj/src/TopLevel/BasicGates/register/tb_dffg.vhd proj/src/TopLevel/BasicGates/register/tb_MIPSregister.vhd proj/src/TopLevel/BasicGates/register/tb_decoder5_32.vhd proj/src/TopLevel/BasicGates/register/tb_dffgN.vhd proj/src/TopLevel/BasicGates/register/dffg.vhd proj/src/TopLevel/BasicGates/register/decoder5_32.vhd proj/src/TopLevel/BasicGates/register/register_package.vhd proj/src/TopLevel/FetchLogic/tb_fetch_logic.vhd proj/src/TopLevel/FetchLogic/fetch_Logic.vhd proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd proj/src/TopLevel/FetchLogic/Supporting files/tb_pcreg.vhd proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd proj/src/TopLevel/FetchLogic/Supporting files/tb_shiftleft2N.vhd proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd proj/src/TopLevel/loadMemModule/loadMemModule.vhd proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd proj/src/TopLevel/ControlLogic/control_Logic.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
+** Warning: proj/src/MIPS_types.vhd(15): (vcom-1615) Existing package 'MIPS_types' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/MIPS_types.vhd(15) will be overwritten.
 -- Compiling package MIPS_types
 -- Compiling package body MIPS_types
 -- Loading package MIPS_types
 -- Loading package std_logic_textio
 -- Loading package ENV
+** Warning: internal/testpy/tb.vhd(24): (vcom-1615) Existing entity 'tb' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/internal/testpy/tb.vhd(24) will be overwritten.
 -- Compiling entity tb
+** Warning: internal/testpy/tb.vhd(31): (vcom-1615) Existing architecture 'tb(mixed)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/internal/testpy/tb.vhd(31) will be overwritten.
 -- Compiling architecture mixed of tb
 -- Loading package MIPS_types
+** Warning: proj/src/MIPS_Processor.vhd(23): (vcom-1615) Existing entity 'MIPS_Processor' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/MIPS_Processor.vhd(23) will be overwritten.
 -- Compiling entity MIPS_Processor
+** Warning: proj/src/MIPS_Processor.vhd(35): (vcom-1615) Existing architecture 'MIPS_Processor(structure)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/MIPS_Processor.vhd(35) will be overwritten.
 -- Compiling architecture structure of MIPS_Processor
+-- Loading package NUMERIC_STD
+** Warning: proj/src/mem.vhd(8): (vcom-1615) Existing entity 'mem' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/mem.vhd(8) will be overwritten.
+-- Compiling entity mem
+** Warning: proj/src/mem.vhd(27): (vcom-1615) Existing architecture 'mem(rtl)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/mem.vhd(27) will be overwritten.
+-- Compiling architecture rtl of mem
 ** Warning: proj/src/MIPS_types.vhd(15): (vcom-1615) Existing package 'MIPS_types' at line 15 will be overwritten.
 -- Compiling package MIPS_types
 ** Warning: proj/src/MIPS_types.vhd(29): (vcom-1615) Existing package body 'MIPS_types(body)' at line 29 will be overwritten.
 -- Compiling package body MIPS_types
 -- Loading package MIPS_types
--- Loading package NUMERIC_STD
--- Compiling entity mem
--- Compiling architecture rtl of mem
--- Compiling entity fetch_Logic
--- Compiling architecture mixed of fetch_logic
--- Compiling entity tb_fetch_Logic
--- Compiling architecture behavior of tb_fetch_Logic
--- Compiling entity nbitregister
--- Compiling architecture structural of nbitregister
--- Compiling entity shiftleft2N
--- Compiling architecture Behavioral of shiftleft2N
--- Compiling entity bit16_extender
--- Compiling architecture flow of bit16_extender
--- Compiling entity PCReg
--- Compiling architecture structural of PCReg
--- Compiling entity tb_shiftleft2N
--- Compiling architecture behavior of tb_shiftleft2N
--- Compiling entity tb_PCReg
--- Compiling architecture behavior of tb_PCReg
--- Compiling entity xorg2
--- Compiling architecture dataflow of xorg2
--- Compiling entity dffg
--- Compiling architecture mixed of dffg
--- Compiling entity org2
--- Compiling architecture dataflow of org2
--- Compiling entity invg
--- Compiling architecture dataflow of invg
--- Compiling entity andg2
--- Compiling architecture dataflow of andg2
--- Compiling entity rippleCarryAdderN
--- Compiling architecture structural of rippleCarryAdderN
--- Compiling entity Adder1b
--- Compiling architecture structural of Adder1b
--- Compiling entity tb_dffg
--- Compiling architecture behavior of tb_dffg
--- Compiling entity dffgN
--- Compiling architecture structural of dffgN
--- Compiling package register_package
--- Compiling entity tb_mux32_1
--- Compiling architecture behavior of tb_mux32_1
--- Compiling entity tb_dffgN
--- Compiling architecture behavior of tb_dffgN
--- Compiling entity mux32_1
--- Compiling architecture mux of mux32_1
-** Warning: proj/src/TopLevel/BasicGates/register/dffg.vhd(23): (vcom-1615) Existing entity 'dffg' at proj/src/TopLevel/BasicGates/dffg.vhd(23) will be overwritten.
--- Compiling entity dffg
-** Warning: proj/src/TopLevel/BasicGates/register/dffg.vhd(33): (vcom-1615) Existing architecture 'dffg(mixed)' at proj/src/TopLevel/BasicGates/dffg.vhd(33) will be overwritten.
--- Compiling architecture mixed of dffg
--- Compiling entity tb_MIPSregister
--- Compiling architecture mixed of tb_MIPSregister
--- Compiling entity decoder5_32
--- Compiling architecture decoder of decoder5_32
--- Compiling entity tb_decoder5_32
--- Compiling architecture behavior of tb_decoder5_32
--- Loading package register_package
--- Compiling entity MIPSregister
--- Compiling architecture structure of MIPSregister
--- Compiling entity mux2t1
--- Compiling architecture structure of mux2t1
+** Warning: proj/src/TopLevel/LogicGates/mux2t1N.vhd(21): (vcom-1615) Existing entity 'mux2t1N' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/LogicGates/mux2t1N.vhd(21) will be overwritten.
 -- Compiling entity mux2t1N
+** Warning: proj/src/TopLevel/LogicGates/mux2t1N.vhd(30): (vcom-1615) Existing architecture 'mux2t1N(structural)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/LogicGates/mux2t1N.vhd(30) will be overwritten.
 -- Compiling architecture structural of mux2t1N
--- Compiling entity tb_control_Logic
--- Compiling architecture behavior of tb_control_Logic
--- Compiling entity control_Logic
--- Compiling architecture flow of control_Logic
--- Compiling entity tb_loadMemModule
--- Compiling architecture mixed of tb_loadMemModule
--- Compiling entity loadMemModule
--- Compiling architecture structure of loadMemModule
--- Compiling entity ALU
--- Compiling architecture structure of ALU
+** Warning: proj/src/TopLevel/LogicGates/mux2t1.vhd(17): (vcom-1615) Existing entity 'mux2t1' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/mux2t1.vhd(20) will be overwritten.
+-- Compiling entity mux2t1
+** Warning: proj/src/TopLevel/LogicGates/mux2t1.vhd(25): (vcom-1615) Existing architecture 'mux2t1(structure)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/mux2t1.vhd(30) will be overwritten.
+-- Compiling architecture structure of mux2t1
+** Warning: proj/src/TopLevel/aluUnit/adderSubS.vhd(17): (vcom-1615) Existing entity 'adderSubS' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/adderSubS.vhd(17) will be overwritten.
 -- Compiling entity adderSubS
+** Warning: proj/src/TopLevel/aluUnit/adderSubS.vhd(32): (vcom-1615) Existing architecture 'adderSubS(structure)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/adderSubS.vhd(32) will be overwritten.
 -- Compiling architecture structure of adderSubS
--- Compiling entity onesCompN
--- Compiling architecture structural of onesCompN
--- Compiling entity slt
--- Compiling architecture behavorial of slt
--- Compiling entity fullAdderStruct
--- Compiling architecture structure of fullAdderStruct
--- Compiling entity firstALU
--- Compiling architecture structure of firstALU
+** Warning: proj/src/TopLevel/aluUnit/fullAdderStructN.vhd(21): (vcom-1615) Existing entity 'fullAdderStructN' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/fullAdderStructN.vhd(21) will be overwritten.
 -- Compiling entity fullAdderStructN
+** Warning: proj/src/TopLevel/aluUnit/fullAdderStructN.vhd(34): (vcom-1615) Existing architecture 'fullAdderStructN(structural)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/fullAdderStructN.vhd(34) will be overwritten.
 -- Compiling architecture structural of fullAdderStructN
+** Warning: proj/src/TopLevel/aluUnit/onesCompN.vhd(20): (vcom-1615) Existing entity 'onesCompN' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/onesCompN.vhd(20) will be overwritten.
+-- Compiling entity onesCompN
+** Warning: proj/src/TopLevel/aluUnit/onesCompN.vhd(28): (vcom-1615) Existing architecture 'onesCompN(structural)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/onesCompN.vhd(28) will be overwritten.
+-- Compiling architecture structural of onesCompN
+** Warning: proj/src/TopLevel/aluUnit/lui.vhd(21): (vcom-1615) Existing entity 'lui' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/lui.vhd(21) will be overwritten.
 -- Compiling entity lui
+** Warning: proj/src/TopLevel/aluUnit/lui.vhd(33): (vcom-1615) Existing architecture 'lui(flow)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/lui.vhd(33) will be overwritten.
 -- Compiling architecture flow of lui
--- Compiling entity mux32b3t1
--- Compiling architecture mux of mux32b3t1
--- Compiling entity orG32b
--- Compiling architecture dataflow of orG32b
-** Warning: proj/src/TopLevel/aluUnit/basicGates/xorg2.vhd(23): (vcom-1615) Existing entity 'xorg2' at proj/src/TopLevel/BasicGates/xorg2.vhd(23) will be overwritten.
--- Compiling entity xorg2
-** Warning: proj/src/TopLevel/aluUnit/basicGates/xorg2.vhd(31): (vcom-1615) Existing architecture 'xorg2(dataflow)' at proj/src/TopLevel/BasicGates/xorg2.vhd(31) will be overwritten.
--- Compiling architecture dataflow of xorg2
-** Warning: proj/src/TopLevel/aluUnit/basicGates/invg.vhd(23): (vcom-1615) Existing entity 'invg' at proj/src/TopLevel/BasicGates/invg.vhd(23) will be overwritten.
--- Compiling entity invg
-** Warning: proj/src/TopLevel/aluUnit/basicGates/invg.vhd(30): (vcom-1615) Existing architecture 'invg(dataflow)' at proj/src/TopLevel/BasicGates/invg.vhd(30) will be overwritten.
--- Compiling architecture dataflow of invg
+** Warning: proj/src/TopLevel/aluUnit/fullAdderStruct.vhd(17): (vcom-1615) Existing entity 'fullAdderStruct' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/fullAdderStruct.vhd(17) will be overwritten.
+-- Compiling entity fullAdderStruct
+** Warning: proj/src/TopLevel/aluUnit/fullAdderStruct.vhd(31): (vcom-1615) Existing architecture 'fullAdderStruct(structure)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/fullAdderStruct.vhd(31) will be overwritten.
+-- Compiling architecture structure of fullAdderStruct
+** Warning: proj/src/TopLevel/aluUnit/ALU.vhd(26): (vcom-1615) Existing entity 'ALU' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/ALU.vhd(26) will be overwritten.
+-- Compiling entity ALU
+** Warning: proj/src/TopLevel/aluUnit/ALU.vhd(47): (vcom-1615) Existing architecture 'ALU(structure)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/ALU.vhd(47) will be overwritten.
+-- Compiling architecture structure of ALU
+** Warning: proj/src/TopLevel/aluUnit/slt.vhd(21): (vcom-1615) Existing entity 'slt' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/slt.vhd(21) will be overwritten.
+-- Compiling entity slt
+** Warning: proj/src/TopLevel/aluUnit/slt.vhd(33): (vcom-1615) Existing architecture 'slt(behavorial)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/slt.vhd(33) will be overwritten.
+-- Compiling architecture behavorial of slt
+** Warning: proj/src/TopLevel/aluUnit/firstALU.vhd(21): (vcom-1615) Existing entity 'firstALU' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/firstALU.vhd(21) will be overwritten.
+-- Compiling entity firstALU
+** Warning: proj/src/TopLevel/aluUnit/firstALU.vhd(40): (vcom-1615) Existing architecture 'firstALU(structure)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/firstALU.vhd(40) will be overwritten.
+-- Compiling architecture structure of firstALU
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_andG_N.vhd(21): (vcom-1615) Existing entity 'tb_andG_N' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_andG_N.vhd(21) will be overwritten.
+-- Compiling entity tb_andG_N
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_andG_N.vhd(28): (vcom-1615) Existing architecture 'tb_andG_N(mixed)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_andG_N.vhd(28) will be overwritten.
+-- Compiling architecture mixed of tb_andG_N
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_lui.vhd(21): (vcom-1615) Existing entity 'tb_lui' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_lui.vhd(21) will be overwritten.
+-- Compiling entity tb_lui
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_lui.vhd(28): (vcom-1615) Existing architecture 'tb_lui(mixed)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_lui.vhd(28) will be overwritten.
+-- Compiling architecture mixed of tb_lui
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders24b.vhd(25): (vcom-1615) Existing entity 'tb_bit_extenders24b' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders24b.vhd(25) will be overwritten.
+-- Compiling entity tb_bit_extenders24b
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders24b.vhd(29): (vcom-1615) Existing architecture 'tb_bit_extenders24b(behavior)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders24b.vhd(29) will be overwritten.
+-- Compiling architecture behavior of tb_bit_extenders24b
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_onesCompN.vhd(21): (vcom-1615) Existing entity 'tb_onesCompN' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_onesCompN.vhd(21) will be overwritten.
+-- Compiling entity tb_onesCompN
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_onesCompN.vhd(28): (vcom-1615) Existing architecture 'tb_onesCompN(mixed)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_onesCompN.vhd(28) will be overwritten.
+-- Compiling architecture mixed of tb_onesCompN
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_mux16b2t1.vhd(21): (vcom-1615) Existing entity 'tb_mux16b2t1' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_mux16b2t1.vhd(21) will be overwritten.
+-- Compiling entity tb_mux16b2t1
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_mux16b2t1.vhd(28): (vcom-1615) Existing architecture 'tb_mux16b2t1(mixed)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_mux16b2t1.vhd(28) will be overwritten.
+-- Compiling architecture mixed of tb_mux16b2t1
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_andg32b.vhd(21): (vcom-1615) Existing entity 'tb_andG32b' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_andg32b.vhd(21) will be overwritten.
+-- Compiling entity tb_andG32b
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_andg32b.vhd(28): (vcom-1615) Existing architecture 'tb_andG32b(mixed)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_andg32b.vhd(28) will be overwritten.
+-- Compiling architecture mixed of tb_andG32b
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_orG32b.vhd(21): (vcom-1615) Existing entity 'tb_orG32b' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_orG32b.vhd(21) will be overwritten.
+-- Compiling entity tb_orG32b
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_orG32b.vhd(28): (vcom-1615) Existing architecture 'tb_orG32b(mixed)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_orG32b.vhd(28) will be overwritten.
+-- Compiling architecture mixed of tb_orG32b
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_xorG_N.vhd(21): (vcom-1615) Existing entity 'tb_xorG_N' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_xorG_N.vhd(21) will be overwritten.
+-- Compiling entity tb_xorG_N
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_xorG_N.vhd(28): (vcom-1615) Existing architecture 'tb_xorG_N(mixed)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_xorG_N.vhd(28) will be overwritten.
+-- Compiling architecture mixed of tb_xorG_N
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_norG_N.vhd(21): (vcom-1615) Existing entity 'tb_norG_N' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_norG_N.vhd(21) will be overwritten.
+-- Compiling entity tb_norG_N
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_norG_N.vhd(28): (vcom-1615) Existing architecture 'tb_norG_N(mixed)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_norG_N.vhd(28) will be overwritten.
+-- Compiling architecture mixed of tb_norG_N
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_slt.vhd(21): (vcom-1615) Existing entity 'tb_slt' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_slt.vhd(21) will be overwritten.
+-- Compiling entity tb_slt
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_slt.vhd(28): (vcom-1615) Existing architecture 'tb_slt(mixed)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_slt.vhd(28) will be overwritten.
+-- Compiling architecture mixed of tb_slt
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_mux8b4t1.vhd(21): (vcom-1615) Existing entity 'tb_mux8b4t1' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_mux8b4t1.vhd(21) will be overwritten.
+-- Compiling entity tb_mux8b4t1
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_mux8b4t1.vhd(28): (vcom-1615) Existing architecture 'tb_mux8b4t1(mixed)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_mux8b4t1.vhd(28) will be overwritten.
+-- Compiling architecture mixed of tb_mux8b4t1
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_ALU.vhd(22): (vcom-1615) Existing entity 'tb_ALU' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_ALU.vhd(22) will be overwritten.
+-- Compiling entity tb_ALU
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_ALU.vhd(28): (vcom-1615) Existing architecture 'tb_ALU(mixed)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_ALU.vhd(28) will be overwritten.
+-- Compiling architecture mixed of tb_ALU
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_orG_N.vhd(21): (vcom-1615) Existing entity 'tb_orG_N' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_orG_N.vhd(21) will be overwritten.
+-- Compiling entity tb_orG_N
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_orG_N.vhd(28): (vcom-1615) Existing architecture 'tb_orG_N(mixed)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_orG_N.vhd(28) will be overwritten.
+-- Compiling architecture mixed of tb_orG_N
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders.vhd(25): (vcom-1615) Existing entity 'tb_bit_extenders' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders.vhd(25) will be overwritten.
+-- Compiling entity tb_bit_extenders
+** Warning: proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders.vhd(29): (vcom-1615) Existing architecture 'tb_bit_extenders(behavior)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders.vhd(29) will be overwritten.
+-- Compiling architecture behavior of tb_bit_extenders
 ** Warning: proj/src/TopLevel/aluUnit/basicGates/mux2t1.vhd(20): (vcom-1615) Existing entity 'mux2t1' at proj/src/TopLevel/LogicGates/mux2t1.vhd(17) will be overwritten.
 -- Compiling entity mux2t1
 ** Warning: proj/src/TopLevel/aluUnit/basicGates/mux2t1.vhd(30): (vcom-1615) Existing architecture 'mux2t1(structure)' at proj/src/TopLevel/LogicGates/mux2t1.vhd(25) will be overwritten.
 -- Compiling architecture structure of mux2t1
--- Compiling entity mux2t1_N
--- Compiling architecture structural of mux2t1_N
--- Compiling entity andG_N
--- Compiling architecture structural of andG_N
-** Warning: proj/src/TopLevel/aluUnit/basicGates/mux32_1.vhd(20): (vcom-1615) Existing entity 'mux32_1' at proj/src/TopLevel/BasicGates/register/mux32_1.vhd(20) will be overwritten.
--- Compiling entity mux32_1
-** Warning: proj/src/TopLevel/aluUnit/basicGates/mux32_1.vhd(29): (vcom-1615) Existing architecture 'mux32_1(mux)' at proj/src/TopLevel/BasicGates/register/mux32_1.vhd(29) will be overwritten.
--- Compiling architecture mux of mux32_1
--- Compiling entity mux2t1_5b
--- Compiling architecture structural of mux2t1_5b
--- Compiling entity mux16b2t1
--- Compiling architecture mux of mux16b2t1
--- Compiling entity mux2t1Flow
--- Compiling architecture mux2t1F of mux2t1Flow
--- Compiling entity orG_N
--- Compiling architecture structural of orG_N
--- Compiling entity bit_extenders24b
--- Compiling architecture flow of bit_extenders24b
-** Warning: proj/src/TopLevel/aluUnit/basicGates/org2.vhd(23): (vcom-1615) Existing entity 'org2' at proj/src/TopLevel/BasicGates/org2.vhd(23) will be overwritten.
+** Warning: proj/src/TopLevel/aluUnit/basicGates/org2.vhd(23): (vcom-1615) Existing entity 'org2' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/org2.vhd(23) will be overwritten.
 -- Compiling entity org2
-** Warning: proj/src/TopLevel/aluUnit/basicGates/org2.vhd(31): (vcom-1615) Existing architecture 'org2(dataflow)' at proj/src/TopLevel/BasicGates/org2.vhd(31) will be overwritten.
+** Warning: proj/src/TopLevel/aluUnit/basicGates/org2.vhd(31): (vcom-1615) Existing architecture 'org2(dataflow)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/org2.vhd(31) will be overwritten.
 -- Compiling architecture dataflow of org2
--- Compiling entity mux16_1
--- Compiling architecture mux of mux16_1
--- Compiling entity xorG_N
--- Compiling architecture structural of xorG_N
--- Compiling entity andG32b
--- Compiling architecture dataflow of andG32b
+** Warning: proj/src/TopLevel/aluUnit/basicGates/orG32b.vhd(24): (vcom-1615) Existing entity 'orG32b' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/orG32b.vhd(24) will be overwritten.
+-- Compiling entity orG32b
+** Warning: proj/src/TopLevel/aluUnit/basicGates/orG32b.vhd(33): (vcom-1615) Existing architecture 'orG32b(dataflow)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/orG32b.vhd(33) will be overwritten.
+-- Compiling architecture dataflow of orG32b
+** Warning: proj/src/TopLevel/aluUnit/basicGates/orG_N.vhd(21): (vcom-1615) Existing entity 'orG_N' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/orG_N.vhd(21) will be overwritten.
+-- Compiling entity orG_N
+** Warning: proj/src/TopLevel/aluUnit/basicGates/orG_N.vhd(29): (vcom-1615) Existing architecture 'orG_N(structural)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/orG_N.vhd(29) will be overwritten.
+-- Compiling architecture structural of orG_N
+** Warning: proj/src/TopLevel/aluUnit/basicGates/mux2t1_5b.vhd(21): (vcom-1615) Existing entity 'mux2t1_5b' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/mux2t1_5b.vhd(21) will be overwritten.
+-- Compiling entity mux2t1_5b
+** Warning: proj/src/TopLevel/aluUnit/basicGates/mux2t1_5b.vhd(30): (vcom-1615) Existing architecture 'mux2t1_5b(structural)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/mux2t1_5b.vhd(30) will be overwritten.
+-- Compiling architecture structural of mux2t1_5b
+** Warning: proj/src/TopLevel/aluUnit/basicGates/bit_extenders.vhd(22): (vcom-1615) Existing entity 'bit_extenders' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/bit_extenders.vhd(22) will be overwritten.
 -- Compiling entity bit_extenders
+** Warning: proj/src/TopLevel/aluUnit/basicGates/bit_extenders.vhd(34): (vcom-1615) Existing architecture 'bit_extenders(flow)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/bit_extenders.vhd(34) will be overwritten.
 -- Compiling architecture flow of bit_extenders
-** Warning: proj/src/TopLevel/aluUnit/basicGates/andg2.vhd(23): (vcom-1615) Existing entity 'andg2' at proj/src/TopLevel/BasicGates/andg2.vhd(23) will be overwritten.
--- Compiling entity andg2
-** Warning: proj/src/TopLevel/aluUnit/basicGates/andg2.vhd(31): (vcom-1615) Existing architecture 'andg2(dataflow)' at proj/src/TopLevel/BasicGates/andg2.vhd(31) will be overwritten.
--- Compiling architecture dataflow of andg2
+** Warning: proj/src/TopLevel/aluUnit/basicGates/mux32b3t1.vhd(20): (vcom-1615) Existing entity 'mux32b3t1' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/mux32b3t1.vhd(20) will be overwritten.
+-- Compiling entity mux32b3t1
+** Warning: proj/src/TopLevel/aluUnit/basicGates/mux32b3t1.vhd(27): (vcom-1615) Existing architecture 'mux32b3t1(mux)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/mux32b3t1.vhd(27) will be overwritten.
+-- Compiling architecture mux of mux32b3t1
+** Warning: proj/src/TopLevel/aluUnit/basicGates/mux8b4t1.vhd(20): (vcom-1615) Existing entity 'mux8b4t1' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/mux8b4t1.vhd(20) will be overwritten.
 -- Compiling entity mux8b4t1
+** Warning: proj/src/TopLevel/aluUnit/basicGates/mux8b4t1.vhd(27): (vcom-1615) Existing architecture 'mux8b4t1(mux)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/mux8b4t1.vhd(27) will be overwritten.
 -- Compiling architecture mux of mux8b4t1
+** Warning: proj/src/TopLevel/aluUnit/basicGates/andg2.vhd(23): (vcom-1615) Existing entity 'andg2' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/andg2.vhd(23) will be overwritten.
+-- Compiling entity andg2
+** Warning: proj/src/TopLevel/aluUnit/basicGates/andg2.vhd(31): (vcom-1615) Existing architecture 'andg2(dataflow)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/andg2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of andg2
+** Warning: proj/src/TopLevel/aluUnit/basicGates/mux32_1.vhd(20): (vcom-1615) Existing entity 'mux32_1' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/mux32_1.vhd(20) will be overwritten.
+-- Compiling entity mux32_1
+** Warning: proj/src/TopLevel/aluUnit/basicGates/mux32_1.vhd(29): (vcom-1615) Existing architecture 'mux32_1(mux)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/mux32_1.vhd(29) will be overwritten.
+-- Compiling architecture mux of mux32_1
+** Warning: proj/src/TopLevel/aluUnit/basicGates/andG_N.vhd(21): (vcom-1615) Existing entity 'andG_N' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/andG_N.vhd(21) will be overwritten.
+-- Compiling entity andG_N
+** Warning: proj/src/TopLevel/aluUnit/basicGates/andG_N.vhd(29): (vcom-1615) Existing architecture 'andG_N(structural)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/andG_N.vhd(29) will be overwritten.
+-- Compiling architecture structural of andG_N
+** Warning: proj/src/TopLevel/aluUnit/basicGates/mux2t1Flow.vhd(21): (vcom-1615) Existing entity 'mux2t1Flow' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/mux2t1Flow.vhd(21) will be overwritten.
+-- Compiling entity mux2t1Flow
+** Warning: proj/src/TopLevel/aluUnit/basicGates/mux2t1Flow.vhd(27): (vcom-1615) Existing architecture 'mux2t1Flow(mux2t1F)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/mux2t1Flow.vhd(27) will be overwritten.
+-- Compiling architecture mux2t1F of mux2t1Flow
+** Warning: proj/src/TopLevel/aluUnit/basicGates/xorg2.vhd(23): (vcom-1615) Existing entity 'xorg2' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/xorg2.vhd(23) will be overwritten.
+-- Compiling entity xorg2
+** Warning: proj/src/TopLevel/aluUnit/basicGates/xorg2.vhd(31): (vcom-1615) Existing architecture 'xorg2(dataflow)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/xorg2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of xorg2
+** Warning: proj/src/TopLevel/aluUnit/basicGates/bit_extenders24b.vhd(22): (vcom-1615) Existing entity 'bit_extenders24b' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/bit_extenders24b.vhd(22) will be overwritten.
+-- Compiling entity bit_extenders24b
+** Warning: proj/src/TopLevel/aluUnit/basicGates/bit_extenders24b.vhd(34): (vcom-1615) Existing architecture 'bit_extenders24b(flow)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/bit_extenders24b.vhd(34) will be overwritten.
+-- Compiling architecture flow of bit_extenders24b
+** Warning: proj/src/TopLevel/aluUnit/basicGates/norG_N.vhd(17): (vcom-1615) Existing entity 'norG_N' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/norG_N.vhd(17) will be overwritten.
 -- Compiling entity norG_N
+** Warning: proj/src/TopLevel/aluUnit/basicGates/norG_N.vhd(30): (vcom-1615) Existing architecture 'norG_N(structure)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/norG_N.vhd(30) will be overwritten.
 -- Compiling architecture structure of norG_N
--- Compiling entity tb_ALU
--- Compiling architecture mixed of tb_ALU
--- Compiling entity tb_andG_N
--- Compiling architecture mixed of tb_andG_N
--- Compiling entity tb_slt
--- Compiling architecture mixed of tb_slt
--- Compiling entity tb_orG32b
--- Compiling architecture mixed of tb_orG32b
--- Compiling entity tb_mux8b4t1
--- Compiling architecture mixed of tb_mux8b4t1
--- Compiling entity tb_bit_extenders24b
--- Compiling architecture behavior of tb_bit_extenders24b
--- Compiling entity tb_norG_N
--- Compiling architecture mixed of tb_norG_N
--- Compiling entity tb_andG32b
--- Compiling architecture mixed of tb_andG32b
--- Compiling entity tb_xorG_N
--- Compiling architecture mixed of tb_xorG_N
--- Compiling entity tb_orG_N
--- Compiling architecture mixed of tb_orG_N
--- Compiling entity tb_mux16b2t1
--- Compiling architecture mixed of tb_mux16b2t1
--- Compiling entity tb_bit_extenders
--- Compiling architecture behavior of tb_bit_extenders
--- Compiling entity tb_onesCompN
--- Compiling architecture mixed of tb_onesCompN
--- Compiling entity tb_lui
--- Compiling architecture mixed of tb_lui
-End time: 17:27:24 on Mar 26,2024, Elapsed time: 0:00:01
-Errors: 0, Warnings: 16
+** Warning: proj/src/TopLevel/aluUnit/basicGates/mux16b2t1.vhd(20): (vcom-1615) Existing entity 'mux16b2t1' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/mux16b2t1.vhd(20) will be overwritten.
+-- Compiling entity mux16b2t1
+** Warning: proj/src/TopLevel/aluUnit/basicGates/mux16b2t1.vhd(27): (vcom-1615) Existing architecture 'mux16b2t1(mux)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/mux16b2t1.vhd(27) will be overwritten.
+-- Compiling architecture mux of mux16b2t1
+** Warning: proj/src/TopLevel/aluUnit/basicGates/andG32b.vhd(24): (vcom-1615) Existing entity 'andG32b' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/andG32b.vhd(24) will be overwritten.
+-- Compiling entity andG32b
+** Warning: proj/src/TopLevel/aluUnit/basicGates/andG32b.vhd(33): (vcom-1615) Existing architecture 'andG32b(dataflow)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/andG32b.vhd(33) will be overwritten.
+-- Compiling architecture dataflow of andG32b
+** Warning: proj/src/TopLevel/aluUnit/basicGates/xorG_N.vhd(21): (vcom-1615) Existing entity 'xorG_N' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/xorG_N.vhd(21) will be overwritten.
+-- Compiling entity xorG_N
+** Warning: proj/src/TopLevel/aluUnit/basicGates/xorG_N.vhd(29): (vcom-1615) Existing architecture 'xorG_N(structural)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/xorG_N.vhd(29) will be overwritten.
+-- Compiling architecture structural of xorG_N
+** Warning: proj/src/TopLevel/aluUnit/basicGates/mux2t1_N.vhd(21): (vcom-1615) Existing entity 'mux2t1_N' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/mux2t1_N.vhd(21) will be overwritten.
+-- Compiling entity mux2t1_N
+** Warning: proj/src/TopLevel/aluUnit/basicGates/mux2t1_N.vhd(30): (vcom-1615) Existing architecture 'mux2t1_N(structural)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/mux2t1_N.vhd(30) will be overwritten.
+-- Compiling architecture structural of mux2t1_N
+** Warning: proj/src/TopLevel/aluUnit/basicGates/invg.vhd(23): (vcom-1615) Existing entity 'invg' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/invg.vhd(23) will be overwritten.
+-- Compiling entity invg
+** Warning: proj/src/TopLevel/aluUnit/basicGates/invg.vhd(30): (vcom-1615) Existing architecture 'invg(dataflow)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/invg.vhd(30) will be overwritten.
+-- Compiling architecture dataflow of invg
+** Warning: proj/src/TopLevel/aluUnit/basicGates/mux16_1.vhd(20): (vcom-1615) Existing entity 'mux16_1' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/mux16_1.vhd(20) will be overwritten.
+-- Compiling entity mux16_1
+** Warning: proj/src/TopLevel/aluUnit/basicGates/mux16_1.vhd(28): (vcom-1615) Existing architecture 'mux16_1(mux)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/aluUnit/basicGates/mux16_1.vhd(28) will be overwritten.
+-- Compiling architecture mux of mux16_1
+** Warning: proj/src/TopLevel/BasicGates/invg.vhd(23): (vcom-1615) Existing entity 'invg' at proj/src/TopLevel/aluUnit/basicGates/invg.vhd(23) will be overwritten.
+-- Compiling entity invg
+** Warning: proj/src/TopLevel/BasicGates/invg.vhd(30): (vcom-1615) Existing architecture 'invg(dataflow)' at proj/src/TopLevel/aluUnit/basicGates/invg.vhd(30) will be overwritten.
+-- Compiling architecture dataflow of invg
+** Warning: proj/src/TopLevel/BasicGates/andg2.vhd(23): (vcom-1615) Existing entity 'andg2' at proj/src/TopLevel/aluUnit/basicGates/andg2.vhd(23) will be overwritten.
+-- Compiling entity andg2
+** Warning: proj/src/TopLevel/BasicGates/andg2.vhd(31): (vcom-1615) Existing architecture 'andg2(dataflow)' at proj/src/TopLevel/aluUnit/basicGates/andg2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of andg2
+** Warning: proj/src/TopLevel/BasicGates/dffg.vhd(23): (vcom-1615) Existing entity 'dffg' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/register/dffg.vhd(23) will be overwritten.
+-- Compiling entity dffg
+** Warning: proj/src/TopLevel/BasicGates/dffg.vhd(33): (vcom-1615) Existing architecture 'dffg(mixed)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/register/dffg.vhd(33) will be overwritten.
+-- Compiling architecture mixed of dffg
+** Warning: proj/src/TopLevel/BasicGates/org2.vhd(23): (vcom-1615) Existing entity 'org2' at proj/src/TopLevel/aluUnit/basicGates/org2.vhd(23) will be overwritten.
+-- Compiling entity org2
+** Warning: proj/src/TopLevel/BasicGates/org2.vhd(31): (vcom-1615) Existing architecture 'org2(dataflow)' at proj/src/TopLevel/aluUnit/basicGates/org2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of org2
+** Warning: proj/src/TopLevel/BasicGates/xorg2.vhd(23): (vcom-1615) Existing entity 'xorg2' at proj/src/TopLevel/aluUnit/basicGates/xorg2.vhd(23) will be overwritten.
+-- Compiling entity xorg2
+** Warning: proj/src/TopLevel/BasicGates/xorg2.vhd(31): (vcom-1615) Existing architecture 'xorg2(dataflow)' at proj/src/TopLevel/aluUnit/basicGates/xorg2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of xorg2
+** Warning: proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd(20): (vcom-1615) Existing entity 'rippleCarryAdderN' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd(20) will be overwritten.
+-- Compiling entity rippleCarryAdderN
+** Warning: proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd(30): (vcom-1615) Existing architecture 'rippleCarryAdderN(structural)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd(30) will be overwritten.
+-- Compiling architecture structural of rippleCarryAdderN
+** Warning: proj/src/TopLevel/BasicGates/Adder/adder1b.vhd(8): (vcom-1615) Existing entity 'Adder1b' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd(8) will be overwritten.
+-- Compiling entity Adder1b
+** Warning: proj/src/TopLevel/BasicGates/Adder/adder1b.vhd(19): (vcom-1615) Existing architecture 'Adder1b(structural)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd(19) will be overwritten.
+-- Compiling architecture structural of Adder1b
+** Warning: proj/src/TopLevel/BasicGates/register/mux32_1.vhd(20): (vcom-1615) Existing entity 'mux32_1' at proj/src/TopLevel/aluUnit/basicGates/mux32_1.vhd(20) will be overwritten.
+-- Compiling entity mux32_1
+** Warning: proj/src/TopLevel/BasicGates/register/mux32_1.vhd(29): (vcom-1615) Existing architecture 'mux32_1(mux)' at proj/src/TopLevel/aluUnit/basicGates/mux32_1.vhd(29) will be overwritten.
+-- Compiling architecture mux of mux32_1
+** Warning: proj/src/TopLevel/BasicGates/register/dffgN.vhd(20): (vcom-1615) Existing entity 'dffgN' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/register/dffgN.vhd(20) will be overwritten.
+-- Compiling entity dffgN
+** Warning: proj/src/TopLevel/BasicGates/register/dffgN.vhd(30): (vcom-1615) Existing architecture 'dffgN(structural)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/register/dffgN.vhd(30) will be overwritten.
+-- Compiling architecture structural of dffgN
+** Warning: proj/src/TopLevel/BasicGates/register/tb_mux32_1.vhd(20): (vcom-1615) Existing entity 'tb_mux32_1' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/register/tb_mux32_1.vhd(20) will be overwritten.
+-- Compiling entity tb_mux32_1
+** Warning: proj/src/TopLevel/BasicGates/register/tb_mux32_1.vhd(24): (vcom-1615) Existing architecture 'tb_mux32_1(behavior)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/register/tb_mux32_1.vhd(24) will be overwritten.
+-- Compiling architecture behavior of tb_mux32_1
+-- Loading package register_package
+** Warning: proj/src/TopLevel/BasicGates/register/MIPSregister.vhd(21): (vcom-1615) Existing entity 'MIPSregister' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/register/MIPSregister.vhd(21) will be overwritten.
+-- Compiling entity MIPSregister
+** Warning: proj/src/TopLevel/BasicGates/register/MIPSregister.vhd(42): (vcom-1615) Existing architecture 'MIPSregister(structure)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/register/MIPSregister.vhd(42) will be overwritten.
+-- Compiling architecture structure of MIPSregister
+** Warning: proj/src/TopLevel/BasicGates/register/tb_dffg.vhd(23): (vcom-1615) Existing entity 'tb_dffg' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/register/tb_dffg.vhd(23) will be overwritten.
+-- Compiling entity tb_dffg
+** Warning: proj/src/TopLevel/BasicGates/register/tb_dffg.vhd(27): (vcom-1615) Existing architecture 'tb_dffg(behavior)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/register/tb_dffg.vhd(27) will be overwritten.
+-- Compiling architecture behavior of tb_dffg
+** Warning: proj/src/TopLevel/BasicGates/register/tb_MIPSregister.vhd(21): (vcom-1615) Existing entity 'tb_MIPSregister' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/register/tb_MIPSregister.vhd(21) will be overwritten.
+-- Compiling entity tb_MIPSregister
+** Warning: proj/src/TopLevel/BasicGates/register/tb_MIPSregister.vhd(27): (vcom-1615) Existing architecture 'tb_MIPSregister(mixed)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/register/tb_MIPSregister.vhd(27) will be overwritten.
+-- Compiling architecture mixed of tb_MIPSregister
+** Warning: proj/src/TopLevel/BasicGates/register/tb_decoder5_32.vhd(20): (vcom-1615) Existing entity 'tb_decoder5_32' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/register/tb_decoder5_32.vhd(20) will be overwritten.
+-- Compiling entity tb_decoder5_32
+** Warning: proj/src/TopLevel/BasicGates/register/tb_decoder5_32.vhd(24): (vcom-1615) Existing architecture 'tb_decoder5_32(behavior)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/register/tb_decoder5_32.vhd(24) will be overwritten.
+-- Compiling architecture behavior of tb_decoder5_32
+** Warning: proj/src/TopLevel/BasicGates/register/tb_dffgN.vhd(20): (vcom-1615) Existing entity 'tb_dffgN' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/register/tb_dffgN.vhd(20) will be overwritten.
+-- Compiling entity tb_dffgN
+** Warning: proj/src/TopLevel/BasicGates/register/tb_dffgN.vhd(24): (vcom-1615) Existing architecture 'tb_dffgN(behavior)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/register/tb_dffgN.vhd(24) will be overwritten.
+-- Compiling architecture behavior of tb_dffgN
+** Warning: proj/src/TopLevel/BasicGates/register/dffg.vhd(23): (vcom-1615) Existing entity 'dffg' at proj/src/TopLevel/BasicGates/dffg.vhd(23) will be overwritten.
+-- Compiling entity dffg
+** Warning: proj/src/TopLevel/BasicGates/register/dffg.vhd(33): (vcom-1615) Existing architecture 'dffg(mixed)' at proj/src/TopLevel/BasicGates/dffg.vhd(33) will be overwritten.
+-- Compiling architecture mixed of dffg
+** Warning: proj/src/TopLevel/BasicGates/register/decoder5_32.vhd(20): (vcom-1615) Existing entity 'decoder5_32' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/register/decoder5_32.vhd(20) will be overwritten.
+-- Compiling entity decoder5_32
+** Warning: proj/src/TopLevel/BasicGates/register/decoder5_32.vhd(26): (vcom-1615) Existing architecture 'decoder5_32(decoder)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/register/decoder5_32.vhd(26) will be overwritten.
+-- Compiling architecture decoder of decoder5_32
+** Warning: ../../WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/register/register_package.vhd(19): (vcom-1615) Existing package 'register_package' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/BasicGates/register/register_package.vhd(19) will be overwritten.
+-- Compiling package register_package
+** Warning: proj/src/TopLevel/FetchLogic/tb_fetch_logic.vhd(13): (vcom-1615) Existing entity 'tb_fetch_Logic' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/FetchLogic/tb_fetch_logic.vhd(13) will be overwritten.
+-- Compiling entity tb_fetch_Logic
+** Warning: proj/src/TopLevel/FetchLogic/tb_fetch_logic.vhd(16): (vcom-1615) Existing architecture 'tb_fetch_Logic(behavior)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/FetchLogic/tb_fetch_logic.vhd(16) will be overwritten.
+-- Compiling architecture behavior of tb_fetch_Logic
+** Warning: proj/src/TopLevel/FetchLogic/fetch_Logic.vhd(24): (vcom-1615) Existing entity 'fetch_Logic' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/FetchLogic/fetch_Logic.vhd(24) will be overwritten.
+-- Compiling entity fetch_Logic
+** Warning: proj/src/TopLevel/FetchLogic/fetch_Logic.vhd(43): (vcom-1615) Existing architecture 'fetch_logic(mixed)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/FetchLogic/fetch_Logic.vhd(43) will be overwritten.
+-- Compiling architecture mixed of fetch_logic
+** Warning: proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd(8): (vcom-1615) Existing entity 'nbitregister' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd(8) will be overwritten.
+-- Compiling entity nbitregister
+** Warning: proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd(19): (vcom-1615) Existing architecture 'nbitregister(structural)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd(19) will be overwritten.
+-- Compiling architecture structural of nbitregister
+** Warning: proj/src/TopLevel/FetchLogic/Supporting files/tb_pcreg.vhd(14): (vcom-1615) Existing entity 'tb_PCReg' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/FetchLogic/Supporting files/tb_pcreg.vhd(14) will be overwritten.
+-- Compiling entity tb_PCReg
+** Warning: proj/src/TopLevel/FetchLogic/Supporting files/tb_pcreg.vhd(17): (vcom-1615) Existing architecture 'tb_PCReg(behavior)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/FetchLogic/Supporting files/tb_pcreg.vhd(17) will be overwritten.
+-- Compiling architecture behavior of tb_PCReg
+** Warning: proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd(15): (vcom-1615) Existing entity 'bit16_extender' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd(15) will be overwritten.
+-- Compiling entity bit16_extender
+** Warning: proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd(24): (vcom-1615) Existing architecture 'bit16_extender(flow)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd(24) will be overwritten.
+-- Compiling architecture flow of bit16_extender
+** Warning: proj/src/TopLevel/FetchLogic/Supporting files/tb_shiftleft2N.vhd(15): (vcom-1615) Existing entity 'tb_shiftleft2N' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/FetchLogic/Supporting files/tb_shiftleft2N.vhd(15) will be overwritten.
+-- Compiling entity tb_shiftleft2N
+** Warning: proj/src/TopLevel/FetchLogic/Supporting files/tb_shiftleft2N.vhd(18): (vcom-1615) Existing architecture 'tb_shiftleft2N(behavior)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/FetchLogic/Supporting files/tb_shiftleft2N.vhd(18) will be overwritten.
+-- Compiling architecture behavior of tb_shiftleft2N
+** Warning: proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd(22): (vcom-1615) Existing entity 'shiftleft2N' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd(22) will be overwritten.
+-- Compiling entity shiftleft2N
+** Warning: proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd(33): (vcom-1615) Existing architecture 'shiftleft2N(Behavioral)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd(33) will be overwritten.
+-- Compiling architecture Behavioral of shiftleft2N
+** Warning: proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd(23): (vcom-1615) Existing entity 'PCReg' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd(23) will be overwritten.
+-- Compiling entity PCReg
+** Warning: proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd(34): (vcom-1615) Existing architecture 'PCReg(structural)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd(34) will be overwritten.
+-- Compiling architecture structural of PCReg
+** Warning: proj/src/TopLevel/loadMemModule/loadMemModule.vhd(17): (vcom-1615) Existing entity 'loadMemModule' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/loadMemModule/loadMemModule.vhd(17) will be overwritten.
+-- Compiling entity loadMemModule
+** Warning: proj/src/TopLevel/loadMemModule/loadMemModule.vhd(32): (vcom-1615) Existing architecture 'loadMemModule(structure)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/loadMemModule/loadMemModule.vhd(32) will be overwritten.
+-- Compiling architecture structure of loadMemModule
+** Warning: proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd(22): (vcom-1615) Existing entity 'tb_loadMemModule' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd(22) will be overwritten.
+-- Compiling entity tb_loadMemModule
+** Warning: proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd(28): (vcom-1615) Existing architecture 'tb_loadMemModule(mixed)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd(28) will be overwritten.
+-- Compiling architecture mixed of tb_loadMemModule
+** Warning: proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd(20): (vcom-1615) Existing entity 'tb_control_Logic' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd(20) will be overwritten.
+-- Compiling entity tb_control_Logic
+** Warning: proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd(24): (vcom-1615) Existing architecture 'tb_control_Logic(behavior)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd(24) will be overwritten.
+-- Compiling architecture behavior of tb_control_Logic
+** Warning: proj/src/TopLevel/ControlLogic/control_Logic.vhd(28): (vcom-1615) Existing entity 'control_Logic' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/ControlLogic/control_Logic.vhd(28) will be overwritten.
+-- Compiling entity control_Logic
+** Warning: proj/src/TopLevel/ControlLogic/control_Logic.vhd(40): (vcom-1615) Existing architecture 'control_Logic(flow)' at /home/cfergen/cpre381/WORKING BACKUP cpre381-toolflow WORKING BACKUP/proj/src/TopLevel/ControlLogic/control_Logic.vhd(40) will be overwritten.
+-- Compiling architecture flow of control_Logic
+End time: 22:09:40 on Mar 26,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 158
