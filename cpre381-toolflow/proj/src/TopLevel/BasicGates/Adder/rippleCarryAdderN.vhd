@@ -51,7 +51,7 @@ begin
 	     oS		=> o_S(0));
 
   --Generate rest of adders
-  NbitRipple_Adder: for i in 1 to N-1 generate
+  NbitRipple_Adder: for i in 1 to N-2 generate
     Adderi: adder1b port map(
       iA	=> i_A(i),
       iB	=> i_B(i),

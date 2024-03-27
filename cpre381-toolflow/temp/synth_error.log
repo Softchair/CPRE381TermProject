@@ -15,7 +15,7 @@ Info: Running Quartus Prime Analysis & Synthesis
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed Mar 27 17:23:05 2024
+    Info: Processing started: Wed Mar 27 17:27:36 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off toolflow -c toolflow
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -187,6 +187,7 @@ Info (12128): Elaborating entity "org2" for hierarchy "fetch_Logic:fetchUnit|PCR
 Info (12128): Elaborating entity "nbitregister" for hierarchy "fetch_Logic:fetchUnit|PCReg:r_PCReg|nbitregister:r_PC" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd Line: 77
 Info (12128): Elaborating entity "dffg" for hierarchy "fetch_Logic:fetchUnit|PCReg:r_PCReg|nbitregister:r_PC|dffg:\gen_dffg:0:g_dffg" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd Line: 32
 Info (12128): Elaborating entity "rippleCarryAdderN" for hierarchy "fetch_Logic:fetchUnit|rippleCarryAdderN:g_NextPC" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/fetch_Logic.vhd Line: 145
+Warning (10873): Using initial value X (don't care) for net "s_adderCarryBit[31]" at rippleCarryAdderN.vhd(41) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd Line: 41
 Info (12128): Elaborating entity "Adder1b" for hierarchy "fetch_Logic:fetchUnit|rippleCarryAdderN:g_NextPC|Adder1b:g_1stBitRipple_Adder" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd Line: 46
 Info (12128): Elaborating entity "xorg2" for hierarchy "fetch_Logic:fetchUnit|rippleCarryAdderN:g_NextPC|Adder1b:g_1stBitRipple_Adder|xorg2:g_xorgAB" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd Line: 52
 Info (12128): Elaborating entity "shiftleft2N" for hierarchy "fetch_Logic:fetchUnit|shiftleft2N:g_jShiftLeft" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/fetch_Logic.vhd Line: 161
@@ -233,45 +234,4 @@ Info (10041): Inferred latch for "o_OUT[16]" at slt.vhd(35) File: /home/cfergen/
 Info (10041): Inferred latch for "o_OUT[17]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
 Info (10041): Inferred latch for "o_OUT[18]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
 Info (10041): Inferred latch for "o_OUT[19]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
-Info (10041): Inferred latch for "o_OUT[20]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
-Info (10041): Inferred latch for "o_OUT[21]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
-Info (10041): Inferred latch for "o_OUT[22]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
-Info (10041): Inferred latch for "o_OUT[23]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
-Info (10041): Inferred latch for "o_OUT[24]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
-Info (10041): Inferred latch for "o_OUT[25]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
-Info (10041): Inferred latch for "o_OUT[26]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
-Info (10041): Inferred latch for "o_OUT[27]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
-Info (10041): Inferred latch for "o_OUT[28]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
-Info (10041): Inferred latch for "o_OUT[29]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
-Info (10041): Inferred latch for "o_OUT[30]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
-Info (10041): Inferred latch for "o_OUT[31]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
-Info (12128): Elaborating entity "barrelShifterSLL" for hierarchy "ALU:ALUmod|barrelShifterSLL:g_sllShifter" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 322
-Info (12128): Elaborating entity "barrelShifterArithmetic" for hierarchy "ALU:ALUmod|barrelShifterArithmetic:g_sraShifter" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 342
-Info (12128): Elaborating entity "mux16_1" for hierarchy "ALU:ALUmod|mux16_1:g_16t1Mux" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 382
-Info (12128): Elaborating entity "mux2t1Flow" for hierarchy "ALU:ALUmod|mux2t1Flow:g_ovrFlowMux" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 402
-Info (12128): Elaborating entity "orG32b" for hierarchy "ALU:ALUmod|orG32b:g_orG32b01" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 409
-Info (12128): Elaborating entity "loadMemModule" for hierarchy "loadMemModule:loadMemModuleMod" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/MIPS_Processor.vhd Line: 464
-Info (12128): Elaborating entity "mux8b4t1" for hierarchy "loadMemModule:loadMemModuleMod|mux8b4t1:g_8b4t1mux01" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/loadMemModule/loadMemModule.vhd Line: 82
-Info (12128): Elaborating entity "mux16b2t1" for hierarchy "loadMemModule:loadMemModuleMod|mux16b2t1:g_16b2t1mux01" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/loadMemModule/loadMemModule.vhd Line: 91
-Info (12128): Elaborating entity "bit_extenders24b" for hierarchy "loadMemModule:loadMemModuleMod|bit_extenders24b:g_24bsignExt" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/loadMemModule/loadMemModule.vhd Line: 101
-Info (12128): Elaborating entity "mux32b3t1" for hierarchy "mux32b3t1:muxFinalData" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/MIPS_Processor.vhd Line: 475
-
-
-
-Error (12014): Net "fetch_Logic:fetchUnit|rippleCarryAdderN:g_bAddPC|o_S[31]", which fans out to "fetch_Logic:fetchUnit|rippleCarryAdderN:g_bAddPC|o_S[31]", cannot be assigned more than one value File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd Line: 26
-    Error (12015): Net is fed by "fetch_Logic:fetchUnit|rippleCarryAdderN:g_bAddPC|Adder1b:\NbitRipple_Adder:31:Adderi|oS" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd Line: 14
-    Error (12015): Net is fed by "fetch_Logic:fetchUnit|rippleCarryAdderN:g_bAddPC|Adder1b:g_LastBitRipple_Adder|oS" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd Line: 14
-Error (12014): Net "fetch_Logic:fetchUnit|rippleCarryAdderN:g_jAdd|o_S[31]", which fans out to "fetch_Logic:fetchUnit|rippleCarryAdderN:g_jAdd|o_S[31]", cannot be assigned more than one value File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd Line: 26
-    Error (12015): Net is fed by "fetch_Logic:fetchUnit|rippleCarryAdderN:g_jAdd|Adder1b:\NbitRipple_Adder:31:Adderi|oS" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd Line: 14
-    Error (12015): Net is fed by "fetch_Logic:fetchUnit|rippleCarryAdderN:g_jAdd|Adder1b:g_LastBitRipple_Adder|oS" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd Line: 14
-Error (12014): Net "fetch_Logic:fetchUnit|rippleCarryAdderN:g_NextPC|o_S[31]", which fans out to "fetch_Logic:fetchUnit|rippleCarryAdderN:g_NextPC|o_S[31]", cannot be assigned more than one value File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd Line: 26
-    Error (12015): Net is fed by "fetch_Logic:fetchUnit|rippleCarryAdderN:g_NextPC|Adder1b:\NbitRipple_Adder:31:Adderi|oS" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd Line: 14
-    Error (12015): Net is fed by "fetch_Logic:fetchUnit|rippleCarryAdderN:g_NextPC|Adder1b:g_LastBitRipple_Adder|oS" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd Line: 14
-
-
-
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 9 errors, 7 warnings
-    Error: Peak virtual memory: 743 megabytes
-    Error: Processing ended: Wed Mar 27 17:23:15 2024
-    Error: Elapsed time: 00:00:10
-    Error: Total CPU time (on all processors): 00:00:14
+Info (10041): Inferred latch for "o_OUT[20]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line:
