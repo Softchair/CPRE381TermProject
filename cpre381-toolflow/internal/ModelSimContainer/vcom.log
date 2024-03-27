@@ -14,9 +14,6 @@ vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd interna
 -- Loading package MIPS_types
 -- Compiling entity MIPS_Processor
 -- Compiling architecture structure of MIPS_Processor
--- Loading package NUMERIC_STD
--- Compiling entity mem
--- Compiling architecture rtl of mem
 ** Warning: proj/src/MIPS_types.vhd(15): (vcom-1615) Existing package 'MIPS_types' at line 15 will be overwritten.
 -- Compiling package MIPS_types
 ** Warning: proj/src/MIPS_types.vhd(29): (vcom-1615) Existing package body 'MIPS_types(body)' at line 29 will be overwritten.
@@ -82,9 +79,11 @@ vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd interna
 -- Compiling architecture structure of mux2t1
 -- Compiling entity andgN
 -- Compiling architecture structural of andgN
-** Warning: proj/src/TopLevel/BasicGates/dffg.vhd(23): (vcom-1615) Existing entity 'dffg' at /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/dffg.vhd(23) will be overwritten.
+-- Compiling entity mux2t1
+-- Compiling architecture structure of mux2t1
+** Warning: proj/src/TopLevel/BasicGates/dffg.vhd(23): (vcom-1615) Existing entity 'dffg' at /home/kosice/Documents/cpre381TermProjNEW-EMIL/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/dffg.vhd(23) will be overwritten.
 -- Compiling entity dffg
-** Warning: proj/src/TopLevel/BasicGates/dffg.vhd(33): (vcom-1615) Existing architecture 'dffg(mixed)' at /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/dffg.vhd(33) will be overwritten.
+** Warning: proj/src/TopLevel/BasicGates/dffg.vhd(33): (vcom-1615) Existing architecture 'dffg(mixed)' at /home/kosice/Documents/cpre381TermProjNEW-EMIL/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/dffg.vhd(33) will be overwritten.
 -- Compiling architecture mixed of dffg
 -- Compiling entity org2
 -- Compiling architecture dataflow of org2
@@ -107,6 +106,8 @@ vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd interna
 -- Compiling entity dffg
 ** Warning: proj/src/TopLevel/BasicGates/register/dffg.vhd(33): (vcom-1615) Existing architecture 'dffg(mixed)' at proj/src/TopLevel/BasicGates/dffg.vhd(33) will be overwritten.
 -- Compiling architecture mixed of dffg
+-- Compiling entity tb_MIPSregister
+-- Compiling architecture mixed of tb_MIPSregister
 -- Compiling entity decoder5_32
 -- Compiling architecture decoder of decoder5_32
 -- Compiling package register_package
