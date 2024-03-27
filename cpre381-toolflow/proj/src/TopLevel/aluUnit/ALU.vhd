@@ -198,6 +198,32 @@ port(
        o_F          : out std_logic);
 
 end component;
+
+
+-----------------------------------------
+-- Shifters
+-----------------------------------------
+
+component barrelShifterSLL
+ 
+port(
+       i_Cin        : in std_logic_vector(31 downto 0);
+       i_shamt         : in std_logic_vector(4 downto 0);
+       o_Cout       : out std_logic_vector(31 downto 0));
+  end component;
+
+component barrelShifterArithmetic
+ 
+port(
+       i_Cin        : in std_logic_vector(31 downto 0);
+       i_shamt         : in std_logic_vector(4 downto 0);
+       o_Cout       : out std_logic_vector(31 downto 0));
+  end component;
+
+
+
+
+
 --signals
 
 
@@ -217,7 +243,17 @@ signal s_NorDataOut : std_logic_vector(31 downto 0); -- signal data output from 
 signal s_LuiDataOut : std_logic_vector(31 downto 0); -- signal data output from LUI to 16t1 mux
 signal s_sltDataOut : std_logic_vector(31 downto 0); -- signal for output of SLT/SLTI to 16t1 mux
 signal s_orGateZeroOut : std_logic; --signal from or gate to inverter for zero logic
-
+signal s_sllDataOut : std_logic_vector(31 downto 0); -- signal for output of SLL to 16t1 mux
+signal s_sllvDataOut : std_logic_vector(31 downto 0); -- signal for output of SLLV to 16t1 mux
+signal s_srlDataOut : std_logic_vector(31 downto 0); -- signal for output of SRL before flip
+signal s_srlDataOutmux : std_logic_vector(31 downto 0); -- signal for output of SRL to 16t1 mux
+signal s_srlDataIn : std_logic_vector(31 downto 0); -- flipping bits before shifting
+signal s_srlvDataOut : std_logic_vector(31 downto 0); -- signal for output of SRLV before flip
+signal s_srlvDataOutmux : std_logic_vector(31 downto 0); -- signal for output of SRLV to 16t1 mux
+signal s_sraDataOut : std_logic_vector(31 downto 0); -- signal for output of SRA before flip
+signal s_sraDataOutmux : std_logic_vector(31 downto 0); -- signal for output of SRA to 16t1 mux
+signal s_sravDataOut : std_logic_vector(31 downto 0); -- signal for output of SRAV before flip
+signal s_sravDataOutmux : std_logic_vector(31 downto 0); -- signal for output of SRLAV to 16t1 mux
 begin
 
 
@@ -285,7 +321,64 @@ g_slt : slt
    port MAP(i_Din => s_AddSubDataOut,
             o_OUT => s_sltDataOut);
 
+-- level 2.5 (shifter unit)
+g_sllShifter : barrelShifterSLL
+   port MAP(i_Cin   => i_B,
+       i_shamt      => i_imme(10 downto 6),
+       o_Cout       => s_sllDataOut);
 
+g_sllvShifter : barrelShifterSLL
+   port MAP(i_Cin   => i_B,
+       i_shamt      => i_A(4 downto 0),
+       o_Cout       => s_sllvDataOut);
+
+g_srlShifter : barrelShifterSLL
+   port MAP(i_Cin   => s_srlDataIn,
+       i_shamt      => i_imme(10 downto 6),
+       o_Cout       => s_srlDataOut);
+
+g_srlvShifter : barrelShifterSLL
+   port MAP(i_Cin   => s_srlDataIn,
+       i_shamt      => i_A(4 downto 0),
+       o_Cout       => s_srlvDataOut);
+
+g_sraShifter : barrelShifterArithmetic
+   port MAP(i_Cin   => s_srlDataIn,
+       i_shamt      => i_imme(10 downto 6),
+       o_Cout       => s_sraDataOut);
+
+g_sravShifter : barrelShifterArithmetic
+   port MAP(i_Cin   => s_srlDataIn,
+       i_shamt      => i_A(4 downto 0),
+       o_Cout       => s_sravDataOut);
+
+
+-- FLIPPING BITS FOR RIGHT SHIFT
+genSlrBefore: for i in 0 to 31 generate
+  s_srlDataIn(i) <= i_B(31 - i);
+end generate;
+
+genSlrAfter: for i in 0 to 31 generate
+  s_srlDataOutmux(i) <= s_srlDataOut(31 - i);
+end generate;
+
+genSlrvAfter: for i in 0 to 31 generate
+  s_srlvDataOutmux(i) <= s_srlvDataOut(31 - i);
+end generate;
+
+genSraAfter: for i in 0 to 31 generate
+  s_sraDataOutmux(i) <= s_sraDataOut(31 - i);
+end generate;
+
+genSravAfter: for i in 0 to 31 generate
+  s_sravDataOutmux(i) <= s_sravDataOut(31 - i);
+end generate;
+
+
+
+
+--s_srlDataOut <= s_sllDataOut(0 to 31);
+--s_srlvDataOut <= s_sllvDataOut(0 to 31);
 
 -- level 3: (16t1 mux and overflow mux and Zero output)
 
@@ -297,12 +390,12 @@ g_16t1Mux : mux16_1
            D4 => s_XorDataOut, 
            D5 => s_OrDataOut, 
            D6 => s_sltDataOut, 
-           D7 => x"00000000", 
-           D8 => x"00000000", 
-           D9 => x"00000000", 
-           D10 => x"00000000", 
-           D11 => x"00000000",
-           D12 => x"00000000", 
+           D7 => s_sllDataOut, 
+           D8 => s_srlDataOutmux, 
+           D9 => s_sraDataOutmux, 
+           D10 => s_sllvDataOut, 
+           D11 => s_srlvDataOutmux,
+           D12 => s_sravDataOutmux, 
            D13 => x"00000000", 
            D14 => x"00000000",
            D15 => x"00000000",
@@ -357,6 +450,9 @@ g_invgG01 : invg
   port MAP(
          i_A   => s_orGateZeroOut,
          o_F   => o_Zero);
+
+
+
 
 end structure;
 

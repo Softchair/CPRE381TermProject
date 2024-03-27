@@ -72,9 +72,9 @@ begin
                      "1010110000000000100110" when i_DOpcode = "100001" else                        -- 101011000000000010 lh
                      "1010110000000000000100" when i_DOpcode = "100100" else                        -- 101011000000000000 lbu
                      "1010110000000000001000" when i_DOpcode = "100101" else                        -- 101011000000000000 lhu
-                     "0000100000001110010000" when i_DOpcode = "000000" and i_DFunc = "000100" else -- XX00100000001110X1 sllv
-                     "0000100000010000010000" when i_DOpcode = "000000" and i_DFunc = "000110" else -- XX00100000010000X1 srlv
-                     "0000100000010010010000" when i_DOpcode = "000000" and i_DFunc = "000111" else -- XX00100000010010X1 srav
+                     "0000100000010100010000" when i_DOpcode = "000000" and i_DFunc = "000100" else -- XX00100000001110X1 sllv
+                     "0000100000010110010000" when i_DOpcode = "000000" and i_DFunc = "000110" else -- XX00100000010000X1 srlv
+                     "0000100000011000010000" when i_DOpcode = "000000" and i_DFunc = "000111" else -- XX00100000010010X1 srav
                      "0000000000000000000001" when i_DOpcode = "010100" else                        -- 0000000000000000000001 halt
                      "0000000000000000000000";
 
