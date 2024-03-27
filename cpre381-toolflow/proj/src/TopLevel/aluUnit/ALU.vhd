@@ -60,6 +60,14 @@ component firstALU
 
 end component;
 
+-- Barrel shifter
+component barrelShifter is
+  generic(N : integer := 32);
+  port(i_Cin        : in std_logic_vector(31 downto 0);
+        i_shamt      : in std_logic_vector(4 downto 0);
+        o_Cout       : out std_logic_vector(31 downto 0));
+ end component; 
+
 
 -- used for immediate operations
 component bit_extenders

@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------
--- Emil Kosic
+-- Emil Kosic and Camden Fergen
 -- Department of Electrical and Computer Engineering
 -- Iowa State University
 -------------------------------------------------------------------------
@@ -9,23 +9,18 @@
 -------------------------------------------------------------------------
 -- DESCRIPTION: This file contains an implementation of an 32 bit wide barrel shifter using
 -- multiple generics
---
--- NOTES:
--- 1/6/20 by H3::Created.
 -------------------------------------------------------------------------
 
 library IEEE;
 use IEEE.std_logic_1164.all;
 
 entity barrelShifter is
-  generic(N : integer := 32); -- Generic of type integer for input/output data width. Default value is 32.
-  port(i_Cin        : in std_logic_vector(31 downto 0);
-       i_shamt         : in std_logic_vector(4 downto 0);
-       o_Cout       : out std_logic_vector(31 downto 0));
-
-
-
-end barrelShifter;
+  generic(N : integer := 32);
+  port( i_Cin        : in std_logic_vector(31 downto 0);    -- Data in
+        i_shamt      : in std_logic_vector(4 downto 0);     -- Shift amount
+        i_dir        : in std_logic;                        -- Direction (0) = (1) = 
+        o_Cout       : out std_logic_vector(31 downto 0));  -- Data out
+ end barrelShifter;
 
 architecture structural of barrelShifter is
 
