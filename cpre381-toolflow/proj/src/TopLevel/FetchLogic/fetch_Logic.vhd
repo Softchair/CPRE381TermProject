@@ -258,7 +258,6 @@ architecture mixed of fetch_logic is
 
         -- Also assign the out of PC address to the result of jump reg control
         o_PCAddress <= s_PCaddressOut;
-        o_jalAdd  <= s_PCNext; -- NEW
         -- ------- END ENDING LOGIC CONTROL ------- --
 
 end mixed;
