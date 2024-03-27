@@ -126,12 +126,28 @@ DUT0: ALU
     s_A <= x"FFFFFC18"; -- rs
     s_B <= x"FFFFF060"; -- rt
     s_imme <= "1111000100011000";
+
+
+   wait for gCLK_HPER*2;
+    
+  
+    s_A <= x"7FFFFC18"; -- rs
+    s_B <= x"FFFFF060"; -- rt
+    s_imme <= "1111000100011000";
+
+
+   wait for gCLK_HPER*2;
+    
+  
+    s_A <= "01111111111111111111110000011000"; -- rs
+    s_B <= "01000000000000000000000000000000"; -- rt
+    s_imme <= "1111000100011000";
     
 -- Expected outputs:
 -- 8c
 -- 3c 
 -- ffffec78
-
+-- f-------
 
   wait for gCLK_HPER*2;
   wait for gCLK_HPER*2;
@@ -186,6 +202,106 @@ wait for gCLK_HPER*2;
 -- fffffffb
 -- ffffd6df
 -- 00000000
+
+
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+
+-----------------------------------------------
+-- ADDIU
+-----------------------------------------------
+
+-- values to addiu
+    s_A <= x"00000000"; -- rs
+    s_B <= x"00000028"; -- rt
+    s_imme <= "0000000001100100";
+    
+    --signals
+    s_ALUSrc  <= '1'; --  (0) A+B, (1) A+imme
+    s_SEL     <= '0'; -- sel (add(0)-sub(1))
+    s_ALUOpSel  <= "0000"; -- ALUOpSel signal
+    s_sOverFlow <= '1'; -- overflow mux logic
+    s_zeroSignSEL <= '0'; -- select 0/1 infront of immediate
+    
+  wait for gCLK_HPER*2;
+
+    s_A <= x"00000064"; -- rs
+    s_B <= x"00000028"; -- rt
+    s_imme <= "0000000001100100";
+
+
+ wait for gCLK_HPER*2;
+
+    s_A <= x"00000064"; -- rs
+    s_B <= x"00000028"; -- rt
+    s_imme <= "1111111110010111";
+
+ wait for gCLK_HPER*2;
+
+    s_A <= x"fffffEC0"; -- rs
+    s_B <= x"00000028"; -- rt
+    s_imme <= "1101100000011111";
+
+
+wait for gCLK_HPER*2;
+
+    s_A <= x"00000000"; -- rs
+    s_B <= x"00000028"; -- rt
+    s_imme <= "0000000000000000";
+
+
+-- Expecting
+-- 00000064
+-- 000000c8
+-- fffffffb
+-- ffffd6df
+-- 00000000
+
+ wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+
+----------------------------------
+-- ADDU
+----------------------------------
+
+  
+    -- values to addu 
+    s_A <= x"00000064"; -- rs
+    s_B <= x"00000028"; -- rt
+    s_imme <= "0000000100000000";
+    
+    --signals
+    s_ALUSrc  <= '0'; --  (0) A+B, (1) A+imme
+    s_SEL     <= '0'; -- sel (add(0)-sub(1))
+    s_ALUOpSel  <= "0000"; -- ALUOpSel signal
+    s_sOverFlow <= '0'; -- overflow mux logic
+    s_zeroSignSEL <= '0'; -- select 0/1 infront of immediate
+    
+
+  wait for gCLK_HPER*2;
+
+    s_A <= x"00000028"; -- rs
+    s_B <= x"FFFFF25C"; -- rt
+    s_imme <= "0000000100011000";
+    
+   
+ 
+    
+    wait for gCLK_HPER*2;
+    
+  
+    s_A <= x"FFFFF25C"; -- rs
+    s_B <= x"FFFFFC5C"; -- rt
+    s_imme <= "1111000100011000";
+
+
+    
+-- Expected outputs:
+-- 0000008C
+-- FFFFF284 
+-- FFFFEEB8
 
  
 
@@ -244,7 +360,7 @@ wait for gCLK_HPER*2;
 -- "FFFE92C0
 
 -----------------------------------------------
--- ANDI (NOT DONE)
+-- ANDI 
 -----------------------------------------------
   wait for gCLK_HPER*2;
   wait for gCLK_HPER*2;
@@ -252,9 +368,9 @@ wait for gCLK_HPER*2;
 
 
 -- values to andi
-    s_A <= x"00000000"; -- rs
-    s_B <= x"0000041A"; -- rt
-    s_imme <= "0000000001100100";
+    s_A <= x"00002EE0"; -- rs
+    s_B <= x"00002EE0"; -- rt
+    s_imme <= "0010000000100111";
     
     --signals
     s_ALUSrc  <= '1'; --  (0) A+B, (1) A+imme
@@ -265,11 +381,226 @@ wait for gCLK_HPER*2;
     
   wait for gCLK_HPER*2;
 
-    s_A <= x"0000B331"; -- rs
+    s_A <= x"00000025"; -- rs
     s_B <= x"0000041A"; -- rt
-    s_imme <= "0000000001100100";
+    s_imme <= "0000000000100101";
+
+-- expected
+-- 0x00002020
+-- 0x00000025
+
+-----------------------------------------------
+-- NOR 
+-----------------------------------------------
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
 
 
+-- values to nor
+    s_A <= x"00002EE0"; -- rs
+    s_B <= x"00000025"; -- rt
+    s_imme <= "0010000000100111";
+    
+    --signals
+    s_ALUSrc  <= '0'; --  (0) A+B, (1) A+imme
+    s_SEL     <= '0'; -- sel (add(0)-sub(1))
+    s_ALUOpSel  <= "0011"; -- ALUOpSel signal
+    s_sOverFlow <= '0'; -- overflow mux logic
+    s_zeroSignSEL <= '0'; -- select 0/1 infront of immediate
+    
+  wait for gCLK_HPER*2;
+
+    s_A <= x"00000025"; -- rs
+    s_B <= x"FFFFFb30"; -- rt
+    s_imme <= "0000000000100101";
+
+-- expected
+-- 0xFFFFD11A
+-- 0x000004CA
+
+
+
+-----------------------------------------------
+-- XOR 
+-----------------------------------------------
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+
+
+-- values to xor
+    s_A <= x"00002EE0"; -- rs
+    s_B <= x"00000025"; -- rt
+    s_imme <= "0010000000100111";
+    
+    --signals
+    s_ALUSrc  <= '0'; --  (0) A+B, (1) A+imme
+    s_SEL     <= '0'; -- sel (add(0)-sub(1))
+    s_ALUOpSel  <= "0100"; -- ALUOpSel signal
+    s_sOverFlow <= '0'; -- overflow mux logic
+    s_zeroSignSEL <= '0'; -- select 0/1 infront of immediate
+    
+  wait for gCLK_HPER*2;
+
+    s_A <= x"00000025"; -- rs
+    s_B <= x"FFFFFb30"; -- rt
+    s_imme <= "0000000000100101";
+
+-- expected
+-- 0x00002EC5
+-- 0xFFFFFB15
+
+-----------------------------------------------
+-- XORI
+-----------------------------------------------
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+
+
+-- values to xori
+    s_A <= x"00002EE0"; -- rs
+    s_B <= x"00000025"; -- rt
+    s_imme <= "0001110000111111";
+    
+    --signals
+    s_ALUSrc  <= '1'; --  (0) A+B, (1) A+imme
+    s_SEL     <= '0'; -- sel (add(0)-sub(1))
+    s_ALUOpSel  <= "0100"; -- ALUOpSel signal
+    s_sOverFlow <= '0'; -- overflow mux logic
+    s_zeroSignSEL <= '0'; -- select 0/1 infront of immediate
+    
+  wait for gCLK_HPER*2;
+
+    s_A <= x"00000025"; -- rs
+    s_B <= x"FFFFFb30"; -- rt
+    s_imme <= "0000000101010110";
+
+-- expected
+-- 0x000032DF
+-- 0x00000173
+
+-----------------------------------------------
+-- OR
+-----------------------------------------------
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+
+
+-- values to or
+    s_A <= x"00002EE0"; -- rs
+    s_B <= x"00000025"; -- rt
+    s_imme <= "0001110000111111";
+    
+    --signals
+    s_ALUSrc  <= '0'; --  (0) A+B, (1) A+imme
+    s_SEL     <= '0'; -- sel (add(0)-sub(1))
+    s_ALUOpSel  <= "0101"; -- ALUOpSel signal
+    s_sOverFlow <= '0'; -- overflow mux logic
+    s_zeroSignSEL <= '0'; -- select 0/1 infront of immediate
+    
+  wait for gCLK_HPER*2;
+
+    s_A <= x"00000025"; -- rs
+    s_B <= x"FFFFFb30"; -- rt
+    s_imme <= "0000000101010110";
+
+-- expected
+-- 0x00002EE5
+-- 0xFFFFFB35
+
+-----------------------------------------------
+-- ORI
+-----------------------------------------------
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+
+
+-- values to ori
+    s_A <= x"00002EE0"; -- rs
+    s_B <= x"00000025"; -- rt
+    s_imme <= "0011000001011101";
+    
+    --signals
+    s_ALUSrc  <= '1'; --  (0) A+B, (1) A+imme
+    s_SEL     <= '0'; -- sel (add(0)-sub(1))
+    s_ALUOpSel  <= "0101"; -- ALUOpSel signal
+    s_sOverFlow <= '0'; -- overflow mux logic
+    s_zeroSignSEL <= '0'; -- select 0/1 infront of immediate
+    
+  wait for gCLK_HPER*2;
+
+    s_A <= x"00000025"; -- rs
+    s_B <= x"FFFFFb30"; -- rt
+    s_imme <= "0000100100101100";
+
+-- expected
+-- 0x00003EFD
+-- 0x0000092D
+
+-----------------------------------------------
+-- SUB
+-----------------------------------------------
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+
+
+-- values to sub
+    s_A <= x"00002EE0"; -- rs
+    s_B <= x"00000025"; -- rt
+    s_imme <= "0011000001011101";
+    
+    --signals
+    s_ALUSrc  <= '0'; --  (0) A+B, (1) A+imme
+    s_SEL     <= '1'; -- sel (add(0)-sub(1))
+    s_ALUOpSel  <= "0000"; -- ALUOpSel signal
+    s_sOverFlow <= '1'; -- overflow mux logic
+    s_zeroSignSEL <= '0'; -- select 0/1 infront of immediate
+    
+  wait for gCLK_HPER*2;
+
+    s_A <= x"00000025"; -- rs
+    s_B <= x"FFFFFb30"; -- rt
+    s_imme <= "0000100100101100";
+
+-- expected
+-- 0x00002EBB
+-- 0x000004F5
+
+
+-----------------------------------------------
+-- SUBU
+-----------------------------------------------
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+
+
+-- values to subu
+    s_A <= x"00002EE0"; -- rs
+    s_B <= x"00000025"; -- rt
+    s_imme <= "0011000001011101";
+    
+    --signals
+    s_ALUSrc  <= '0'; --  (0) A+B, (1) A+imme
+    s_SEL     <= '1'; -- sel (add(0)-sub(1))
+    s_ALUOpSel  <= "0000"; -- ALUOpSel signal
+    s_sOverFlow <= '0'; -- overflow mux logic
+    s_zeroSignSEL <= '0'; -- select 0/1 infront of immediate
+    
+  wait for gCLK_HPER*2;
+
+    s_A <= x"00000025"; -- rs
+    s_B <= x"FFFFFb30"; -- rt
+    s_imme <= "0000100100101100";
+
+-- expected
+-- 0x00002EBB
+-- 0x000004F5
 
 -----------------------------------------------
 -- LUI
@@ -369,6 +700,323 @@ wait for gCLK_HPER*2;
 -- 00000000
 -- 00000000
 
+-----------------------------------------------
+-- SLTI
+-----------------------------------------------
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+
+
+-- values to slti
+    s_A <= x"00000000"; -- rs
+    s_B <= x"00000000"; -- rt
+    s_imme <= "0000000000000000";
+              
+    --signals
+    s_ALUSrc  <= '1'; --  (0) A+B, (1) A+imme
+    s_SEL     <= '1'; -- sel (add(0)-sub(1))
+    s_ALUOpSel  <= "0110"; -- ALUOpSel signal
+    s_sOverFlow <= '0'; -- overflow mux logic
+    s_zeroSignSEL <= '1'; -- select 0/1 infront of immediate
+
+
+wait for gCLK_HPER*2;
+    s_A <= x"000003D7"; -- rs
+    s_B <= x"0F00041A"; -- rt
+    s_imme <= "0000110010101001";
+
+wait for gCLK_HPER*2;
+    s_A <= x"000010B7"; -- rs
+    s_B <= x"0F00041A"; -- rt
+    s_imme <= "0000001110100000";
+
+
+
+
+-- expecting
+-- 00000000
+-- 00000001
+-- 00000000
+
+
+-----------------------------------------------
+-- SLL
+-----------------------------------------------
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+
+
+-- values to sll
+    s_A <= x"00000000"; -- rs
+    s_B <= x"00000001"; -- rt
+    s_imme <= "0000001010000000";
+              
+    --signals
+    s_ALUSrc  <= '0'; --  (0) A+B, (1) A+imme
+    s_SEL     <= '0'; -- sel (add(0)-sub(1))
+    s_ALUOpSel  <= "0111"; -- ALUOpSel signal
+    s_sOverFlow <= '0'; -- overflow mux logic
+    s_zeroSignSEL <= '0'; -- select 0/1 infront of immediate
+
+
+wait for gCLK_HPER*2;
+    s_A <= x"000003D7"; -- rs
+    s_B <= x"00000400"; -- rt
+    s_imme <= "0000001000000000";
+
+wait for gCLK_HPER*2;
+    s_A <= x"000010B7"; -- rs
+    s_B <= x"0000000A"; -- rt
+    s_imme <= "0000001100000000";
+
+wait for gCLK_HPER*2;
+    s_A <= x"000010B7"; -- rs
+    s_B <= x"0000A000"; -- rt
+    s_imme <= "0000000100000000";
+
+
+
+-- expecting
+-- 00000400
+-- 00040000
+-- 0000A000
+-- 000A0000
+
+
+-----------------------------------------------
+-- SLLV
+-----------------------------------------------
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+
+
+-- values to sllv
+    s_A <= "00000000000000000000000000001010"; -- rs
+    s_B <= x"00007276"; -- rt
+    s_imme <= "0000001010000000";
+
+    --signals
+    s_ALUSrc  <= '0'; --  (0) A+B, (1) A+imme
+    s_SEL     <= '0'; -- sel (add(0)-sub(1))
+    s_ALUOpSel  <= "1010"; -- ALUOpSel signal
+    s_sOverFlow <= '0'; -- overflow mux logic
+    s_zeroSignSEL <= '0'; -- select 0/1 infront of immediate
+
+
+wait for gCLK_HPER*2;
+    s_A <= "00000000000000000000000000010011"; -- rs
+    s_B <= x"0000078C"; -- rt
+    s_imme <= "0000001000000000";
+
+
+wait for gCLK_HPER*2;
+    s_A <= "00000000000000000000000000000110"; -- rs
+    s_B <= x"FFFFB473"; -- rt
+    s_imme <= "0000001100000000";
+
+
+
+wait for gCLK_HPER*2;
+    s_A <= "00000000000000000000000000000110"; -- rs
+    s_B <= x"FFED1CC0"; -- rt
+    s_imme <= "0000000100000000";
+
+
+
+
+-- expecting
+-- 01C9D800
+-- 3C600000
+-- FFED1CC0
+-- FB473000
+
+-----------------------------------------------
+-- SRL
+-----------------------------------------------
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+
+
+-- values to srl
+    s_A <= x"00000000"; -- rs
+    s_B <= x"0005B04C"; -- rt
+    s_imme <= "0000001010000000";
+              
+    --signals
+    s_ALUSrc  <= '0'; --  (0) A+B, (1) A+imme
+    s_SEL     <= '0'; -- sel (add(0)-sub(1))
+    s_ALUOpSel  <= "1000"; -- ALUOpSel signal
+    s_sOverFlow <= '0'; -- overflow mux logic
+    s_zeroSignSEL <= '0'; -- select 0/1 infront of immediate
+
+
+wait for gCLK_HPER*2;
+    s_A <= x"000003D7"; -- rs
+    s_B <= x"30F58E48"; -- rt
+    s_imme <= "0000001000000000";
+
+wait for gCLK_HPER*2;
+    s_A <= x"000010B7"; -- rs
+    s_B <= x"FFFFDC5D"; -- rt
+    s_imme <= "0000001100000000";
+
+wait for gCLK_HPER*2;
+    s_A <= x"000010B7"; -- rs
+    s_B <= x"000FFFFD"; -- rt
+    s_imme <= "0000000100000000";
+
+
+
+-- expecting
+-- 0000016C
+-- 0030F58E
+-- 000FFFFD
+-- 0000FFFF
+
+-----------------------------------------------
+-- SRLV
+-----------------------------------------------
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+
+
+-- values to srlv
+    s_A <= "00000000000000000000000000001010"; -- rs
+    s_B <= x"0005B04C"; -- rt
+    s_imme <= "0000001010000000";
+
+    --signals
+    s_ALUSrc  <= '0'; --  (0) A+B, (1) A+imme
+    s_SEL     <= '0'; -- sel (add(0)-sub(1))
+    s_ALUOpSel  <= "1011"; -- ALUOpSel signal
+    s_sOverFlow <= '0'; -- overflow mux logic
+    s_zeroSignSEL <= '0'; -- select 0/1 infront of immediate
+
+
+wait for gCLK_HPER*2;
+    s_A <= "00000000000000000000000000010011"; -- rs
+    s_B <= x"FFFFDC5D"; -- rt
+    s_imme <= "0000001000000000";
+
+
+wait for gCLK_HPER*2;
+    s_A <= "00000000000000000000000000000110"; -- rs
+    s_B <= x"30F58E48"; -- rt
+    s_imme <= "0000001100000000";
+
+
+
+wait for gCLK_HPER*2;
+    s_A <= "00000000000000000000000000000110"; -- rs
+    s_B <= x"00C3D639"; -- rt
+    s_imme <= "0000000100000000";
+
+
+
+
+-- expecting
+-- 0000016C
+-- 00001FFF
+-- 00C3D639
+-- 00030F58
+
+
+-----------------------------------------------
+-- SRA
+-----------------------------------------------
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+
+
+-- values to sra
+    s_A <= x"00000000"; -- rs
+    s_B <= x"0005B04C"; -- rt
+    s_imme <= "0000001010000000";
+              
+    --signals
+    s_ALUSrc  <= '0'; --  (0) A+B, (1) A+imme
+    s_SEL     <= '0'; -- sel (add(0)-sub(1))
+    s_ALUOpSel  <= "1001"; -- ALUOpSel signal
+    s_sOverFlow <= '0'; -- overflow mux logic
+    s_zeroSignSEL <= '0'; -- select 0/1 infront of immediate
+
+
+wait for gCLK_HPER*2;
+    s_A <= x"000003D7"; -- rs
+    s_B <= x"30F58E48"; -- rt
+    s_imme <= "0000001000000000";
+
+wait for gCLK_HPER*2;
+    s_A <= x"000010B7"; -- rs
+    s_B <= x"FFFFDC5D"; -- rt
+    s_imme <= "0000001100000000";
+
+wait for gCLK_HPER*2;
+    s_A <= x"000010B7"; -- rs
+    s_B <= x"FFFFFFFD"; -- rt
+    s_imme <= "0000000100000000";
+
+
+
+-- expecting
+-- 0000016C
+-- 0030F58E
+-- FFFFFFFD
+-- FFFFFFFF
+
+-----------------------------------------------
+-- SRAV
+-----------------------------------------------
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+  wait for gCLK_HPER*2;
+
+
+-- values to srav
+    s_A <= "00000000000000000000000000001010"; -- rs
+    s_B <= x"0005B04C"; -- rt
+    s_imme <= "0000001010000000";
+
+    --signals
+    s_ALUSrc  <= '0'; --  (0) A+B, (1) A+imme
+    s_SEL     <= '0'; -- sel (add(0)-sub(1))
+    s_ALUOpSel  <= "1100"; -- ALUOpSel signal
+    s_sOverFlow <= '0'; -- overflow mux logic
+    s_zeroSignSEL <= '0'; -- select 0/1 infront of immediate
+
+
+wait for gCLK_HPER*2;
+    s_A <= "00000000000000000000000000010011"; -- rs
+    s_B <= x"FFFFDC5D"; -- rt
+    s_imme <= "0000001000000000";
+
+
+wait for gCLK_HPER*2;
+    s_A <= "00000000000000000000000000000110"; -- rs
+    s_B <= x"30F58E48"; -- rt
+    s_imme <= "0000001100000000";
+
+
+
+wait for gCLK_HPER*2;
+    s_A <= "00000000000000000000000000000110"; -- rs
+    s_B <= x"00C3D639"; -- rt
+    s_imme <= "0000000100000000";
+
+
+
+
+-- expecting
+-- 0000016C
+-- FFFFFFFF
+-- 00C3D639
+-- 00030F58
 
 -----------------------------------------------
 -- ZERO logic testing for BNE/BEQ
