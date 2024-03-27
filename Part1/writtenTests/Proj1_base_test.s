@@ -30,12 +30,12 @@ main:
     # Logical instructions
     and $s6, $t0, $t1       # and
     andi $s7, $t0, 0xFF     # andi
-    or $s8, $t0, $t1        # or
-    ori $s9, $t0, 0xFF      # ori
-    xor $s10, $t0, $t1      # xor
-    xori $s11, $t0, 0xFF    # xori
-    nor $s12, $t0, $t1      # nor
-    lui $s13, 0x1234        # lui
+    or $t3, $t0, $t1        # or
+    ori $t4, $t0, 0xFF      # ori
+    xor $t5, $t0, $t1      # xor
+    xori $t6, $t0, 0xFF    # xori
+    nor $t7, $t0, $t1      # nor
+    lui $t8, 0x1234        # lui
 
     # Store result
     sw $t2, result
@@ -49,11 +49,11 @@ main:
 
 equal:
     # Equal branch
-    add $s14, $t0, $t1
+    add $t4, $t0, $t1
 
 notEqual:
     # Not equal branch
-    sub $s15, $t0, $t1
+    sub $5, $t0, $t1
 
 end:
     # End of program
