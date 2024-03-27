@@ -15,10 +15,7 @@
 
 library IEEE;
 use IEEE.std_logic_1164.all;
-use IEEE.std_logic_textio.all; -- For logic types I/O
 library std;
-use std.env.all; -- For hierarchical/external signals
-use std.textio.all; -- For basic I/O
 
 
 entity orG32b is
