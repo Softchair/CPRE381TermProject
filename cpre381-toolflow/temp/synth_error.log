@@ -15,7 +15,7 @@ Info: Running Quartus Prime Analysis & Synthesis
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed Mar 27 16:32:21 2024
+    Info: Processing started: Wed Mar 27 16:35:13 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off toolflow -c toolflow
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -32,8 +32,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file /home/c
     Info (12022): Found design unit 1: rippleCarryAdderN-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd Line: 30
     Info (12023): Found entity 1: rippleCarryAdderN File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd Line: 20
 Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andG32b.vhd
-    Info (12022): Found design unit 1: andG32b-dataflow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andG32b.vhd Line: 33
-    Info (12023): Found entity 1: andG32b File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andG32b.vhd Line: 24
+    Info (12022): Found design unit 1: andG32b-dataflow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andG32b.vhd Line: 30
+    Info (12023): Found entity 1: andG32b File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andG32b.vhd Line: 21
 Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andg2.vhd
     Info (12022): Found design unit 1: andg2-dataflow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andg2.vhd Line: 31
     Info (12023): Found entity 1: andg2 File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andg2.vhd Line: 23
@@ -75,8 +75,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file /home/c
 Info (12021): Found 1 design units, including 0 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/register_package.vhd
     Info (12022): Found design unit 1: register_package File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/register_package.vhd Line: 19
 Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_MIPSregister.vhd
-    Info (12022): Found design unit 1: tb_MIPSregister-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_MIPSregister.vhd Line: 27
-    Info (12023): Found entity 1: tb_MIPSregister File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_MIPSregister.vhd Line: 21
+    Info (12022): Found design unit 1: tb_MIPSregister-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_MIPSregister.vhd Line: 24
+    Info (12023): Found entity 1: tb_MIPSregister File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_MIPSregister.vhd Line: 18
 Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_decoder5_32.vhd
     Info (12022): Found design unit 1: tb_decoder5_32-behavior File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_decoder5_32.vhd Line: 24
     Info (12023): Found entity 1: tb_decoder5_32 File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/tb_decoder5_32.vhd Line: 20
@@ -93,8 +93,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file /home/c
     Info (12022): Found design unit 1: xorg2-dataflow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/xorg2.vhd Line: 31
     Info (12023): Found entity 1: xorg2 File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/xorg2.vhd Line: 23
 Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/ControlLogic/control_Logic.vhd
-    Info (12022): Found design unit 1: control_Logic-flow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/ControlLogic/control_Logic.vhd Line: 38
-    Info (12023): Found entity 1: control_Logic File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/ControlLogic/control_Logic.vhd Line: 26
+    Info (12022): Found design unit 1: control_Logic-flow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/ControlLogic/control_Logic.vhd Line: 34
+    Info (12023): Found entity 1: control_Logic File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/ControlLogic/control_Logic.vhd Line: 22
 Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd
     Info (12022): Found design unit 1: tb_control_Logic-behavior File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd Line: 24
     Info (12023): Found entity 1: tb_control_Logic File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd Line: 20
@@ -123,8 +123,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file /home/c
     Info (12022): Found design unit 1: tb_fetch_Logic-behavior File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/tb_fetch_logic.vhd Line: 16
     Info (12023): Found entity 1: tb_fetch_Logic File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/FetchLogic/tb_fetch_logic.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd
-    Info (12022): Found design unit 1: ALU-structure File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 47
-    Info (12023): Found entity 1: ALU File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 26
+    Info (12022): Found design unit 1: ALU-structure File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 44
+    Info (12023): Found entity 1: ALU File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 23
 Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/adderSubS.vhd
     Info (12022): Found design unit 1: adderSubS-structure File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/adderSubS.vhd Line: 32
     Info (12023): Found entity 1: adderSubS File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/adderSubS.vhd Line: 17
@@ -169,8 +169,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file /home/c
     Info (12022): Found design unit 1: norG_N-structure File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/norG_N.vhd Line: 30
     Info (12023): Found entity 1: norG_N File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/norG_N.vhd Line: 17
 Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/orG32b.vhd
-    Info (12022): Found design unit 1: orG32b-dataflow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/orG32b.vhd Line: 33
-    Info (12023): Found entity 1: orG32b File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/orG32b.vhd Line: 24
+    Info (12022): Found design unit 1: orG32b-dataflow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/orG32b.vhd Line: 30
+    Info (12023): Found entity 1: orG32b File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/orG32b.vhd Line: 21
 Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/orG_N.vhd
     Info (12022): Found design unit 1: orG_N-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/orG_N.vhd Line: 29
     Info (12023): Found entity 1: orG_N File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/orG_N.vhd Line: 21
@@ -241,8 +241,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file /home/c
     Info (12022): Found design unit 1: loadMemModule-structure File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/loadMemModule/loadMemModule.vhd Line: 32
     Info (12023): Found entity 1: loadMemModule File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/loadMemModule/loadMemModule.vhd Line: 17
 Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd
-    Info (12022): Found design unit 1: tb_loadMemModule-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd Line: 28
-    Info (12023): Found entity 1: tb_loadMemModule File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd Line: 22
+    Info (12022): Found design unit 1: tb_loadMemModule-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd Line: 25
+    Info (12023): Found entity 1: tb_loadMemModule File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd Line: 19
 Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/mem.vhd
     Info (12022): Found design unit 1: mem-rtl File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/mem.vhd Line: 27
     Info (12023): Found entity 1: mem File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/mem.vhd Line: 8
@@ -276,10 +276,72 @@ Info (12128): Elaborating entity "dffgN" for hierarchy "MIPSregister:RegisterMod
 Info (12128): Elaborating entity "mux32_1" for hierarchy "MIPSregister:RegisterMod|mux32_1:g_mux01" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/MIPSregister.vhd Line: 169
 Info (12128): Elaborating entity "control_Logic" for hierarchy "control_Logic:controlUnit" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/MIPS_Processor.vhd Line: 417
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALUmod" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/MIPS_Processor.vhd Line: 429
-Error (10495): VHDL Subprogram Declaration error at env_vhdl2008.vhd(9): declaration of function or procedure "STOP" must have corresponding Subprogram Body File: /remote/Altera/20.1/quartus/libraries/vhdl/std/2008/env_vhdl2008.vhd Line: 9
-Error (12152): Can't elaborate user hierarchy "ALU:ALUmod" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/MIPS_Processor.vhd Line: 429
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 6 warnings
-    Error: Peak virtual memory: 699 megabytes
-    Error: Processing ended: Wed Mar 27 16:32:32 2024
+Info (12128): Elaborating entity "bit_extenders" for hierarchy "ALU:ALUmod|bit_extenders:g_bitExtender01" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 261
+Info (12128): Elaborating entity "lui" for hierarchy "ALU:ALUmod|lui:g_lui01" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 275
+Info (12128): Elaborating entity "firstALU" for hierarchy "ALU:ALUmod|firstALU:g_addSub01" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 283
+Info (12128): Elaborating entity "adderSubS" for hierarchy "ALU:ALUmod|firstALU:g_addSub01|adderSubS:g_adderSub01" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/firstALU.vhd Line: 111
+Info (12128): Elaborating entity "onesCompN" for hierarchy "ALU:ALUmod|firstALU:g_addSub01|adderSubS:g_adderSub01|onesCompN:g_inverterGate01" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/adderSubS.vhd Line: 100
+Info (12128): Elaborating entity "fullAdderStructN" for hierarchy "ALU:ALUmod|firstALU:g_addSub01|adderSubS:g_adderSub01|fullAdderStructN:g_RippleFAGate02" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/adderSubS.vhd Line: 119
+Info (12128): Elaborating entity "fullAdderStruct" for hierarchy "ALU:ALUmod|firstALU:g_addSub01|adderSubS:g_adderSub01|fullAdderStructN:g_RippleFAGate02|fullAdderStruct:\G_NBit_ADDER:0:MUXI" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/fullAdderStructN.vhd Line: 64
+Info (12128): Elaborating entity "andG_N" for hierarchy "ALU:ALUmod|andG_N:g_AND32" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 292
+Info (12128): Elaborating entity "orG_N" for hierarchy "ALU:ALUmod|orG_N:g_OR32" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 297
+Info (12128): Elaborating entity "xorG_N" for hierarchy "ALU:ALUmod|xorG_N:g_XOR32" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 303
+Info (12128): Elaborating entity "norG_N" for hierarchy "ALU:ALUmod|norG_N:g_NOR32" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 309
+Info (12128): Elaborating entity "slt" for hierarchy "ALU:ALUmod|slt:g_slt" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 317
+Warning (10631): VHDL Process Statement warning at slt.vhd(35): inferring latch(es) for signal or variable "o_OUT", which holds its previous value in one or more paths through the process File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[0]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[1]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[2]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[3]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[4]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[5]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[6]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[7]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[8]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[9]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[10]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[11]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[12]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[13]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[14]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[15]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[16]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[17]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[18]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[19]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[20]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[21]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[22]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[23]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[24]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[25]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[26]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[27]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[28]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[29]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[30]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (10041): Inferred latch for "o_OUT[31]" at slt.vhd(35) File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/slt.vhd Line: 35
+Info (12128): Elaborating entity "barrelShifterSLL" for hierarchy "ALU:ALUmod|barrelShifterSLL:g_sllShifter" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 322
+Info (12128): Elaborating entity "barrelShifterArithmetic" for hierarchy "ALU:ALUmod|barrelShifterArithmetic:g_sraShifter" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 342
+Info (12128): Elaborating entity "mux16_1" for hierarchy "ALU:ALUmod|mux16_1:g_16t1Mux" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 382
+Info (12128): Elaborating entity "mux2t1Flow" for hierarchy "ALU:ALUmod|mux2t1Flow:g_ovrFlowMux" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 402
+Info (12128): Elaborating entity "orG32b" for hierarchy "ALU:ALUmod|orG32b:g_orG32b01" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/ALU.vhd Line: 409
+Info (12128): Elaborating entity "loadMemModule" for hierarchy "loadMemModule:loadMemModuleMod" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/MIPS_Processor.vhd Line: 464
+Info (12128): Elaborating entity "mux8b4t1" for hierarchy "loadMemModule:loadMemModuleMod|mux8b4t1:g_8b4t1mux01" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/loadMemModule/loadMemModule.vhd Line: 82
+Info (12128): Elaborating entity "mux16b2t1" for hierarchy "loadMemModule:loadMemModuleMod|mux16b2t1:g_16b2t1mux01" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/loadMemModule/loadMemModule.vhd Line: 91
+Info (12128): Elaborating entity "bit_extenders24b" for hierarchy "loadMemModule:loadMemModuleMod|bit_extenders24b:g_24bsignExt" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/loadMemModule/loadMemModule.vhd Line: 101
+Info (12128): Elaborating entity "mux32b3t1" for hierarchy "mux32b3t1:muxFinalData" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/MIPS_Processor.vhd Line: 475
+Error (12014): Net "fetch_Logic:fetchUnit|rippleCarryAdderN:g_bAddPC|o_S[31]", which fans out to "fetch_Logic:fetchUnit|rippleCarryAdderN:g_bAddPC|o_S[31]", cannot be assigned more than one value File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd Line: 26
+    Error (12015): Net is fed by "fetch_Logic:fetchUnit|rippleCarryAdderN:g_bAddPC|Adder1b:\NbitRipple_Adder:31:Adderi|oS" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd Line: 14
+    Error (12015): Net is fed by "fetch_Logic:fetchUnit|rippleCarryAdderN:g_bAddPC|Adder1b:g_LastBitRipple_Adder|oS" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd Line: 14
+Error (12014): Net "fetch_Logic:fetchUnit|rippleCarryAdderN:g_jAdd|o_S[31]", which fans out to "fetch_Logic:fetchUnit|rippleCarryAdderN:g_jAdd|o_S[31]", cannot be assigned more than one value File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd Line: 26
+    Error (12015): Net is fed by "fetch_Logic:fetchUnit|rippleCarryAdderN:g_jAdd|Adder1b:\NbitRipple_Adder:31:Adderi|oS" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd Line: 14
+    Error (12015): Net is fed by "fetch_Logic:fetchUnit|rippleCarryAdderN:g_jAdd|Adder1b:g_LastBitRipple_Adder|oS" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd Line: 14
+Error (12014): Net "fetch_Logic:fetchUnit|rippleCarryAdderN:g_NextPC|o_S[31]", which fans out to "fetch_Logic:fetchUnit|rippleCarryAdderN:g_NextPC|o_S[31]", cannot be assigned more than one value File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd Line: 26
+    Error (12015): Net is fed by "fetch_Logic:fetchUnit|rippleCarryAdderN:g_NextPC|Adder1b:\NbitRipple_Adder:31:Adderi|oS" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd Line: 14
+    Error (12015): Net is fed by "fetch_Logic:fetchUnit|rippleCarryAdderN:g_NextPC|Adder1b:g_LastBitRipple_Adder|oS" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd Line: 14
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 9 errors, 7 warnings
+    Error: Peak virtual memory: 745 megabytes
+    Error: Processing ended: Wed Mar 27 16:35:24 2024
     Error: Elapsed time: 00:00:11
-    Error: Total CPU time (on all processors): 00:00:12
+    Error: Total CPU time (on all processors): 00:00:14
