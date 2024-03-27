@@ -15,7 +15,7 @@ Info: Running Quartus Prime Analysis & Synthesis
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed Mar 27 16:56:05 2024
+    Info: Processing started: Wed Mar 27 17:23:05 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off toolflow -c toolflow
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -24,7 +24,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file /home/c
     Info (12023): Found entity 1: MIPS_Processor File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/MIPS_Processor.vhd Line: 23
 Info (12021): Found 2 design units, including 0 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/MIPS_types.vhd
     Info (12022): Found design unit 1: MIPS_types File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/MIPS_types.vhd Line: 15
-    Info (12022): Found design unit 2: MIPS_types-body File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/MIPS_types.vhd Line: 29
+    Info (12022): Found design unit 2: MIPS_types-body File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/MIPS_types.vhd Line: 31
 Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd
     Info (12022): Found design unit 1: Adder1b-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd Line: 19
     Info (12023): Found entity 1: Adder1b File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd Line: 8
@@ -40,9 +40,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file /home/c
 Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andgN.vhd
     Info (12022): Found design unit 1: andgN-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andgN.vhd Line: 26
     Info (12023): Found entity 1: andgN File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andgN.vhd Line: 17
-Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/dffg.vhd
-    Info (12022): Found design unit 1: dffg-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/dffg.vhd Line: 33
-    Info (12023): Found entity 1: dffg File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/dffg.vhd Line: 23
 Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/invg.vhd
     Info (12022): Found design unit 1: invg-dataflow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/invg.vhd Line: 30
     Info (12023): Found entity 1: invg File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/invg.vhd Line: 23
@@ -64,16 +61,15 @@ Info (12021): Found 2 design units, including 1 entities, in source file /home/c
 Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/decoder5_32.vhd
     Info (12022): Found design unit 1: decoder5_32-decoder File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/decoder5_32.vhd Line: 26
     Info (12023): Found entity 1: decoder5_32 File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/decoder5_32.vhd Line: 20
-Info (15248): File "/home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/dffg.vhd" is a duplicate of already analyzed file "/home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/dffg.vhd" (same filename, same library name and same md5 digest). Skipping analysis of this file.
-Info (12021): Found 0 design units, including 0 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/dffg.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/dffg.vhd
+    Info (12022): Found design unit 1: dffg-mixed File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/dffg.vhd Line: 33
+    Info (12023): Found entity 1: dffg File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/dffg.vhd Line: 23
 Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/dffgN.vhd
     Info (12022): Found design unit 1: dffgN-structural File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/dffgN.vhd Line: 30
     Info (12023): Found entity 1: dffgN File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/dffgN.vhd Line: 20
 Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/mux32_1.vhd
     Info (12022): Found design unit 1: mux32_1-mux File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/mux32_1.vhd Line: 29
     Info (12023): Found entity 1: mux32_1 File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/mux32_1.vhd Line: 20
-Info (12021): Found 1 design units, including 0 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/register_package.vhd
-    Info (12022): Found design unit 1: register_package File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/register_package.vhd Line: 19
 Info (12021): Found 2 design units, including 1 entities, in source file /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/xorg2.vhd
     Info (12022): Found design unit 1: xorg2-dataflow File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/xorg2.vhd Line: 31
     Info (12023): Found entity 1: xorg2 File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/xorg2.vhd Line: 23
@@ -259,6 +255,9 @@ Info (12128): Elaborating entity "mux8b4t1" for hierarchy "loadMemModule:loadMem
 Info (12128): Elaborating entity "mux16b2t1" for hierarchy "loadMemModule:loadMemModuleMod|mux16b2t1:g_16b2t1mux01" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/loadMemModule/loadMemModule.vhd Line: 91
 Info (12128): Elaborating entity "bit_extenders24b" for hierarchy "loadMemModule:loadMemModuleMod|bit_extenders24b:g_24bsignExt" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/loadMemModule/loadMemModule.vhd Line: 101
 Info (12128): Elaborating entity "mux32b3t1" for hierarchy "mux32b3t1:muxFinalData" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/MIPS_Processor.vhd Line: 475
+
+
+
 Error (12014): Net "fetch_Logic:fetchUnit|rippleCarryAdderN:g_bAddPC|o_S[31]", which fans out to "fetch_Logic:fetchUnit|rippleCarryAdderN:g_bAddPC|o_S[31]", cannot be assigned more than one value File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd Line: 26
     Error (12015): Net is fed by "fetch_Logic:fetchUnit|rippleCarryAdderN:g_bAddPC|Adder1b:\NbitRipple_Adder:31:Adderi|oS" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd Line: 14
     Error (12015): Net is fed by "fetch_Logic:fetchUnit|rippleCarryAdderN:g_bAddPC|Adder1b:g_LastBitRipple_Adder|oS" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd Line: 14
@@ -268,8 +267,11 @@ Error (12014): Net "fetch_Logic:fetchUnit|rippleCarryAdderN:g_jAdd|o_S[31]", whi
 Error (12014): Net "fetch_Logic:fetchUnit|rippleCarryAdderN:g_NextPC|o_S[31]", which fans out to "fetch_Logic:fetchUnit|rippleCarryAdderN:g_NextPC|o_S[31]", cannot be assigned more than one value File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd Line: 26
     Error (12015): Net is fed by "fetch_Logic:fetchUnit|rippleCarryAdderN:g_NextPC|Adder1b:\NbitRipple_Adder:31:Adderi|oS" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd Line: 14
     Error (12015): Net is fed by "fetch_Logic:fetchUnit|rippleCarryAdderN:g_NextPC|Adder1b:g_LastBitRipple_Adder|oS" File: /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/Adder/adder1b.vhd Line: 14
+
+
+
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 9 errors, 7 warnings
-    Error: Peak virtual memory: 741 megabytes
-    Error: Processing ended: Wed Mar 27 16:56:18 2024
-    Error: Elapsed time: 00:00:13
+    Error: Peak virtual memory: 743 megabytes
+    Error: Processing ended: Wed Mar 27 17:23:15 2024
+    Error: Elapsed time: 00:00:10
     Error: Total CPU time (on all processors): 00:00:14
