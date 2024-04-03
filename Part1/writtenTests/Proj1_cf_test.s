@@ -11,56 +11,37 @@ main:
     lw $t1, value2
 
     # Call function1
-    jal function1
-
-    halt
+    jal function4
+    
+    j end
 
 function1:
     # Function 1
     add $t2, $t0, $t1       # Demonstrate arithmetic operation
 
     # Call function2
-    jal function2
-
-    # Return from function1
     jr $ra
 
 function2:
     # Function 2
-    beq $t0, $t1, equal     # Demonstrate branch instruction
-    bne $t0, $t1, notEqual # Demonstrate branch instruction
+    add $t3, $t0, $t1       # Demonstrate arithmetic operation
 
     # Call function3
-    jal function3
+    j function1
 
-    # Return from function2
-    jr $ra
-
-equal:
-    # Equal branch
-    add $t3, $t0, $t1
-    j function2
-
-notEqual:
-    # Not equal branch
-    sub $t4, $t0, $t1
 
 function3:
+    add $t2, $t0, $t1       # Demonstrate arithmetic operation
+
     # Function 3
-    j function4                   # Demonstrate jump instruction
+    j function2                   # Demonstrate jump instruction
 
-    # Call function4
-    jal function4
-
-    # Return from function3
-    jr $ra
 
 function4:
+    add $t3, $t0, $t1       # Demonstrate arithmetic operation
     # Function 4
-    jal end                 # Demonstrate jump and link instruction
+    j function3
 
-    # Return from function4
-    jr $ra
 
 end:
     # End of program
