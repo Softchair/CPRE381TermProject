@@ -39,6 +39,7 @@ function2:
 equal:
     # Equal branch
     add $t3, $t0, $t1
+    j function2
 
 notEqual:
     # Not equal branch
@@ -46,7 +47,7 @@ notEqual:
 
 function3:
     # Function 3
-    j end                   # Demonstrate jump instruction
+    j function4                   # Demonstrate jump instruction
 
     # Call function4
     jal function4
