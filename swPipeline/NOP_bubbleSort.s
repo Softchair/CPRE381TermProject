@@ -20,26 +20,52 @@ outer_loop:
     li $t1, 0        # Reset j = 0
     addi $s2, $s2, -1 # Decrease size for inner_loop
     add $t3, $zero, $s0 # Reset address iteration for j
+    nop
+    nop
+    nop
+    nop
 
 inner_loop:
     lw $s3, 0($t3) # Load array[j] into $s3
     addi $t3, $t3, 4 # Increment address for j
+    nop
+    nop
+    nop
+    nop
     lw $s4, 0($t3) # Load array[j+1] into $s4
     addi $t1, $t1, 1 # Increment j
+    nop
+    nop
 
     slt $t4, $s3, $s4 # Set $t4 = 1 if $s3 < $s4
+    nop
+    nop
+    nop
+    nop
     bne $t4, $zero, cond # If $s3 < $s4, skip swap
 
 swap:
     sw $s3, 0($t3) # Swap array[j] and array[j+1]
     sw $s4, -4($t3)
+    nop
+    nop
+    nop
+    nop
     lw $s4, 0($t3)
 
 cond:
     bne $t1, $s2, inner_loop # If j != n-i, continue inner loop
 
     addi $t0, $t0, 1 # Increment i
+    nop
+    nop
+    nop
+    nop
     bne $t0, $s1, outer_loop # If i != n, continue outer loop
+    nop
+    nop
+    nop
+    nop
     li $t0, 1
 
 print_loop:
