@@ -137,6 +137,10 @@ s_ID_inst : std_logic_vector(31 downto 0); -- instructions for ID stage
 s_ID_PC4 : std_logic_vector(31 downto 0); -- PC+4 for ID stage
 s_ID_JalAdd : std_logic_vector(31 downto 0); -- JalAdd for ID stage
 s_ID_RegWrAddr : std_logic_vector(5 downto 0); -- regWrAddr output from muxes
+s_subtractorOut : std_logic_vector(31 downto 0); -- zero logic subtractor output
+s_orGateZeroOut : std_logic_vector; -- output of or gate zero logic
+s_zeroID : std_logic_vector; -- zero signal in ID stage
+
 -----------------------
 --Large components
 -----------------------
@@ -202,6 +206,38 @@ port (
   o_jalAdd  : OUT STD_LOGIC_VECTOR(31 downto 0) -- NEW
 );
   end component;
+
+-----------------------
+--Zero output "unit"
+-----------------------
+
+component adderSubS is 
+port(
+     i_D0    : in std_logic_vector(N-1 downto 0); -- reg A input
+     i_D1   : in std_logic_vector(N-1 downto 0); -- reg B input
+     i_SEL  : in std_logic;
+     o_O    : out std_logic_vector(N-1 downto 0);
+     o_Cout : out std_logic);
+
+     end component;
+
+component orG32b
+
+port(
+       D0, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, D14, D15, D16,
+   D17, D18, D19, D20, D21, D22, D23, D24, D25, D26, D27, D28, D29, D30, D31 : in std_logic;
+   o_Out : out std_logic);
+
+end component;
+
+component invg
+
+port(
+       i_A          : in std_logic;
+       o_F          : out std_logic);
+
+end component;
+
 
 
 -----------------------
@@ -389,6 +425,9 @@ s_ID_inst <= s_IF_ID_out(31 downto 0);
 s_ID_PC4 <= s_IF_ID_out(63 downto 32);
 s_ID_JalAdd <= s_IF_ID_out(95 downto 64);
 
+-- Zero logic Subtractor output signals
+
+
 IfIdReg : IF_ID_Reg
  
  port map(
@@ -414,7 +453,7 @@ port map(
              i_S  => s_controlOut(12), 
              i_D0 => s_RegWrAddrBefore, 
              i_D1 => "11111",   
-             o_O  => );
+             o_O  => s_ID_RegWrAddr);
 
 
  RegisterMod : MIPSregister 
@@ -424,7 +463,7 @@ port map(
           i_rd      => , 
           i_rs      => s_ID_inst(25 downto 21), 
           i_rt      => s_ID_inst(20 downto 16), 
-          i_rdindata => ,
+          i_rdindata => , --to add
           i_reset    => iRST, 
           o_rsOUT    => s_rsOut,
           o_rtOUT    => s_rtOut);
@@ -436,13 +475,71 @@ port map(
            i_DFunc     => s_ID_inst(5 downto 0),
            o_signals =>  s_controlOut);
 
+
+------------------
+-- Zero "Unit"
+------------------
+
+subtractor : adderSubs
+ port map(
+
+     i_D0  => s_rsOut, -- reg A input
+     i_D1  => s_rtOut, -- reg B input
+     i_SEL => '1',
+     o_O   => s_subtractorOut,
+     o_Cout => open);
+ 
+
+     g_orG32 : orG32b
+     port MAP(
+       D0 => s_subtractorOut(0),
+       D1 => s_subtractorOut(1), 
+       D2 => s_subtractorOut(2), 
+       D3 => s_subtractorOut(3), 
+       D4 => s_subtractorOut(4), 
+       D5 => s_subtractorOut(5), 
+       D6 => s_subtractorOut(6), 
+       D7 => s_subtractorOut(7), 
+       D8 => s_subtractorOut(8), 
+       D9 => s_subtractorOut(9), 
+       D10 => s_subtractorOut(10), 
+       D11 => s_subtractorOut(11), 
+       D12 => s_subtractorOut(12), 
+       D13 => s_subtractorOut(13), 
+       D14 => s_subtractorOut(14), 
+       D15 => s_subtractorOut(15), 
+       D16 => s_subtractorOut(16),
+       D17 => s_subtractorOut(17), 
+       D18 => s_subtractorOut(18),
+             D19 => s_subtractorOut(19),
+              D20 => s_subtractorOut(20),
+              D21 => s_subtractorOut(21), 
+              D22 => s_subtractorOut(22),
+              D23 => s_subtractorOut(23),
+              D24 => s_subtractorOut(24),
+              D25 => s_subtractorOut(25),
+              D26 => s_subtractorOut(26),
+              D27 => s_subtractorOut(27),
+              D28 => s_subtractorOut(28), 
+              D29 => s_subtractorOut(29),
+              D30 => s_subtractorOut(30),
+              D31 => s_subtractorOut(31),
+              o_Out        => s_orGateZeroOut);
+   
+   
+   g_invg : invg 
+     port MAP(
+            i_A   => s_orGateZeroOut,
+            o_F   => s_zeroID);
+   
+
 ------------------
 -- branch "unit" -- do we need fetch logic in decode unit??
 ------------------
  BranchEqualAnd : andg2
   port map(
     i_A     =>  s_controlOut(15),
-    i_B     =>  s_zero,
+    i_B     =>  s_zeroID,
     o_F     => s_afterBEAnd);
 
     BranchNotEqualAnd : andg2
@@ -454,7 +551,7 @@ port map(
 
    BranchInv : invg 
    port map(
-    i_A  => s_zero,     
+    i_A  => s_zeroID,     
     o_F  =>  s_afterBNEINV);
    
 
@@ -487,7 +584,7 @@ ALUmod : ALU
       i_ALUOpSel    => s_controlOut(10 downto 7), 
       o_DataOut     => s_aluDataOut,
       i_sOverFlow   => s_controlOut(6),
-      o_zero        => s_zero,
+      o_zero        => open,
       o_overFlow    => s_Ovfl);
 
 
@@ -551,4 +648,3 @@ port map(
   -- TODO: Implement the rest of your processor below this comment! 
 
 end structure;
-
