@@ -1,0 +1,204 @@
+QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+Start time: 22:12:52 on Mar 26,2024
+vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd internal/testpy/tb.vhd proj/src/MIPS_Processor.vhd proj/src/mem.vhd proj/src/MIPS_types.vhd proj/src/TopLevel/LogicGates/mux2t1N.vhd proj/src/TopLevel/LogicGates/mux2t1.vhd proj/src/TopLevel/aluUnit/adderSubS.vhd proj/src/TopLevel/aluUnit/fullAdderStructN.vhd proj/src/TopLevel/aluUnit/onesCompN.vhd proj/src/TopLevel/aluUnit/lui.vhd proj/src/TopLevel/aluUnit/fullAdderStruct.vhd proj/src/TopLevel/aluUnit/ALU.vhd proj/src/TopLevel/aluUnit/slt.vhd proj/src/TopLevel/aluUnit/firstALU.vhd proj/src/TopLevel/aluUnit/testBenches/tb_andG_N.vhd proj/src/TopLevel/aluUnit/testBenches/tb_lui.vhd proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders24b.vhd proj/src/TopLevel/aluUnit/testBenches/tb_onesCompN.vhd proj/src/TopLevel/aluUnit/testBenches/tb_mux16b2t1.vhd proj/src/TopLevel/aluUnit/testBenches/tb_andg32b.vhd proj/src/TopLevel/aluUnit/testBenches/tb_orG32b.vhd proj/src/TopLevel/aluUnit/testBenches/tb_xorG_N.vhd proj/src/TopLevel/aluUnit/testBenches/tb_norG_N.vhd proj/src/TopLevel/aluUnit/testBenches/tb_slt.vhd proj/src/TopLevel/aluUnit/testBenches/tb_mux8b4t1.vhd proj/src/TopLevel/aluUnit/testBenches/tb_ALU.vhd proj/src/TopLevel/aluUnit/testBenches/tb_orG_N.vhd proj/src/TopLevel/aluUnit/testBenches/tb_bit_extenders.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1.vhd proj/src/TopLevel/aluUnit/basicGates/org2.vhd proj/src/TopLevel/aluUnit/basicGates/orG32b.vhd proj/src/TopLevel/aluUnit/basicGates/orG_N.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1_5b.vhd proj/src/TopLevel/aluUnit/basicGates/bit_extenders.vhd proj/src/TopLevel/aluUnit/basicGates/mux32b3t1.vhd proj/src/TopLevel/aluUnit/basicGates/mux8b4t1.vhd proj/src/TopLevel/aluUnit/basicGates/andg2.vhd proj/src/TopLevel/aluUnit/basicGates/mux32_1.vhd proj/src/TopLevel/aluUnit/basicGates/andG_N.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1Flow.vhd proj/src/TopLevel/aluUnit/basicGates/xorg2.vhd proj/src/TopLevel/aluUnit/basicGates/bit_extenders24b.vhd proj/src/TopLevel/aluUnit/basicGates/norG_N.vhd proj/src/TopLevel/aluUnit/basicGates/mux16b2t1.vhd proj/src/TopLevel/aluUnit/basicGates/andG32b.vhd proj/src/TopLevel/aluUnit/basicGates/xorG_N.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1_N.vhd proj/src/TopLevel/aluUnit/basicGates/invg.vhd proj/src/TopLevel/aluUnit/basicGates/mux16_1.vhd proj/src/TopLevel/BasicGates/invg.vhd proj/src/TopLevel/BasicGates/andg2.vhd proj/src/TopLevel/BasicGates/dffg.vhd proj/src/TopLevel/BasicGates/org2.vhd proj/src/TopLevel/BasicGates/xorg2.vhd proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd proj/src/TopLevel/BasicGates/Adder/adder1b.vhd proj/src/TopLevel/BasicGates/register/mux32_1.vhd proj/src/TopLevel/BasicGates/register/dffgN.vhd proj/src/TopLevel/BasicGates/register/tb_mux32_1.vhd proj/src/TopLevel/BasicGates/register/MIPSregister.vhd proj/src/TopLevel/BasicGates/register/tb_dffg.vhd proj/src/TopLevel/BasicGates/register/tb_MIPSregister.vhd proj/src/TopLevel/BasicGates/register/tb_decoder5_32.vhd proj/src/TopLevel/BasicGates/register/tb_dffgN.vhd proj/src/TopLevel/BasicGates/register/dffg.vhd proj/src/TopLevel/BasicGates/register/decoder5_32.vhd proj/src/TopLevel/BasicGates/register/register_package.vhd proj/src/TopLevel/FetchLogic/tb_fetch_logic.vhd proj/src/TopLevel/FetchLogic/fetch_Logic.vhd proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd proj/src/TopLevel/FetchLogic/Supporting files/tb_pcreg.vhd proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd proj/src/TopLevel/FetchLogic/Supporting files/tb_shiftleft2N.vhd proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd proj/src/TopLevel/loadMemModule/loadMemModule.vhd proj/src/TopLevel/loadMemModule/tb_loadMemModule.vhd proj/src/TopLevel/ControlLogic/tb_control_Logic.vhd proj/src/TopLevel/ControlLogic/control_Logic.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package MIPS_types
+-- Compiling package body MIPS_types
+-- Loading package MIPS_types
+-- Loading package std_logic_textio
+-- Loading package ENV
+-- Compiling entity tb
+-- Compiling architecture mixed of tb
+-- Loading package MIPS_types
+-- Compiling entity MIPS_Processor
+-- Compiling architecture structure of MIPS_Processor
+-- Loading package NUMERIC_STD
+-- Compiling entity mem
+-- Compiling architecture rtl of mem
+** Warning: proj/src/MIPS_types.vhd(15): (vcom-1615) Existing package 'MIPS_types' at line 15 will be overwritten.
+-- Compiling package MIPS_types
+** Warning: proj/src/MIPS_types.vhd(29): (vcom-1615) Existing package body 'MIPS_types(body)' at line 29 will be overwritten.
+-- Compiling package body MIPS_types
+-- Loading package MIPS_types
+-- Compiling entity mux2t1N
+-- Compiling architecture structural of mux2t1N
+** Warning: proj/src/TopLevel/LogicGates/mux2t1.vhd(17): (vcom-1615) Existing entity 'mux2t1' at /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux2t1.vhd(20) will be overwritten.
+-- Compiling entity mux2t1
+** Warning: proj/src/TopLevel/LogicGates/mux2t1.vhd(25): (vcom-1615) Existing architecture 'mux2t1(structure)' at /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/aluUnit/basicGates/mux2t1.vhd(30) will be overwritten.
+-- Compiling architecture structure of mux2t1
+-- Compiling entity adderSubS
+-- Compiling architecture structure of adderSubS
+-- Compiling entity fullAdderStructN
+-- Compiling architecture structural of fullAdderStructN
+-- Compiling entity onesCompN
+-- Compiling architecture structural of onesCompN
+-- Compiling entity lui
+-- Compiling architecture flow of lui
+-- Compiling entity fullAdderStruct
+-- Compiling architecture structure of fullAdderStruct
+-- Compiling entity ALU
+-- Compiling architecture structure of ALU
+-- Compiling entity slt
+-- Compiling architecture behavorial of slt
+-- Compiling entity firstALU
+-- Compiling architecture structure of firstALU
+-- Compiling entity tb_andG_N
+-- Compiling architecture mixed of tb_andG_N
+-- Compiling entity tb_lui
+-- Compiling architecture mixed of tb_lui
+-- Compiling entity tb_bit_extenders24b
+-- Compiling architecture behavior of tb_bit_extenders24b
+-- Compiling entity tb_onesCompN
+-- Compiling architecture mixed of tb_onesCompN
+-- Compiling entity tb_mux16b2t1
+-- Compiling architecture mixed of tb_mux16b2t1
+-- Compiling entity tb_andG32b
+-- Compiling architecture mixed of tb_andG32b
+-- Compiling entity tb_orG32b
+-- Compiling architecture mixed of tb_orG32b
+-- Compiling entity tb_xorG_N
+-- Compiling architecture mixed of tb_xorG_N
+-- Compiling entity tb_norG_N
+-- Compiling architecture mixed of tb_norG_N
+-- Compiling entity tb_slt
+-- Compiling architecture mixed of tb_slt
+-- Compiling entity tb_mux8b4t1
+-- Compiling architecture mixed of tb_mux8b4t1
+-- Compiling entity tb_ALU
+-- Compiling architecture mixed of tb_ALU
+-- Compiling entity tb_orG_N
+-- Compiling architecture mixed of tb_orG_N
+-- Compiling entity tb_bit_extenders
+-- Compiling architecture behavior of tb_bit_extenders
+** Warning: proj/src/TopLevel/aluUnit/basicGates/mux2t1.vhd(20): (vcom-1615) Existing entity 'mux2t1' at proj/src/TopLevel/LogicGates/mux2t1.vhd(17) will be overwritten.
+-- Compiling entity mux2t1
+** Warning: proj/src/TopLevel/aluUnit/basicGates/mux2t1.vhd(30): (vcom-1615) Existing architecture 'mux2t1(structure)' at proj/src/TopLevel/LogicGates/mux2t1.vhd(25) will be overwritten.
+-- Compiling architecture structure of mux2t1
+** Warning: proj/src/TopLevel/aluUnit/basicGates/org2.vhd(23): (vcom-1615) Existing entity 'org2' at /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/org2.vhd(23) will be overwritten.
+-- Compiling entity org2
+** Warning: proj/src/TopLevel/aluUnit/basicGates/org2.vhd(31): (vcom-1615) Existing architecture 'org2(dataflow)' at /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/org2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of org2
+-- Compiling entity orG32b
+-- Compiling architecture dataflow of orG32b
+-- Compiling entity orG_N
+-- Compiling architecture structural of orG_N
+-- Compiling entity mux2t1_5b
+-- Compiling architecture structural of mux2t1_5b
+-- Compiling entity bit_extenders
+-- Compiling architecture flow of bit_extenders
+-- Compiling entity mux32b3t1
+-- Compiling architecture mux of mux32b3t1
+-- Compiling entity mux8b4t1
+-- Compiling architecture mux of mux8b4t1
+** Warning: proj/src/TopLevel/aluUnit/basicGates/andg2.vhd(23): (vcom-1615) Existing entity 'andg2' at /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andg2.vhd(23) will be overwritten.
+-- Compiling entity andg2
+** Warning: proj/src/TopLevel/aluUnit/basicGates/andg2.vhd(31): (vcom-1615) Existing architecture 'andg2(dataflow)' at /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/andg2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of andg2
+** Warning: proj/src/TopLevel/aluUnit/basicGates/mux32_1.vhd(20): (vcom-1615) Existing entity 'mux32_1' at /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/mux32_1.vhd(20) will be overwritten.
+-- Compiling entity mux32_1
+** Warning: proj/src/TopLevel/aluUnit/basicGates/mux32_1.vhd(29): (vcom-1615) Existing architecture 'mux32_1(mux)' at /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/mux32_1.vhd(29) will be overwritten.
+-- Compiling architecture mux of mux32_1
+-- Compiling entity andG_N
+-- Compiling architecture structural of andG_N
+-- Compiling entity mux2t1Flow
+-- Compiling architecture mux2t1F of mux2t1Flow
+** Warning: proj/src/TopLevel/aluUnit/basicGates/xorg2.vhd(23): (vcom-1615) Existing entity 'xorg2' at /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/xorg2.vhd(23) will be overwritten.
+-- Compiling entity xorg2
+** Warning: proj/src/TopLevel/aluUnit/basicGates/xorg2.vhd(31): (vcom-1615) Existing architecture 'xorg2(dataflow)' at /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/xorg2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of xorg2
+-- Compiling entity bit_extenders24b
+-- Compiling architecture flow of bit_extenders24b
+-- Compiling entity norG_N
+-- Compiling architecture structure of norG_N
+-- Compiling entity mux16b2t1
+-- Compiling architecture mux of mux16b2t1
+-- Compiling entity andG32b
+-- Compiling architecture dataflow of andG32b
+-- Compiling entity xorG_N
+-- Compiling architecture structural of xorG_N
+-- Compiling entity mux2t1_N
+-- Compiling architecture structural of mux2t1_N
+** Warning: proj/src/TopLevel/aluUnit/basicGates/invg.vhd(23): (vcom-1615) Existing entity 'invg' at /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/invg.vhd(23) will be overwritten.
+-- Compiling entity invg
+** Warning: proj/src/TopLevel/aluUnit/basicGates/invg.vhd(30): (vcom-1615) Existing architecture 'invg(dataflow)' at /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/invg.vhd(30) will be overwritten.
+-- Compiling architecture dataflow of invg
+-- Compiling entity mux16_1
+-- Compiling architecture mux of mux16_1
+** Warning: proj/src/TopLevel/BasicGates/invg.vhd(23): (vcom-1615) Existing entity 'invg' at proj/src/TopLevel/aluUnit/basicGates/invg.vhd(23) will be overwritten.
+-- Compiling entity invg
+** Warning: proj/src/TopLevel/BasicGates/invg.vhd(30): (vcom-1615) Existing architecture 'invg(dataflow)' at proj/src/TopLevel/aluUnit/basicGates/invg.vhd(30) will be overwritten.
+-- Compiling architecture dataflow of invg
+** Warning: proj/src/TopLevel/BasicGates/andg2.vhd(23): (vcom-1615) Existing entity 'andg2' at proj/src/TopLevel/aluUnit/basicGates/andg2.vhd(23) will be overwritten.
+-- Compiling entity andg2
+** Warning: proj/src/TopLevel/BasicGates/andg2.vhd(31): (vcom-1615) Existing architecture 'andg2(dataflow)' at proj/src/TopLevel/aluUnit/basicGates/andg2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of andg2
+** Warning: proj/src/TopLevel/BasicGates/dffg.vhd(23): (vcom-1615) Existing entity 'dffg' at /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/dffg.vhd(23) will be overwritten.
+-- Compiling entity dffg
+** Warning: proj/src/TopLevel/BasicGates/dffg.vhd(33): (vcom-1615) Existing architecture 'dffg(mixed)' at /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/proj/src/TopLevel/BasicGates/register/dffg.vhd(33) will be overwritten.
+-- Compiling architecture mixed of dffg
+** Warning: proj/src/TopLevel/BasicGates/org2.vhd(23): (vcom-1615) Existing entity 'org2' at proj/src/TopLevel/aluUnit/basicGates/org2.vhd(23) will be overwritten.
+-- Compiling entity org2
+** Warning: proj/src/TopLevel/BasicGates/org2.vhd(31): (vcom-1615) Existing architecture 'org2(dataflow)' at proj/src/TopLevel/aluUnit/basicGates/org2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of org2
+** Warning: proj/src/TopLevel/BasicGates/xorg2.vhd(23): (vcom-1615) Existing entity 'xorg2' at proj/src/TopLevel/aluUnit/basicGates/xorg2.vhd(23) will be overwritten.
+-- Compiling entity xorg2
+** Warning: proj/src/TopLevel/BasicGates/xorg2.vhd(31): (vcom-1615) Existing architecture 'xorg2(dataflow)' at proj/src/TopLevel/aluUnit/basicGates/xorg2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of xorg2
+-- Compiling entity rippleCarryAdderN
+-- Compiling architecture structural of rippleCarryAdderN
+-- Compiling entity Adder1b
+-- Compiling architecture structural of Adder1b
+** Warning: proj/src/TopLevel/BasicGates/register/mux32_1.vhd(20): (vcom-1615) Existing entity 'mux32_1' at proj/src/TopLevel/aluUnit/basicGates/mux32_1.vhd(20) will be overwritten.
+-- Compiling entity mux32_1
+** Warning: proj/src/TopLevel/BasicGates/register/mux32_1.vhd(29): (vcom-1615) Existing architecture 'mux32_1(mux)' at proj/src/TopLevel/aluUnit/basicGates/mux32_1.vhd(29) will be overwritten.
+-- Compiling architecture mux of mux32_1
+-- Compiling entity dffgN
+-- Compiling architecture structural of dffgN
+-- Compiling entity tb_mux32_1
+-- Compiling architecture behavior of tb_mux32_1
+-- Loading package register_package
+-- Compiling entity MIPSregister
+-- Compiling architecture structure of MIPSregister
+-- Compiling entity tb_dffg
+-- Compiling architecture behavior of tb_dffg
+-- Compiling entity tb_MIPSregister
+-- Compiling architecture mixed of tb_MIPSregister
+-- Compiling entity tb_decoder5_32
+-- Compiling architecture behavior of tb_decoder5_32
+-- Compiling entity tb_dffgN
+-- Compiling architecture behavior of tb_dffgN
+** Warning: proj/src/TopLevel/BasicGates/register/dffg.vhd(23): (vcom-1615) Existing entity 'dffg' at proj/src/TopLevel/BasicGates/dffg.vhd(23) will be overwritten.
+-- Compiling entity dffg
+** Warning: proj/src/TopLevel/BasicGates/register/dffg.vhd(33): (vcom-1615) Existing architecture 'dffg(mixed)' at proj/src/TopLevel/BasicGates/dffg.vhd(33) will be overwritten.
+-- Compiling architecture mixed of dffg
+-- Compiling entity decoder5_32
+-- Compiling architecture decoder of decoder5_32
+-- Compiling package register_package
+-- Compiling entity tb_fetch_Logic
+-- Compiling architecture behavior of tb_fetch_Logic
+-- Compiling entity fetch_Logic
+-- Compiling architecture mixed of fetch_logic
+-- Compiling entity nbitregister
+-- Compiling architecture structural of nbitregister
+-- Compiling entity tb_PCReg
+-- Compiling architecture behavior of tb_PCReg
+-- Compiling entity bit16_extender
+-- Compiling architecture flow of bit16_extender
+-- Compiling entity tb_shiftleft2N
+-- Compiling architecture behavior of tb_shiftleft2N
+-- Compiling entity shiftleft2N
+-- Compiling architecture Behavioral of shiftleft2N
+-- Compiling entity PCReg
+-- Compiling architecture structural of PCReg
+-- Compiling entity loadMemModule
+-- Compiling architecture structure of loadMemModule
+-- Compiling entity tb_loadMemModule
+-- Compiling architecture mixed of tb_loadMemModule
+-- Compiling entity tb_control_Logic
+-- Compiling architecture behavior of tb_control_Logic
+-- Compiling entity control_Logic
+-- Compiling architecture flow of control_Logic
+End time: 22:12:52 on Mar 26,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 30
