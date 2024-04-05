@@ -18,14 +18,14 @@
 17 ripplecarryaddern
 2
 8 mux2t1_n
+1
+120 /home/kosice/Documents/cpre381TermProjNEW-EMIL/CPRE381TermProject/Part2/cpre381-toolflow/containers/sim_container_4/work
 27
 6 mux2t1
 4
 1 N
 45
 5 mixed
-1
-114 /home/kosice/Documents/cpre381TermProjNEW-EMIL/CPRE381TermProject/cpre381-toolflow/containers/sim_container_0/work
 10
 12 nbitregister
 6
@@ -94,48 +94,6 @@
 4 i_D0
 28
 4 i_D1
-]
-[G
-1
-26
-3
-1
-4
-1
-0
-32
-0
-0 0
-0
-0
-]
-[G
-1
-12
-13
-1
-14
-1
-0
-26
-0
-0 0
-0
-0
-]
-[G
-1
-12
-13
-2
-14
-1
-0
-30
-0
-0 0
-0
-0
 ]
 [G
 1
@@ -462,6 +420,68 @@
 0
 0
 ]
+[G
+1
+26
+3
+1
+4
+1
+0
+32
+0
+0 0
+0
+0
+]
+[G
+1
+12
+13
+1
+14
+1
+0
+26
+0
+0 0
+0
+0
+]
+[G
+1
+12
+13
+2
+14
+1
+0
+30
+0
+0 0
+0
+0
+]
+[P
+1
+31
+32
+33
+34
+1
+0
+0
+]
+[P
+1
+31
+32
+35
+34
+1
+0
+0
+]
 [P
 1
 36
@@ -508,26 +528,6 @@
 21
 42
 43
-1
-0
-0
-]
-[P
-1
-31
-32
-33
-34
-1
-0
-0
-]
-[P
-1
-31
-32
-35
-34
 1
 0
 0

@@ -125,6 +125,18 @@ signal s_afterBNEINV : std_logic; -- signal after inv for BNE
 signal s_afterBNEAnd : std_logic; -- signal going into OR for branch
 signal s_RegWrAddrBefore : std_logic_vector(4 downto 0); -- one mux to another
 signal s_jalAddnext  :  std_logic_vector(31 downto 0); -- NEW
+
+--------------------
+--PipelineSignals
+--------------------
+--IF/ID reg
+signal s_IF_ID_in :  std_logic_vector(95 downto 0); -- signal going into if/id reg
+signal s_IF_ID_out : std_logic_vector(95 downto 0); -- signal coming out of if/id reg
+--ID stage internal
+s_ID_inst : std_logic_vector(31 downto 0); -- instructions for ID stage
+s_ID_PC4 : std_logic_vector(31 downto 0); -- PC+4 for ID stage
+s_ID_JalAdd : std_logic_vector(31 downto 0); -- JalAdd for ID stage
+s_ID_RegWrAddr : std_logic_vector(5 downto 0); -- regWrAddr output from muxes
 -----------------------
 --Large components
 -----------------------
@@ -192,8 +204,49 @@ port (
   end component;
 
 
+-----------------------
+--Pipeline Registers
+-----------------------
+component IF_ID_Reg is 
+port (
+i_CLK        : in std_logic;
+i_RST         : in std_logic;
+i_WE         : in std_logic;
+i_D          : in std_logic_vector(95 downto 0);
+o_Q       : out std_logic_vector(95 downto 0));
+
+  end component;
+
+component ID_EX_Reg is 
+port (
+i_CLK        : in std_logic;
+i_RST         : in std_logic;
+i_WE         : in std_logic;
+i_D          : in std_logic_vector(132 downto 0);
+o_Q       : out std_logic_vector(132 downto 0));
+
+  end component;
 
 
+component EX_MEM_Reg is 
+port (
+i_CLK        : in std_logic;
+i_RST         : in std_logic;
+i_WE         : in std_logic;
+i_D          : in std_logic_vector(104 downto 0);
+o_Q       : out std_logic_vector(104 downto 0));
+
+  end component;
+
+  component MEM_WB_Reg is 
+port (
+i_CLK        : in std_logic;
+i_RST         : in std_logic;
+i_WE         : in std_logic;
+i_D          : in std_logic_vector(103 downto 0);
+o_Q       : out std_logic_vector(103 downto 0));
+
+  end component;
 
 
 
@@ -261,32 +314,6 @@ port(
 
   end component;
 
-----------------------
---branching "unit"
-----------------------
-
-component andg2 is 
-
-port(i_A          : in std_logic;
-i_B          : in std_logic;
-o_F          : out std_logic);
-
-  end component;
-
-
-component invg is 
-port(i_A          : in std_logic;
-o_F          : out std_logic);
-
-  end component;
-
-component org2 is 
-
-port(i_A          : in std_logic;
-i_B          : in std_logic;
-o_F          : out std_logic);
-
-  end component;
 
 
 
@@ -342,7 +369,77 @@ port map(
   o_jalAdd      => s_jalAddnext); -- NEW
 
 
-  BranchEqualAnd : andg2
+ 
+
+------------------
+--between imem and reg
+------------------
+
+------------------
+--IF/ID 
+------------------
+
+--IF/ID input signal
+s_IF_ID_in(31 downto 0) <= s_Inst;
+s_IF_ID_in(63 downto 32) <= s_jalAddnext; -- same as PC+4
+s_IF_ID_in(95 downto 64) <= s_jalAddnext; -- save jal instruction (duplicate)
+
+-- IF/ID output signal
+s_ID_inst <= s_IF_ID_out(31 downto 0);
+s_ID_PC4 <= s_IF_ID_out(63 downto 32);
+s_ID_JalAdd <= s_IF_ID_out(95 downto 64);
+
+IfIdReg : IF_ID_Reg
+ 
+ port map(
+  i_CLK  => i_CLK,
+  i_RST  => iRST,
+  i_WE   => 1,   
+  i_D    => s_IF_ID_in,
+  o_Q      => s_IF_ID_out);
+ 
+
+muxWrAddr : mux2t1_5b
+
+port map(
+             i_S  => s_controlOut(16), 
+             i_D0 => s_ID_inst(15 downto 11), 
+             i_D1 => s_ID_inst(20 downto 16),   
+             o_O  => s_RegWrAddrBefore);
+
+
+muxWrAddr02 : mux2t1_5b
+
+port map(
+             i_S  => s_controlOut(12), 
+             i_D0 => s_RegWrAddrBefore, 
+             i_D1 => "11111",   
+             o_O  => );
+
+
+ RegisterMod : MIPSregister 
+
+ port map(i_CLK => iCLK,
+          i_enable  => s_RegWr,
+          i_rd      => , 
+          i_rs      => s_ID_inst(25 downto 21), 
+          i_rt      => s_ID_inst(20 downto 16), 
+          i_rdindata => ,
+          i_reset    => iRST, 
+          o_rsOUT    => s_rsOut,
+          o_rtOUT    => s_rtOut);
+
+
+  controlUnit : control_logic 
+
+  port map(i_DOpcode   => s_ID_inst(31 downto 26),
+           i_DFunc     => s_ID_inst(5 downto 0),
+           o_signals =>  s_controlOut);
+
+------------------
+-- branch "unit" -- do we need fetch logic in decode unit??
+------------------
+ BranchEqualAnd : andg2
   port map(
     i_A     =>  s_controlOut(15),
     i_B     =>  s_zero,
@@ -366,62 +463,14 @@ port map(
       i_A    => s_afterBEAnd,
       i_B    => s_afterBNEAnd,
       o_F    => s_branchUnit);
-
-------------------
---between imem and reg
-------------------
-
-
-muxWrAddr : mux2t1_5b
-
-port map(
-             i_S  => s_controlOut(16), 
-             i_D0 => s_Inst(15 downto 11), 
-             i_D1 => s_Inst(20 downto 16),   
-             o_O  => s_RegWrAddrBefore);
-
-
-muxWrAddr02 : mux2t1_5b
-
-port map(
-             i_S  => s_controlOut(12), 
-             i_D0 => s_RegWrAddrBefore, 
-             i_D1 => "11111",   
-             o_O  => s_RegWrAddr);
-
-
-
-muxjal : mux2t1_N
-
-port map(
-             i_S  => s_controlOut(12), 
-             i_D0 => s_databeforeMux, 
-             i_D1 => s_jalAddnext, -- was PCnextAddress   
-             o_O  => s_RegWrData);
-
-
-
- RegisterMod : MIPSregister 
-
- port map(i_CLK => iCLK,
-          i_enable  => s_RegWr,
-          i_rd      => s_RegWrAddr, 
-          i_rs      => s_Inst(25 downto 21), 
-          i_rt      => s_Inst(20 downto 16), 
-          i_rdindata => s_RegWrData,
-          i_reset    => iRST, 
-          o_rsOUT    => s_rsOut,
-          o_rtOUT    => s_rtOut);
-
-
-  controlUnit : control_logic 
-
-  port map(i_DOpcode   => s_Inst(31 downto 26),
-           i_DFunc     => s_Inst(5 downto 0),
-           o_signals =>  s_controlOut);
-
-
+           
+--to do
+-- add all branch logic inside of here (include branch logic unit after ALU + zero functionality)
   
+------------------
+--ID/EX
+------------------
+
 ------------------
 --between reg and ALU
 ------------------
@@ -488,7 +537,13 @@ port map(
 
   
 
- 
+    muxjal : mux2t1_N
+
+    port map(
+                 i_S  => s_controlOut(12), 
+                 i_D0 => s_databeforeMux, 
+                 i_D1 => s_jalAddnext, -- was PCnextAddress   
+                 o_O  => s_RegWrData);
 
 
 
