@@ -17,7 +17,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 
 entity MEM_WB_Reg is
-  generic(N : integer := 109); -- Generic of type integer for input/output data width. Default value is 32.
+  generic(N : integer := 104); -- Generic of type integer for input/output data width. Default value is 32.
   port(i_CLK        : in std_logic;
        i_RST         : in std_logic;
        i_WE         : in std_logic;

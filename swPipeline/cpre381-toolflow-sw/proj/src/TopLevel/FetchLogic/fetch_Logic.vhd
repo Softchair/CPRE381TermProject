@@ -36,6 +36,7 @@ entity fetch_Logic is
         -- Ouput
         o_PCAddress     : OUT STD_LOGIC_VECTOR(31 downto 0); -- PC Address 
         o_jalAdd        : OUT STD_LOGIC_VECTOR(31 downto 0) -- JAL Output
+
     );
       
 end fetch_Logic;
