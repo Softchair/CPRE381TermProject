@@ -23,20 +23,22 @@ visited:
 res_idx:
         .word   3
 .text
-	#li $sp, 0x10011000
-    lui $1, 0x00001001
+	li $sp, 0x10011000
         nop
         nop
         nop
-    ori $sp, $1, 0x1000
 	li $fp, 0 #changes to addiu instead of lui+xor
-	lasw $ra pump
+        nop
+        nop
+        nop
+	la $ra pump
 
 	j main # jump to the starting location
         nop
         nop
         nop
         nop
+
 pump:
 	halt
 
@@ -103,8 +105,10 @@ kick:
             nop
             nop
         sw $2,24($fp)
+
 main_loop_control:
         lw $2,24($fp)
+            nop
             nop
             nop
             nop

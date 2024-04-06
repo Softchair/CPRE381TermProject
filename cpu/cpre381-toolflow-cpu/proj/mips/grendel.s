@@ -59,6 +59,7 @@ kick:
         lw      $2,24($fp)
         addiu   $2,$2,1
         sw      $2,24($fp)
+
 main_loop_control:
         lw      $2,24($fp)
         slti     $2,$2, 4
