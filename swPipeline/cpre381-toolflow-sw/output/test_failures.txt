@@ -1,1 +1,1 @@
-proj/mips/NOP_grendel.s
+proj/mips/NOP_bubbleSort.s
