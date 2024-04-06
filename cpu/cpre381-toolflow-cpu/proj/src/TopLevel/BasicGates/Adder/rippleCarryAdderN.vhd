@@ -64,7 +64,7 @@ begin
   g_LastBitRipple_Adder: adder1b
     port map(iA		=> i_A(N-1),
 	     iB		=> i_B(N-1),
-	     iC		=> s_adderCarryBit(N-2),
+	     iC		=> s_adderCarryBit(N-1),
 	     oC		=> o_Cout,
 	     oS		=> o_S(N-1));
 
