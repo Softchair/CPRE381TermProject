@@ -1,12 +1,24 @@
 Oh no...
 
-Cycle: na
+Cycle: 3
 MARS instruction number: 1	Instruction: lui $1,4097
 Expected:	Register Write to Reg: 0x01 Val: 0x10010000
-Got     :	Execution stopped
-Student execution ended prematurely
+Got     :	Register Write to Reg: 0xXX Val: 0xXXXXXXXX
+Incorrect write
 
-Almost! your processor completed the program with  1/3 allowed mismatches
+Cycle: 4
+MARS instruction number: 5	Instruction: ori $29,$1,4096
+Expected:	Register Write to Reg: 0x1D Val: 0x10011000
+Got     :	Register Write to Reg: 0xXX Val: 0xXXXXXXXX
+Incorrect write
+
+Cycle: 5
+MARS instruction number: 6	Instruction: addiu $30,$0,0
+Expected:	Register Write to Reg: 0x1E Val: 0x00000000
+Got     :	Register Write to Reg: 0xXX Val: 0xXXXXXXXX
+Incorrect write
+
+You have reached the maximum mismatches (3)
 
 Helpful resources for Debugging:
 ms.trace : output from the VHDL testbench during program execution on your processor

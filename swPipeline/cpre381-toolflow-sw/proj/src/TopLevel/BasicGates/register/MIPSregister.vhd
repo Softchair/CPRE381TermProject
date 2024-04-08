@@ -55,7 +55,7 @@ end component;
 
 
 
-component dffgN
+component dffgNN
 
   port(i_CLK        : in std_logic;
        i_RST         : in std_logic;
@@ -150,7 +150,7 @@ g_decoder: decoder5_32
 
 
 G_NBit_REGISTER: for i in 0 to 31 generate
-    REG: dffgN port map(
+    REG: dffgNN port map(
    --    i_CLK        : in std_logic;
    --    i_RST         : in std_logic;
    --    i_WE         : in std_logic;

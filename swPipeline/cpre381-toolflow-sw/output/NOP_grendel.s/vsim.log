@@ -3,20 +3,8 @@ Reading pref.tcl
 # 2023.2_2
 
 # vsim -postsimdataflow -debugdb -c -voptargs=""+acc"" tb -do "modelsim_framework.do" -gOUTPUT_TRACE=ms.trace 
-# Start time: 19:18:17 on Apr 05,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Note: (vsim-8611) Generating debug db.
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
-# ** Warning: ../../proj/src/MIPS_Processor.vhd(471): (vopt-3473) Component instance "IfIdReg : IF_ID_Reg" is not bound.
-#         Region: /tb/MyMips
-# ** Warning: ../../proj/src/MIPS_Processor.vhd(633): (vopt-3473) Component instance "IDEXReg : ID_EX_Reg" is not bound.
-#         Region: /tb/MyMips
-# ** Warning: ../../proj/src/MIPS_Processor.vhd(679): (vopt-3473) Component instance "EXMEMReg : EX_MEM_Reg" is not bound.
-#         Region: /tb/MyMips
-# ** Warning: ../../proj/src/MIPS_Processor.vhd(710): (vopt-3473) Component instance "MEMWBReg : MEM_WB_Reg" is not bound.
-#         Region: /tb/MyMips
-# ** Note: (vopt-4301) Memory core inferred for signal 'ram' width=32, depth=1024, type=RAM at location proj/src/mem.vhd:35
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=5.
+# Start time: 18:03:27 on Apr 07,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim-64
 # //  Version 2023.2_2 linux_x86_64 Jun  9 2023
 # //
@@ -56,8 +44,7 @@ Reading pref.tcl
 # Loading work.shiftleft2n(behavioral)#1
 # Loading work.bit16_extender(flow)#1
 # Loading work.shiftleft2n(behavioral)#2
-# ** Warning: (vsim-3473) Component instance "IfIdReg : IF_ID_Reg" is not bound.
-#    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips File: /home/kosice/Documents/cpre381TermProjNEW-EMIL/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/MIPS_Processor.vhd
+# Loading work.if_id_reg(structural)#1
 # Loading work.mux2t1_5b(structural)#1
 # Loading work.mipsregister(structure)#1
 # Loading work.decoder5_32(decoder)#1
@@ -70,8 +57,7 @@ Reading pref.tcl
 # Loading work.fulladderstructn(structural)#1
 # Loading work.fulladderstruct(structure)#1
 # Loading work.org32b(dataflow)#1
-# ** Warning: (vsim-3473) Component instance "IDEXReg : ID_EX_Reg" is not bound.
-#    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips File: /home/kosice/Documents/cpre381TermProjNEW-EMIL/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/MIPS_Processor.vhd
+# Loading work.id_ex_reg(structural)#1
 # Loading work.alu(structure)#1
 # Loading work.bit_extenders(flow)#1
 # Loading work.lui(flow)#1
@@ -86,22 +72,26 @@ Reading pref.tcl
 # Loading work.mux2t1(structure)#2
 # Loading work.mux16_1(mux)#1
 # Loading work.mux2t1flow(mux2t1f)#1
-# ** Warning: (vsim-3473) Component instance "EXMEMReg : EX_MEM_Reg" is not bound.
-#    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips File: /home/kosice/Documents/cpre381TermProjNEW-EMIL/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/MIPS_Processor.vhd
-# ** Warning: (vsim-3473) Component instance "MEMWBReg : MEM_WB_Reg" is not bound.
-#    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips File: /home/kosice/Documents/cpre381TermProjNEW-EMIL/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/MIPS_Processor.vhd
+# Loading work.ex_mem_reg(structural)#1
+# Loading work.mem_wb_reg(structural)#1
 # Loading work.loadmemmodule(structure)#1
 # Loading work.mux8b4t1(mux)#1
 # Loading work.mux16b2t1(mux)#1
 # Loading work.bit_extenders24b(flow)#1
 # Loading work.mux32b3t1(mux)#1
-# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
 # do modelsim_framework.do
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/DMem
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/IMem
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 40 ns  Iteration: 5  Instance: /tb/MyMips/IMem
-# End time: 19:18:21 on Apr 05,2024, Elapsed time: 0:00:04
-# Errors: 0, Warnings: 12
+#    Time: 400 ns  Iteration: 5  Instance: /tb/MyMips/IMem
+# ** Note: Data structure takes 80340888 bytes of memory
+#          Process time 0.11 seconds
+#          stop
+#    Time: 440 ns  Iteration: 1  Instance: /tb
+# Break in Process P_DUMP_STATE at /home/kosice/Documents/cpre381TermProjNEW-EMIL/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/internal/testpy/tb.vhd line 150
+# Stopped at /home/kosice/Documents/cpre381TermProjNEW-EMIL/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/internal/testpy/tb.vhd line 150
+# End time: 18:03:28 on Apr 07,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 3

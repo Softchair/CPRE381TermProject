@@ -146,8 +146,8 @@ signal s_rsOutID : std_logic_vector(31 downto 0); -- rs out in ID stage
 signal s_rtOutID : std_logic_vector(31 downto 0); -- rt out in ID stage
 
 --ID/EX Reg
-signal s_ID_EX_in :  std_logic_vector(132 downto 0); -- signal going into ID/EX reg
-signal s_ID_EX_out : std_logic_vector(132 downto 0); -- signal coming out of ID/EX reg
+signal s_ID_EX_in :  std_logic_vector(133 downto 0); -- signal going into ID/EX reg
+signal s_ID_EX_out : std_logic_vector(133 downto 0); -- signal coming out of ID/EX reg
 --EX stage internal
 signal s_aluDataOutEX : std_logic_vector(31 downto 0); -- alu data out EX stage
 signal s_OvflEX : std_logic; -- overflow logic EX stage
@@ -234,10 +234,10 @@ port (
 
 component adderSubS is 
 port(
-     i_D0    : in std_logic_vector(N-1 downto 0); -- reg A input
-     i_D1   : in std_logic_vector(N-1 downto 0); -- reg B input
+     i_D0    : in std_logic_vector(31 downto 0); -- reg A input
+     i_D1   : in std_logic_vector(31 downto 0); -- reg B input
      i_SEL  : in std_logic;
-     o_O    : out std_logic_vector(N-1 downto 0);
+     o_O    : out std_logic_vector(31 downto 0);
      o_Cout : out std_logic);
 
      end component;
@@ -298,8 +298,8 @@ port (
 i_CLK        : in std_logic;
 i_RST         : in std_logic;
 i_WE         : in std_logic;
-i_D          : in std_logic_vector(132 downto 0);
-o_Q       : out std_logic_vector(132 downto 0));
+i_D          : in std_logic_vector(133 downto 0);
+o_Q       : out std_logic_vector(133 downto 0));
 
   end component;
 
@@ -435,8 +435,8 @@ port map(
   i_JReg =>  s_rsOut,
   -- Control logic inputs
   i_BranchLogic => s_branchUnit,
-  i_JumpLogic   => s_controlOut(13),
-  i_JRegLogic   => s_controlOut(11),   
+  i_JumpLogic   => s_IDcontrol(13),
+  i_JRegLogic   => s_IDcontrol(11),   
  
   -- Instruction input
   i_Instruction => s_Inst,-- Instruction output
@@ -500,10 +500,10 @@ port map(
 
  port map(i_CLK => iCLK,
           i_enable  => s_regWr, -- to add
-          i_rd      => s_MEM_WB_out(108 downto 104), -- addr
+          i_rd      => s_RegWrAddr, -- addr
           i_rs      => s_ID_inst(25 downto 21), 
           i_rt      => s_ID_inst(20 downto 16), 
-          i_rdindata => s_dataInWB, --to add
+          i_rdindata => s_RegWrData, --to add
           i_reset    => iRST, 
           o_rsOUT    => s_rsOutID,
           o_rtOUT    => s_rtOutID);
@@ -625,7 +625,7 @@ s_ID_EX_in(21 downto 17) <= s_ID_RegWrAddr; -- Write Addr
 s_ID_EX_in(37 downto 22) <= s_ID_imme; -- Imme 
 s_ID_EX_in(69 downto 38) <= s_rsOutID; -- rs 
 s_ID_EX_in(101 downto 70) <= s_rtOutID; -- rt
-s_ID_EX_in(132 downto 101) <= s_jalAddnext; -- Jal 
+s_ID_EX_in(133 downto 102) <= s_ID_JalAdd; -- Jal 
 
 
 
@@ -671,10 +671,10 @@ s_EX_MEM_in(5) <= s_ID_EX_out(7); -- overflow
 s_EX_MEM_in(6) <= s_ID_EX_out(8); -- regWrite
 s_EX_MEM_in(7) <= s_ID_EX_out(9); -- Dmem write
 s_EX_MEM_in(8) <= s_ID_EX_out(10); -- memtoreg
-s_EX_MEM_in(39 downto 9) <= s_ID_EX_out(132 downto 102); -- Jal
-s_EX_MEM_in(71 downto 40) <= s_aluDataOutEX; -- dataOutEX
-s_EX_MEM_in(103 downto 72) <= s_ID_EX_in(101 downto 70); -- RT
-s_EX_MEM_in(108 downto 104) <= s_ID_EX_in(21 downto 17); -- write addr
+s_EX_MEM_in(40 downto 9) <= s_ID_EX_out(133 downto 102); -- Jal
+s_EX_MEM_in(72 downto 41) <= s_aluDataOutEX; -- dataOutEX
+s_EX_MEM_in(104 downto 73) <= s_ID_EX_out(101 downto 70); -- RT
+s_EX_MEM_in(109 downto 105) <= s_ID_EX_out(21 downto 17); -- write addr
 
 EXMEMReg : EX_MEM_Reg
  
@@ -722,7 +722,7 @@ MEMWBReg : MEM_WB_Reg
 s_Halt          <= s_MEM_WB_out(1); -- COULD BE WRONG (idk where this can be (ID stage?))
 s_regWr         <= s_MEM_WB_out(6);
 oALUOut         <= s_MEM_WB_out(71 downto 40); -- COULD BE WRONG (maybe be at alu out location instead of WB stage)
-
+s_RegWrAddr     <= s_MEM_WB_out(108 downto 104);
 
 muxmemToReg : mux2t1_N
 
@@ -765,7 +765,7 @@ port map(
                  i_S  => s_MEM_WB_out(0), 
                  i_D0 => s_databeforeMux, 
                  i_D1 => s_MEM_WB_out(39 downto 8), -- was PCnextAddress   
-                 o_O  => s_dataInWB);
+                 o_O  => s_RegWrData);
 
 
 

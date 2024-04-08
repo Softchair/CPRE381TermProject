@@ -5,12 +5,64 @@ space: .asciiz " "
 .text
 .globl main
 main:
-    la $s0, array # Load the address of the array into $s0
-    li $t0, 0      # Initialize i = 0
-    li $t1, 0      # Initialize j = 0
-    li $s1, 11     # Set the array length (11 elements)
-    li $s2, 11     # Initialize n-i for inner loop
+ 
 
+    lui $1, 4097
+    nop
+    nop 
+    nop 
+    nop
+    ori $16, $1, 0
+    nop
+    nop 
+    nop 
+    nop
+    addiu $8, $0, 0
+    nop
+    nop 
+    nop 
+    nop
+    addiu $9, $0, 0
+    nop
+    nop 
+    nop 
+    nop
+    addiu $17, $0, 11
+    nop
+    nop 
+    nop 
+    nop
+    addiu $18, $0, 11
+    nop
+    nop 
+    nop 
+    nop
+    add $10, $0, $16
+    nop
+    nop 
+    nop 
+    nop
+    add $11, $0, $16
+    nop
+    nop 
+    nop 
+    nop
+    addi $17, $17, -1
+    nop
+    nop 
+    nop 
+    nop
+    addiu $9, $0, 0
+    nop
+    nop 
+    nop 
+    nop
+    addi $18, $18, -1
+    nop
+    nop 
+    nop 
+    nop
+    add $11, $0, $16
     add $t2, $zero, $s0 # For iterating address by i
     add $t3, $zero, $s0 # For iterating address by j
 
