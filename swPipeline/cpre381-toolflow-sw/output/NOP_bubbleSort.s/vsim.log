@@ -3,7 +3,7 @@ Reading pref.tcl
 # 2023.2_2
 
 # vsim -postsimdataflow -debugdb -c -voptargs=""+acc"" tb -do "modelsim_framework.do" -gOUTPUT_TRACE=ms.trace 
-# Start time: 12:35:36 on Apr 08,2024
+# Start time: 11:49:17 on Apr 09,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vsim-8611) Generating debug db.
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
@@ -90,11 +90,11 @@ Reading pref.tcl
 #    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/DMem
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/IMem
-# ** Note: Data structure takes 81684472 bytes of memory
-#          Process time 0.12 seconds
+# ** Note: Data structure takes 81691896 bytes of memory
+#          Process time 0.13 seconds
 #          stop
-#    Time: 2320 ns  Iteration: 1  Instance: /tb
+#    Time: 5380 ns  Iteration: 1  Instance: /tb
 # Break in Process P_DUMP_STATE at /home/kosice/Documents/cpre381TermProjNEW-EMIL/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/internal/testpy/tb.vhd line 150
 # Stopped at /home/kosice/Documents/cpre381TermProjNEW-EMIL/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/internal/testpy/tb.vhd line 150
-# End time: 12:35:40 on Apr 08,2024, Elapsed time: 0:00:04
+# End time: 11:49:22 on Apr 09,2024, Elapsed time: 0:00:05
 # Errors: 0, Warnings: 3
