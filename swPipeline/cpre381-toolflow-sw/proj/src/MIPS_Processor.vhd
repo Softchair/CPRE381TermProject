@@ -130,8 +130,8 @@ signal s_jalAddnext  :  std_logic_vector(31 downto 0); -- NEW
 --PipelineSignals
 --------------------
 --IF/ID reg
-signal s_IF_ID_in :  std_logic_vector(95 downto 0); -- signal going into if/id reg
-signal s_IF_ID_out : std_logic_vector(95 downto 0); -- signal coming out of if/id reg
+signal s_IF_ID_in :  std_logic_vector(127 downto 0); -- signal going into if/id reg
+signal s_IF_ID_out : std_logic_vector(127 downto 0); -- signal coming out of if/id reg
 --ID stage internal
 signal s_ID_inst : std_logic_vector(31 downto 0); -- instructions for ID stage
 signal s_ID_PC4 : std_logic_vector(31 downto 0); -- PC+4 for ID stage
@@ -222,8 +222,11 @@ port (
   
   -- Instruction input
   i_Instruction   : IN STD_LOGIC_VECTOR(31 downto 0); -- Instruction output
+  i_branchAddress : IN STD_LOGIC_VECTOR(31 downto 0);
+  
   -- Ouput
   o_PCAddress     : OUT STD_LOGIC_VECTOR(31 downto 0); -- PC Address for JAL box
+  o_branchAddress : OUT STD_LOGIC_VECTOR(31 downto 0);
   o_jalAdd  : OUT STD_LOGIC_VECTOR(31 downto 0) -- NEW
 );
   end component;
@@ -288,8 +291,8 @@ port (
 i_CLK        : in std_logic;
 i_RST         : in std_logic;
 i_WE         : in std_logic;
-i_D          : in std_logic_vector(95 downto 0);
-o_Q       : out std_logic_vector(95 downto 0));
+i_D          : in std_logic_vector(127 downto 0);
+o_Q       : out std_logic_vector(127 downto 0));
 
   end component;
 
@@ -437,11 +440,12 @@ port map(
   i_BranchLogic => s_branchUnit,
   i_JumpLogic   => s_IDcontrol(13),
   i_JRegLogic   => s_IDcontrol(11),   
- 
+  i_branchAddress => s_IF_ID_out(127 downto 96),
   -- Instruction input
   i_Instruction => s_Inst,-- Instruction output
   -- Ouput
   o_PCAddress   => s_NextInstAddr,
+  o_branchAddress => s_IF_ID_in(127 downto 96),
   o_jalAdd      => s_jalAddnext); -- NEW
 
 
