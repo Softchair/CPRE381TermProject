@@ -43,6 +43,7 @@ inner_loop:
     nop
     nop
     bne $t4, $zero, cond # If $s3 < $s4, skip swap
+    nop
 
 swap:
     sw $s3, 0($t3) # Swap array[j] and array[j+1]
@@ -55,6 +56,7 @@ swap:
 
 cond:
     bne $t1, $s2, inner_loop # If j != n-i, continue inner loop
+    nop
 
     addi $t0, $t0, 1 # Increment i
     nop
@@ -85,6 +87,7 @@ print_loop:
     nop
     nop
     bne $t0, $s1, print_loop # If i != n, continue print loop
+    nop
 
 exit:
     halt
