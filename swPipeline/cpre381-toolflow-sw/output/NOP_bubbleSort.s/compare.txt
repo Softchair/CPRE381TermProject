@@ -6,23 +6,7 @@ Expected:	Register Write to Reg: 0x01 Val: 0x10010000
 Got     :	Execution stopped
 Student execution ended prematurely
 
-<<<<<<< HEAD
 Almost! your processor completed the program with  1/3 allowed mismatches
-=======
-Cycle: 88
-MARS instruction number: 85	Instruction: addi $11,$11,4
-Expected:	Register Write to Reg: 0x0B Val: 0x10010008
-Got     :	Register Write to Reg: 0x08 Val: 0x00000001
-Incorrect write
-
-Cycle: 89
-MARS instruction number: 90	Instruction: lw $20,0($11)
-Expected:	Register Write to Reg: 0x14 Val: 0x00000028
-Got     :	Register Write to Reg: 0x13 Val: 0x0000000A
-Incorrect write
-
-You have reached the maximum mismatches (3)
->>>>>>> 9d94003cff637629a27727e64641e65b778e0621
 
 Helpful resources for Debugging:
 ms.trace : output from the VHDL testbench during program execution on your processor
