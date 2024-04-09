@@ -71,6 +71,8 @@ cond:
 print_loop:
     li $v0, 1
     lw $a0, 0($t2)
+    nop
+    nop
     syscall
     li $v0, 4
     la $a0, space
@@ -78,6 +80,10 @@ print_loop:
 
     addi $t2, $t2, 4 # Increment address for i
     addi $t0, $t0, 1 # Increment i
+    nop
+    nop
+    nop
+    nop
     bne $t0, $s1, print_loop # If i != n, continue print loop
 
 exit:
