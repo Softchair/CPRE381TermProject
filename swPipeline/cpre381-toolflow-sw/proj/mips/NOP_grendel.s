@@ -83,7 +83,6 @@ trucks: #come back
             nop
 
         lw      $4,24($fp)
-        # addi 	$k0, $k0,1# breakpoint
         lasw 	$ra, billowy
         j     	topsort
             nop

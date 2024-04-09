@@ -5,64 +5,12 @@ space: .asciiz " "
 .text
 .globl main
 main:
- 
+    la $s0, array # Load the address of the array into $s0
+    li $t0, 0      # Initialize i = 0
+    li $t1, 0      # Initialize j = 0
+    li $s1, 11     # Set the array length (11 elements)
+    li $s2, 11     # Initialize n-i for inner loop
 
-    lui $1, 4097
-    nop
-    nop 
-    nop 
-    nop
-    ori $16, $1, 0
-    nop
-    nop 
-    nop 
-    nop
-    addiu $8, $0, 0
-    nop
-    nop 
-    nop 
-    nop
-    addiu $9, $0, 0
-    nop
-    nop 
-    nop 
-    nop
-    addiu $17, $0, 11
-    nop
-    nop 
-    nop 
-    nop
-    addiu $18, $0, 11
-    nop
-    nop 
-    nop 
-    nop
-    add $10, $0, $16
-    nop
-    nop 
-    nop 
-    nop
-    add $11, $0, $16
-    nop
-    nop 
-    nop 
-    nop
-    addi $17, $17, -1
-    nop
-    nop 
-    nop 
-    nop
-    addiu $9, $0, 0
-    nop
-    nop 
-    nop 
-    nop
-    addi $18, $18, -1
-    nop
-    nop 
-    nop 
-    nop
-    add $11, $0, $16
     add $t2, $zero, $s0 # For iterating address by i
     add $t3, $zero, $s0 # For iterating address by j
 
@@ -95,6 +43,7 @@ inner_loop:
     nop
     nop
     bne $t4, $zero, cond # If $s3 < $s4, skip swap
+    nop
 
 swap:
     sw $s3, 0($t3) # Swap array[j] and array[j+1]
@@ -107,6 +56,7 @@ swap:
 
 cond:
     bne $t1, $s2, inner_loop # If j != n-i, continue inner loop
+    nop
 
     addi $t0, $t0, 1 # Increment i
     nop
@@ -123,6 +73,8 @@ cond:
 print_loop:
     li $v0, 1
     lw $a0, 0($t2)
+    nop
+    nop
     syscall
     li $v0, 4
     la $a0, space
@@ -130,7 +82,12 @@ print_loop:
 
     addi $t2, $t2, 4 # Increment address for i
     addi $t0, $t0, 1 # Increment i
+    nop
+    nop
+    nop
+    nop
     bne $t0, $s1, print_loop # If i != n, continue print loop
+    nop
 
 exit:
     halt
