@@ -1,1 +1,1 @@
-proj/mips/NOP_bubbleSort.s
+proj/mips/NOP_newBubble.s
