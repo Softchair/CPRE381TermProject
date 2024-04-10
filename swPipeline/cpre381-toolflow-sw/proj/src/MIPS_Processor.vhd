@@ -222,11 +222,10 @@ port (
   
   -- Instruction input
   i_Instruction   : IN STD_LOGIC_VECTOR(31 downto 0); -- Instruction output
-  i_branchAddress : IN STD_LOGIC_VECTOR(31 downto 0);
+  i_PcLast        : IN STD_LOGIC_VECTOR(31 downto 0);
   
   -- Ouput
   o_PCAddress     : OUT STD_LOGIC_VECTOR(31 downto 0); -- PC Address for JAL box
-  o_branchAddress : OUT STD_LOGIC_VECTOR(31 downto 0);
   o_jalAdd  : OUT STD_LOGIC_VECTOR(31 downto 0) -- NEW
 );
   end component;
@@ -435,17 +434,16 @@ port map(
   i_CLK  => iCLK,       
   i_RST  => iRST,        
   -- Register inputs
-  i_JReg =>  s_rsOut,
+  i_JReg =>  s_rsOutID,
   -- Control logic inputs
   i_BranchLogic => s_branchUnit,
   i_JumpLogic   => s_IDcontrol(13),
   i_JRegLogic   => s_IDcontrol(11),   
-  i_branchAddress => s_IF_ID_out(127 downto 96),
   -- Instruction input
-  i_Instruction => s_Inst,-- Instruction output
+  i_Instruction => s_ID_inst,-- Instruction output
+  i_PcLast      => s_ID_PC4,
   -- Ouput
   o_PCAddress   => s_NextInstAddr,
-  o_branchAddress => s_IF_ID_in(127 downto 96),
   o_jalAdd      => s_jalAddnext); -- NEW
 
 

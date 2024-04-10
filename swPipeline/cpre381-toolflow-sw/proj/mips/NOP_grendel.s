@@ -107,7 +107,7 @@ main_loop_control:
             nop
             nop
             nop
-        sltiu $2,$2, 4
+        slti $2,$2, 4
             nop
             nop
             nop
@@ -670,7 +670,7 @@ experience:
             nop
             nop
             nop
-        sltu    $2,$0,$2
+        slt    $2,$0,$2
             nop
             nop
             nop
@@ -885,7 +885,7 @@ representitive:
             nop
             nop
             nop
-        sltu    $2,$0,$2
+        slt    $2,$0,$2
             nop
             nop
             nop
