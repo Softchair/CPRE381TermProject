@@ -1,0 +1,97 @@
+
+#
+# CprE 381 toolflow Timing dump
+#
+
+FMax: 47.88mhz Clk Constraint: 20.00ns Slack: -0.89ns
+
+The path is given below
+
+ ===================================================================
+ From Node    : mem:IMem|altsyncram:ram_rtl_0|altsyncram_eg81:auto_generated|ram_block1a7~porta_we_reg
+ To Node      : fetch_Logic:fetchUnit|PCReg:r_PCReg|nbitregister:r_PC|dffg:\gen_dffg:1:g_dffg|s_Q
+ Launch Clock : iCLK
+ Latch Clock  : iCLK
+ Data Arrival Path:
+ Total (ns)  Incr (ns)     Type  Element
+ ==========  ========= ==  ====  ===================================
+      0.000      0.000           launch edge time
+      3.465      3.465  R        clock network delay
+      3.728      0.263     uTco  mem:IMem|altsyncram:ram_rtl_0|altsyncram_eg81:auto_generated|ram_block1a7~porta_we_reg
+      6.577      2.849 FR  CELL  IMem|ram_rtl_0|auto_generated|ram_block1a7|portadataout[6]
+      7.579      1.002 RR    IC  IMem|ram~65|datad
+      7.734      0.155 RR  CELL  IMem|ram~65|combout
+      8.915      1.181 RR    IC  RegisterMod|g_mux01|Mux31~20|datad
+      9.070      0.155 RR  CELL  RegisterMod|g_mux01|Mux31~20|combout
+      9.304      0.234 RR    IC  RegisterMod|g_mux01|Mux31~21|datab
+      9.722      0.418 RR  CELL  RegisterMod|g_mux01|Mux31~21|combout
+     10.739      1.017 RR    IC  RegisterMod|g_mux01|Mux31~22|datab
+     11.127      0.388 RR  CELL  RegisterMod|g_mux01|Mux31~22|combout
+     11.330      0.203 RR    IC  RegisterMod|g_mux01|Mux31~23|datad
+     11.485      0.155 RR  CELL  RegisterMod|g_mux01|Mux31~23|combout
+     12.161      0.676 RR    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:4:MUXI|g_orGate|o_F~0|datab
+     12.604      0.443 RF  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:4:MUXI|g_orGate|o_F~0|combout
+     12.854      0.250 FF    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:4:MUXI|g_orGate|o_F~1|datad
+     12.979      0.125 FF  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:4:MUXI|g_orGate|o_F~1|combout
+     13.206      0.227 FF    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:4:MUXI|g_orGate|o_F~2|datad
+     13.331      0.125 FF  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:4:MUXI|g_orGate|o_F~2|combout
+     13.559      0.228 FF    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:4:MUXI|g_orGate|o_F~3|datad
+     13.709      0.150 FR  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:4:MUXI|g_orGate|o_F~3|combout
+     13.945      0.236 RR    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:9:MUXI|g_andGateB|o_F~0|datad
+     14.100      0.155 RR  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:9:MUXI|g_andGateB|o_F~0|combout
+     14.316      0.216 RR    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:9:MUXI|g_andGateB|o_F~1|datad
+     14.471      0.155 RR  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:9:MUXI|g_andGateB|o_F~1|combout
+     14.674      0.203 RR    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:9:MUXI|g_andGateB|o_F~2|datad
+     14.829      0.155 RR  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:9:MUXI|g_andGateB|o_F~2|combout
+     15.040      0.211 RR    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:13:MUXI|g_xorGate02|o_F~1|datad
+     15.195      0.155 RR  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:13:MUXI|g_xorGate02|o_F~1|combout
+     15.629      0.434 RR    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:12:MUXI|g_andGateB|o_F|datad
+     15.784      0.155 RR  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:12:MUXI|g_andGateB|o_F|combout
+     15.987      0.203 RR    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:13:MUXI|g_orGate|o_F|datad
+     16.142      0.155 RR  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:13:MUXI|g_orGate|o_F|combout
+     16.354      0.212 RR    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:15:MUXI|g_andGateB|o_F|datad
+     16.509      0.155 RR  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:15:MUXI|g_andGateB|o_F|combout
+     16.952      0.443 RR    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:19:MUXI|g_orGate|o_F~0|datad
+     17.091      0.139 RF  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:19:MUXI|g_orGate|o_F~0|combout
+     17.319      0.228 FF    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:19:MUXI|g_orGate|o_F~1|datad
+     17.444      0.125 FF  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:19:MUXI|g_orGate|o_F~1|combout
+     17.671      0.227 FF    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:19:MUXI|g_orGate|o_F~2|datad
+     17.796      0.125 FF  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:19:MUXI|g_orGate|o_F~2|combout
+     18.023      0.227 FF    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:19:MUXI|g_orGate|o_F~3|datad
+     18.173      0.150 FR  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:19:MUXI|g_orGate|o_F~3|combout
+     18.385      0.212 RR    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:22:MUXI|g_orGate|o_F~0|datad
+     18.540      0.155 RR  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:22:MUXI|g_orGate|o_F~0|combout
+     18.745      0.205 RR    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:22:MUXI|g_orGate|o_F~1|datad
+     18.900      0.155 RR  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:22:MUXI|g_orGate|o_F~1|combout
+     19.103      0.203 RR    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:22:MUXI|g_orGate|o_F~2|datad
+     19.258      0.155 RR  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:22:MUXI|g_orGate|o_F~2|combout
+     19.689      0.431 RR    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:24:MUXI|g_andGateB|o_F|datad
+     19.844      0.155 RR  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:24:MUXI|g_andGateB|o_F|combout
+     20.218      0.374 RR    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:25:MUXI|g_orGate|o_F|datad
+     20.373      0.155 RR  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:25:MUXI|g_orGate|o_F|combout
+     20.585      0.212 RR    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:27:MUXI|g_andGateB|o_F|datad
+     20.740      0.155 RR  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:27:MUXI|g_andGateB|o_F|combout
+     20.952      0.212 RR    IC  subtractor|g_RippleFAGate02|\G_NBit_ADDER:28:MUXI|g_xorGate02|o_F|datad
+     21.107      0.155 RR  CELL  subtractor|g_RippleFAGate02|\G_NBit_ADDER:28:MUXI|g_xorGate02|o_F|combout
+     21.755      0.648 RR    IC  g_orG32|o_Out~23|datad
+     21.894      0.139 RF  CELL  g_orG32|o_Out~23|combout
+     22.119      0.225 FF    IC  BranchOr|o_F~0|datad
+     22.269      0.150 FR  CELL  BranchOr|o_F~0|combout
+     23.047      0.778 RR    IC  fetchUnit|g_jumpRegControl|\G_NBit_MUX:1:MUXi|g_orGate|o_F~0|datad
+     23.202      0.155 RR  CELL  fetchUnit|g_jumpRegControl|\G_NBit_MUX:1:MUXi|g_orGate|o_F~0|combout
+     23.634      0.432 RR    IC  fetchUnit|g_jumpRegControl|\G_NBit_MUX:1:MUXi|g_orGate|o_F~1|datad
+     23.789      0.155 RR  CELL  fetchUnit|g_jumpRegControl|\G_NBit_MUX:1:MUXi|g_orGate|o_F~1|combout
+     23.789      0.000 RR    IC  fetchUnit|r_PCReg|r_PC|\gen_dffg:1:g_dffg|s_Q|d
+     23.876      0.087 RR  CELL  fetch_Logic:fetchUnit|PCReg:r_PCReg|nbitregister:r_PC|dffg:\gen_dffg:1:g_dffg|s_Q
+ Data Required Path:
+ Total (ns)  Incr (ns)     Type  Element
+ ==========  ========= ==  ====  ===================================
+     20.000     20.000           latch edge time
+     22.984      2.984  R        clock network delay
+     22.992      0.008           clock pessimism removed
+     22.972     -0.020           clock uncertainty
+     22.990      0.018     uTsu  fetch_Logic:fetchUnit|PCReg:r_PCReg|nbitregister:r_PC|dffg:\gen_dffg:1:g_dffg|s_Q
+ Data Arrival Time  :    23.876
+ Data Required Time :    22.990
+ Slack              :    -0.886 (VIOLATED)
+ ===================================================================
