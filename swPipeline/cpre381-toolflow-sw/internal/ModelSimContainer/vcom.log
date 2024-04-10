@@ -1,6 +1,6 @@
 QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
-Start time: 18:28:15 on Apr 10,2024
-vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd internal/testpy/tb.vhd proj/src/MIPS_Processor.vhd proj/src/mem.vhd proj/src/MIPS_types.vhd proj/src/TopLevel/aluUnit/lui.vhd proj/src/TopLevel/aluUnit/fullAdderStruct.vhd proj/src/TopLevel/aluUnit/fullAdderStructN.vhd proj/src/TopLevel/aluUnit/onesCompN.vhd proj/src/TopLevel/aluUnit/adderSubS.vhd proj/src/TopLevel/aluUnit/firstALU.vhd proj/src/TopLevel/aluUnit/slt.vhd proj/src/TopLevel/aluUnit/ALU.vhd proj/src/TopLevel/aluUnit/barrelShifter/1bitShifter.vhd proj/src/TopLevel/aluUnit/barrelShifter/barrelshifter.vhd proj/src/TopLevel/aluUnit/basicGates/xorG_N.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1Flow.vhd proj/src/TopLevel/aluUnit/basicGates/norG_N.vhd proj/src/TopLevel/aluUnit/basicGates/mux16b2t1.vhd proj/src/TopLevel/aluUnit/basicGates/barrelShifterArithmetic.vhd proj/src/TopLevel/aluUnit/basicGates/mux16_1.vhd proj/src/TopLevel/aluUnit/basicGates/barrelShifterSLL.vhd proj/src/TopLevel/aluUnit/basicGates/orG_N.vhd proj/src/TopLevel/aluUnit/basicGates/bit_extenders.vhd proj/src/TopLevel/aluUnit/basicGates/andG_N.vhd proj/src/TopLevel/aluUnit/basicGates/mux8b4t1.vhd proj/src/TopLevel/aluUnit/basicGates/mux32b3t1.vhd proj/src/TopLevel/aluUnit/basicGates/bit_extenders24b.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1_5b.vhd proj/src/TopLevel/aluUnit/basicGates/orG32b.vhd proj/src/TopLevel/ControlLogic/control_Logic.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/EX_MEM_Reg.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/dffgN.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/ID_EX_Reg.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/tb_IF_ID_Reg.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/tb_dffg.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/tb_dffgN.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/dffg.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/MEM_WB_Reg.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/IF_ID_Reg.vhd proj/src/TopLevel/BasicGates/org2.vhd proj/src/TopLevel/BasicGates/mux2t1.vhd proj/src/TopLevel/BasicGates/mux2t1N.vhd proj/src/TopLevel/BasicGates/andg2.vhd proj/src/TopLevel/BasicGates/andgN.vhd proj/src/TopLevel/BasicGates/andG32b.vhd proj/src/TopLevel/BasicGates/xorg2.vhd proj/src/TopLevel/BasicGates/mux2t1_N.vhd proj/src/TopLevel/BasicGates/invg.vhd proj/src/TopLevel/BasicGates/Adder/adder1b.vhd proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd proj/src/TopLevel/BasicGates/register/decoder5_32.vhd proj/src/TopLevel/BasicGates/register/dffgN.vhd proj/src/TopLevel/BasicGates/register/dffg.vhd proj/src/TopLevel/BasicGates/register/dffgNN.vhd proj/src/TopLevel/BasicGates/register/mux32_1.vhd proj/src/TopLevel/BasicGates/register/MIPSregister.vhd proj/src/TopLevel/FetchLogic/fetch_Logic.vhd proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd proj/src/TopLevel/loadMemModule/loadMemModule.vhd 
+Start time: 18:35:50 on Apr 10,2024
+vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd internal/testpy/tb.vhd proj/src/MIPS_Processor.vhd proj/src/mem.vhd proj/src/MIPS_types.vhd proj/src/TopLevel/aluUnit/lui.vhd proj/src/TopLevel/aluUnit/fullAdderStruct.vhd proj/src/TopLevel/aluUnit/fullAdderStructN.vhd proj/src/TopLevel/aluUnit/onesCompN.vhd proj/src/TopLevel/aluUnit/adderSubS.vhd proj/src/TopLevel/aluUnit/firstALU.vhd proj/src/TopLevel/aluUnit/slt.vhd proj/src/TopLevel/aluUnit/ALU.vhd proj/src/TopLevel/aluUnit/barrelShifter/1bitShifter.vhd proj/src/TopLevel/aluUnit/barrelShifter/barrelshifter.vhd proj/src/TopLevel/aluUnit/basicGates/xorG_N.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1Flow.vhd proj/src/TopLevel/aluUnit/basicGates/norG_N.vhd proj/src/TopLevel/aluUnit/basicGates/mux16b2t1.vhd proj/src/TopLevel/aluUnit/basicGates/barrelShifterArithmetic.vhd proj/src/TopLevel/aluUnit/basicGates/mux16_1.vhd proj/src/TopLevel/aluUnit/basicGates/barrelShifterSLL.vhd proj/src/TopLevel/aluUnit/basicGates/orG_N.vhd proj/src/TopLevel/aluUnit/basicGates/bit_extenders.vhd proj/src/TopLevel/aluUnit/basicGates/andG_N.vhd proj/src/TopLevel/aluUnit/basicGates/mux8b4t1.vhd proj/src/TopLevel/aluUnit/basicGates/mux32b3t1.vhd proj/src/TopLevel/aluUnit/basicGates/bit_extenders24b.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1_5b.vhd proj/src/TopLevel/aluUnit/basicGates/orG32b.vhd proj/src/TopLevel/ControlLogic/control_Logic.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/EX_MEM_Reg.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/ID_EX_Reg.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/tb_IF_ID_Reg.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/tb_dffg.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/tb_dffgN.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/MEM_WB_Reg.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/IF_ID_Reg.vhd proj/src/TopLevel/BasicGates/org2.vhd proj/src/TopLevel/BasicGates/mux2t1.vhd proj/src/TopLevel/BasicGates/mux2t1N.vhd proj/src/TopLevel/BasicGates/andg2.vhd proj/src/TopLevel/BasicGates/andgN.vhd proj/src/TopLevel/BasicGates/andG32b.vhd proj/src/TopLevel/BasicGates/xorg2.vhd proj/src/TopLevel/BasicGates/mux2t1_N.vhd proj/src/TopLevel/BasicGates/invg.vhd proj/src/TopLevel/BasicGates/Adder/adder1b.vhd proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd proj/src/TopLevel/BasicGates/register/decoder5_32.vhd proj/src/TopLevel/BasicGates/register/dffgN.vhd proj/src/TopLevel/BasicGates/register/dffg.vhd proj/src/TopLevel/BasicGates/register/dffgNN.vhd proj/src/TopLevel/BasicGates/register/mux32_1.vhd proj/src/TopLevel/BasicGates/register/MIPSregister.vhd proj/src/TopLevel/FetchLogic/fetch_Logic.vhd proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd proj/src/TopLevel/loadMemModule/loadMemModule.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -74,9 +74,6 @@ vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd interna
 -- Compiling architecture flow of control_Logic
 -- Compiling entity EX_MEM_Reg
 -- Compiling architecture structural of EX_MEM_Reg
-** Warning: proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/dffgN.vhd(20): (vcom-1615) Existing entity 'dffgN' at /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/TopLevel/BasicGates/register/dffgN.vhd(23) will be overwritten.
--- Compiling entity dffgN
--- Compiling architecture structural of dffgN
 -- Compiling entity ID_EX_Reg
 -- Compiling architecture structural of ID_EX_Reg
 -- Compiling entity tb_IF_ID_Reg
@@ -85,10 +82,6 @@ vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd interna
 -- Compiling architecture behavior of tb_dffg
 -- Compiling entity tb_dffgN
 -- Compiling architecture behavior of tb_dffgN
-** Warning: proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/dffg.vhd(23): (vcom-1615) Existing entity 'dffg' at /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/TopLevel/BasicGates/register/dffg.vhd(23) will be overwritten.
--- Compiling entity dffg
-** Warning: proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/dffg.vhd(33): (vcom-1615) Existing architecture 'dffg(mixed)' at /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/TopLevel/BasicGates/register/dffg.vhd(33) will be overwritten.
--- Compiling architecture mixed of dffg
 -- Compiling entity MEM_WB_Reg
 -- Compiling architecture structural of MEM_WB_Reg
 -- Compiling entity IF_ID_Reg
@@ -117,12 +110,9 @@ vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd interna
 -- Compiling architecture structural of rippleCarryAdderN
 -- Compiling entity decoder5_32
 -- Compiling architecture decoder of decoder5_32
-** Warning: proj/src/TopLevel/BasicGates/register/dffgN.vhd(23): (vcom-1615) Existing entity 'dffgN' at proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/dffgN.vhd(20) will be overwritten.
 -- Compiling entity dffgN
 -- Compiling architecture mixed of dffgN
-** Warning: proj/src/TopLevel/BasicGates/register/dffg.vhd(23): (vcom-1615) Existing entity 'dffg' at proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/dffg.vhd(23) will be overwritten.
 -- Compiling entity dffg
-** Warning: proj/src/TopLevel/BasicGates/register/dffg.vhd(33): (vcom-1615) Existing architecture 'dffg(mixed)' at proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/dffg.vhd(33) will be overwritten.
 -- Compiling architecture mixed of dffg
 -- Compiling entity dffgNN
 -- Compiling architecture structural of dffgNN
@@ -143,5 +133,5 @@ vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd interna
 -- Compiling architecture structural of nbitregister
 -- Compiling entity loadMemModule
 -- Compiling architecture structure of loadMemModule
-End time: 18:28:15 on Apr 10,2024, Elapsed time: 0:00:00
-Errors: 0, Warnings: 8
+End time: 18:35:50 on Apr 10,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 2
