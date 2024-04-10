@@ -31,11 +31,11 @@ res_idx:
     ori $sp, $1, 0x1000
 	li $fp, 0 #changes to addiu instead of lui+xor
 	lasw $ra pump
-
+        nop
+        nop
+        nop
+        nop
 	j main # jump to the starting location
-        nop
-        nop
-        nop
         nop
 pump:
 	halt
