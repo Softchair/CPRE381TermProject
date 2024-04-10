@@ -33,9 +33,11 @@ entity fetch_Logic is
         i_JRegLogic     : IN STD_LOGIC; -- Jump register logic control, 1 if jump reg
         -- Instruction input
         i_Instruction   : IN STD_LOGIC_VECTOR(31 downto 0); -- Instruction output
+        i_branchAddress : IN STD_LOGIC_VECTOR(31 downto 0);
         -- Ouput
         o_PCAddress     : OUT STD_LOGIC_VECTOR(31 downto 0); -- PC Address 
-        o_jalAdd        : OUT STD_LOGIC_VECTOR(31 downto 0) -- JAL Output
+        o_jalAdd        : OUT STD_LOGIC_VECTOR(31 downto 0); -- JAL Output
+        o_branchAddress : OUT STD_LOGIC_VECTOR(31 downto 0)
     );
       
 end fetch_Logic;
@@ -120,6 +122,7 @@ architecture mixed of fetch_logic is
     signal s_BranchShiftLeft    : STD_LOGIC_VECTOR(31 downto 0);
     -- Signal to carry location to branch to
     signal s_BranchLocation     : STD_LOGIC_VECTOR(31 downto 0);
+    signal s_BranchLocationnew : STD_LOGIC_VECTOR(31 downto 0);
     -- Signal to carry output of branch mux to jump mux
     signal s_BranchMuxOut       : STD_LOGIC_VECTOR(31 downto 0);
 
@@ -153,7 +156,8 @@ architecture mixed of fetch_logic is
             );
 
         o_jalAdd <= s_PCNext; -- For JAL add
-
+        o_branchAddress <= s_BranchLocation;
+        s_BranchLocationnew <= i_branchAddress;
         -- -------- START JUMP LOGIC CONTROL -------- --
 
         -- Shift left 2 for jump address
@@ -227,7 +231,7 @@ architecture mixed of fetch_logic is
             generic map(N => 32)
             port map(
                 i_A     => s_PCNext, -- Next PC location (0)
-                i_B     => s_BranchLocation, -- Branching location (1)
+                i_B     => s_BranchLocationnew, -- Branching location (1)
                 i_Sel   => i_BranchLogic, -- From control
                 o_Out   => s_BranchMuxOut -- To jump mux
             );

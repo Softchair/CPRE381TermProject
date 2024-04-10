@@ -1,0 +1,207 @@
+Reading pref.tcl
+
+# 2023.2_2
+
+# vsim -postsimdataflow -debugdb -c -voptargs=""+acc"" tb -do "modelsim_framework.do" -gOUTPUT_TRACE=ms.trace 
+# Start time: 11:59:29 on Apr 09,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "i_D".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# ** Error: ../../proj/src/TopLevel/BasicGates/register/dffgNN.vhd(45): (vopt-1133) Type mismatch found on port "o_Q".
+#    In the component "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC".
+#    In the entity "dffgN", the port type is "ieee.std_logic_1164.STD_LOGIC_VECTOR"
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=64, Warnings=1.
+# Error loading design
+Error loading design
+# End time: 11:59:30 on Apr 09,2024, Elapsed time: 0:00:01
+# Errors: 64, Warnings: 1

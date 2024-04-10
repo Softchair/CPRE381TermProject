@@ -3,7 +3,7 @@ Reading pref.tcl
 # 2023.2_2
 
 # vsim -postsimdataflow -debugdb -c -voptargs=""+acc"" tb -do "modelsim_framework.do" -gOUTPUT_TRACE=ms.trace 
-# Start time: 22:12:38 on Mar 26,2024
+# Start time: 19:36:00 on Apr 05,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vsim-8611) Generating debug db.
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
@@ -50,7 +50,6 @@ Reading pref.tcl
 # Loading work.shiftleft2n(behavioral)#2
 # Loading work.mux2t1_5b(structural)#1
 # Loading work.mux2t1_n(structural)#1
-# Loading work.register_package
 # Loading work.mipsregister(structure)#1
 # Loading work.decoder5_32(decoder)#1
 # Loading work.dffgn(structural)#1
@@ -69,6 +68,9 @@ Reading pref.tcl
 # Loading work.xorg_n(structural)#1
 # Loading work.norg_n(structure)#1
 # Loading work.slt(behavorial)#1
+# Loading work.barrelshiftersll(structural)#1
+# Loading work.barrelshifterarithmetic(structural)#1
+# Loading work.mux2t1(structure)#2
 # Loading work.mux16_1(mux)#1
 # Loading work.mux2t1flow(mux2t1f)#1
 # Loading work.org32b(dataflow)#1
@@ -85,11 +87,11 @@ Reading pref.tcl
 #    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/IMem
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 3  Instance: /tb/MyMips/DMem
-# ** Note: Data structure takes 60920088 bytes of memory
-#          Process time 0.29 seconds
+# ** Note: Data structure takes 76073624 bytes of memory
+#          Process time 0.64 seconds
 #          stop
-#    Time: 37140 ns  Iteration: 1  Instance: /tb
-# Break in Process P_DUMP_STATE at /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/internal/testpy/tb.vhd line 150
-# Stopped at /home/cfergen/cpre381/CPRE381TermProject/cpre381-toolflow/internal/testpy/tb.vhd line 150
-# End time: 22:12:41 on Mar 26,2024, Elapsed time: 0:00:03
+#    Time: 42340 ns  Iteration: 1  Instance: /tb
+# Break in Process P_DUMP_STATE at /home/kosice/Documents/cpre381TermProjNEW-EMIL/CPRE381TermProject/cpu/cpre381-toolflow-cpu/internal/testpy/tb.vhd line 150
+# Stopped at /home/kosice/Documents/cpre381TermProjNEW-EMIL/CPRE381TermProject/cpu/cpre381-toolflow-cpu/internal/testpy/tb.vhd line 150
+# End time: 19:36:03 on Apr 05,2024, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 4

@@ -17,7 +17,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 
 entity ID_EX_Reg is
-  generic(N : integer := 133); -- Generic of type integer for input/output data width. Default value is 32.
+  generic(N : integer := 134); -- Generic of type integer for input/output data width. Default value is 32.
   port(i_CLK        : in std_logic;
        i_RST         : in std_logic;
        i_WE         : in std_logic;
