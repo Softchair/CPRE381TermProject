@@ -5,11 +5,13 @@ space: .asciiz " "
 .text
 .globl main
 main:
-    la $s0, array # Load the address of the array into $s0
-    li $t0, 0      # Initialize i = 0
-    li $t1, 0      # Initialize j = 0
-    li $s1, 11     # Set the array length (11 elements)
-    li $s2, 11     # Initialize n-i for inner loop
+    #la $s0, array # Load the address of the array into $s0
+    lui $1, 0x00001001 #non psuedo
+    ori $16, $1, 0x00000000
+    addiu $8 $0, 0x00000000 #li $t0, 0      # Initialize i = 0
+    addiu $9, $0, 0x00000000 #li $t1, 0      # Initialize j = 0
+    addiu $17, $0, 0x0000000b #li $s1, 11     # Set the array length (11 elements)
+    addiu $18, $0, 0x0000000b #li $s2, 11     # Initialize n-i for inner loop
 
     add $t2, $zero, $s0 # For iterating address by i
     add $t3, $zero, $s0 # For iterating address by j
@@ -17,7 +19,7 @@ main:
     addi $s1, $s1, -1
 
 outer_loop:
-    li $t1, 0        # Reset j = 0
+    addiu $9, $0 0x00000000 #li $t1, 0        # Reset j = 0
     addi $s2, $s2, -1 # Decrease size for inner_loop
     add $t3, $zero, $s0 # Reset address iteration for j
     nop
@@ -71,13 +73,14 @@ cond:
     li $t0, 1
 
 print_loop:
-    li $v0, 1
+    addiu $2, $0, 0x00000001 #li $v0, 1
     lw $a0, 0($t2)
     nop
     nop
     syscall
-    li $v0, 4
-    la $a0, space
+    addiu $2, $0, 0x00000004 #li $v0, 4
+    lui $1, 0x00001001 #la $a0, space
+    ori $4, $1, 0x0000002c
     syscall
 
     addi $t2, $t2, 4 # Increment address for i
