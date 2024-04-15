@@ -46,6 +46,7 @@ swPipeline/cpre381-toolflow-sw/output/*
 swPipeline/cpre381-toolflow-sw/output/
 
 hwPipeline/cpre381-toolflow-hw/internal
+hwPipeline/cpre381-toolflow-hw/internal/
 hwPipeline/cpre381-toolflow-hw/containers
 hwPipeline/cpre381-toolflow-hw/output
 hwPipeline/cpre381-toolflow-hw/output/*
