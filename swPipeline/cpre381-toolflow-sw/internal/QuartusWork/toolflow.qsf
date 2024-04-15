@@ -42,8 +42,6 @@ set_global_assignment -name VHDL_FILE "/home/cfergen/cpre381/CPRE381TermProject/
 set_global_assignment -name VHDL_FILE "/home/cfergen/cpre381/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/ID_EX_Reg.vhd"
 set_global_assignment -name VHDL_FILE "/home/cfergen/cpre381/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/IF_ID_Reg.vhd"
 set_global_assignment -name VHDL_FILE "/home/cfergen/cpre381/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/MEM_WB_Reg.vhd"
-set_global_assignment -name VHDL_FILE "/home/cfergen/cpre381/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/dffg.vhd"
-set_global_assignment -name VHDL_FILE "/home/cfergen/cpre381/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/dffgN.vhd"
 set_global_assignment -name VHDL_FILE "/home/cfergen/cpre381/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/tb_IF_ID_Reg.vhd"
 set_global_assignment -name VHDL_FILE "/home/cfergen/cpre381/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/tb_dffg.vhd"
 set_global_assignment -name VHDL_FILE "/home/cfergen/cpre381/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/tb_dffgN.vhd"
