@@ -25,6 +25,7 @@ entity fetch_Logic is
     port (
         i_CLK           : IN STD_LOGIC; -- Clock
         i_RST           : IN STD_LOGIC; -- Reset
+        i_PCWE          : IN STD_LOGIC; -- pc WE for stalling
         -- Register inputs
         i_JReg          : IN STD_LOGIC_VECTOR(31 downto 0); -- Jump register inputz
         -- Control logic inputs
@@ -33,6 +34,7 @@ entity fetch_Logic is
         i_JRegLogic     : IN STD_LOGIC; -- Jump register logic control, 1 if jump reg
         -- Instruction input
         i_Instruction   : IN STD_LOGIC_VECTOR(31 downto 0); -- Instruction output
+        i_PcLast        : IN STD_LOGIC_VECTOR(31 downto 0); -- Last PC
         -- Ouput
         o_PCAddress     : OUT STD_LOGIC_VECTOR(31 downto 0); -- PC Address 
         o_jalAdd        : OUT STD_LOGIC_VECTOR(31 downto 0) -- JAL Output
@@ -47,6 +49,7 @@ architecture mixed of fetch_logic is
         port (
             i_CLK       : IN STD_LOGIC; -- Clock
             i_RST       : IN STD_LOGIC; -- Reset
+            i_WE        : IN STD_LOGIC; -- write enable (newly added)
             i_PC        : IN STD_LOGIC_VECTOR(31 downto 0); -- PC in
             o_PC        : OUT STD_LOGIC_VECTOR(31 downto 0) -- PC Out
         );
@@ -120,6 +123,7 @@ architecture mixed of fetch_logic is
     signal s_BranchShiftLeft    : STD_LOGIC_VECTOR(31 downto 0);
     -- Signal to carry location to branch to
     signal s_BranchLocation     : STD_LOGIC_VECTOR(31 downto 0);
+    signal s_BranchLocationnew : STD_LOGIC_VECTOR(31 downto 0);
     -- Signal to carry output of branch mux to jump mux
     signal s_BranchMuxOut       : STD_LOGIC_VECTOR(31 downto 0);
 
@@ -136,6 +140,7 @@ architecture mixed of fetch_logic is
             port map(
                 i_CLK   => i_CLK,
                 i_RST   => i_RST,
+                i_WE    => i_PCWE, -- newly added for stalling
                 i_PC    => s_JumpRegMuxOut, -- New PC
                 o_PC    => s_PCAddressOut -- Cur PC
             );
@@ -153,7 +158,6 @@ architecture mixed of fetch_logic is
             );
 
         o_jalAdd <= s_PCNext; -- For JAL add
-
         -- -------- START JUMP LOGIC CONTROL -------- --
 
         -- Shift left 2 for jump address
@@ -216,7 +220,7 @@ architecture mixed of fetch_logic is
         g_bAddPC: rippleCarryAdderN
             generic map(N => 32)
             port map(
-                i_A     => s_PCNext, -- Adding PC location
+                i_A     => i_PcLast, -- Adding PC location
                 i_B     => s_BranchShiftLeft, -- Relative location
                 i_Cin   => '0', -- No input
                 o_Cout  => open,

@@ -25,6 +25,7 @@ entity PCReg is
         -- Reg file
         i_CLK       : IN STD_LOGIC; -- Clock
         i_RST       : IN STD_LOGIC; -- Reset, should reset PC to 0x0040...
+        i_WE        : IN STD_LOGIC; -- newly added 
         -- PC Specific
         i_PC        : IN STD_LOGIC_VECTOR(31 downto 0);  -- Program counter in
         o_PC        : OUT STD_LOGIC_VECTOR(31 downto 0) -- Program counter out
@@ -79,7 +80,7 @@ architecture structural of PCReg is
             port map(
                 i_CLK       => i_CLK,
                 i_RST       => '0',
-                i_WE        => '1',
+                i_WE        => i_WE, -- newly added
                 i_DataIn    => s_muxOut,
                 o_DataOut   => o_PC
             );

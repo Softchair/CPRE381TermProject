@@ -125,6 +125,57 @@ signal s_afterBNEINV : std_logic; -- signal after inv for BNE
 signal s_afterBNEAnd : std_logic; -- signal going into OR for branch
 signal s_RegWrAddrBefore : std_logic_vector(4 downto 0); -- one mux to another
 signal s_jalAddnext  :  std_logic_vector(31 downto 0); -- NEW
+
+--------------------
+--PipelineSignals
+--------------------
+--IF/ID reg
+signal s_IF_ID_in :  std_logic_vector(127 downto 0); -- signal going into if/id reg
+signal s_IF_ID_out : std_logic_vector(127 downto 0); -- signal coming out of if/id reg
+--ID stage internal
+signal s_ID_inst : std_logic_vector(31 downto 0); -- instructions for ID stage
+signal s_ID_PC4 : std_logic_vector(31 downto 0); -- PC+4 for ID stage
+signal s_ID_JalAdd : std_logic_vector(31 downto 0); -- JalAdd for ID stage
+signal s_ID_RegWrAddr : std_logic_vector(4 downto 0); -- regWrAddr output from muxes
+signal s_subtractorOut : std_logic_vector(31 downto 0); -- zero logic subtractor output
+signal s_orGateZeroOut : std_logic; -- output of or gate zero logic
+signal s_zeroID : std_logic; -- zero signal in ID stage
+signal s_IDcontrol : std_logic_vector(21 downto 0); -- control signals ID stage
+signal s_ID_imme : std_logic_vector(15 downto 0); -- imme value from instruciton mem for ID stage 
+signal s_rsOutID : std_logic_vector(31 downto 0); -- rs out in ID stage
+signal s_rtOutID : std_logic_vector(31 downto 0); -- rt out in ID stage
+
+--ID/EX Reg
+signal s_ID_EX_in :  std_logic_vector(133 downto 0); -- signal going into ID/EX reg
+signal s_ID_EX_out : std_logic_vector(133 downto 0); -- signal coming out of ID/EX reg
+--EX stage internal
+signal s_aluDataOutEX : std_logic_vector(31 downto 0); -- alu data out EX stage
+signal s_OvflEX : std_logic; -- overflow logic EX stage
+
+--EX/MEM Reg
+signal s_EX_MEM_in :  std_logic_vector(109 downto 0); -- signal going into EX/MEM reg
+signal s_EX_MEM_out : std_logic_vector(109 downto 0); -- signal coming out of EX/MEM reg
+
+--MEM/WB Reg
+signal s_MEM_WB_in :  std_logic_vector(108 downto 0); -- signal going into MEM/WB reg
+signal s_MEM_WB_out : std_logic_vector(108 downto 0); -- signal coming out of MEM/WB reg
+
+--internal WB signals
+signal s_dataInWB : std_logic_vector(31 downto 0); -- reg data in WB stage
+
+-- HW Stall signal
+signal s_stall : std_logic; -- hw stall signal 
+signal s_regStall : std_logic; -- stall signal must be inverted before pipeline reg's
+-- hazard detection signals
+signal s_idRs_exWrAdr : std_logic; -- compare idRs_ex address
+signal s_idRt_exWrAdr : std_logic; -- compare idRt_ex address
+signal s_id_exSameReg : std_logic; -- both rt/rs to ex comparison signals
+signal s_id_exStall : std_logic; -- id_ex stall signal
+
+signal s_idRs_memWrAdr : std_logic; -- compare idRs_mem address
+signal s_idRt_memWrAdr : std_logic; -- compare idRt_mem address
+signal s_id_memSameReg : std_logic; -- both rt/rs to ex comparison signals
+signal s_id_memStall : std_logic; -- id_mem stall signal
 -----------------------
 --Large components
 -----------------------
@@ -185,15 +236,119 @@ port (
   
   -- Instruction input
   i_Instruction   : IN STD_LOGIC_VECTOR(31 downto 0); -- Instruction output
+  i_PcLast        : IN STD_LOGIC_VECTOR(31 downto 0);
+  
   -- Ouput
   o_PCAddress     : OUT STD_LOGIC_VECTOR(31 downto 0); -- PC Address for JAL box
   o_jalAdd  : OUT STD_LOGIC_VECTOR(31 downto 0) -- NEW
 );
   end component;
 
+-----------------------
+component andgN is
+  port(
+         i_A    : in std_logic_vector(4 downto 0);
+         i_B    : in std_logic_vector(4 downto 0);
+         o_F    : out std_logic_vector(4 downto 0)
+    );
+  end component;
+
+
+-----------------------
+--Zero output "unit"
+-----------------------
+
+component adderSubS is 
+port(
+     i_D0    : in std_logic_vector(31 downto 0); -- reg A input
+     i_D1   : in std_logic_vector(31 downto 0); -- reg B input
+     i_SEL  : in std_logic;
+     o_O    : out std_logic_vector(31 downto 0);
+     o_Cout : out std_logic);
+
+     end component;
+
+component orG32b
+
+port(
+       D0, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, D14, D15, D16,
+   D17, D18, D19, D20, D21, D22, D23, D24, D25, D26, D27, D28, D29, D30, D31 : in std_logic;
+   o_Out : out std_logic);
+
+end component;
+
+-----------------------
+--Branching unit
+-----------------------
+
+component andg2 is 
+
+port(i_A          : in std_logic;
+i_B          : in std_logic;
+o_F          : out std_logic);
+
+  end component;
+
+
+component invg is 
+port(i_A          : in std_logic;
+o_F          : out std_logic);
+
+  end component;
+
+component org2 is 
+
+port(i_A          : in std_logic;
+i_B          : in std_logic;
+o_F          : out std_logic);
+
+  end component;
 
 
 
+-----------------------
+--Pipeline Registers
+-----------------------
+component IF_ID_Reg is 
+port (
+i_CLK        : in std_logic;
+i_RST         : in std_logic;
+i_WE         : in std_logic;
+i_D          : in std_logic_vector(127 downto 0);
+o_Q       : out std_logic_vector(127 downto 0));
+
+  end component;
+
+component ID_EX_Reg is 
+port (
+i_CLK        : in std_logic;
+i_RST         : in std_logic;
+i_WE         : in std_logic;
+i_D          : in std_logic_vector(133 downto 0);
+o_Q       : out std_logic_vector(133 downto 0));
+
+  end component;
+
+
+component EX_MEM_Reg is 
+port (
+i_CLK        : in std_logic;
+i_RST         : in std_logic;
+i_WE         : in std_logic;
+i_D          : in std_logic_vector(109 downto 0);
+o_Q       : out std_logic_vector(109 downto 0));
+
+  end component;
+
+  component MEM_WB_Reg is 
+port (
+i_CLK        : in std_logic;
+i_RST         : in std_logic;
+i_WE         : in std_logic;
+i_D          : in std_logic_vector(108 downto 0);
+o_Q       : out std_logic_vector(108 downto 0));
+
+  end component;
 
 
 
@@ -261,32 +416,6 @@ port(
 
   end component;
 
-----------------------
---branching "unit"
-----------------------
-
-component andg2 is 
-
-port(i_A          : in std_logic;
-i_B          : in std_logic;
-o_F          : out std_logic);
-
-  end component;
-
-
-component invg is 
-port(i_A          : in std_logic;
-o_F          : out std_logic);
-
-  end component;
-
-component org2 is 
-
-port(i_A          : in std_logic;
-i_B          : in std_logic;
-o_F          : out std_logic);
-
-  end component;
 
 
 
@@ -329,35 +458,172 @@ port map(
   i_CLK  => iCLK,       
   i_RST  => iRST,        
   -- Register inputs
-  i_JReg =>  s_rsOut,
+  i_JReg =>  s_rsOutID,
   -- Control logic inputs
   i_BranchLogic => s_branchUnit,
-  i_JumpLogic   => s_controlOut(13),
-  i_JRegLogic   => s_controlOut(11),   
- 
+  i_JumpLogic   => s_IDcontrol(13),
+  i_JRegLogic   => s_IDcontrol(11),   
   -- Instruction input
-  i_Instruction => s_Inst,-- Instruction output
+  i_Instruction => s_ID_inst,-- Instruction output
+  i_PcLast      => s_ID_PC4,
   -- Ouput
   o_PCAddress   => s_NextInstAddr,
   o_jalAdd      => s_jalAddnext); -- NEW
 
 
-  BranchEqualAnd : andg2
+ 
+
+------------------
+--between imem and reg
+------------------
+
+------------------
+--IF/ID 
+------------------
+
+--IF/ID input signal
+s_IF_ID_in(31 downto 0) <= s_Inst;
+s_IF_ID_in(63 downto 32) <= s_jalAddnext; -- same as PC+4
+s_IF_ID_in(95 downto 64) <= s_jalAddnext; -- save jal instruction (duplicate)
+
+-- IF/ID output signal
+s_ID_inst <= s_IF_ID_out(31 downto 0);
+s_ID_PC4 <= s_IF_ID_out(63 downto 32);
+s_ID_JalAdd <= s_IF_ID_out(95 downto 64);
+s_ID_imme <= s_ID_inst(15 downto 0);
+-- Zero logic Subtractor output signals
+
+g_stallReginvg : invg 
+port MAP(
+       i_A   => s_stall,
+       o_F   => s_regStall);
+
+
+
+IfIdReg : IF_ID_Reg
+ 
+ port map(
+  i_CLK  => iCLK,
+  i_RST  => iRST,
+  i_WE   => s_regStall,   
+  i_D    => s_IF_ID_in,
+  o_Q      => s_IF_ID_out);
+ 
+
+muxWrAddr : mux2t1_5b
+
+port map(
+             i_S  => s_IDcontrol(16), 
+             i_D0 => s_ID_inst(15 downto 11), 
+             i_D1 => s_ID_inst(20 downto 16),   
+             o_O  => s_RegWrAddrBefore);
+
+
+muxWrAddr02 : mux2t1_5b
+
+port map(
+             i_S  => s_IDcontrol(12), 
+             i_D0 => s_RegWrAddrBefore, 
+             i_D1 => "11111",   
+             o_O  => s_ID_RegWrAddr);
+
+
+ RegisterMod : MIPSregister 
+
+ port map(i_CLK => iCLK,
+          i_enable  => s_regWr, -- to add
+          i_rd      => s_RegWrAddr, -- addr
+          i_rs      => s_ID_inst(25 downto 21), 
+          i_rt      => s_ID_inst(20 downto 16), 
+          i_rdindata => s_RegWrData, --to add
+          i_reset    => iRST, 
+          o_rsOUT    => s_rsOutID,
+          o_rtOUT    => s_rtOutID);
+
+
+  controlUnit : control_logic 
+
+  port map(i_DOpcode   => s_ID_inst(31 downto 26),
+           i_DFunc     => s_ID_inst(5 downto 0),
+           o_signals =>  s_IDcontrol);
+
+
+------------------
+-- Zero "Unit"
+------------------
+
+subtractor : adderSubs
+ port map(
+
+     i_D0  => s_rsOutID, -- reg A input
+     i_D1  => s_rtOutID, -- reg B input
+     i_SEL => '1',
+     o_O   => s_subtractorOut,
+     o_Cout => open);
+ 
+
+     g_orG32 : orG32b
+     port MAP(
+       D0 => s_subtractorOut(0),
+       D1 => s_subtractorOut(1), 
+       D2 => s_subtractorOut(2), 
+       D3 => s_subtractorOut(3), 
+       D4 => s_subtractorOut(4), 
+       D5 => s_subtractorOut(5), 
+       D6 => s_subtractorOut(6), 
+       D7 => s_subtractorOut(7), 
+       D8 => s_subtractorOut(8), 
+       D9 => s_subtractorOut(9), 
+       D10 => s_subtractorOut(10), 
+       D11 => s_subtractorOut(11), 
+       D12 => s_subtractorOut(12), 
+       D13 => s_subtractorOut(13), 
+       D14 => s_subtractorOut(14), 
+       D15 => s_subtractorOut(15), 
+       D16 => s_subtractorOut(16),
+       D17 => s_subtractorOut(17), 
+       D18 => s_subtractorOut(18),
+             D19 => s_subtractorOut(19),
+              D20 => s_subtractorOut(20),
+              D21 => s_subtractorOut(21), 
+              D22 => s_subtractorOut(22),
+              D23 => s_subtractorOut(23),
+              D24 => s_subtractorOut(24),
+              D25 => s_subtractorOut(25),
+              D26 => s_subtractorOut(26),
+              D27 => s_subtractorOut(27),
+              D28 => s_subtractorOut(28), 
+              D29 => s_subtractorOut(29),
+              D30 => s_subtractorOut(30),
+              D31 => s_subtractorOut(31),
+              o_Out        => s_orGateZeroOut);
+   
+   
+   g_invg : invg 
+     port MAP(
+            i_A   => s_orGateZeroOut,
+            o_F   => s_zeroID);
+   
+
+------------------
+-- branch "unit" -- do we need fetch logic in decode unit??
+------------------
+ BranchEqualAnd : andg2
   port map(
-    i_A     =>  s_controlOut(15),
-    i_B     =>  s_zero,
+    i_A     =>  s_IDcontrol(15),
+    i_B     =>  s_zeroID,
     o_F     => s_afterBEAnd);
 
     BranchNotEqualAnd : andg2
     port map(
-      i_A     =>  s_controlOut(14),
+      i_A     =>  s_IDcontrol(14),
       i_B     =>  s_afterBNEINV,
       o_F     => s_afterBNEAnd);
 
 
    BranchInv : invg 
    port map(
-    i_A  => s_zero,     
+    i_A  => s_zeroID,     
     o_F  =>  s_afterBNEINV);
    
 
@@ -366,62 +632,45 @@ port map(
       i_A    => s_afterBEAnd,
       i_B    => s_afterBNEAnd,
       o_F    => s_branchUnit);
-
-------------------
---between imem and reg
-------------------
-
-
-muxWrAddr : mux2t1_5b
-
-port map(
-             i_S  => s_controlOut(16), 
-             i_D0 => s_Inst(15 downto 11), 
-             i_D1 => s_Inst(20 downto 16),   
-             o_O  => s_RegWrAddrBefore);
-
-
-muxWrAddr02 : mux2t1_5b
-
-port map(
-             i_S  => s_controlOut(12), 
-             i_D0 => s_RegWrAddrBefore, 
-             i_D1 => "11111",   
-             o_O  => s_RegWrAddr);
-
-
-
-muxjal : mux2t1_N
-
-port map(
-             i_S  => s_controlOut(12), 
-             i_D0 => s_databeforeMux, 
-             i_D1 => s_jalAddnext, -- was PCnextAddress   
-             o_O  => s_RegWrData);
-
-
-
- RegisterMod : MIPSregister 
-
- port map(i_CLK => iCLK,
-          i_enable  => s_RegWr,
-          i_rd      => s_RegWrAddr, 
-          i_rs      => s_Inst(25 downto 21), 
-          i_rt      => s_Inst(20 downto 16), 
-          i_rdindata => s_RegWrData,
-          i_reset    => iRST, 
-          o_rsOUT    => s_rsOut,
-          o_rtOUT    => s_rtOut);
-
-
-  controlUnit : control_logic 
-
-  port map(i_DOpcode   => s_Inst(31 downto 26),
-           i_DFunc     => s_Inst(5 downto 0),
-           o_signals =>  s_controlOut);
-
+           
 
   
+
+
+------------------
+--ID/EX
+------------------
+--ID/EX input signal
+s_ID_EX_in(0) <= s_IDcontrol(12); -- JalSel
+s_ID_EX_in(1) <= s_IDcontrol(0); -- Halt
+s_ID_EX_in(4 downto 2) <= s_IDcontrol(3 downto 1); -- s_Load
+s_ID_EX_in(5) <= s_IDcontrol(4); -- s_vshift
+s_ID_EX_in(6) <= s_IDcontrol(5); -- s_sign ext (zero/sign)
+s_ID_EX_in(7) <= s_IDcontrol(6); -- s_overflow
+s_ID_EX_in(8) <= s_IDcontrol(17); -- regWrite
+s_ID_EX_in(9) <= s_IDcontrol(18); -- Dmem write
+s_ID_EX_in(10) <= s_IDcontrol(19); -- memToReg
+s_ID_EX_in(11) <= s_IDcontrol(20); -- addSub
+s_ID_EX_in(12) <= s_IDcontrol(21); -- Alu Src
+s_ID_EX_in(16 downto 13) <= s_IDcontrol(10 downto 7); -- AluOp sel
+s_ID_EX_in(21 downto 17) <= s_ID_RegWrAddr; -- Write Addr
+s_ID_EX_in(37 downto 22) <= s_ID_imme; -- Imme 
+s_ID_EX_in(69 downto 38) <= s_rsOutID; -- rs 
+s_ID_EX_in(101 downto 70) <= s_rtOutID; -- rt
+s_ID_EX_in(133 downto 102) <= s_ID_JalAdd; -- Jal 
+
+
+
+
+IDEXReg : ID_EX_Reg
+ 
+ port map(
+  i_CLK  => iCLK,
+  i_RST  => iRST,
+  i_WE   => '1',   
+  i_D    => s_ID_EX_in,
+  o_Q      => s_ID_EX_out);
+
 ------------------
 --between reg and ALU
 ------------------
@@ -429,43 +678,97 @@ port map(
 ALUmod : ALU
  
  port map(
-      i_A => s_rsOut,  
-      i_B => s_rtOut,   
-      i_imme => s_Inst(15 downto 0),
-      i_zeroSignSEL => s_controlOut(5),  
-      i_SEL         => s_controlOut(20),
-      ALUSrc        => s_controlOut(21),
-      i_ALUOpSel    => s_controlOut(10 downto 7), 
-      o_DataOut     => s_aluDataOut,
-      i_sOverFlow   => s_controlOut(6),
-      o_zero        => s_zero,
-      o_overFlow    => s_Ovfl);
+      i_A => s_ID_EX_out(69 downto 38),  
+      i_B => s_ID_EX_out(101 downto 70),   
+      i_imme => s_ID_EX_out(37 downto 22),
+      i_zeroSignSEL => s_ID_EX_out(6),  
+      i_SEL         => s_ID_EX_out(11),
+      ALUSrc        => s_ID_EX_out(12),
+      i_ALUOpSel    => s_ID_EX_out(16 downto 13), 
+      o_DataOut     => s_aluDataOutEX,
+      i_sOverFlow   => s_ID_EX_out(7),
+      o_zero        => open,
+      o_overFlow    => s_OvflEX);
 
 
-s_DMemAddr      <= s_aluDataOut ;
-oALUOut         <= s_aluDataOut  ;
-s_DMemData       <= s_rtOut  ;
-s_DMemWr        <= s_controlOut(18);
-s_rd            <= s_Inst(15 downto 11);
-s_rt            <= s_Inst(20 downto 16);
-s_rs            <= s_Inst(25 downto 21);
-s_Halt          <= s_controlOut(0);
-s_regWr         <= s_controlOut(17);
 
+------------------
+--EX/MEM
+------------------
+--EX/MEM input signal
+s_EX_MEM_in(0) <= s_ID_EX_out(0); -- JalSel
+s_EX_MEM_in(1) <= s_ID_EX_out(1); -- Halt
+s_EX_MEM_in(4 downto 2) <= s_ID_EX_out(4 downto 2); -- s_load
+s_EX_MEM_in(5) <= s_ID_EX_out(7); -- overflow
+s_EX_MEM_in(6) <= s_ID_EX_out(8); -- regWrite
+s_EX_MEM_in(7) <= s_ID_EX_out(9); -- Dmem write
+s_EX_MEM_in(8) <= s_ID_EX_out(10); -- memtoreg
+s_EX_MEM_in(40 downto 9) <= s_ID_EX_out(133 downto 102); -- Jal
+s_EX_MEM_in(72 downto 41) <= s_aluDataOutEX; -- dataOutEX
+s_EX_MEM_in(104 downto 73) <= s_ID_EX_out(101 downto 70); -- RT
+s_EX_MEM_in(109 downto 105) <= s_ID_EX_out(21 downto 17); -- write addr
+
+EXMEMReg : EX_MEM_Reg
+ 
+ port map(
+  i_CLK  => iCLK,
+  i_RST  => iRST,
+  i_WE   => '1',   
+  i_D    => s_EX_MEM_in,
+  o_Q      => s_EX_MEM_out);
+
+
+
+  s_DMemAddr      <= s_EX_MEM_out(72 downto 41);
+  s_DMemData       <= s_EX_MEM_out(104 downto 73);
+  s_DMemWr        <= s_EX_MEM_out(7);
+
+------------------
+--MEM/WB
+------------------
+--MEM/WB input signal
+s_MEM_WB_in(0) <= s_EX_MEM_out(0); -- JalSel
+s_MEM_WB_in(1) <= s_EX_MEM_out(1); -- Halt
+s_MEM_WB_in(4 downto 2) <= s_EX_MEM_out(4 downto 2); -- s_load
+s_MEM_WB_in(5) <= s_EX_MEM_out(5); -- overflow
+s_MEM_WB_in(6) <= s_EX_MEM_out(6); -- regWrite
+s_MEM_WB_in(7) <= s_EX_MEM_out(8); -- mem to reg
+s_MEM_WB_in(39 downto 8) <= s_EX_MEM_out(40 downto 9); -- jal
+s_MEM_WB_in(71 downto 40) <= s_EX_MEM_out(72 downto 41); -- dataOut
+s_MEM_WB_in(103 downto 72) <= s_DMemOut; -- Read Data (data out from dmem)
+s_MEM_WB_in(108 downto 104) <= s_EX_MEM_out(109 downto 105); -- write addr
+
+
+MEMWBReg : MEM_WB_Reg
+ 
+ port map(
+  i_CLK  => iCLK,
+  i_RST  => iRST,
+  i_WE   => '1',   
+  i_D    => s_MEM_WB_in,
+  o_Q      => s_MEM_WB_out);
+
+
+
+
+s_Halt          <= s_MEM_WB_out(1); -- COULD BE WRONG (idk where this can be (ID stage?))
+s_regWr         <= s_MEM_WB_out(6);
+oALUOut         <= s_MEM_WB_out(71 downto 40); -- COULD BE WRONG (maybe be at alu out location instead of WB stage)
+s_RegWrAddr     <= s_MEM_WB_out(108 downto 104);
 
 muxmemToReg : mux2t1_N
 
 port map(
-             i_S  => s_controlOut(19), 
-             i_D0 => s_aluDataOut, 
-             i_D1 => s_DMemOut,   
+             i_S  => s_MEM_WB_out(7), 
+             i_D0 => s_MEM_WB_out(71 downto 40), 
+             i_D1 => s_MEM_WB_out(103 downto 72),   
              o_O  => s_memRegMuxOut);
 
  loadMemModuleMod : loadMemModule
  
  port map(
      i_memData   =>  s_memRegMuxOut,
-     i_addrData  =>  s_aluDataOut(1 downto 0),
+     i_addrData  =>  s_MEM_WB_out(41 downto 40),
      o_LB        => s_lb, 
      o_LBU       => s_lbu,
      o_LH        => s_lh,
@@ -484,16 +787,117 @@ port map(
     D6 => s_memRegMuxOut, --not used
     D7 => s_memRegMuxOut, -- not used
     o_OUT => s_databeforeMux,
-    SEL => s_controlOut(3 downto 1));
+    SEL => s_MEM_WB_out(4 downto 2));
 
   
 
- 
+    muxjal : mux2t1_N
 
+    port map(
+                 i_S  => s_MEM_WB_out(0), 
+                 i_D0 => s_databeforeMux, 
+                 i_D1 => s_MEM_WB_out(39 downto 8), -- was PCnextAddress   
+                 o_O  => s_RegWrData);
+
+
+-----------------------
+---Hazard dection unit 
+-----------------------
+
+-- ID reg inputs and EX destReg comparisons
+  idRs_exWrAdrAND : andgN
+
+  port map(
+                 i_A => s_ID_inst(25 downto 21); -- ID rs
+                 i_B => s_ID_EX_out(21 downto 17); -- EX wr addr
+                 o_F => s_idRs_exWrAdr;
+  );
+
+  idRt_exWrAdrAND : andgN
+
+  port map(
+                 i_A => s_ID_inst(20 downto 16); -- ID rt
+                 i_B => s_ID_EX_out(21 downto 17); -- EX wr addr
+                 o_F => s_idRt_exWrAdr;
+  );
+
+
+  id_exHazardOr : org2
+
+  port map(
+                  i_A => s_idRs_exWrAdr; -- rs comparison
+                  i_B => s_idRt_exWrAdr; -- rt comparison
+                  o_F => s_id_exSameReg; -- signal if these have same regs
+  );
+
+
+ id_exHazardAnd : andg2
+ 
+ port map(
+                  i_A => s_id_exSameReg; -- --same regs
+                  i_B => s_ID_EX_out(8); -- see if wb is enabled
+                  o_F => s_id_exStall; -- stall signal for id_ex
+);
+
+-- ID reg inputs and MEM destReg comparisons
+
+idRs_memWrAdrAND : andgN
+
+port map(
+               i_A => s_ID_inst(25 downto 21); -- ID rs
+               i_B => s_EX_MEM_out(109 downto 105); -- MEM wr addr
+               o_F => s_idRs_memWrAdr;
+);
+
+idRt_memWrAdrAND : andgN
+
+port map(
+               i_A => s_ID_inst(20 downto 16); -- ID rt
+               i_B => s_EX_MEM_out(109 downto 105); -- MEM wr addr
+               o_F => s_idRt_memWrAdr;
+);
+
+
+id_memHazardOr : org2
+
+port map(
+                i_A => s_idRs_memWrAdr; -- rs comparison
+                i_B => s_idRt_memWrAdr; -- rt comparison
+                o_F => s_id_memSameReg; -- signal if these have same regs
+);
+
+
+id_memHazardAnd : andg2
+
+port map(
+                i_A => s_id_memSameReg; -- --same regs
+                i_B => s_EX_MEM_out(6); -- see if wb is enabled 
+                o_F => s_id_memStall; -- stall signal for id_ex
+);
+
+-- final or gate to combine both stall stages into one signal
+
+  
+finalStallOR : org2
+
+port map(
+                i_A => s_id_exStall, --id_ex stall
+                i_B => s_id_memStall; -- id_mem stall
+                o_F => s_stall --  stall signal
+);
+
+-- signal s_idRs_exWrAdr : std_logic; -- compare idRs_ex address
+-- signal s_idRt_exWrAdr : std_logic; -- compare idRt_ex address
+-- signal s_id_exSameReg : std_logic; -- both rt/rs to ex comparison signals
+-- signal s_id_exStall : std_logic; -- id_ex stall signal
+
+-- signal s_idRs_memWrAdr : std_logic; -- compare idRs_mem address
+-- signal s_idRt_memWrAdr : std_logic; -- compare idRt_mem address
+-- signal s_id_memSameReg : std_logic; -- both rt/rs to ex comparison signals
+-- signal s_id_memStall : std_logic; -- id_mem stall signal
 
 
 
   -- TODO: Implement the rest of your processor below this comment! 
 
 end structure;
-
