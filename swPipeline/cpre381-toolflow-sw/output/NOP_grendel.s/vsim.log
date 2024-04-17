@@ -3,8 +3,12 @@ Reading pref.tcl
 # 2023.2_2
 
 # vsim -postsimdataflow -debugdb -c -voptargs=""+acc"" tb -do "modelsim_framework.do" -gOUTPUT_TRACE=ms.trace 
-# Start time: 18:03:27 on Apr 07,2024
-# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Start time: 13:13:16 on Apr 15,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-4301) Memory core inferred for signal 'ram' width=32, depth=1024, type=RAM at location proj/src/mem.vhd:35
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # //  Questa Sim-64
 # //  Version 2023.2_2 linux_x86_64 Jun  9 2023
 # //
@@ -48,7 +52,8 @@ Reading pref.tcl
 # Loading work.mux2t1_5b(structural)#1
 # Loading work.mipsregister(structure)#1
 # Loading work.decoder5_32(decoder)#1
-# Loading work.dffgn(structural)#1
+# Loading work.dffgnn(structural)#1
+# Loading work.dffgn(mixed)#1
 # Loading work.mux32_1(mux)#1
 # Loading work.control_logic(flow)#1
 # Loading work.addersubs(structure)#1
@@ -79,19 +84,17 @@ Reading pref.tcl
 # Loading work.mux16b2t1(mux)#1
 # Loading work.bit_extenders24b(flow)#1
 # Loading work.mux32b3t1(mux)#1
-# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
 # do modelsim_framework.do
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/DMem
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/IMem
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 400 ns  Iteration: 5  Instance: /tb/MyMips/IMem
-# ** Note: Data structure takes 80340888 bytes of memory
-#          Process time 0.11 seconds
+# ** Note: Data structure takes 82347304 bytes of memory
+#          Process time 0.92 seconds
 #          stop
-#    Time: 440 ns  Iteration: 1  Instance: /tb
-# Break in Process P_DUMP_STATE at /home/kosice/Documents/cpre381TermProjNEW-EMIL/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/internal/testpy/tb.vhd line 150
-# Stopped at /home/kosice/Documents/cpre381TermProjNEW-EMIL/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/internal/testpy/tb.vhd line 150
-# End time: 18:03:28 on Apr 07,2024, Elapsed time: 0:00:01
+#    Time: 114340 ns  Iteration: 1  Instance: /tb
+# Break in Process P_DUMP_STATE at /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/internal/testpy/tb.vhd line 150
+# Stopped at /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/internal/testpy/tb.vhd line 150
+# End time: 13:13:21 on Apr 15,2024, Elapsed time: 0:00:05
 # Errors: 0, Warnings: 3
