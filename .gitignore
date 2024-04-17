@@ -32,19 +32,23 @@
 
 # toolflow ignore
 cpu/cpre381-toolflow-cpu/internal
+cpu/cpre381-toolflow-cpu/internal/
 cpu/cpre381-toolflow-cpu/containers
 cpu/cpre381-toolflow-cpu/output
 cpu/cpre381-toolflow-cpu/output/*
 cpu/cpre381-toolflow-cpu/output/
 
 swPipeline/cpre381-toolflow-sw/internal
+swPipeline/cpre381-toolflow-sw/internal/
 swPipeline/cpre381-toolflow-sw/containers
 swPipeline/cpre381-toolflow-sw/output
 swPipeline/cpre381-toolflow-sw/output/*
 swPipeline/cpre381-toolflow-sw/output/
 
 hwPipeline/cpre381-toolflow-hw/internal
+hwPipeline/cpre381-toolflow-hw/internal/
 hwPipeline/cpre381-toolflow-hw/containers
 hwPipeline/cpre381-toolflow-hw/output
 hwPipeline/cpre381-toolflow-hw/output/*
 hwPipeline/cpre381-toolflow-hw/output/
+
