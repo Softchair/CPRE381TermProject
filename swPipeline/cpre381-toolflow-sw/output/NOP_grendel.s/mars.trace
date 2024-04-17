@@ -40,7 +40,7 @@ Register Write to Reg: 0x02 Val: 0x00000000
 [inst #26] nop 
 [inst #27] nop 
 [inst #28] nop 
-[inst #29] sltiu $2,$2,4
+[inst #29] slti $2,$2,4
 Register Write to Reg: 0x02 Val: 0x00000001
 [inst #30] nop 
 [inst #31] nop 
@@ -133,7 +133,7 @@ Register Write to Reg: 0x02 Val: 0x00000000
 [inst #92] nop 
 [inst #93] nop 
 [inst #94] nop 
-[inst #95] sltu $2,$0,$2
+[inst #95] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000000
 [inst #96] nop 
 [inst #97] nop 
@@ -531,7 +531,7 @@ Register Write to Reg: 0x02 Val: 0x00000000
 [inst #365] nop 
 [inst #366] nop 
 [inst #367] nop 
-[inst #368] sltu $2,$0,$2
+[inst #368] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000000
 [inst #369] nop 
 [inst #370] nop 
@@ -746,7 +746,7 @@ Register Write to Reg: 0x02 Val: 0x00000002
 [inst #523] nop 
 [inst #524] nop 
 [inst #525] nop 
-[inst #526] sltu $2,$0,$2
+[inst #526] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000001
 [inst #527] nop 
 [inst #528] nop 
@@ -946,7 +946,7 @@ Register Write to Reg: 0x02 Val: 0x00000000
 [inst #670] nop 
 [inst #671] nop 
 [inst #672] nop 
-[inst #673] sltu $2,$0,$2
+[inst #673] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000000
 [inst #674] nop 
 [inst #675] nop 
@@ -1386,7 +1386,7 @@ Register Write to Reg: 0x02 Val: 0x00000000
 [inst #976] nop 
 [inst #977] nop 
 [inst #978] nop 
-[inst #979] sltu $2,$0,$2
+[inst #979] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000000
 [inst #980] nop 
 [inst #981] nop 
@@ -1601,7 +1601,7 @@ Register Write to Reg: 0x02 Val: 0x00000000
 [inst #1134] nop 
 [inst #1135] nop 
 [inst #1136] nop 
-[inst #1137] sltu $2,$0,$2
+[inst #1137] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000000
 [inst #1138] nop 
 [inst #1139] nop 
@@ -1858,7 +1858,7 @@ Register Write to Reg: 0x02 Val: 0x00000000
 [inst #1325] nop 
 [inst #1326] nop 
 [inst #1327] nop 
-[inst #1328] sltu $2,$0,$2
+[inst #1328] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000000
 [inst #1329] nop 
 [inst #1330] nop 
@@ -2157,7 +2157,7 @@ Register Write to Reg: 0x02 Val: 0x00000000
 [inst #1549] nop 
 [inst #1550] nop 
 [inst #1551] nop 
-[inst #1552] sltu $2,$0,$2
+[inst #1552] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000000
 [inst #1553] nop 
 [inst #1554] nop 
@@ -2612,7 +2612,7 @@ Register Write to Reg: 0x02 Val: 0x00000004
 [inst #1875] nop 
 [inst #1876] nop 
 [inst #1877] nop 
-[inst #1878] sltu $2,$0,$2
+[inst #1878] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000001
 [inst #1879] nop 
 [inst #1880] nop 
@@ -2853,7 +2853,7 @@ Register Write to Reg: 0x02 Val: 0x00000000
 [inst #2054] nop 
 [inst #2055] nop 
 [inst #2056] nop 
-[inst #2057] sltu $2,$0,$2
+[inst #2057] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000000
 [inst #2058] nop 
 [inst #2059] nop 
@@ -3335,7 +3335,7 @@ Register Write to Reg: 0x02 Val: 0x00000000
 [inst #2393] nop 
 [inst #2394] nop 
 [inst #2395] nop 
-[inst #2396] sltu $2,$0,$2
+[inst #2396] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000000
 [inst #2397] nop 
 [inst #2398] nop 
@@ -3550,7 +3550,7 @@ Register Write to Reg: 0x02 Val: 0x00000000
 [inst #2551] nop 
 [inst #2552] nop 
 [inst #2553] nop 
-[inst #2554] sltu $2,$0,$2
+[inst #2554] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000000
 [inst #2555] nop 
 [inst #2556] nop 
@@ -3807,7 +3807,7 @@ Register Write to Reg: 0x02 Val: 0x00000000
 [inst #2742] nop 
 [inst #2743] nop 
 [inst #2744] nop 
-[inst #2745] sltu $2,$0,$2
+[inst #2745] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000000
 [inst #2746] nop 
 [inst #2747] nop 
@@ -4106,7 +4106,7 @@ Register Write to Reg: 0x02 Val: 0x00000000
 [inst #2966] nop 
 [inst #2967] nop 
 [inst #2968] nop 
-[inst #2969] sltu $2,$0,$2
+[inst #2969] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000000
 [inst #2970] nop 
 [inst #2971] nop 
@@ -4603,7 +4603,7 @@ Register Write to Reg: 0x02 Val: 0x00000000
 [inst #3325] nop 
 [inst #3326] nop 
 [inst #3327] nop 
-[inst #3328] sltu $2,$0,$2
+[inst #3328] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000000
 [inst #3329] nop 
 [inst #3330] nop 
@@ -4819,7 +4819,7 @@ Register Write to Reg: 0x02 Val: 0x00000001
 [inst #3476] nop 
 [inst #3477] nop 
 [inst #3478] nop 
-[inst #3479] sltiu $2,$2,4
+[inst #3479] slti $2,$2,4
 Register Write to Reg: 0x02 Val: 0x00000001
 [inst #3480] nop 
 [inst #3481] nop 
@@ -4954,7 +4954,7 @@ Register Write to Reg: 0x02 Val: 0x00000100
 [inst #3575] nop 
 [inst #3576] nop 
 [inst #3577] nop 
-[inst #3578] sltu $2,$0,$2
+[inst #3578] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000001
 [inst #3579] nop 
 [inst #3580] nop 
@@ -4999,7 +4999,7 @@ Register Write to Reg: 0x02 Val: 0x00000002
 [inst #3609] nop 
 [inst #3610] nop 
 [inst #3611] nop 
-[inst #3612] sltiu $2,$2,4
+[inst #3612] slti $2,$2,4
 Register Write to Reg: 0x02 Val: 0x00000001
 [inst #3613] nop 
 [inst #3614] nop 
@@ -5176,7 +5176,7 @@ Register Write to Reg: 0x02 Val: 0x00010000
 [inst #3741] nop 
 [inst #3742] nop 
 [inst #3743] nop 
-[inst #3744] sltu $2,$0,$2
+[inst #3744] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000001
 [inst #3745] nop 
 [inst #3746] nop 
@@ -5221,7 +5221,7 @@ Register Write to Reg: 0x02 Val: 0x00000003
 [inst #3775] nop 
 [inst #3776] nop 
 [inst #3777] nop 
-[inst #3778] sltiu $2,$2,4
+[inst #3778] slti $2,$2,4
 Register Write to Reg: 0x02 Val: 0x00000001
 [inst #3779] nop 
 [inst #3780] nop 
@@ -5440,7 +5440,7 @@ Register Write to Reg: 0x02 Val: 0x00000000
 [inst #3940] nop 
 [inst #3941] nop 
 [inst #3942] nop 
-[inst #3943] sltu $2,$0,$2
+[inst #3943] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000000
 [inst #3944] nop 
 [inst #3945] nop 
@@ -5964,7 +5964,7 @@ Register Write to Reg: 0x02 Val: 0x00000001
 [inst #4312] nop 
 [inst #4313] nop 
 [inst #4314] nop 
-[inst #4315] sltu $2,$0,$2
+[inst #4315] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000001
 [inst #4316] nop 
 [inst #4317] nop 
@@ -6122,7 +6122,7 @@ Register Write to Reg: 0x02 Val: 0x00000001
 [inst #4426] nop 
 [inst #4427] nop 
 [inst #4428] nop 
-[inst #4429] sltu $2,$0,$2
+[inst #4429] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000001
 [inst #4430] nop 
 [inst #4431] nop 
@@ -6363,7 +6363,7 @@ Register Write to Reg: 0x02 Val: 0x00000002
 [inst #4601] nop 
 [inst #4602] nop 
 [inst #4603] nop 
-[inst #4604] sltu $2,$0,$2
+[inst #4604] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000001
 [inst #4605] nop 
 [inst #4606] nop 
@@ -6562,7 +6562,7 @@ Register Write to Reg: 0x02 Val: 0x00000100
 [inst #4747] nop 
 [inst #4748] nop 
 [inst #4749] nop 
-[inst #4750] sltu $2,$0,$2
+[inst #4750] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000001
 [inst #4751] nop 
 [inst #4752] nop 
@@ -6845,7 +6845,7 @@ Register Write to Reg: 0x02 Val: 0x00000000
 [inst #4955] nop 
 [inst #4956] nop 
 [inst #4957] nop 
-[inst #4958] sltu $2,$0,$2
+[inst #4958] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000000
 [inst #4959] nop 
 [inst #4960] nop 
@@ -7144,7 +7144,7 @@ Register Write to Reg: 0x02 Val: 0x00000000
 [inst #5179] nop 
 [inst #5180] nop 
 [inst #5181] nop 
-[inst #5182] sltu $2,$0,$2
+[inst #5182] slt $2,$0,$2
 Register Write to Reg: 0x02 Val: 0x00000000
 [inst #5183] nop 
 [inst #5184] nop 
@@ -7360,7 +7360,7 @@ Register Write to Reg: 0x02 Val: 0x00000004
 [inst #5330] nop 
 [inst #5331] nop 
 [inst #5332] nop 
-[inst #5333] sltiu $2,$2,4
+[inst #5333] slti $2,$2,4
 Register Write to Reg: 0x02 Val: 0x00000000
 [inst #5334] nop 
 [inst #5335] nop 

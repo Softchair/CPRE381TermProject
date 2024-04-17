@@ -83,26 +83,26 @@ signal s_branchUnit : std_logic; -- branch unit logic output to mux of fetch
 -------------------
 --control logic
 -------------------
-signal s_controlOut : std_logic_vector(21 downto 0); -- control output signals
+--signal s_controlOut : std_logic_vector(21 downto 0); -- control output signals
 
 -------------------
 --signals from iMEM
 -------------------
 
-signal s_opcode : std_logic_vector(5 downto 0); -- Opcode signal
-signal s_rs : std_logic_vector(4 downto 0); -- rs signal
-signal s_rt : std_logic_vector(4 downto 0); -- rt signal
-signal s_rd : std_logic_vector(4 downto 0); -- rd signal
-signal s_jump : std_logic_vector(25 downto 0); -- rd signal
-signal s_imme : std_logic_vector(15 downto 0); -- immediate signal
-signal s_func : std_logic_vector(5 downto 0); -- func signal
+--signal s_opcode : std_logic_vector(5 downto 0); -- Opcode signal
+--signal s_rs : std_logic_vector(4 downto 0); -- rs signal
+--signal s_rt : std_logic_vector(4 downto 0); -- rt signal
+--signal s_rd : std_logic_vector(4 downto 0); -- rd signal
+--signal s_jump : std_logic_vector(25 downto 0); -- rd signal
+--signal s_imme : std_logic_vector(15 downto 0); -- immediate signal
+--signal s_func : std_logic_vector(5 downto 0); -- func signal
 -------------------
 --signals between register and ALU
 -------------------
-signal s_rsOut: std_logic_vector(31 downto 0); -- rs out of reg
-signal s_rtOut: std_logic_vector(31 downto 0); -- rt out of reg
-signal s_extender : std_logic_vector(31 downto 0); -- extended value going into mux
-signal s_regSelMuxOut : std_logic_vector(4 downto 0); -- mux out
+--signal s_rsOut: std_logic_vector(31 downto 0); -- rs out of reg
+--signal s_rtOut: std_logic_vector(31 downto 0); -- rt out of reg
+--signal s_extender : std_logic_vector(31 downto 0); -- extended value going into mux
+--signal s_regSelMuxOut : std_logic_vector(4 downto 0); -- mux out
 
 -------------------
 --signals from data
@@ -113,13 +113,13 @@ signal s_databeforeMux: std_logic_vector(31 downto 0); -- signal from load byte 
 -------------------
 --signals after ALU
 -------------------
-signal s_aluDataOut : std_logic_vector(31 downto 0); -- signal for data output of ALU
+--signal s_aluDataOut : std_logic_vector(31 downto 0); -- signal for data output of ALU
 signal s_memRegMuxOut : std_logic_vector(31 downto 0); -- signal for data output of memtoregmux
 signal s_lb :  std_logic_vector(31 downto 0); -- lb signal from load module
 signal s_lbu :  std_logic_vector(31 downto 0); -- lbu signal from load module
 signal s_lh :  std_logic_vector(31 downto 0); -- lh signal from load module
 signal s_lhu :  std_logic_vector(31 downto 0); -- lhu signal from load module
-signal s_zero : std_logic; -- for branching 
+--signal s_zero : std_logic; -- for branching 
 signal s_afterBEAnd : std_logic; -- signal going into branch OR
 signal s_afterBNEINV : std_logic; -- signal after inv for BNE
 signal s_afterBNEAnd : std_logic; -- signal going into OR for branch
@@ -161,7 +161,7 @@ signal s_MEM_WB_in :  std_logic_vector(108 downto 0); -- signal going into MEM/W
 signal s_MEM_WB_out : std_logic_vector(108 downto 0); -- signal coming out of MEM/WB reg
 
 --internal WB signals
-signal s_dataInWB : std_logic_vector(31 downto 0); -- reg data in WB stage
+--signal s_dataInWB : std_logic_vector(31 downto 0); -- reg data in WB stage
 -----------------------
 --Large components
 -----------------------
@@ -222,11 +222,10 @@ port (
   
   -- Instruction input
   i_Instruction   : IN STD_LOGIC_VECTOR(31 downto 0); -- Instruction output
-  i_branchAddress : IN STD_LOGIC_VECTOR(31 downto 0);
+  i_PcLast        : IN STD_LOGIC_VECTOR(31 downto 0);
   
   -- Ouput
   o_PCAddress     : OUT STD_LOGIC_VECTOR(31 downto 0); -- PC Address for JAL box
-  o_branchAddress : OUT STD_LOGIC_VECTOR(31 downto 0);
   o_jalAdd  : OUT STD_LOGIC_VECTOR(31 downto 0) -- NEW
 );
   end component;
@@ -435,17 +434,16 @@ port map(
   i_CLK  => iCLK,       
   i_RST  => iRST,        
   -- Register inputs
-  i_JReg =>  s_rsOut,
+  i_JReg =>  s_rsOutID,
   -- Control logic inputs
   i_BranchLogic => s_branchUnit,
   i_JumpLogic   => s_IDcontrol(13),
   i_JRegLogic   => s_IDcontrol(11),   
-  i_branchAddress => s_IF_ID_out(127 downto 96),
   -- Instruction input
-  i_Instruction => s_Inst,-- Instruction output
+  i_Instruction => s_ID_inst,-- Instruction output
+  i_PcLast      => s_ID_PC4,
   -- Ouput
   o_PCAddress   => s_NextInstAddr,
-  o_branchAddress => s_IF_ID_in(127 downto 96),
   o_jalAdd      => s_jalAddnext); -- NEW
 
 
@@ -660,7 +658,7 @@ ALUmod : ALU
       o_DataOut     => s_aluDataOutEX,
       i_sOverFlow   => s_ID_EX_out(7),
       o_zero        => open,
-      o_overFlow    => s_OvflEX);
+      o_overFlow    => s_OvflEX); -- not assigned to anything else (BUG)
 
 
 
@@ -671,7 +669,7 @@ ALUmod : ALU
 s_EX_MEM_in(0) <= s_ID_EX_out(0); -- JalSel
 s_EX_MEM_in(1) <= s_ID_EX_out(1); -- Halt
 s_EX_MEM_in(4 downto 2) <= s_ID_EX_out(4 downto 2); -- s_load
-s_EX_MEM_in(5) <= s_ID_EX_out(7); -- overflow
+s_EX_MEM_in(5) <= s_OvflEX; -- overflow
 s_EX_MEM_in(6) <= s_ID_EX_out(8); -- regWrite
 s_EX_MEM_in(7) <= s_ID_EX_out(9); -- Dmem write
 s_EX_MEM_in(8) <= s_ID_EX_out(10); -- memtoreg
@@ -708,7 +706,7 @@ s_MEM_WB_in(7) <= s_EX_MEM_out(8); -- mem to reg
 s_MEM_WB_in(39 downto 8) <= s_EX_MEM_out(40 downto 9); -- jal
 s_MEM_WB_in(71 downto 40) <= s_EX_MEM_out(72 downto 41); -- dataOut
 s_MEM_WB_in(103 downto 72) <= s_DMemOut; -- Read Data (data out from dmem)
-s_MEM_WB_in(108 downto 104) <= s_EX_MEM_out(109 downto 105); -- write addr
+s_MEM_WB_in(108 downto 104) <= s_EX_MEM_out(109 downto 105); --   addr
 
 
 MEMWBReg : MEM_WB_Reg
@@ -723,10 +721,12 @@ MEMWBReg : MEM_WB_Reg
 
 
 
-s_Halt          <= s_MEM_WB_out(1); -- COULD BE WRONG (idk where this can be (ID stage?))
+s_Halt          <= s_MEM_WB_out(1); 
 s_regWr         <= s_MEM_WB_out(6);
-oALUOut         <= s_MEM_WB_out(71 downto 40); -- COULD BE WRONG (maybe be at alu out location instead of WB stage)
+oALUOut         <= s_MEM_WB_out(71 downto 40);
 s_RegWrAddr     <= s_MEM_WB_out(108 downto 104);
+s_Ovfl          <= s_MEM_WB_out(5);
+-- To do, assign overflow from alu at this stage as well
 
 muxmemToReg : mux2t1_N
 
