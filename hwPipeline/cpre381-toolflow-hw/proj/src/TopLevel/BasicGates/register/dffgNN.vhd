@@ -17,7 +17,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity dffgN is
+entity dffgNN is
   generic(N : integer := 32); -- Generic of type integer for input/output data width. Default value is 32.
   port(i_CLK        : in std_logic;
        i_RST         : in std_logic;
@@ -25,11 +25,11 @@ entity dffgN is
        i_D          : in std_logic_vector(N-1 downto 0);
        o_Q       : out std_logic_vector(N-1 downto 0));
 
-end dffgN;
+end dffgNN;
 
-architecture structural of dffgN is
+architecture structural of dffgNN is
 
-  component dffg is
+  component dffgNF is
     port(i_CLK                  : in std_logic;
          i_RST                 : in std_logic;
          i_WE                 : in std_logic;
@@ -42,7 +42,7 @@ architecture structural of dffgN is
 begin
   -- Instantiate N FF instances.
   G_NBit_DFFG: for i in 0 to N-1 generate
-    MUXI: dffg port map(
+    MUXI: dffgNF port map(
               i_CLK      => i_CLK,      -- All instances share the same select input.
 	      i_RST      => i_RST,
               i_D     => i_D(i),  -- ith instance's data 0 input hooked up to ith data 0 input.

@@ -25,7 +25,7 @@ entity fetch_Logic is
     port (
         i_CLK           : IN STD_LOGIC; -- Clock
         i_RST           : IN STD_LOGIC; -- Reset
-        i_PCWE          : IN STD_LOGIC; -- pc WE for stalling
+        i_PCWE          : IN STD_LOGIC;
         -- Register inputs
         i_JReg          : IN STD_LOGIC_VECTOR(31 downto 0); -- Jump register inputz
         -- Control logic inputs
@@ -49,7 +49,7 @@ architecture mixed of fetch_logic is
         port (
             i_CLK       : IN STD_LOGIC; -- Clock
             i_RST       : IN STD_LOGIC; -- Reset
-            i_WE        : IN STD_LOGIC; -- write enable (newly added)
+            i_WE        : IN STD_LOGIC;
             i_PC        : IN STD_LOGIC_VECTOR(31 downto 0); -- PC in
             o_PC        : OUT STD_LOGIC_VECTOR(31 downto 0) -- PC Out
         );
@@ -140,7 +140,7 @@ architecture mixed of fetch_logic is
             port map(
                 i_CLK   => i_CLK,
                 i_RST   => i_RST,
-                i_WE    => i_PCWE, -- newly added for stalling
+                i_WE  => i_PCWE,
                 i_PC    => s_JumpRegMuxOut, -- New PC
                 o_PC    => s_PCAddressOut -- Cur PC
             );

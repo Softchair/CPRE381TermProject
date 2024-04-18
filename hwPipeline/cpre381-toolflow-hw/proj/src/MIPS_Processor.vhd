@@ -56,6 +56,9 @@ architecture structure of MIPS_Processor is
   -- Required overflow signal -- for overflow exception detection
   signal s_Ovfl         : std_logic;  -- TODO: this signal indicates an overflow exception would have been initiated
 
+
+
+
   component mem is
     generic(ADDR_WIDTH : integer;
             DATA_WIDTH : integer);
@@ -176,6 +179,18 @@ signal s_idRs_memWrAdr : std_logic; -- compare idRs_mem address
 signal s_idRt_memWrAdr : std_logic; -- compare idRt_mem address
 signal s_id_memSameReg : std_logic; -- both rt/rs to ex comparison signals
 signal s_id_memStall : std_logic; -- id_mem stall signal
+
+signal s_controlOutbeforeStall : std_logic_vector(21 downto 0);
+signal s_IDcontrolFinal : std_logic_vector(21 downto 0);
+
+     
+signal s_ID_EX_zero_andg : std_logic;
+signal s_EX_MEM_zero_andg : std_logic;
+signal s_ID_EX_zero : std_logic;
+signal s_ID_MEM_zero  : std_logic;
+signal s_id_exStallFinal  : std_logic;
+signal s_id_memStallFinal : std_logic;
+
 -----------------------
 --Large components
 -----------------------
@@ -227,6 +242,7 @@ component fetch_logic is
 port (
   i_CLK           : IN STD_LOGIC; -- Clock
   i_RST           : IN STD_LOGIC; -- Reset
+  i_PCWE          : IN STD_LOGIC; 
   -- Register inputs
   i_JReg          : IN STD_LOGIC_VECTOR(31 downto 0); -- Jump register input
   -- Control logic inputs
@@ -243,16 +259,6 @@ port (
   o_jalAdd  : OUT STD_LOGIC_VECTOR(31 downto 0) -- NEW
 );
   end component;
-
------------------------
-component andgN is
-  port(
-         i_A    : in std_logic_vector(4 downto 0);
-         i_B    : in std_logic_vector(4 downto 0);
-         o_F    : out std_logic_vector(4 downto 0)
-    );
-  end component;
-
 
 -----------------------
 --Zero output "unit"
@@ -352,6 +358,15 @@ o_Q       : out std_logic_vector(108 downto 0));
 
 
 
+-----------------------
+--Extra gates
+-----------------------
+component andG5b is 
+port(i_A          : in std_logic_vector(4 downto 0);
+i_B          : in std_logic_vector(4 downto 0);
+o_F          : out std_logic);
+
+  end component;
 
 
 
@@ -374,6 +389,15 @@ o_Q       : out std_logic_vector(108 downto 0));
 -----------------------
 --mux's
 -----------------------
+component mux2t1_17b is -- 5 bit wide 2t1 mux
+   port(i_S          : in std_logic;
+   i_D0         : in std_logic_vector(21 downto 0);
+   i_D1         : in std_logic_vector(21 downto 0);
+   o_O          : out std_logic_vector(21 downto 0));
+     end component;
+
+
+
 
    component mux2t1_5b is -- 5 bit wide 2t1 mux
    port(i_S          : in std_logic;
@@ -457,6 +481,7 @@ fetchUnit : fetch_logic
 port map(
   i_CLK  => iCLK,       
   i_RST  => iRST,        
+  i_PCWE => s_regStall,
   -- Register inputs
   i_JReg =>  s_rsOutID,
   -- Control logic inputs
@@ -492,6 +517,7 @@ s_ID_PC4 <= s_IF_ID_out(63 downto 32);
 s_ID_JalAdd <= s_IF_ID_out(95 downto 64);
 s_ID_imme <= s_ID_inst(15 downto 0);
 -- Zero logic Subtractor output signals
+
 
 g_stallReginvg : invg 
 port MAP(
@@ -633,27 +659,50 @@ subtractor : adderSubs
       i_B    => s_afterBNEAnd,
       o_F    => s_branchUnit);
            
+--------------------------------
+stallControlSignalMux : mux2t1_17b
 
+port map(
+    i_S  => s_stall,
+    i_D0 => s_controlOutbeforeStall,
+    i_D1 => "0000000000000000000000",
+    o_O  => s_IDcontrolFinal
+);
   
+
+
+s_controlOutbeforeStall(0) <= s_IDcontrol(12); -- JalSel
+s_controlOutbeforeStall(1) <= s_IDcontrol(0); -- Halt
+s_controlOutbeforeStall(4 downto 2) <= s_IDcontrol(3 downto 1); -- s_Load
+s_controlOutbeforeStall(5) <= s_IDcontrol(4); -- s_vshift
+s_controlOutbeforeStall(6) <= s_IDcontrol(5); -- s_sign ext (zero/sign)
+s_controlOutbeforeStall(7) <= s_IDcontrol(6); -- s_overflow
+s_controlOutbeforeStall(8) <= s_IDcontrol(17); -- regWrite
+s_controlOutbeforeStall(9) <= s_IDcontrol(18); -- Dmem write
+s_controlOutbeforeStall(10) <= s_IDcontrol(19); -- memToReg
+s_controlOutbeforeStall(11) <= s_IDcontrol(20); -- addSub
+s_controlOutbeforeStall(12) <= s_IDcontrol(21); -- Alu Src
+s_controlOutbeforeStall(16 downto 13) <= s_IDcontrol(10 downto 7); -- AluOp sel
+s_controlOutbeforeStall(21 downto 17) <= s_ID_RegWrAddr; -- Write Addr
 
 
 ------------------
 --ID/EX
 ------------------
 --ID/EX input signal
-s_ID_EX_in(0) <= s_IDcontrol(12); -- JalSel
-s_ID_EX_in(1) <= s_IDcontrol(0); -- Halt
-s_ID_EX_in(4 downto 2) <= s_IDcontrol(3 downto 1); -- s_Load
-s_ID_EX_in(5) <= s_IDcontrol(4); -- s_vshift
-s_ID_EX_in(6) <= s_IDcontrol(5); -- s_sign ext (zero/sign)
-s_ID_EX_in(7) <= s_IDcontrol(6); -- s_overflow
-s_ID_EX_in(8) <= s_IDcontrol(17); -- regWrite
-s_ID_EX_in(9) <= s_IDcontrol(18); -- Dmem write
-s_ID_EX_in(10) <= s_IDcontrol(19); -- memToReg
-s_ID_EX_in(11) <= s_IDcontrol(20); -- addSub
-s_ID_EX_in(12) <= s_IDcontrol(21); -- Alu Src
-s_ID_EX_in(16 downto 13) <= s_IDcontrol(10 downto 7); -- AluOp sel
-s_ID_EX_in(21 downto 17) <= s_ID_RegWrAddr; -- Write Addr
+s_ID_EX_in(0) <= s_IDcontrolFinal(0); -- JalSel
+s_ID_EX_in(1) <= s_IDcontrolFinal(1); -- Halt
+s_ID_EX_in(4 downto 2) <= s_IDcontrolFinal(4 downto 2); -- s_Load
+s_ID_EX_in(5) <= s_IDcontrolFinal(5); -- s_vshift
+s_ID_EX_in(6) <= s_IDcontrolFinal(6); -- s_sign ext (zero/sign)
+s_ID_EX_in(7) <= s_IDcontrolFinal(7); -- s_overflow
+s_ID_EX_in(8) <= s_IDcontrolFinal(8); -- regWrite
+s_ID_EX_in(9) <= s_IDcontrolFinal(9); -- Dmem write
+s_ID_EX_in(10) <= s_IDcontrolFinal(10); -- memToReg
+s_ID_EX_in(11) <= s_IDcontrolFinal(11); -- addSub
+s_ID_EX_in(12) <= s_IDcontrolFinal(12); -- Alu Src
+s_ID_EX_in(16 downto 13) <= s_IDcontrolFinal(16 downto 13); -- AluOp sel
+s_ID_EX_in(21 downto 17) <= s_IDcontrolFinal(21 downto 17); -- Write Addr
 s_ID_EX_in(37 downto 22) <= s_ID_imme; -- Imme 
 s_ID_EX_in(69 downto 38) <= s_rsOutID; -- rs 
 s_ID_EX_in(101 downto 70) <= s_rtOutID; -- rt
@@ -805,98 +854,135 @@ port map(
 -----------------------
 
 -- ID reg inputs and EX destReg comparisons
-  idRs_exWrAdrAND : andgN
+idRs_exWrAdrAND : andG5b
 
-  port map(
-                 i_A => s_ID_inst(25 downto 21); -- ID rs
-                 i_B => s_ID_EX_out(21 downto 17); -- EX wr addr
-                 o_F => s_idRs_exWrAdr;
-  );
+port map(
+               i_A => s_ID_inst(25 downto 21), -- ID rs
+               i_B => s_ID_EX_out(21 downto 17), -- EX wr addr
+               o_F => s_idRs_exWrAdr
+);
 
-  idRt_exWrAdrAND : andgN
+idRt_exWrAdrAND : andG5b
 
-  port map(
-                 i_A => s_ID_inst(20 downto 16); -- ID rt
-                 i_B => s_ID_EX_out(21 downto 17); -- EX wr addr
-                 o_F => s_idRt_exWrAdr;
-  );
-
-
-  id_exHazardOr : org2
-
-  port map(
-                  i_A => s_idRs_exWrAdr; -- rs comparison
-                  i_B => s_idRt_exWrAdr; -- rt comparison
-                  o_F => s_id_exSameReg; -- signal if these have same regs
-  );
+port map(
+               i_A => s_ID_inst(20 downto 16), -- ID rt
+               i_B => s_ID_EX_out(21 downto 17), -- EX wr addr
+               o_F => s_idRt_exWrAdr
+);
 
 
- id_exHazardAnd : andg2
- 
- port map(
-                  i_A => s_id_exSameReg; -- --same regs
-                  i_B => s_ID_EX_out(8); -- see if wb is enabled
-                  o_F => s_id_exStall; -- stall signal for id_ex
+id_exHazardOr : org2
+
+port map(
+                i_A => s_idRs_exWrAdr, -- rs comparison
+                i_B => s_idRt_exWrAdr, -- rt comparison
+                o_F => s_id_exSameReg -- signal if these have same regs
+);
+
+
+id_exHazardAnd : andg2
+
+port map(
+                i_A => s_id_exSameReg, -- --same regs
+                i_B => s_ID_EX_out(8), -- see if wb is enabled
+                o_F => s_id_exStall -- stall signal for id_ex
 );
 
 -- ID reg inputs and MEM destReg comparisons
 
-idRs_memWrAdrAND : andgN
+idRs_memWrAdrAND : andG5b
 
 port map(
-               i_A => s_ID_inst(25 downto 21); -- ID rs
-               i_B => s_EX_MEM_out(109 downto 105); -- MEM wr addr
-               o_F => s_idRs_memWrAdr;
+             i_A => s_ID_inst(25 downto 21), -- ID rs
+             i_B => s_EX_MEM_out(109 downto 105), -- MEM wr addr
+             o_F => s_idRs_memWrAdr
 );
 
-idRt_memWrAdrAND : andgN
+idRt_memWrAdrAND : andG5b
 
 port map(
-               i_A => s_ID_inst(20 downto 16); -- ID rt
-               i_B => s_EX_MEM_out(109 downto 105); -- MEM wr addr
-               o_F => s_idRt_memWrAdr;
+             i_A => s_ID_inst(20 downto 16), -- ID rt
+             i_B => s_EX_MEM_out(109 downto 105), -- MEM wr addr
+             o_F => s_idRt_memWrAdr
 );
 
 
 id_memHazardOr : org2
 
 port map(
-                i_A => s_idRs_memWrAdr; -- rs comparison
-                i_B => s_idRt_memWrAdr; -- rt comparison
-                o_F => s_id_memSameReg; -- signal if these have same regs
+              i_A => s_idRs_memWrAdr, -- rs comparison
+              i_B => s_idRt_memWrAdr, -- rt comparison
+              o_F => s_id_memSameReg -- signal if these have same regs
 );
 
 
 id_memHazardAnd : andg2
 
 port map(
-                i_A => s_id_memSameReg; -- --same regs
-                i_B => s_EX_MEM_out(6); -- see if wb is enabled 
-                o_F => s_id_memStall; -- stall signal for id_ex
+              i_A => s_id_memSameReg, -- --same regs
+              i_B => s_EX_MEM_out(6), -- see if wb is enabled 
+              o_F => s_id_memStall -- stall signal for id_ex
 );
 
 -- final or gate to combine both stall stages into one signal
 
-  
+
+zero_Check_ID_EX : andG5b
+
+port map(
+             i_A => "00000", -- zero
+             i_B => s_ID_EX_out(21 downto 17), -- EX wr addr
+             o_F => s_ID_EX_zero_andg
+);
+
+zero_Check_ID_MEM : andG5b
+
+port map(
+             i_A => "00000", -- zero
+             i_B => s_EX_MEM_out(109 downto 105), -- MEM wr addr
+             o_F => s_EX_MEM_zero_andg
+);
+
+
+
+zero_check_EX_invg : invg 
+   port map(
+    i_A  => s_ID_EX_zero_andg,     
+    o_F  =>  s_ID_EX_zero);
+   
+
+    zero_check_MEM_invg : invg 
+    port map(
+     i_A  => s_EX_MEM_zero_andg,     
+     o_F  =>  s_ID_MEM_zero);
+
+     id_exHazardFinalAnd : andg2
+
+     port map(
+                   i_A => s_id_exStall, 
+                   i_B => s_ID_EX_zero, 
+                   o_F => s_id_exStallFinal -- stall signal for id_ex
+     );
+     
+     id_memHazardFinalAnd : andg2
+
+     port map(
+                   i_A => s_id_memStall, 
+                   i_B => s_ID_MEM_zero, 
+                   o_F => s_id_memStallFinal -- stall signal for id_ex
+     );
+
+
+
+
+
 finalStallOR : org2
 
 port map(
-                i_A => s_id_exStall, --id_ex stall
-                i_B => s_id_memStall; -- id_mem stall
-                o_F => s_stall --  stall signal
+              i_A => s_id_exStallFinal, --id_ex stall
+              i_B => s_id_memStallFinal, -- id_mem stall
+              o_F => s_stall --  stall signal
 );
-
--- signal s_idRs_exWrAdr : std_logic; -- compare idRs_ex address
--- signal s_idRt_exWrAdr : std_logic; -- compare idRt_ex address
--- signal s_id_exSameReg : std_logic; -- both rt/rs to ex comparison signals
--- signal s_id_exStall : std_logic; -- id_ex stall signal
-
--- signal s_idRs_memWrAdr : std_logic; -- compare idRs_mem address
--- signal s_idRt_memWrAdr : std_logic; -- compare idRt_mem address
--- signal s_id_memSameReg : std_logic; -- both rt/rs to ex comparison signals
--- signal s_id_memStall : std_logic; -- id_mem stall signal
-
-
 
   -- TODO: Implement the rest of your processor below this comment! 
 
