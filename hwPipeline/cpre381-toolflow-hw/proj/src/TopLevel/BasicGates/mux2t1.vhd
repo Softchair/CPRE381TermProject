@@ -23,7 +23,6 @@ port(
      i_D0    : in std_logic;
      i_D1    : in std_logic;
      o_O  : out std_logic);
-
 end mux2t1;
 
 

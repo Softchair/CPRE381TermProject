@@ -21,7 +21,7 @@ ENTITY IF_ID_Reg IS
     i_RST : IN STD_LOGIC;
     i_WE : IN STD_LOGIC;
     -- In Signals
-    i_IFID_PC4 : IN STD_LOGIC_VECTOR(31 downto 0); -- PC + 4 (next pc)
+    i_IFID_PC4 : IN STD_LOGIC_VECTOR(31 downto 0); -- PC + 4 (jal)
     i_IFID_Inst : IN STD_LOGIC_VECTOR(31 downto 0); -- Next Instruction
     -- Out Signals
     o_IFID_PC4 : OUT STD_LOGIC_VECTOR(31 downto 0);
