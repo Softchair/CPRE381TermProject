@@ -120,6 +120,11 @@ ARCHITECTURE structure OF MIPS_Processor IS
   --------------------
   --PipelineSignals
   --------------------
+  --IF stage internal
+   signal s_Inst_mux :  STD_LOGIC_VECTOR(31 downto 0);
+   signal s_flush  : std_logic;
+
+
   --IF/ID reg
   SIGNAL s_IFID_PC4_in : STD_LOGIC_VECTOR(31 downto 0); -- Inputs to ID reg
   SIGNAL s_IFID_Inst_in : STD_LOGIC_VECTOR(31 downto 0); -- Inputs to ID reg
@@ -351,6 +356,15 @@ ARCHITECTURE structure OF MIPS_Processor IS
       o_OUT : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       SEL : IN STD_LOGIC);
   END COMPONENT;
+
+
+  COMPONENT org5b is
+    port (
+   D0, D1, D2, D3, D4 : in std_logic;
+   o_Out : out std_logic);
+
+  end COMPONENT;
+  
   -----------------------
   --mux's
   -----------------------
@@ -413,7 +427,7 @@ BEGIN
     addr => s_IMemAddr(11 DOWNTO 2),
     data => iInstExt,
     we => iInstLd,
-    q => s_Inst);
+    q => s_Inst_mux);
 
   DMem : mem
   GENERIC MAP(
@@ -452,7 +466,7 @@ BEGIN
   --between imem and reg
   ------------------
 
-  s_IFID_Inst_in <= s_Inst;
+  
 
   ------------------
   --IF/ID 
@@ -471,7 +485,7 @@ BEGIN
     i_WE => s_regStall,
     -- In Signals
     i_IFID_PC4 => s_IFID_PC4_in, -- PC + 4 (next pc)
-    i_IFID_Inst => s_IFID_Inst_in, -- Next Instruction
+    i_IFID_Inst => s_Inst, -- Next Instruction
     -- Out Signals
     o_IFID_PC4 => s_IFID_PC4_out,
     o_IFID_Inst => s_IFID_Inst_out);
@@ -860,4 +874,31 @@ BEGIN
     o_F => s_stall --  stall signal
   );
 
+
+-----------------
+--FLUSHING
+-----------------
+
+   flushOrG : org5b
+   port map(
+    D0 => s_IDcontrol(13), --jump signal
+    D1 => s_IDcontrol(11), -- jump reg signal
+    D2 => s_IDcontrol(12), -- JAL signal
+    D3 => s_afterBNEAnd, -- BNE signal 
+    D4 => s_afterBEAnd, -- BE signal
+    o_out => s_flush
+   );
+
+
+   flushIF_IDmux : mux2t1_N 
+   port map(
+    i_S => s_flush,
+    i_D0 => s_Inst_mux,
+    i_D1 => x"00000000",
+    o_O  => s_Inst
+   );
+
+   
+
+ 
 END structure;
