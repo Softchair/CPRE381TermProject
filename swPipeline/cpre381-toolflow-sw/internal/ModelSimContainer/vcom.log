@@ -11,6 +11,11 @@ vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd interna
 -- Loading package ENV
 -- Compiling entity tb
 -- Compiling architecture mixed of tb
+** Warning: proj/src/MIPS_types.vhd(15): (vcom-1615) Existing package 'MIPS_types' at line 15 will be overwritten.
+-- Compiling package MIPS_types
+** Warning: proj/src/MIPS_types.vhd(31): (vcom-1615) Existing package body 'MIPS_types(body)' at line 31 will be overwritten.
+-- Compiling package body MIPS_types
+-- Loading package MIPS_types
 -- Loading package MIPS_types
 -- Compiling entity MIPS_Processor
 -- Compiling architecture structure of MIPS_Processor
@@ -90,6 +95,8 @@ vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd interna
 -- Compiling architecture dataflow of org2
 -- Compiling entity mux2t1
 -- Compiling architecture structure of mux2t1
+-- Compiling entity mux2t1_N
+-- Compiling architecture structural of mux2t1_N
 -- Compiling entity mux2t1N
 -- Compiling architecture structural of mux2t1N
 -- Compiling entity andg2
@@ -98,39 +105,52 @@ vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd interna
 -- Compiling architecture structural of andgN
 -- Compiling entity andG32b
 -- Compiling architecture dataflow of andG32b
--- Compiling entity xorg2
--- Compiling architecture dataflow of xorg2
--- Compiling entity mux2t1_N
--- Compiling architecture structural of mux2t1_N
--- Compiling entity invg
--- Compiling architecture dataflow of invg
--- Compiling entity Adder1b
--- Compiling architecture structural of Adder1b
--- Compiling entity rippleCarryAdderN
--- Compiling architecture structural of rippleCarryAdderN
+-- Compiling entity org2
+-- Compiling architecture dataflow of org2
+-- Compiling entity andg2
+-- Compiling architecture dataflow of andg2
+-- Compiling entity dffgNN
+-- Compiling architecture structural of dffgNN
+-- Compiling entity MIPSregister
+-- Compiling architecture structure of MIPSregister
+-- Compiling entity dffg
+-- Compiling architecture mixed of dffg
 -- Compiling entity decoder5_32
 -- Compiling architecture decoder of decoder5_32
 -- Compiling entity dffgN
 -- Compiling architecture mixed of dffgN
--- Compiling entity dffg
--- Compiling architecture mixed of dffg
--- Compiling entity dffgNN
--- Compiling architecture structural of dffgNN
 -- Compiling entity mux32_1
 -- Compiling architecture mux of mux32_1
--- Loading package MIPS_types
--- Compiling entity MIPSregister
--- Compiling architecture structure of MIPSregister
+-- Compiling entity rippleCarryAdderN
+-- Compiling architecture structural of rippleCarryAdderN
+-- Compiling entity Adder1b
+-- Compiling architecture structural of Adder1b
 -- Compiling entity fetch_Logic
 -- Compiling architecture mixed of fetch_logic
--- Compiling entity shiftleft2N
--- Compiling architecture Behavioral of shiftleft2N
+-- Compiling entity nbitregister
+-- Compiling architecture structural of nbitregister
 -- Compiling entity bit16_extender
 -- Compiling architecture flow of bit16_extender
 -- Compiling entity PCReg
 -- Compiling architecture structural of PCReg
--- Compiling entity nbitregister
--- Compiling architecture structural of nbitregister
+-- Compiling entity shiftleft2N
+-- Compiling architecture Behavioral of shiftleft2N
+-- Compiling entity tb_dffg
+-- Compiling architecture behavior of tb_dffg
+-- Compiling entity MEM_WB_Reg
+-- Compiling architecture structural of MEM_WB_Reg
+-- Compiling entity ID_EX_Reg
+-- Compiling architecture structural of ID_EX_Reg
+-- Compiling entity tb_IF_ID_Reg
+-- Compiling architecture behavior of tb_IF_ID_Reg
+-- Compiling entity EX_MEM_Reg
+-- Compiling architecture structural of EX_MEM_Reg
+-- Compiling entity IF_ID_Reg
+-- Compiling architecture structural of IF_ID_Reg
+-- Compiling entity tb_dffgN
+-- Compiling architecture behavior of tb_dffgN
+-- Compiling entity control_Logic
+-- Compiling architecture flow of control_Logic
 -- Compiling entity loadMemModule
 -- Compiling architecture structure of loadMemModule
 End time: 11:01:25 on Apr 29,2024, Elapsed time: 0:00:00
