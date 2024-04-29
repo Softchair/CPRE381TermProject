@@ -531,17 +531,10 @@ subtractor : adderSubs
   o_Cout => open);
  
 
-<<<<<<< HEAD
-     g_orG32 : orG32b
-     port MAP(
-      i_D => s_subtractorOut,
-      o_Out        => s_orGateZeroOut);
-=======
 g_orG32 : orG32b
   port MAP(
     i_D => s_subtractorOut,
     o_Out        => s_orGateZeroOut);
->>>>>>> 373a7808e29b632bf2a1faeb3988b4d3cf6ff6fd
    
    
   g_invg : invg 
