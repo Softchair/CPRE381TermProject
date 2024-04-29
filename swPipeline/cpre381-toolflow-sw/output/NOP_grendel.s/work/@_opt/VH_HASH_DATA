@@ -1,5 +1,7 @@
 [N
 51
+1
+103 /home/cfergen/cpre381/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/containers/sim_container_0/work
 6
 16 fulladderstructn
 7
@@ -98,10 +100,64 @@
 4 i_D0
 30
 4 i_D1
-1
-130 /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/containers/sim_container_0/work
 23
 9 id_ex_reg
+]
+[G
+1
+48
+49
+1
+4
+1
+0
+32
+0
+0 0
+0
+0
+]
+[G
+1
+6
+3
+1
+4
+1
+0
+32
+0
+0 0
+0
+0
+]
+[G
+1
+13
+3
+1
+4
+1
+0
+32
+0
+0 0
+0
+0
+]
+[G
+1
+21
+3
+1
+4
+1
+0
+5
+0
+0 0
+0
+0
 ]
 [G
 1
@@ -467,62 +523,6 @@
 0
 0
 0
-0
-0
-]
-[G
-1
-48
-49
-1
-4
-1
-0
-32
-0
-0 0
-0
-0
-]
-[G
-1
-6
-3
-1
-4
-1
-0
-32
-0
-0 0
-0
-0
-]
-[G
-1
-13
-3
-1
-4
-1
-0
-32
-0
-0 0
-0
-0
-]
-[G
-1
-21
-3
-1
-4
-1
-0
-5
-0
-0 0
 0
 0
 ]
