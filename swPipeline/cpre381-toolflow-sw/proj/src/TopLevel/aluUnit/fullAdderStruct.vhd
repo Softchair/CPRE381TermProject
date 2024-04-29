@@ -41,11 +41,6 @@ component andg2
 
 end component;
 
-
-
-
-
-
 component xorg2
 
   port(i_A     : in std_logic;
@@ -53,10 +48,6 @@ component xorg2
        o_F     : out std_logic);
 
 end component;
-
-
-
-
 
 
 component org2
@@ -74,17 +65,7 @@ signal s_A1      : std_logic; -- signal to carry AND Gate1
 signal s_A2      : std_logic; -- signal to carry AND GAte2
 signal s_R0     : std_logic; -- signal to output carry out
 
-
-
-
-
-
-
-
-
 begin
-
-
 
 -- level 0: Xor gate and AND gate
 

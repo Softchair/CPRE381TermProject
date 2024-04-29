@@ -247,9 +247,8 @@ port(
 component orG32b
 
 port(
-       D0, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, D14, D15, D16,
-   D17, D18, D19, D20, D21, D22, D23, D24, D25, D26, D27, D28, D29, D30, D31 : in std_logic;
-   o_Out : out std_logic);
+  i_D   : in std_logic_vector(31 downto 0);
+  o_Out : out std_logic);
 
 end component;
 
@@ -525,54 +524,23 @@ port map(
 subtractor : adderSubs
  port map(
 
-     i_D0  => s_rsOutID, -- reg A input
-     i_D1  => s_rtOutID, -- reg B input
-     i_SEL => '1',
-     o_O   => s_subtractorOut,
-     o_Cout => open);
+  i_D0  => s_rsOutID, -- reg A input
+  i_D1  => s_rtOutID, -- reg B input
+  i_SEL => '1',
+  o_O   => s_subtractorOut,
+  o_Cout => open);
  
 
-     g_orG32 : orG32b
-     port MAP(
-       D0 => s_subtractorOut(0),
-       D1 => s_subtractorOut(1), 
-       D2 => s_subtractorOut(2), 
-       D3 => s_subtractorOut(3), 
-       D4 => s_subtractorOut(4), 
-       D5 => s_subtractorOut(5), 
-       D6 => s_subtractorOut(6), 
-       D7 => s_subtractorOut(7), 
-       D8 => s_subtractorOut(8), 
-       D9 => s_subtractorOut(9), 
-       D10 => s_subtractorOut(10), 
-       D11 => s_subtractorOut(11), 
-       D12 => s_subtractorOut(12), 
-       D13 => s_subtractorOut(13), 
-       D14 => s_subtractorOut(14), 
-       D15 => s_subtractorOut(15), 
-       D16 => s_subtractorOut(16),
-       D17 => s_subtractorOut(17), 
-       D18 => s_subtractorOut(18),
-             D19 => s_subtractorOut(19),
-              D20 => s_subtractorOut(20),
-              D21 => s_subtractorOut(21), 
-              D22 => s_subtractorOut(22),
-              D23 => s_subtractorOut(23),
-              D24 => s_subtractorOut(24),
-              D25 => s_subtractorOut(25),
-              D26 => s_subtractorOut(26),
-              D27 => s_subtractorOut(27),
-              D28 => s_subtractorOut(28), 
-              D29 => s_subtractorOut(29),
-              D30 => s_subtractorOut(30),
-              D31 => s_subtractorOut(31),
-              o_Out        => s_orGateZeroOut);
+g_orG32 : orG32b
+  port MAP(
+    i_D => s_subtractorOut,
+    o_Out        => s_orGateZeroOut);
    
    
-   g_invg : invg 
-     port MAP(
-            i_A   => s_orGateZeroOut,
-            o_F   => s_zeroID);
+  g_invg : invg 
+    port MAP(
+    i_A   => s_orGateZeroOut,
+    o_F   => s_zeroID);
    
 
 ------------------

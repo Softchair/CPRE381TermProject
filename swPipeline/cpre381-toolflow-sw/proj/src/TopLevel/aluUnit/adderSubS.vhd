@@ -117,12 +117,13 @@ g_muxGate01 : mux2t1_N
 -- level 2: Ripple Full Adder component
 
 g_RippleFAGate02: fullAdderStructN
-  port MAP(i_D0    => i_D0,
-           i_D1    => s_M,
-	   i_Cin    => i_SEL,
-	   o_Cout => s_Cout,
-           o_Cout31 => s_Cout31, 
-           o_O    => o_O);
+  port MAP(
+    i_D0    => i_D0,
+    i_D1    => s_M,
+	  i_Cin    => i_SEL,
+	  o_Cout => s_Cout,
+    o_Cout31 => s_Cout31, 
+    o_O    => o_O);
 
 
 

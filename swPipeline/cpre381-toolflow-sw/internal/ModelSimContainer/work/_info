@@ -7098,6 +7098,15 @@ R0
 >>>>>>> da586f2757d29424b95ab50850a1a7bae656dcb5
 R0
 Eadder1b
+<<<<<<< HEAD
+Z527 w1712683263
+R48
+R315
+!i122 90
+R83
+R380
+R80
+=======
 Z527 w1712347389
 R23
 R24
@@ -7105,47 +7114,77 @@ R24
 Z528 d/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/swPipeline/cpre381-toolflow-sw
 R318
 R268
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 L8 1
 R319
 R320
 R65
 33
+<<<<<<< HEAD
+Z528 !s110 1714421340
+!i10b 1
+Z529 !s108 1714421339.000000
+Z530 !s90 -2008|-work|internal/ModelSimContainer/work|proj/src/MIPS_types.vhd|internal/testpy/tb.vhd|proj/src/MIPS_types.vhd|proj/src/MIPS_Processor.vhd|proj/src/mem.vhd|proj/src/TopLevel/BasicGates/xorg2.vhd|proj/src/TopLevel/BasicGates/invg.vhd|proj/src/TopLevel/BasicGates/mux2t1.vhd|proj/src/TopLevel/BasicGates/mux2t1_N.vhd|proj/src/TopLevel/BasicGates/mux2t1N.vhd|proj/src/TopLevel/BasicGates/andgN.vhd|proj/src/TopLevel/BasicGates/andG32b.vhd|proj/src/TopLevel/BasicGates/org2.vhd|proj/src/TopLevel/BasicGates/andg2.vhd|proj/src/TopLevel/BasicGates/register/dffgNN.vhd|proj/src/TopLevel/BasicGates/register/MIPSregister.vhd|proj/src/TopLevel/BasicGates/register/dffg.vhd|proj/src/TopLevel/BasicGates/register/decoder5_32.vhd|proj/src/TopLevel/BasicGates/register/dffgN.vhd|proj/src/TopLevel/BasicGates/register/mux32_1.vhd|proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd|proj/src/TopLevel/BasicGates/Adder/adder1b.vhd|proj/src/TopLevel/FetchLogic/fetch_Logic.vhd|proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd|proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd|proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd|proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd|proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/tb_dffg.vhd|proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/MEM_WB_Reg.vhd|proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/ID_EX_Reg.vhd|proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/tb_IF_ID_Reg.vhd|proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/EX_MEM_Reg.vhd|proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/IF_ID_Reg.vhd|proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/tb_dffgN.vhd|proj/src/TopLevel/ControlLogic/control_Logic.vhd|proj/src/TopLevel/loadMemModule/loadMemModule.vhd|proj/src/TopLevel/aluUnit/slt.vhd|proj/src/TopLevel/aluUnit/fullAdderStruct.vhd|proj/src/TopLevel/aluUnit/ALU.vhd|proj/src/TopLevel/aluUnit/onesCompN.vhd|proj/src/TopLevel/aluUnit/adderSubS.vhd|proj/src/TopLevel/aluUnit/lui.vhd|proj/src/TopLevel/aluUnit/firstALU.vhd|proj/src/TopLevel/aluUnit/fullAdderStructN.vhd|proj/src/TopLevel/aluUnit/barrelShifter/1bitShifter.vhd|proj/src/TopLevel/aluUnit/barrelShifter/barrelshifter.vhd|proj/src/TopLevel/aluUnit/basicGates/andG_N.vhd|proj/src/TopLevel/aluUnit/basicGates/barrelShifterSLL.vhd|proj/src/TopLevel/aluUnit/basicGates/mux16b2t1.vhd|proj/src/TopLevel/aluUnit/basicGates/mux8b4t1.vhd|proj/src/TopLevel/aluUnit/basicGates/mux16_1.vhd|proj/src/TopLevel/aluUnit/basicGates/orG32b.vhd|proj/src/TopLevel/aluUnit/basicGates/orG_N.vhd|proj/src/TopLevel/aluUnit/basicGates/mux2t1Flow.vhd|proj/src/TopLevel/aluUnit/basicGates/xorG_N.vhd|proj/src/TopLevel/aluUnit/basicGates/barrelShifterArithmetic.vhd|proj/src/TopLevel/aluUnit/basicGates/mux32b3t1.vhd|proj/src/TopLevel/aluUnit/basicGates/bit_extenders.vhd|proj/src/TopLevel/aluUnit/basicGates/norG_N.vhd|proj/src/TopLevel/aluUnit/basicGates/bit_extenders24b.vhd|proj/src/TopLevel/aluUnit/basicGates/mux2t1_5b.vhd|
+Z531 !s107 proj/src/TopLevel/aluUnit/basicGates/mux2t1_5b.vhd|proj/src/TopLevel/aluUnit/basicGates/bit_extenders24b.vhd|proj/src/TopLevel/aluUnit/basicGates/norG_N.vhd|proj/src/TopLevel/aluUnit/basicGates/bit_extenders.vhd|proj/src/TopLevel/aluUnit/basicGates/mux32b3t1.vhd|proj/src/TopLevel/aluUnit/basicGates/barrelShifterArithmetic.vhd|proj/src/TopLevel/aluUnit/basicGates/xorG_N.vhd|proj/src/TopLevel/aluUnit/basicGates/mux2t1Flow.vhd|proj/src/TopLevel/aluUnit/basicGates/orG_N.vhd|proj/src/TopLevel/aluUnit/basicGates/orG32b.vhd|proj/src/TopLevel/aluUnit/basicGates/mux16_1.vhd|proj/src/TopLevel/aluUnit/basicGates/mux8b4t1.vhd|proj/src/TopLevel/aluUnit/basicGates/mux16b2t1.vhd|proj/src/TopLevel/aluUnit/basicGates/barrelShifterSLL.vhd|proj/src/TopLevel/aluUnit/basicGates/andG_N.vhd|proj/src/TopLevel/aluUnit/barrelShifter/barrelshifter.vhd|proj/src/TopLevel/aluUnit/barrelShifter/1bitShifter.vhd|proj/src/TopLevel/aluUnit/fullAdderStructN.vhd|proj/src/TopLevel/aluUnit/firstALU.vhd|proj/src/TopLevel/aluUnit/lui.vhd|proj/src/TopLevel/aluUnit/adderSubS.vhd|proj/src/TopLevel/aluUnit/onesCompN.vhd|proj/src/TopLevel/aluUnit/ALU.vhd|proj/src/TopLevel/aluUnit/fullAdderStruct.vhd|proj/src/TopLevel/aluUnit/slt.vhd|proj/src/TopLevel/loadMemModule/loadMemModule.vhd|proj/src/TopLevel/ControlLogic/control_Logic.vhd|proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/tb_dffgN.vhd|proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/IF_ID_Reg.vhd|proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/EX_MEM_Reg.vhd|proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/tb_IF_ID_Reg.vhd|proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/ID_EX_Reg.vhd|proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/MEM_WB_Reg.vhd|proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/tb_dffg.vhd|proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd|proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd|proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd|proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd|proj/src/TopLevel/FetchLogic/fetch_Logic.vhd|proj/src/TopLevel/BasicGates/Adder/adder1b.vhd|proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd|proj/src/TopLevel/BasicGates/register/mux32_1.vhd|proj/src/TopLevel/BasicGates/register/dffgN.vhd|proj/src/TopLevel/BasicGates/register/decoder5_32.vhd|proj/src/TopLevel/BasicGates/register/dffg.vhd|proj/src/TopLevel/BasicGates/register/MIPSregister.vhd|proj/src/TopLevel/BasicGates/register/dffgNN.vhd|proj/src/TopLevel/BasicGates/andg2.vhd|proj/src/TopLevel/BasicGates/org2.vhd|proj/src/TopLevel/BasicGates/andG32b.vhd|proj/src/TopLevel/BasicGates/andgN.vhd|proj/src/TopLevel/BasicGates/mux2t1N.vhd|proj/src/TopLevel/BasicGates/mux2t1_N.vhd|proj/src/TopLevel/BasicGates/mux2t1.vhd|proj/src/TopLevel/BasicGates/invg.vhd|proj/src/TopLevel/BasicGates/xorg2.vhd|proj/src/mem.vhd|proj/src/MIPS_Processor.vhd|internal/testpy/tb.vhd|proj/src/MIPS_types.vhd|
+=======
 Z529 !s110 1714406485
 !i10b 1
 Z530 !s108 1714406485.000000
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Astructural
+<<<<<<< HEAD
+R48
+R315
+R90
+!i122 90
+=======
 R23
 R24
 R13
 !i122 89
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l49
 R269
 R349
 R350
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Eadder1b
 R527
+<<<<<<< HEAD
+R48
+R315
+!i122 89
+R83
+R380
+R80
+=======
 R23
 R24
 !i122 88
 R528
 R318
 R268
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 L8 1
 R319
@@ -7679,14 +7718,52 @@ R24
 R528
 R381
 R382
+<<<<<<< HEAD
+R127
+33
+Z532 !s110 1714420142
+!i10b 1
+Z533 !s108 1714420142.000000
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R90
+!i122 89
+l49
+R1
+R383
+R384
+R127
+=======
 l0
 R352
 R383
 R384
 R65
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 33
 R529
 !i10b 1
+<<<<<<< HEAD
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Eaddersubs
+R527
+R48
+R315
+!i122 90
+R83
+R107
+=======
 R530
 R302
 R303
@@ -7699,14 +7776,49 @@ R24
 R37
 !i122 89
 l73
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 R385
 R386
 R387
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+!i113 0
+R11
+R2
+Astructure
+R48
+R315
+R91
+!i122 90
+l97
+R388
+R389
+R390
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Eaddersubs
+R527
+R48
+R315
+!i122 89
+R83
+R107
+R385
+=======
 R302
 R303
 !i113 0
@@ -7720,6 +7832,7 @@ R24
 R528
 R381
 R382
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R352
 R383
@@ -7743,10 +7856,28 @@ l73
 R385
 R386
 R387
+<<<<<<< HEAD
+R127
+=======
 R65
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 33
 R531
 !i10b 1
+<<<<<<< HEAD
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructure
+R48
+R315
+R91
+!i122 89
+l97
+=======
 R532
 R302
 R303
@@ -7759,17 +7890,91 @@ R23
 R24
 !i122 89
 R528
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 R388
 R389
 l0
 R228
 R390
+<<<<<<< HEAD
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Ealu
+Z534 w1714421245
+R48
+R315
+!i122 90
+R83
+=======
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 R391
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+!i113 0
+R11
+R2
+Astructure
+R48
+R315
+R92
+!i122 90
+l253
+L44 379
+VlbnXYPkKYkY4Qkej86llf2
+!s100 iUjaR@]BZ6^PgRo3d>41H1
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Ealu
+R527
+R48
+R315
+!i122 89
+R83
+R391
+R392
+l0
+R327
+R6
+R393
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructure
+R48
+R315
+R92
+!i122 89
+l254
+=======
 R302
 R303
 !i113 0
@@ -7783,6 +7988,7 @@ R38
 l78
 R392
 R393
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 R394
 R65
 33
@@ -7849,9 +8055,22 @@ R397
 R398
 R65
 33
-R529
+R532
 !i10b 1
+R533
 R530
+<<<<<<< HEAD
+R531
+!i113 0
+R11
+R2
+Eandg2
+R527
+R48
+R315
+!i122 90
+R83
+=======
 R302
 R303
 !i113 0
@@ -7886,10 +8105,87 @@ R395
 R396
 l0
 R228
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 R397
 R398
 R65
 33
+<<<<<<< HEAD
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Adataflow
+R48
+R315
+R3
+!i122 90
+l32
+R139
+R141
+R399
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Eandg2
+R527
+R48
+R315
+!i122 89
+R83
+R397
+R398
+l0
+R327
+R7
+R8
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Adataflow
+R48
+R315
+R3
+!i122 89
+l32
+R139
+R141
+R399
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Eandg32b
+R527
+R48
+R315
+!i122 90
+R83
+=======
 R531
 !i10b 1
 R532
@@ -7906,9 +8202,86 @@ R39
 l78
 R392
 R399
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 R400
 R65
 33
+<<<<<<< HEAD
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Adataflow
+R48
+R315
+R4
+!i122 90
+l31
+R133
+R136
+R15
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Eandg32b
+R527
+R48
+R315
+!i122 89
+R83
+R400
+R401
+l0
+R320
+R13
+R14
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Adataflow
+R48
+R315
+R4
+!i122 89
+l31
+R133
+R136
+R15
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Eandg_n
+R527
+R48
+R315
+!i122 90
+R83
+=======
 R531
 !i10b 1
 R532
@@ -7924,6 +8297,7 @@ R24
 !i122 89
 R528
 R401
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 R402
 l0
 R403
@@ -7931,9 +8305,82 @@ R404
 R405
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R96
+!i122 90
+l37
+R116
+R55
+R406
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Eandg_n
+R527
+R48
+R315
+!i122 89
+R83
+R402
+R403
+l0
+R320
+R404
+R405
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R96
+!i122 89
+l37
+R116
+R55
+R406
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Eandgn
+R527
+R48
+R315
+!i122 90
+R83
+=======
 R302
 R303
 !i113 0
@@ -7946,13 +8393,27 @@ R40
 !i122 89
 l28
 R406
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 R407
 R408
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R97
+!i122 90
+l35
+=======
 R302
 R303
 !i113 0
@@ -8008,14 +8469,418 @@ R528
 R409
 R410
 l0
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 R411
 R412
 R413
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+!i113 0
+R11
+R2
+Eandgn
+R527
+R48
+R315
+!i122 89
+R83
+R407
+R408
+l0
+R360
+R409
+R410
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R97
+!i122 89
+l35
+R411
+R412
+R413
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Ebarrelshifter
+R527
+R48
+R315
+!i122 90
+R83
+R414
+R415
+l0
+R360
+R416
+R417
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R98
+!i122 90
+l73
+R418
+R419
+R420
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Ebarrelshifter
+R527
+R48
+R315
+!i122 89
+R83
+R414
+R415
+l0
+R360
+R416
+R417
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R98
+!i122 89
+l73
+R418
+R419
+R420
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Ebarrelshifterarithmetic
+R527
+R48
+R315
+!i122 90
+R83
+R421
+R422
+l0
+R270
+R423
+R424
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R274
+!i122 90
+l78
+R425
+R426
+R427
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Ebarrelshifterarithmetic
+R527
+R48
+R315
+!i122 89
+R83
+R421
+R422
+l0
+R270
+R423
+R424
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R274
+!i122 89
+l78
+R425
+R426
+R427
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Ebarrelshiftersll
+R527
+R48
+R315
+!i122 90
+R83
+R428
+R429
+l0
+R270
+R430
+R431
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R108
+!i122 90
+l78
+R425
+R432
+R433
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Ebarrelshiftersll
+R527
+R48
+R315
+!i122 89
+R83
+R428
+R429
+l0
+R270
+R430
+R431
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R108
+!i122 89
+l78
+R425
+R432
+R433
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Ebit16_extender
+R527
+R48
+R315
+!i122 90
+R83
+R434
+R435
+l0
+R436
+R437
+R438
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Aflow
+R48
+R315
+R109
+!i122 90
+l28
+R439
+R440
+R441
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Ebit16_extender
+R527
+R48
+R315
+!i122 89
+R83
+R434
+R435
+l0
+R436
+R437
+R438
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Aflow
+R48
+R315
+R109
+!i122 89
+l28
+R439
+R440
+R441
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Ebit_extenders
+R527
+R48
+R315
+!i122 90
+R83
+R442
+R443
+l0
+R444
+R445
+R446
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Aflow
+R48
+R315
+R110
+!i122 90
+=======
 R302
 R303
 !i113 0
@@ -8072,12 +8937,76 @@ R23
 R24
 R41
 !i122 88
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l37
 R272
 R414
 R415
 R65
 33
+<<<<<<< HEAD
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Ebit_extenders
+R527
+R48
+R315
+!i122 89
+R83
+R442
+R443
+l0
+R444
+R445
+R446
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Aflow
+R48
+R315
+R110
+!i122 89
+l37
+R73
+R447
+R448
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R49
+R0
+Ebit_extenders24b
+R527
+R48
+R315
+!i122 90
+R83
+R449
+R450
+=======
 R531
 !i10b 1
 R532
@@ -8135,36 +9064,60 @@ R24
 R528
 R416
 R417
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R411
 R418
 R419
 R65
 33
+<<<<<<< HEAD
+R528
+!i10b 1
+R529
+R530
+R531
+=======
 R531
 !i10b 1
 R532
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Aflow
+<<<<<<< HEAD
+R48
+R315
+R111
+!i122 90
+=======
 R23
 R24
 R42
 !i122 88
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l37
 R272
 R420
 R421
 R65
 33
+<<<<<<< HEAD
+R528
+!i10b 1
+R529
+R530
+R531
+=======
 R531
 !i10b 1
 R532
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
@@ -8188,6 +9141,58 @@ R303
 R275
 R57
 R0
+<<<<<<< HEAD
+R16
+Ebit_extenders24b
+R527
+R48
+R315
+!i122 89
+R83
+R449
+R450
+l0
+R444
+R451
+R452
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Aflow
+R48
+R315
+R111
+!i122 89
+l37
+R73
+R453
+R454
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Econtrol_logic
+R527
+R48
+R315
+!i122 90
+R83
+R455
+R456
+=======
 Econtrol_logic
 R285
 R23
@@ -8196,21 +9201,33 @@ R24
 R528
 R422
 R423
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R411
 R424
 R425
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Aflow
+<<<<<<< HEAD
+R48
+R315
+R112
+!i122 90
+=======
 R23
 R24
 R43
@@ -8256,12 +9273,72 @@ R23
 R24
 R43
 !i122 88
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l37
 R276
 R277
 R278
 R65
 33
+<<<<<<< HEAD
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Econtrol_logic
+R527
+R48
+R315
+!i122 89
+R83
+R455
+R456
+l0
+R444
+R457
+R458
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Aflow
+R48
+R315
+R112
+!i122 89
+l37
+R69
+R70
+R71
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Edecoder5_32
+R527
+R48
+R315
+!i122 90
+R83
+R459
+R460
+=======
 R531
 !i10b 1
 R532
@@ -8278,21 +9355,33 @@ R24
 R528
 R426
 R427
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R228
 R428
 R429
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Adecoder
+<<<<<<< HEAD
+R48
+R315
+R113
+!i122 90
+=======
 R23
 R24
 R52
@@ -8338,6 +9427,7 @@ R23
 R24
 R52
 !i122 88
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l27
 R279
 R280
@@ -8538,10 +9628,240 @@ R58
 R23
 R66
 R67
+<<<<<<< HEAD
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Edecoder5_32
+R527
+R48
+R315
+!i122 89
+R83
+R459
+R460
+l0
+R270
+R461
+R462
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Adecoder
+R48
+R315
+R113
+!i122 89
+l27
+R65
+R66
+R67
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Edffg
+Z535 w1713215087
+R48
+R315
+!i122 90
+R83
+R18
+R19
+l0
+R327
+R465
+R466
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Amixed
+R48
+R315
+R61
+!i122 90
+l37
+R45
+R62
+R63
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Edffg
+R535
+R48
+R315
+!i122 89
+R83
+R18
+R19
+l0
+R327
+R465
+R466
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Amixed
+R48
+R315
+R61
+!i122 89
+l37
+R45
+R62
+R63
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Edffgn
+Z536 w1712767009
+R48
+R315
+!i122 90
+R83
+R119
+R120
+l0
+R327
+Z537 V`5O5^ZST9IWDgXEnMO;Mf2
+Z538 !s100 ?LWPWQ;3416fL@[=K;9Vh2
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Amixed
+R48
+R315
+R118
+!i122 90
+l37
+R45
+R59
+R60
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R123
+R48
+R49
+R116
+=======
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i122 76
 R68
 R69
 l42
+<<<<<<< HEAD
+R55
+R131
+R132
+R35
+Z539 d/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/swPipeline/cpre381-toolflow-sw
+Edffgn
+R536
+R48
+R315
+!i122 89
+R83
+R119
+R120
+l0
+R327
+R537
+R538
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Amixed
+R48
+R315
+R118
+!i122 89
+l37
+R45
+R59
+R60
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+=======
 R70
 R71
 R72
@@ -8568,6 +9888,7 @@ R303
 !i113 0
 R275
 R57
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 Astructural
 R23
 R24
@@ -8638,6 +9959,106 @@ R60
 R66
 l0
 R121
+<<<<<<< HEAD
+!i122 56
+l42
+R52
+R116
+R117
+R9
+R10
+R11
+R2
+R0
+R19
+R122
+Edffgnn
+R536
+R48
+R315
+!i122 90
+R83
+R267
+R469
+l0
+R270
+R470
+R471
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R301
+!i122 90
+l42
+R314
+R472
+R473
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Edffgnn
+R536
+R48
+R315
+!i122 89
+R83
+R267
+R469
+l0
+R270
+R470
+R471
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R301
+!i122 89
+l42
+R314
+R472
+R473
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Edffgnp
+Z540 w1712591618
+R48
+R49
+=======
 Z539 VzczFl3P[GAS5LVgPWTQ4G1
 Z540 !s100 YcZEMEIR455`;GklQg<mD3
 R69
@@ -8649,11 +10070,33 @@ Edffgnp
 R538
 R23
 R66
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i122 40
 R4
 R68
 R69
 l0
+<<<<<<< HEAD
+R270
+Z541 VzczFl3P[GAS5LVgPWTQ4G1
+Z542 !s100 YcZEMEIR455`;GklQg<mD3
+R35
+Edffgnp
+R540
+R3
+R4
+!i122 40
+R2
+R122
+R49
+l0
+R168
+R541
+R542
+R9
+R10
+R11
+=======
 R228
 R539
 R540
@@ -8671,6 +10114,7 @@ R358
 Z543 VJZSC00fDg1K@OTf^=QmN93
 Z544 !s100 Q:6V:hL=iURi5<Ef;jVOK2
 R69
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 R2
 R275
 R57
@@ -8680,6 +10124,41 @@ R526
 R23
 R66
 !i122 40
+<<<<<<< HEAD
+R84
+Z543 8proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/dffgp.vhd
+Z544 Fproj/src/TopLevel/SoftwarePipeline/Pipeline Registers/dffgp.vhd
+l0
+R327
+Z545 VJZSC00fDg1K@OTf^=QmN93
+Z546 !s100 Q:6V:hL=iURi5<Ef;jVOK2
+R35
+Edffgp
+R525
+R3
+R4
+!i122 40
+R2
+R543
+R544
+l0
+R391
+R545
+R546
+R9
+R10
+R11
+R2
+R0
+Eex_mem_reg
+R536
+R48
+R315
+!i122 90
+R83
+R474
+R475
+=======
 R4
 R541
 R542
@@ -8696,21 +10175,33 @@ R24
 R528
 R441
 R442
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R443
 R444
 R445
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Astructural
+<<<<<<< HEAD
+R48
+R315
+R306
+!i122 90
+=======
 R23
 R24
 R81
@@ -8756,6 +10247,7 @@ R23
 R24
 R81
 !i122 88
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l41
 R194
 R298
@@ -8784,9 +10276,65 @@ Z547 V8XkC_EHE`gLD]Uzf0_@H82
 Z548 !s100 P[ogVOFb:H<0hMcD^H<Mb2
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+!i113 0
+R11
+R2
+Eex_mem_reg
+R536
+R48
+R315
+!i122 89
+R83
+R474
+R475
+l0
+R476
+R477
+R478
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R306
+!i122 89
+l41
+R236
+R42
+R43
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Efetch_logic
+Z547 w1713387072
+R48
+R315
+!i122 90
+R83
+R479
+R239
+=======
 R302
 R303
 !i113 0
@@ -8819,36 +10367,60 @@ R24
 R528
 R446
 R197
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R94
 R547
 R548
 R65
 33
+<<<<<<< HEAD
+R528
+!i10b 1
+R529
+R530
+R531
+=======
 R531
 !i10b 1
 R532
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Amixed
+<<<<<<< HEAD
+R48
+R315
+Z550 DEx4 work 11 fetch_logic 0 22 8XkC_EHE`gLD]Uzf0_@H82
+!i122 90
+=======
 R23
 R24
 R549
 !i122 88
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l134
 R258
 R550
 R551
 R65
 33
+<<<<<<< HEAD
+R528
+!i10b 1
+R529
+R530
+R531
+=======
 R531
 !i10b 1
 R532
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
@@ -8872,6 +10444,59 @@ R303
 R275
 R57
 R0
+<<<<<<< HEAD
+R196
+Z553 w1712592672
+Efetch_logic
+R547
+R48
+R315
+!i122 89
+R83
+R479
+R239
+l0
+R308
+R548
+R549
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Amixed
+R48
+R315
+R550
+!i122 89
+l134
+R313
+R551
+R552
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Efirstalu
+R527
+R48
+R315
+!i122 90
+R83
+R299
+R300
+=======
 R152
 R534
 Efirstalu
@@ -8882,40 +10507,108 @@ R24
 R528
 R256
 R257
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R323
 R480
 R481
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Astructure
+<<<<<<< HEAD
+R48
+R315
+R295
+!i122 90
+=======
 R23
 R24
 R252
 !i122 89
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l92
 R253
 R254
 R255
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Efirstalu
+<<<<<<< HEAD
+R527
+R48
+R315
+!i122 89
+R83
+R299
+R300
+l0
+R320
+R480
+R481
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructure
+R48
+R315
+R295
+!i122 89
+l92
+R296
+R297
+R298
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Efulladderstruct
+R527
+R48
+R315
+!i122 90
+R83
+R293
+R294
+=======
 R285
 R23
 R24
@@ -8923,6 +10616,7 @@ R24
 R528
 R256
 R257
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R323
 R480
@@ -8970,15 +10664,26 @@ R482
 R483
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Astructure
+<<<<<<< HEAD
+R48
+R315
+R289
+!i122 90
+=======
 R23
 R24
 R246
@@ -9024,12 +10729,72 @@ R23
 R24
 R246
 !i122 88
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l85
 R247
 R248
 R249
 R65
 33
+<<<<<<< HEAD
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Efulladderstruct
+R527
+R48
+R315
+!i122 89
+R83
+R293
+R294
+l0
+R360
+R482
+R483
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructure
+R48
+R315
+R289
+!i122 89
+l85
+R290
+R291
+R292
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Efulladderstructn
+R527
+R48
+R315
+!i122 90
+R83
+R287
+R288
+=======
 R531
 !i10b 1
 R532
@@ -9046,21 +10811,33 @@ R24
 R528
 R244
 R245
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R323
 R484
 R485
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Astructural
+<<<<<<< HEAD
+R48
+R315
+R283
+!i122 90
+=======
 R23
 R24
 R240
@@ -9106,12 +10883,72 @@ R23
 R24
 R240
 !i122 88
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l56
 R241
 R242
 R243
 R65
 33
+<<<<<<< HEAD
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Efulladderstructn
+R527
+R48
+R315
+!i122 89
+R83
+R287
+R288
+l0
+R320
+R484
+R485
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R283
+!i122 89
+l56
+R284
+R285
+R286
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Eid_ex_reg
+R536
+R48
+R315
+!i122 90
+R83
+R280
+R281
+=======
 R531
 !i10b 1
 R532
@@ -9128,40 +10965,78 @@ R24
 R528
 R237
 R238
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R443
 R486
 R487
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Astructural
+<<<<<<< HEAD
+R48
+R315
+R277
+!i122 90
+=======
 R23
 R24
 R234
 !i122 89
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l41
 R194
 R235
 R236
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Eid_ex_reg
+<<<<<<< HEAD
+R536
+R48
+R315
+!i122 89
+R83
+R280
+R281
+l0
+R476
+R486
+R487
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+=======
 R239
 R23
 R24
@@ -9180,18 +11055,50 @@ R531
 R532
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Astructural
+<<<<<<< HEAD
+R48
+R315
+R277
+!i122 89
+=======
 R23
 R24
 R234
 !i122 88
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l41
 R194
 R235
 R236
+<<<<<<< HEAD
+R278
+R279
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Eif_id_reg
+R536
+R48
+R315
+!i122 90
+R83
+R268
+R269
+l0
+R270
+=======
 R65
 33
 R531
@@ -9200,6 +11107,7 @@ R532
 R302
 R303
 !i113 0
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 R275
 R57
 Eif_id_reg
@@ -9216,28 +11124,66 @@ R232
 R233
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Astructural
+<<<<<<< HEAD
+R48
+R315
+R266
+!i122 90
+=======
 R23
 R24
 R224
 !i122 89
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l42
 R62
 R222
 R223
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+!i113 0
+R11
+R2
+Eif_id_reg
+R536
+R48
+R315
+!i122 89
+R83
+R268
+R269
+l0
+R270
+R275
+R276
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+=======
 R302
 R303
 !i113 0
@@ -9262,10 +11208,28 @@ R531
 R532
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Astructural
+<<<<<<< HEAD
+R48
+R315
+R266
+!i122 89
+l42
+R314
+R264
+R265
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+=======
 R23
 R24
 R224
@@ -9281,58 +11245,135 @@ R531
 R532
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Einvg
 R527
+<<<<<<< HEAD
+R48
+R315
+!i122 90
+R83
+R261
+R262
+=======
 R23
 R24
 !i122 89
 R528
 R219
 R220
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R330
 R488
 R489
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Adataflow
+<<<<<<< HEAD
+R48
+R315
+R258
+!i122 90
+=======
 R23
 R24
 R216
 !i122 89
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l31
 R74
 R217
 R218
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Einvg
 R527
+<<<<<<< HEAD
+R48
+R315
+!i122 89
+R83
+R261
+R262
+l0
+R327
+R488
+R489
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Adataflow
+R48
+R315
+R258
+!i122 89
+l31
+R133
+R259
+R260
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Eloadmemmodule
+R527
+R48
+R315
+!i122 90
+R83
+R256
+R257
+=======
 R23
 R24
 !i122 88
 R528
 R219
 R220
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R330
 R488
@@ -9380,34 +11421,101 @@ R490
 R491
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Astructure
+<<<<<<< HEAD
+R48
+R315
+R252
+!i122 90
+=======
 R23
 R24
 R210
 !i122 89
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l78
 R211
 R212
 R213
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Eloadmemmodule
+<<<<<<< HEAD
+R527
+R48
+R315
+!i122 89
+R83
+R256
+R257
+l0
+R360
+R490
+R491
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructure
+R48
+R315
+R252
+!i122 89
+l78
+R253
+R254
+R255
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Elui
+R527
+R48
+R315
+!i122 90
+R83
+R250
+R251
+=======
 R285
 R23
 R24
@@ -9415,6 +11523,7 @@ R24
 R528
 R214
 R215
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R352
 R490
@@ -9462,34 +11571,71 @@ R492
 R493
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Aflow
+<<<<<<< HEAD
+R48
+R315
+R247
+!i122 90
+=======
 R23
 R24
 R205
 !i122 89
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l36
 R26
 R206
 R207
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Elui
+<<<<<<< HEAD
+R527
+R48
+R315
+!i122 89
+R83
+R250
+R251
+l0
+R320
+R492
+R493
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+=======
 R285
 R23
 R24
@@ -9508,10 +11654,28 @@ R531
 R532
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Aflow
+<<<<<<< HEAD
+R48
+R315
+R247
+!i122 89
+l36
+R102
+R248
+R249
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+=======
 R23
 R24
 R205
@@ -9527,15 +11691,109 @@ R531
 R532
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Emem
+<<<<<<< HEAD
+R527
+R100
+R48
+R315
+!i122 90
+R83
+R105
+R246
+=======
 R285
 R22
 R23
 R24
 !i122 89
+R528
+R263
+R204
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
+l0
+L8 1
+R270
+R271
+R65
+33
+R528
+!i10b 1
+R529
+R530
+<<<<<<< HEAD
+R531
+=======
+R302
+R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
+!i113 0
+R275
+R57
+Artl
+<<<<<<< HEAD
+R100
+R48
+R315
+R243
+!i122 90
+=======
+R22
+R23
+R24
+R201
+!i122 89
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
+l37
+R29
+R202
+R203
+R65
+33
+R528
+!i10b 1
+R529
+R530
+<<<<<<< HEAD
+R531
+=======
+R302
+R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
+!i113 0
+R275
+R57
+Emem
+<<<<<<< HEAD
+R527
+R100
+R48
+R315
+!i122 89
+R83
+R105
+R246
+l0
+L8 1
+R76
+R77
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+=======
+R285
+R22
+R23
+R24
+!i122 88
 R528
 R263
 R204
@@ -9545,58 +11803,34 @@ R270
 R271
 R65
 33
-R529
-!i10b 1
-R530
-R302
-R303
-!i113 0
-R275
-R57
-Artl
-R22
-R23
-R24
-R201
-!i122 89
-l37
-R29
-R202
-R203
-R65
-33
-R529
-!i10b 1
-R530
-R302
-R303
-!i113 0
-R275
-R57
-Emem
-R285
-R22
-R23
-R24
-!i122 88
-R528
-R263
-R204
-l0
-L8 1
-R270
-R271
-R65
-33
 R531
 !i10b 1
 R532
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Artl
+<<<<<<< HEAD
+R100
+R48
+R315
+R243
+!i122 89
+l37
+R104
+R244
+R245
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+=======
 R22
 R23
 R24
@@ -9613,10 +11847,20 @@ R531
 R532
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Emem_wb_reg
+<<<<<<< HEAD
+R536
+R48
+R315
+!i122 90
+R83
+R240
+R241
+=======
 R200
 R23
 R24
@@ -9624,40 +11868,78 @@ R24
 R528
 R198
 R199
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R443
 R520
 R521
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Astructural
+<<<<<<< HEAD
+R48
+R315
+R235
+!i122 90
+=======
 R23
 R24
 R193
 !i122 89
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l41
 R194
 R195
 R196
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Emem_wb_reg
+<<<<<<< HEAD
+R536
+R48
+R315
+!i122 89
+R83
+R240
+R241
+l0
+R476
+R520
+R521
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+=======
 R200
 R23
 R24
@@ -9676,10 +11958,28 @@ R531
 R532
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Astructural
+<<<<<<< HEAD
+R48
+R315
+R235
+!i122 89
+l41
+R236
+R237
+R238
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+=======
 R23
 R24
 R193
@@ -9695,10 +11995,21 @@ R531
 R532
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Emips_processor
+<<<<<<< HEAD
+Z554 w1714421045
+R212
+R48
+R315
+!i122 90
+R83
+R232
+R233
+=======
 R546
 R170
 R23
@@ -9707,21 +12018,39 @@ R24
 R528
 R190
 R191
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R330
 R297
 R519
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Astructure
+<<<<<<< HEAD
+R212
+R48
+R315
+R226
+!i122 90
+l397
+L35 713
+VR7ECd=SKHa_8F[S31j6:40
+!s100 FZIazE0z3FNeQ@>M];hGk3
+R127
+=======
 R170
 R23
 R24
@@ -9732,16 +12061,74 @@ R187
 Z553 VU0Tdj]b@jEOYaVW8Rnc323
 Z554 !s100 mm__^`dND@e=j7VkagEA93
 R65
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Emips_processor
+<<<<<<< HEAD
+Z555 w1713995868
+R212
+R48
+R315
+!i122 89
+R83
+R232
+R233
+l0
+R327
+R50
+R519
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructure
+R212
+R48
+R315
+R226
+!i122 89
+l398
+R229
+Z556 VU0Tdj]b@jEOYaVW8Rnc323
+Z557 !s100 mm__^`dND@e=j7VkagEA93
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Pmips_types
+R48
+R315
+!i122 90
+R527
+R83
+R224
+R225
+=======
 R546
 R170
 R23
@@ -9792,40 +12179,67 @@ R527
 R528
 R182
 R183
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R516
 R517
 R518
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Bbody
+<<<<<<< HEAD
+R212
+R48
+R315
+!i122 90
+=======
 R170
 R23
 R24
 !i122 89
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R179
 R180
 R181
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Pmips_types
+<<<<<<< HEAD
+R48
+R315
+!i122 89
+R527
+R83
+R224
+R225
+=======
 R23
 R24
 !i122 88
@@ -9833,10 +12247,20 @@ R527
 R528
 R182
 R183
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R516
 R517
 R518
+<<<<<<< HEAD
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+=======
 R65
 33
 R531
@@ -9844,14 +12268,45 @@ R531
 R532
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Bbody
+<<<<<<< HEAD
+R212
+R48
+R315
+!i122 89
+l0
+R221
+R222
+R223
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Emipsregister
+R536
+R212
+R48
+R315
+!i122 90
+R83
+R218
+R219
+=======
 R170
 R23
 R24
 !i122 88
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R179
 R180
@@ -9881,35 +12336,105 @@ R514
 R515
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Astructure
+<<<<<<< HEAD
+R212
+R48
+R315
+R213
+!i122 90
+=======
 R170
 R23
 R24
 R171
 !i122 89
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l126
 R172
 R173
 R174
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Emipsregister
+<<<<<<< HEAD
+R536
+R212
+R48
+R315
+!i122 89
+R83
+R218
+R219
+l0
+R320
+R514
+R515
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructure
+R212
+R48
+R315
+R213
+!i122 89
+l126
+R214
+R215
+R216
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Emux16_1
+R527
+R48
+R315
+!i122 90
+R83
+R210
+R211
+=======
 R178
 R170
 R23
@@ -9918,6 +12443,7 @@ R24
 R528
 R176
 R177
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R323
 R514
@@ -9964,6 +12490,56 @@ l0
 R228
 R512
 R513
+<<<<<<< HEAD
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Amux
+R48
+R315
+R206
+!i122 90
+l29
+R207
+R208
+R209
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Emux16_1
+R527
+R48
+R315
+!i122 89
+R83
+R210
+R211
+l0
+R270
+R512
+R513
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+=======
 R65
 33
 R529
@@ -9971,10 +12547,39 @@ R529
 R530
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Amux
+<<<<<<< HEAD
+R48
+R315
+R206
+!i122 89
+l29
+R207
+R208
+R209
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Emux16b2t1
+R527
+R48
+R315
+!i122 90
+R83
+R204
+R205
+=======
 R23
 R24
 R164
@@ -10001,6 +12606,7 @@ R24
 R528
 R168
 R169
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R228
 R512
@@ -10048,15 +12654,26 @@ R510
 R511
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Amux
+<<<<<<< HEAD
+R48
+R315
+R200
+!i122 90
+=======
 R23
 R24
 R158
@@ -10102,12 +12719,72 @@ R23
 R24
 R158
 !i122 88
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l28
 R159
 R160
 R161
 R65
 33
+<<<<<<< HEAD
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Emux16b2t1
+R527
+R48
+R315
+!i122 89
+R83
+R204
+R205
+l0
+R270
+R510
+R511
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Amux
+R48
+R315
+R200
+!i122 89
+l28
+R201
+R202
+R203
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Emux2t1
+R527
+R48
+R315
+!i122 90
+R83
+R198
+R199
+=======
 R531
 !i10b 1
 R532
@@ -10124,47 +12801,115 @@ R24
 R528
 R156
 R157
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R228
 R508
 R509
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Astructure
+<<<<<<< HEAD
+R48
+R315
+R197
+!i122 90
+=======
 R23
 R24
 R153
 !i122 89
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l60
 R102
 R154
 R155
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Emux2t1
 R527
+<<<<<<< HEAD
+R48
+R315
+!i122 89
+R83
+R198
+R199
+l0
+R270
+R508
+R509
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructure
+R48
+R315
+R197
+!i122 89
+l60
+R30
+R31
+R32
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Emux2t1_5b
+R527
+R48
+R315
+!i122 90
+R83
+R33
+R196
+=======
 R23
 R24
 !i122 88
 R528
 R156
 R157
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R228
 R508
@@ -10212,15 +12957,26 @@ R506
 R507
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Astructural
+<<<<<<< HEAD
+R48
+R315
+R194
+!i122 90
+=======
 R23
 R24
 R149
@@ -10266,12 +13022,72 @@ R23
 R24
 R149
 !i122 88
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l39
 R133
 R105
 R150
 R65
 33
+<<<<<<< HEAD
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Emux2t1_5b
+R527
+R48
+R315
+!i122 89
+R83
+R33
+R196
+l0
+R320
+R506
+R507
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R194
+!i122 89
+l39
+R178
+R152
+R195
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Emux2t1_n
+R527
+R48
+R315
+!i122 90
+R83
+R192
+R193
+=======
 R531
 !i10b 1
 R532
@@ -10288,47 +13104,115 @@ R24
 R528
 R147
 R148
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R323
 R504
 R505
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Astructural
+<<<<<<< HEAD
+R48
+R315
+R190
+!i122 90
+=======
 R23
 R24
 R145
 !i122 89
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l39
 R133
 R146
 R136
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Emux2t1_n
 R527
+<<<<<<< HEAD
+R48
+R315
+!i122 89
+R83
+R192
+R193
+l0
+R320
+R504
+R505
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R190
+!i122 89
+l39
+R178
+R191
+R181
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Emux2t1flow
+R527
+R48
+R315
+!i122 90
+R83
+R188
+R189
+=======
 R23
 R24
 !i122 88
 R528
 R147
 R148
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R323
 R504
@@ -10376,17 +13260,686 @@ R502
 R503
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Amux2t1f
+<<<<<<< HEAD
+R48
+R315
+R184
+!i122 90
+l28
+R185
+R186
+R187
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Emux2t1flow
+R527
+R48
+R315
+!i122 89
+R83
+R188
+R189
+l0
+R320
+R502
+R503
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Amux2t1f
+R48
+R315
+R184
+!i122 89
+l28
+R185
+R186
+R187
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Emux2t1n
+R527
+R48
+R315
+!i122 90
+R83
+R182
+R183
+l0
+R320
+R500
+R501
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R177
+!i122 90
+l39
+R178
+R179
+R180
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Emux2t1n
+R527
+R48
+R315
+!i122 89
+R83
+R182
+R183
+l0
+R320
+R500
+R501
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R177
+!i122 89
+l39
+R178
+R179
+R180
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Emux32_1
+R527
+R48
+R315
+!i122 90
+R83
+R175
+R176
+l0
+R270
+R498
+R499
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Amux
+R48
+R315
+R52
+!i122 90
+l30
+R172
+R173
+R174
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Emux32_1
+R527
+R48
+R315
+!i122 89
+R83
+R175
+R176
+l0
+R270
+R498
+R499
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Amux
+R48
+R315
+R52
+!i122 89
+l30
+R172
+R173
+R174
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Emux32b3t1
+Z558 w1714421131
+R48
+R315
+!i122 90
+R83
+R170
+R171
+l0
+R270
+R496
+R497
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Amux
+R48
+R315
+R167
+!i122 90
+l28
+R168
+VEkJ3RICUA0;SieFkk^AB52
+!s100 JKJfUI:M6KPNTZ2bh:NJ^2
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Emux32b3t1
+R527
+R48
+R315
+!i122 89
+R83
+R170
+R171
+l0
+R270
+R496
+R497
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Amux
+R48
+R315
+R167
+!i122 89
+l28
+R168
+R99
+R169
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Emux8b4t1
+R527
+R48
+R315
+!i122 90
+R83
+R165
+R166
+l0
+R270
+R494
+R495
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Amux
+R48
+R315
+R161
+!i122 90
+l28
+R162
+R163
+R164
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Emux8b4t1
+R527
+R48
+R315
+!i122 89
+R83
+R165
+R166
+l0
+R270
+R494
+R495
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Amux
+R48
+R315
+R161
+!i122 89
+l28
+R162
+R163
+R164
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Enbitregister
+R527
+R48
+R315
+!i122 90
+R83
+R159
+R160
+l0
+L8 1
+R81
+R82
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R155
+!i122 90
+l29
+R156
+R157
+R158
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Enbitregister
+R527
+R48
+R315
+!i122 89
+R83
+R159
+R160
+l0
+L8 1
+R81
+R82
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R155
+!i122 89
+l29
+R156
+R157
+R158
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Enorg_n
+R527
+R48
+R315
+!i122 90
+R83
+R153
+R154
+l0
+R360
+R74
+R75
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Astructure
+R48
+R315
+R149
+!i122 90
+l63
+R30
+R150
+R151
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Enorg_n
+R527
+R48
+R315
+!i122 89
+R83
+R153
+R154
+l0
+R360
+R74
+R75
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructure
+R48
+R315
+R149
+!i122 89
+l63
+R30
+R150
+R151
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Eonescompn
+R527
+R48
+R315
+!i122 90
+R83
+R147
+R148
+l0
+R270
+R378
+R379
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R143
+!i122 90
+l36
+R144
+R145
+R146
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Eonescompn
+R527
+R48
+R315
+!i122 89
+R83
+R147
+R148
+l0
+R270
+R378
+R379
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R143
+!i122 89
+l36
+R144
+R145
+R146
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Eorg2
+R527
+R48
+R315
+!i122 90
+R83
+R142
+R40
+l0
+R327
+R376
+R377
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Adataflow
+R48
+R315
+R138
+!i122 90
+l32
+=======
 R23
 R24
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 R139
 !i122 89
 l28
@@ -10395,9 +13948,108 @@ R141
 R142
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+!i113 0
+R11
+R2
+Eorg2
+R527
+R48
+R315
+!i122 89
+R83
+R142
+R40
+l0
+R327
+R376
+R377
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Adataflow
+R48
+R315
+R138
+!i122 89
+l32
+R139
+R140
+R34
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Eorg32b
+Z559 w1714421002
+Z560 DPx8 synopsys 10 attributes 0 22 9IX8bg`a2S[Azh3JDMQM02
+Z561 DPx4 ieee 14 std_logic_misc 0 22 Vh1S?Q;D1AH@iib=XF9h<0
+R48
+R315
+!i122 90
+R83
+R137
+R41
+l0
+R444
+VSMlMlWF2eO@e`?F@EIY`P3
+!s100 mllW2jaQI0k6[j;jlWHK91
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Adataflow
+R560
+R561
+R48
+R315
+DEx4 work 6 org32b 0 22 SMlMlWF2eO@e`?F@EIY`P3
+!i122 90
+l30
+L29 4
+V53@0i6ngGa9@adeRVO98`3
+!s100 >dl>:S>TFd10`LXkJ13WK2
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Eorg32b
+R527
+R48
+R315
+!i122 89
+R83
+=======
 R302
 R303
 !i113 0
@@ -10450,6 +14102,7 @@ R23
 R24
 !i122 89
 R528
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 R137
 R138
 l0
@@ -10458,9 +14111,22 @@ R500
 R501
 R65
 33
-R529
+R532
 !i10b 1
+R533
 R530
+<<<<<<< HEAD
+R531
+!i113 0
+R11
+R2
+Adataflow
+R48
+R315
+R35
+!i122 89
+l31
+=======
 R302
 R303
 !i113 0
@@ -10472,14 +14138,54 @@ R24
 R132
 !i122 89
 l39
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 R133
 R134
 R135
 R65
 33
-R529
+R532
 !i10b 1
+R533
 R530
+<<<<<<< HEAD
+R531
+!i113 0
+R11
+R2
+Eorg_n
+R527
+R48
+R315
+!i122 90
+R83
+R131
+R132
+l0
+R320
+R372
+R373
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R49
+!i122 90
+l37
+R116
+R117
+R9
+R127
+=======
 R302
 R303
 !i113 0
@@ -10539,10 +14245,72 @@ R228
 R498
 R499
 R65
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+!i113 0
+R11
+R2
+Eorg_n
+R527
+R48
+R315
+!i122 89
+R83
+R131
+R132
+l0
+R320
+R372
+R373
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R49
+!i122 89
+l37
+R116
+R117
+R9
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Epcreg
+R527
+R48
+R315
+!i122 90
+R83
+R78
+R79
+l0
+R327
+R370
+R371
+R127
+=======
 R302
 R303
 !i113 0
@@ -10722,14 +14490,29 @@ R115
 R116
 R117
 R65
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R56
+!i122 90
+l62
+=======
 R302
 R303
 !i113 0
 R275
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 R57
 Emux8b4t1
 R285
@@ -10786,9 +14569,70 @@ R266
 R267
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+!i113 0
+R11
+R2
+Epcreg
+R527
+R48
+R315
+!i122 89
+R83
+R78
+R79
+l0
+R327
+R370
+R371
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R56
+!i122 89
+l62
+R57
+R58
+R115
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Eripplecarryaddern
+R536
+R48
+R315
+!i122 90
+R83
+R366
+R367
+l0
+R270
+R368
+R369
+R127
+=======
 R302
 R303
 !i113 0
@@ -11113,12 +14957,18 @@ R323
 R474
 R475
 R65
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
@@ -11212,6 +15062,9 @@ R66
 l37
 R67
 R68
+<<<<<<< HEAD
+!i122 90
+=======
 R69
 R65
 33
@@ -11414,12 +15267,264 @@ R23
 R24
 R34
 !i122 88
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l43
 R463
 R464
 R465
 R65
 33
+<<<<<<< HEAD
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Eripplecarryaddern
+R536
+R48
+R315
+!i122 89
+R83
+R366
+R367
+l0
+R270
+R368
+R369
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R68
+!i122 89
+l43
+R363
+R364
+R365
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Eshiftleft2n
+R527
+R100
+R48
+R315
+!i122 90
+R83
+R358
+R359
+l0
+R444
+R361
+R362
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Abehavioral
+R100
+R48
+R315
+R101
+!i122 90
+l35
+R102
+R72
+R103
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Eshiftleft2n
+R527
+R100
+R48
+R315
+!i122 89
+R83
+R358
+R359
+l0
+R444
+R361
+R362
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Abehavioral
+R100
+R48
+R315
+R101
+!i122 89
+l35
+R102
+R72
+R103
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Eslt
+R527
+R48
+R315
+!i122 90
+R83
+R354
+R355
+l0
+R320
+R356
+R357
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Abehavorial
+R48
+R315
+R26
+!i122 90
+l34
+R27
+R28
+R29
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Eslt
+R527
+R48
+R315
+!i122 89
+R83
+R354
+R355
+l0
+R320
+R356
+R357
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Abehavorial
+R48
+R315
+R26
+!i122 89
+l34
+R27
+R28
+R29
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Etb
+Z562 w1712683262
+R20
+R21
+R48
+R315
+!i122 90
+R83
+R350
+R351
+l0
+R308
+R352
+R353
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Amixed
+R20
+R21
+R48
+R315
+R22
+!i122 90
+l56
+=======
 R531
 !i10b 1
 R532
@@ -11453,6 +15558,7 @@ R275
 R57
 Abehavioral
 R22
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 R23
 R24
 R25
@@ -11463,9 +15569,69 @@ R27
 R28
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+!i113 0
+R11
+R2
+Etb
+R562
+R20
+R21
+R48
+R315
+!i122 89
+R83
+R350
+R351
+l0
+R308
+R352
+R353
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Amixed
+R20
+R21
+R48
+R315
+R22
+!i122 89
+l56
+R23
+R24
+R25
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Etb_dffg
+R536
+R48
+R315
+!i122 90
+R83
+R346
+R347
+=======
 R302
 R303
 !i113 0
@@ -11480,6 +15646,7 @@ R24
 R528
 R459
 R460
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R411
 R461
@@ -11528,11 +15695,16 @@ R457
 R458
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
@@ -11709,6 +15881,78 @@ R303
 R275
 R57
 Abehavior
+<<<<<<< HEAD
+R48
+R315
+R12
+!i122 90
+l45
+R343
+R344
+R345
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Etb_dffg
+R536
+R48
+R315
+!i122 89
+R83
+R346
+R347
+l0
+R327
+R348
+R349
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Abehavior
+R48
+R315
+R12
+!i122 89
+l45
+R343
+R344
+R345
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Etb_dffgn
+R536
+R48
+R315
+!i122 90
+R83
+R339
+R340
+l0
+R270
+R341
+=======
 R23
 R24
 R19
@@ -11774,6 +16018,7 @@ R23
 R24
 !i122 89
 R528
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 R342
 R343
 l0
@@ -11782,34 +16027,101 @@ R344
 R345
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Abehavior
+<<<<<<< HEAD
+R48
+R315
+R5
+!i122 90
+=======
 R23
 R24
 R18
 !i122 89
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l42
 R333
 R340
 R341
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Etb_dffgn
+<<<<<<< HEAD
+R536
+R48
+R315
+!i122 89
+R83
+R339
+R340
+l0
+R270
+R341
+R342
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Abehavior
+R48
+R315
+R5
+!i122 89
+l42
+R330
+R337
+R338
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Etb_if_id_reg
+R536
+R48
+R315
+!i122 90
+R83
+R333
+R334
+=======
 R556
 R23
 R24
@@ -11817,6 +16129,7 @@ R24
 R528
 R342
 R343
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R228
 R344
@@ -11864,34 +16177,58 @@ R338
 R339
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Abehavior
+<<<<<<< HEAD
+R48
+R315
+R95
+!i122 90
+=======
 R23
 R24
 R17
 !i122 89
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l42
 R333
 R334
 R335
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Etb_if_id_reg
+<<<<<<< HEAD
+R536
+R48
+R315
+!i122 89
+R83
+=======
 R556
 R23
 R24
@@ -11919,9 +16256,132 @@ R24
 R17
 !i122 88
 l42
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 R333
 R334
 R335
+<<<<<<< HEAD
+R336
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Abehavior
+R48
+R315
+R95
+!i122 89
+l42
+R330
+R331
+R332
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Exorg2
+R527
+R48
+R315
+!i122 90
+R83
+R325
+R326
+l0
+R327
+R328
+R329
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Adataflow
+R48
+R315
+R94
+!i122 90
+l32
+R139
+R323
+R324
+R127
+33
+R528
+!i10b 1
+R529
+R530
+R531
+!i113 0
+R11
+R2
+Exorg2
+R527
+R48
+R315
+!i122 89
+R83
+R325
+R326
+l0
+R327
+R328
+R329
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Adataflow
+R48
+R315
+R94
+!i122 89
+l32
+R139
+R323
+R324
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Exorg_n
+R527
+R48
+R315
+!i122 90
+R83
+R318
+R319
+=======
 R65
 33
 R531
@@ -11981,6 +16441,7 @@ R24
 R528
 R328
 R329
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l0
 R330
 R331
@@ -12028,34 +16489,93 @@ R324
 R325
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Astructural
+<<<<<<< HEAD
+R48
+R315
+R93
+!i122 90
+=======
 R23
 R24
 R1
 !i122 89
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 l37
 R67
 R316
 R317
 R65
 33
-R529
+R528
 !i10b 1
+R529
 R530
+<<<<<<< HEAD
+R531
+=======
 R302
 R303
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
 !i113 0
 R275
 R57
 Exorg_n
+<<<<<<< HEAD
+R527
+R48
+R315
+!i122 89
+R83
+R318
+R319
+l0
+R320
+R321
+R322
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+Astructural
+R48
+R315
+R93
+!i122 89
+l37
+R116
+R316
+R317
+R127
+33
+R532
+!i10b 1
+R533
+R530
+R531
+!i113 0
+R11
+R2
+=======
 R285
 R23
 R24
@@ -12096,3 +16616,4 @@ R303
 !i113 0
 R275
 R57
+>>>>>>> 99dae1e4e50b46897ca8e4f0256cf575283af29f
