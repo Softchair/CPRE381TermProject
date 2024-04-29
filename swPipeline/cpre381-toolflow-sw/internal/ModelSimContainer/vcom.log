@@ -1,5 +1,5 @@
 QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
-Start time: 10:31:38 on Apr 22,2024
+Start time: 11:01:25 on Apr 29,2024
 vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd internal/testpy/tb.vhd proj/src/MIPS_Processor.vhd proj/src/mem.vhd proj/src/MIPS_types.vhd proj/src/TopLevel/aluUnit/lui.vhd proj/src/TopLevel/aluUnit/fullAdderStruct.vhd proj/src/TopLevel/aluUnit/fullAdderStructN.vhd proj/src/TopLevel/aluUnit/onesCompN.vhd proj/src/TopLevel/aluUnit/adderSubS.vhd proj/src/TopLevel/aluUnit/firstALU.vhd proj/src/TopLevel/aluUnit/slt.vhd proj/src/TopLevel/aluUnit/ALU.vhd proj/src/TopLevel/aluUnit/barrelShifter/1bitShifter.vhd proj/src/TopLevel/aluUnit/barrelShifter/barrelshifter.vhd proj/src/TopLevel/aluUnit/basicGates/xorG_N.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1Flow.vhd proj/src/TopLevel/aluUnit/basicGates/norG_N.vhd proj/src/TopLevel/aluUnit/basicGates/mux16b2t1.vhd proj/src/TopLevel/aluUnit/basicGates/barrelShifterArithmetic.vhd proj/src/TopLevel/aluUnit/basicGates/mux16_1.vhd proj/src/TopLevel/aluUnit/basicGates/barrelShifterSLL.vhd proj/src/TopLevel/aluUnit/basicGates/orG_N.vhd proj/src/TopLevel/aluUnit/basicGates/bit_extenders.vhd proj/src/TopLevel/aluUnit/basicGates/andG_N.vhd proj/src/TopLevel/aluUnit/basicGates/mux8b4t1.vhd proj/src/TopLevel/aluUnit/basicGates/mux32b3t1.vhd proj/src/TopLevel/aluUnit/basicGates/bit_extenders24b.vhd proj/src/TopLevel/aluUnit/basicGates/mux2t1_5b.vhd proj/src/TopLevel/aluUnit/basicGates/orG32b.vhd proj/src/TopLevel/ControlLogic/control_Logic.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/EX_MEM_Reg.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/ID_EX_Reg.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/tb_IF_ID_Reg.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/tb_dffg.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/tb_dffgN.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/MEM_WB_Reg.vhd proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/IF_ID_Reg.vhd proj/src/TopLevel/BasicGates/org2.vhd proj/src/TopLevel/BasicGates/mux2t1.vhd proj/src/TopLevel/BasicGates/mux2t1N.vhd proj/src/TopLevel/BasicGates/andg2.vhd proj/src/TopLevel/BasicGates/andgN.vhd proj/src/TopLevel/BasicGates/andG32b.vhd proj/src/TopLevel/BasicGates/xorg2.vhd proj/src/TopLevel/BasicGates/mux2t1_N.vhd proj/src/TopLevel/BasicGates/invg.vhd proj/src/TopLevel/BasicGates/Adder/adder1b.vhd proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd proj/src/TopLevel/BasicGates/register/decoder5_32.vhd proj/src/TopLevel/BasicGates/register/dffgN.vhd proj/src/TopLevel/BasicGates/register/dffg.vhd proj/src/TopLevel/BasicGates/register/dffgNN.vhd proj/src/TopLevel/BasicGates/register/mux32_1.vhd proj/src/TopLevel/BasicGates/register/MIPSregister.vhd proj/src/TopLevel/FetchLogic/fetch_Logic.vhd proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd proj/src/TopLevel/FetchLogic/Supporting files/bit16_extenders.vhd proj/src/TopLevel/FetchLogic/Supporting files/PCReg.vhd proj/src/TopLevel/FetchLogic/Gates/NbitRegister.vhd proj/src/TopLevel/loadMemModule/loadMemModule.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -39,7 +39,6 @@ vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd interna
 -- Compiling entity ALU
 -- Compiling architecture structure of ALU
 -- Compiling entity barrelShifter
-** Warning: proj/src/TopLevel/aluUnit/barrelShifter/barrelshifter.vhd(25): (vcom-1615) Existing architecture 'barrelShifter(structural)' at /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/TopLevel/aluUnit/slt.vhd(0) will be overwritten.
 -- Compiling architecture structural of barrelShifter
 -- Compiling entity xorG_N
 -- Compiling architecture structural of xorG_N
@@ -49,23 +48,17 @@ vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd interna
 -- Compiling architecture structure of norG_N
 -- Compiling entity mux16b2t1
 -- Compiling architecture mux of mux16b2t1
-** Warning: proj/src/TopLevel/aluUnit/basicGates/barrelShifterArithmetic.vhd(20): (vcom-1615) Existing entity 'barrelShifterArithmetic' at /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd(20) will be overwritten.
 -- Compiling entity barrelShifterArithmetic
-** Warning: proj/src/TopLevel/aluUnit/basicGates/barrelShifterArithmetic.vhd(30): (vcom-1615) Existing architecture 'barrelShifterArithmetic(structural)' at /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/TopLevel/FetchLogic/Supporting files/shiftleft2N.vhd(30) will be overwritten.
 -- Compiling architecture structural of barrelShifterArithmetic
 -- Compiling entity mux16_1
 -- Compiling architecture mux of mux16_1
-** Warning: proj/src/TopLevel/aluUnit/basicGates/barrelShifterSLL.vhd(20): (vcom-1615) Existing entity 'barrelShifterSLL' at /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd(20) will be overwritten.
 -- Compiling entity barrelShifterSLL
-** Warning: proj/src/TopLevel/aluUnit/basicGates/barrelShifterSLL.vhd(30): (vcom-1615) Existing architecture 'barrelShifterSLL(structural)' at /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/TopLevel/BasicGates/Adder/rippleCarryAdderN.vhd(0) will be overwritten.
 -- Compiling architecture structural of barrelShifterSLL
 -- Compiling entity orG_N
 -- Compiling architecture structural of orG_N
 -- Compiling entity bit_extenders
 -- Compiling architecture flow of bit_extenders
-** Warning: proj/src/TopLevel/aluUnit/basicGates/andG_N.vhd(21): (vcom-1615) Existing entity 'andG_N' at /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/tb_dffg.vhd(21) will be overwritten.
 -- Compiling entity andG_N
-** Warning: proj/src/TopLevel/aluUnit/basicGates/andG_N.vhd(29): (vcom-1615) Existing architecture 'andG_N(structural)' at /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/proj/src/TopLevel/SoftwarePipeline/Pipeline Registers/tb_dffg.vhd(29) will be overwritten.
 -- Compiling architecture structural of andG_N
 -- Compiling entity mux8b4t1
 -- Compiling architecture mux of mux8b4t1
@@ -101,9 +94,7 @@ vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd interna
 -- Compiling architecture structural of mux2t1N
 -- Compiling entity andg2
 -- Compiling architecture dataflow of andg2
-** Warning: proj/src/TopLevel/BasicGates/andgN.vhd(17): (vcom-1615) Existing entity 'andgN' at /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/internal/testpy/tb.vhd(17) will be overwritten.
 -- Compiling entity andgN
-** Warning: proj/src/TopLevel/BasicGates/andgN.vhd(26): (vcom-1615) Existing architecture 'andgN(structural)' at /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/swPipeline/cpre381-toolflow-sw/internal/testpy/tb.vhd(0) will be overwritten.
 -- Compiling architecture structural of andgN
 -- Compiling entity andG32b
 -- Compiling architecture dataflow of andG32b
@@ -142,5 +133,5 @@ vcom -2008 -work internal/ModelSimContainer/work proj/src/MIPS_types.vhd interna
 -- Compiling architecture structural of nbitregister
 -- Compiling entity loadMemModule
 -- Compiling architecture structure of loadMemModule
-End time: 10:31:38 on Apr 22,2024, Elapsed time: 0:00:00
-Errors: 0, Warnings: 11
+End time: 11:01:25 on Apr 29,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 2
