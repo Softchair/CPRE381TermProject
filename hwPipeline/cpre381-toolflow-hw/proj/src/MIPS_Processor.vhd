@@ -678,7 +678,7 @@ BEGIN
   s_EX_MEM_in(0) <= s_ID_EX_out(0); -- JalSel
   s_EX_MEM_in(1) <= s_ID_EX_out(1); -- Halt
   s_EX_MEM_in(4 DOWNTO 2) <= s_ID_EX_out(4 DOWNTO 2); -- s_load
-  s_EX_MEM_in(5) <= s_ID_EX_out(7); -- overflow
+  s_EX_MEM_in(5) <= s_OvflEX; -- overflow
   s_EX_MEM_in(6) <= s_ID_EX_out(8); -- regWrite
   s_EX_MEM_in(7) <= s_ID_EX_out(9); -- Dmem write
   s_EX_MEM_in(8) <= s_ID_EX_out(10); -- memtoreg
@@ -714,6 +714,11 @@ BEGIN
   s_MEM_WB_in(71 DOWNTO 40) <= s_EX_MEM_out(72 DOWNTO 41); -- dataOut
   s_MEM_WB_in(103 DOWNTO 72) <= s_DMemOut; -- Read Data (data out from dmem)
   s_MEM_WB_in(108 DOWNTO 104) <= s_EX_MEM_out(109 DOWNTO 105); -- write addr
+
+
+  s_Ovfl <= s_MEM_WB_out(5);
+
+
   MEMWBReg : MEM_WB_Reg
 
   PORT MAP(
