@@ -1,0 +1,730 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+!s11e vcom 2023.2_2 2023.06, Jun  9 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel
+T_opt
+!s110 1714426688
+V<cNFMzJGkBhHW8a?3KE0H0
+04 13 5 work tb_stallflush mixed 1
+=1-7486e22834bc-66301340-1f57-17628
+R1
+!s12b OEM100
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2023.2_2;77
+Eandg2
+Z3 w1712347389
+Z4 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z5 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 4
+R2
+Z6 8/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andg2.vhd
+Z7 F/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andg2.vhd
+l0
+Z8 L23 1
+V`ZXnieNX25Iz2HDXPGzo91
+!s100 0e<Rg^QbB^Y@JP[zKSc0[3
+Z9 OL;C;2023.2_2;77
+33
+Z10 !s110 1714426501
+!i10b 1
+Z11 !s108 1714426501.000000
+Z12 !s90 -reportprogress|300|-work|work|/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andg2.vhd|
+Z13 !s107 /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andg2.vhd|
+!i113 0
+Z14 o-work work
+Z15 tExplicit 1 NoCoverage 1 CvgOpt 0
+Adataflow
+R4
+R5
+DEx4 work 5 andg2 0 22 `ZXnieNX25Iz2HDXPGzo91
+!i122 4
+l32
+Z16 L31 6
+VaH[`4RgPnZ4F<9<6AYHeb1
+!s100 CbBW?3Q;N[15?`QCEQ<@f2
+R9
+33
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Eandg32b
+R3
+R4
+R5
+!i122 6
+R2
+Z17 8/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andG32b.vhd
+Z18 F/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andG32b.vhd
+l0
+Z19 L21 1
+V]9LVlFCnMX8>@Ii:LB0O;3
+!s100 :dgD_kOO>?kFLzCn>bFF>2
+R9
+33
+R10
+!i10b 1
+R11
+Z20 !s90 -reportprogress|300|-work|work|/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andG32b.vhd|
+Z21 !s107 /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andG32b.vhd|
+!i113 0
+R14
+R15
+Adataflow
+R4
+R5
+DEx4 work 7 andg32b 0 22 ]9LVlFCnMX8>@Ii:LB0O;3
+!i122 6
+l31
+Z22 L30 6
+V`DaYmXTS:oJi<CmYGLoo@2
+!s100 @kglfcg_>Y^IPjNieQ8C[3
+R9
+33
+R10
+!i10b 1
+R11
+R20
+R21
+!i113 0
+R14
+R15
+Eandg5b
+Z23 w1713391938
+R4
+R5
+!i122 5
+R2
+Z24 8/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andG5b.vhd
+Z25 F/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andG5b.vhd
+l0
+Z26 L20 1
+V>Y@_XGRHnSKODK0zlfV`b1
+!s100 5Hze_;2fA5P4BMAGzdzJN1
+R9
+33
+R10
+!i10b 1
+R11
+Z27 !s90 -reportprogress|300|-work|work|/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andG5b.vhd|
+Z28 !s107 /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andG5b.vhd|
+!i113 0
+R14
+R15
+Adataflow
+R4
+R5
+DEx4 work 6 andg5b 0 22 >Y@_XGRHnSKODK0zlfV`b1
+!i122 5
+l30
+Z29 L29 4
+V^QXh=Y:W<jPz;Oao4Wo2=3
+!s100 B[7<Y`gE[APPGn3YoUfKk3
+R9
+33
+R10
+!i10b 1
+R11
+R27
+R28
+!i113 0
+R14
+R15
+Eandgn
+R3
+R4
+R5
+!i122 7
+R2
+Z30 8/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andgN.vhd
+Z31 F/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andgN.vhd
+l0
+L17 1
+VScE0@f29?Gm8a[NQ];P=K3
+!s100 b]C<YaSIPlQgPdfAiYB=<1
+R9
+33
+R10
+!i10b 1
+R11
+Z32 !s90 -reportprogress|300|-work|work|/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andgN.vhd|
+Z33 !s107 /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andgN.vhd|
+!i113 0
+R14
+R15
+Astructural
+R4
+R5
+DEx4 work 5 andgn 0 22 ScE0@f29?Gm8a[NQ];P=K3
+!i122 7
+l35
+L26 21
+VSUJO[h`8B<kVW]g^7GWVa1
+!s100 `2aSg[7@0]h7FRDQAZ=gn0
+R9
+33
+R10
+!i10b 1
+R11
+R32
+R33
+!i113 0
+R14
+R15
+Edffg
+Z34 w1713994681
+R4
+R5
+!i122 16
+R2
+Z35 8/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/register/dffg.vhd
+Z36 F/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/register/dffg.vhd
+l0
+R8
+V<4[1c^JVlXT1d_XTIVZ261
+!s100 FJQDe;FGDG0KnNV;j4DaY2
+R9
+33
+Z37 !s110 1714426552
+!i10b 1
+Z38 !s108 1714426552.000000
+Z39 !s90 -reportprogress|300|-work|work|/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/register/dffg.vhd|
+Z40 !s107 /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/register/dffg.vhd|
+!i113 0
+R14
+R15
+Amixed
+R4
+R5
+DEx4 work 4 dffg 0 22 <4[1c^JVlXT1d_XTIVZ261
+!i122 16
+l37
+Z41 L33 29
+VTEdG>g0`Ff3kSOBZ1j4FM2
+!s100 GR5ff]ZD1Yiz`>ZFVE>Hg1
+R9
+33
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 0
+R14
+R15
+Edffgnf
+Z42 w1713401197
+R4
+R5
+!i122 17
+R2
+Z43 8/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/register/dffgNF.vhd
+Z44 F/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/register/dffgNF.vhd
+l0
+R8
+Ve:<8iUNOUzS^aQJ^<VF@a0
+!s100 0j;IaG^?2QFn3Gk@=kj>K2
+R9
+33
+R37
+!i10b 1
+R38
+Z45 !s90 -reportprogress|300|-work|work|/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/register/dffgNF.vhd|
+Z46 !s107 /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/register/dffgNF.vhd|
+!i113 0
+R14
+R15
+Amixed
+R4
+R5
+DEx4 work 6 dffgnf 0 22 e:<8iUNOUzS^aQJ^<VF@a0
+!i122 17
+l37
+R41
+VzaoVn3Wc<ni1eR2i?f^NP0
+!s100 _^[<Eb>1@RB21>Q[e5d[g2
+R9
+33
+R37
+!i10b 1
+R38
+R45
+R46
+!i113 0
+R14
+R15
+Edffgnn
+Z47 w1713401151
+R4
+R5
+!i122 18
+R2
+Z48 8/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/register/dffgNN.vhd
+Z49 F/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/register/dffgNN.vhd
+l0
+R26
+V@nA35?kb<_A`FFl7ESC7K0
+!s100 OP:XWd4BZDjXdUNcRYbmz0
+R9
+33
+R37
+!i10b 1
+R38
+Z50 !s90 -reportprogress|300|-work|work|/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/register/dffgNN.vhd|
+Z51 !s107 /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/register/dffgNN.vhd|
+!i113 0
+R14
+R15
+Astructural
+R4
+R5
+DEx4 work 6 dffgnn 0 22 @nA35?kb<_A`FFl7ESC7K0
+!i122 18
+l42
+L30 24
+V[V578QANc:NZOc2Pl^SC81
+!s100 S:kiK92Kjn[:ommaM1TTA3
+R9
+33
+R37
+!i10b 1
+R38
+R50
+R51
+!i113 0
+R14
+R15
+Einvg
+R3
+R4
+R5
+!i122 8
+R2
+Z52 8/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/invg.vhd
+Z53 F/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/invg.vhd
+l0
+R8
+V^IQhB0M:TibmTX48^HJa:0
+!s100 5^0jfQ^dVk:bl_Za_KajG0
+R9
+33
+R10
+!i10b 1
+R11
+Z54 !s90 -reportprogress|300|-work|work|/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/invg.vhd|
+Z55 !s107 /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/invg.vhd|
+!i113 0
+R14
+R15
+Adataflow
+R4
+R5
+DEx4 work 4 invg 0 22 ^IQhB0M:TibmTX48^HJa:0
+!i122 8
+l31
+R22
+VGnAN1IHi;Y?=mi4968o873
+!s100 Q?`9^ToWC]zk1[=<LdPdE3
+R9
+33
+R10
+!i10b 1
+R11
+R54
+R55
+!i113 0
+R14
+R15
+Emux2t1
+R3
+R4
+R5
+!i122 15
+R2
+Z56 8/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1.vhd
+Z57 F/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1.vhd
+l0
+R26
+V89eGLE@:J<eWd@R0KM36c1
+!s100 DVl>2Rfe4AP:[22MffllZ2
+R9
+33
+R10
+!i10b 1
+R11
+Z58 !s90 -reportprogress|300|-work|work|/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1.vhd|
+Z59 !s107 /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1.vhd|
+!i113 0
+R14
+R15
+Astructure
+R4
+R5
+DEx4 work 6 mux2t1 0 22 89eGLE@:J<eWd@R0KM36c1
+!i122 15
+l60
+L30 60
+VBoj07OKiCJ[F0FndoZBB70
+!s100 NP]K<z3HRm<OAkKN:KPX01
+R9
+33
+R10
+!i10b 1
+R11
+R58
+R59
+!i113 0
+R14
+R15
+Emux2t1_17b
+Z60 w1713400058
+R4
+R5
+!i122 14
+R2
+Z61 8/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1_17b.vhd
+Z62 F/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1_17b.vhd
+l0
+R19
+VQ]BbfbYFJ5X5f6Tf8C]f@3
+!s100 z]V7QkAkOd:JeN1;mV9Io1
+R9
+33
+R10
+!i10b 1
+R11
+Z63 !s90 -reportprogress|300|-work|work|/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1_17b.vhd|
+Z64 !s107 /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1_17b.vhd|
+!i113 0
+R14
+R15
+Astructural
+R4
+R5
+DEx4 work 10 mux2t1_17b 0 22 Q]BbfbYFJ5X5f6Tf8C]f@3
+!i122 14
+l39
+Z65 L30 21
+VU=0=h^7gO=@N?4m7FD_a81
+!s100 aA6hK`ZIKWBgR`^E[Qdc22
+R9
+33
+R10
+!i10b 1
+R11
+R63
+R64
+!i113 0
+R14
+R15
+Emux2t1_n
+R3
+R4
+R5
+!i122 9
+R2
+Z66 8/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1_N.vhd
+Z67 F/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1_N.vhd
+l0
+R19
+VQAf8Q9Ej2QBN0lQXa4H@13
+!s100 Y80E^d;5=hf2cNC6Yk_Di1
+R9
+33
+R10
+!i10b 1
+R11
+Z68 !s90 -reportprogress|300|-work|work|/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1_N.vhd|
+Z69 !s107 /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1_N.vhd|
+!i113 0
+R14
+R15
+Astructural
+R4
+R5
+DEx4 work 8 mux2t1_n 0 22 QAf8Q9Ej2QBN0lQXa4H@13
+!i122 9
+l39
+R65
+V97Uc_O[Ql8zDG7OiHJFMQ0
+!s100 `>^]M24jDEZ=7JFVDOOTo3
+R9
+33
+R10
+!i10b 1
+R11
+R68
+R69
+!i113 0
+R14
+R15
+Emux2t1n
+R3
+R4
+R5
+!i122 10
+R2
+Z70 8/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1N.vhd
+Z71 F/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1N.vhd
+l0
+R19
+VeVmeNoBkd3]zPKDS_[OaR1
+!s100 kl>AfKa>FIBOXY3UAQ@1?1
+R9
+33
+R10
+!i10b 1
+R11
+Z72 !s90 -reportprogress|300|-work|work|/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1N.vhd|
+Z73 !s107 /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1N.vhd|
+!i113 0
+R14
+R15
+Astructural
+R4
+R5
+DEx4 work 7 mux2t1n 0 22 eVmeNoBkd3]zPKDS_[OaR1
+!i122 10
+l39
+R65
+V?5=HC1e]EciX]oC^LX5Ob1
+!s100 R7f67P6UdiEe1_FlEc3eB3
+R9
+33
+R10
+!i10b 1
+R11
+R72
+R73
+!i113 0
+R14
+R15
+Eorg2
+R3
+R4
+R5
+!i122 11
+R2
+Z74 8/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/org2.vhd
+Z75 F/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/org2.vhd
+l0
+R8
+VkbW`>IOf=9G1AFX9^DNzY1
+!s100 hJAZ>EB8bm_e<^5IFaP9e1
+R9
+33
+R10
+!i10b 1
+R11
+Z76 !s90 -reportprogress|300|-work|work|/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/org2.vhd|
+Z77 !s107 /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/org2.vhd|
+!i113 0
+R14
+R15
+Adataflow
+R4
+R5
+DEx4 work 4 org2 0 22 kbW`>IOf=9G1AFX9^DNzY1
+!i122 11
+l32
+R16
+Vgb<e=7>XBQTJGCc<Rd:i:1
+!s100 nma>Pa=mMW`KzzjeW=1[d1
+R9
+33
+R10
+!i10b 1
+R11
+R76
+R77
+!i113 0
+R14
+R15
+Eorg5b
+Z78 w1713994979
+R4
+R5
+!i122 12
+R2
+Z79 8/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/org5b.vhd
+Z80 F/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/org5b.vhd
+l0
+R19
+VI8?n:]f0OiFU;GdT][bj51
+!s100 3KG2?0<`i[_OUDmYOJ:8g1
+R9
+33
+R10
+!i10b 1
+R11
+Z81 !s90 -reportprogress|300|-work|work|/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/org5b.vhd|
+Z82 !s107 /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/org5b.vhd|
+!i113 0
+R14
+R15
+Adataflow
+R4
+R5
+DEx4 work 5 org5b 0 22 I8?n:]f0OiFU;GdT][bj51
+!i122 12
+l30
+R29
+VF=EgMLfCE^bPGVT7YeLaL2
+!s100 jQ8=@2;U5H9945K;O94gM2
+R9
+33
+R10
+!i10b 1
+R11
+R81
+R82
+!i113 0
+R14
+R15
+Estallflush
+Z83 w1714414100
+R4
+R5
+!i122 3
+R2
+Z84 8/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/stallFlush.vhd
+Z85 F/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/stallFlush.vhd
+l0
+R26
+ViQoanOJnVBF:FEc=[RCW91
+!s100 ii:Xd]99MSchO^fFU[^OZ2
+R9
+33
+Z86 !s110 1714426495
+!i10b 1
+Z87 !s108 1714426495.000000
+Z88 !s90 -reportprogress|300|-work|work|/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/stallFlush.vhd|
+Z89 !s107 /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/stallFlush.vhd|
+!i113 0
+R14
+R15
+Astructural
+R4
+R5
+DEx4 work 10 stallflush 0 22 iQoanOJnVBF:FEc=[RCW91
+!i122 3
+l64
+L29 102
+V2fVn[>>>K;a51^IV>T<b^0
+!s100 @V_DAd1VELAD8H;G8XOo10
+R9
+33
+R86
+!i10b 1
+R87
+R88
+R89
+!i113 0
+R14
+R15
+Etb_stallflush
+Z90 w1714415778
+Z91 DPx3 std 3 env 0 22 QPZJVBPkV?55nUWhDzFik0
+Z92 DPx4 ieee 16 std_logic_textio 0 22 C8j>g0lzF^EAA]5<S6PY32
+R4
+R5
+!i122 2
+R2
+Z93 8/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/tb_stallFlush.vhd
+Z94 F/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/tb_stallFlush.vhd
+l0
+R19
+VIG]Kin[^?Li5J`[j3Xfgn0
+!s100 @zQfbNHm2Jl<=7LmnBR`D2
+R9
+33
+Z95 !s110 1714426494
+!i10b 1
+Z96 !s108 1714426494.000000
+Z97 !s90 -reportprogress|300|-work|work|/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/tb_stallFlush.vhd|
+Z98 !s107 /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/tb_stallFlush.vhd|
+!i113 0
+R14
+R15
+Amixed
+R91
+R92
+R4
+R5
+DEx4 work 13 tb_stallflush 0 22 IG]Kin[^?Li5J`[j3Xfgn0
+!i122 2
+l64
+L27 130
+V>3=`^@clFS4YcGaYmiN_m1
+!s100 TQSIQoBQ1:^o4;B<FY9I@3
+R9
+33
+R95
+!i10b 1
+R96
+R97
+R98
+!i113 0
+R14
+R15
+Exorg2
+R3
+R4
+R5
+!i122 13
+R2
+Z99 8/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/xorg2.vhd
+Z100 F/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/xorg2.vhd
+l0
+R8
+VESJV1emcX7m;an9A`9kkk3
+!s100 zGkHVGJ]HQ5RboN2N>KzN1
+R9
+33
+R10
+!i10b 1
+R11
+Z101 !s90 -reportprogress|300|-work|work|/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/xorg2.vhd|
+Z102 !s107 /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/xorg2.vhd|
+!i113 0
+R14
+R15
+Adataflow
+R4
+R5
+DEx4 work 5 xorg2 0 22 ESJV1emcX7m;an9A`9kkk3
+!i122 13
+l32
+R16
+VI5[iO;Q^1X31k599`eic[1
+!s100 2<f]d3XziROLh_[:_6mNg2
+R9
+33
+R10
+!i10b 1
+R11
+R101
+R102
+!i113 0
+R14
+R15

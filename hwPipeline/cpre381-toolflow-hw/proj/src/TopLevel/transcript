@@ -1,0 +1,324 @@
+# //  Questa Sim-64
+# //  Version 2023.2_2 linux_x86_64 Jun  9 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Load canceled
+vlib work
+vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/stallFlush.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:34:39 on Apr 29,2024
+# vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/stallFlush.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity stallFLush
+# -- Compiling architecture structural of stallFLush
+# End time: 16:34:39 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/tb_stallFlush.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:34:39 on Apr 29,2024
+# vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/tb_stallFlush.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package ENV
+# ** Warning: /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/tb_stallFlush.vhd(17): (vcom-1516) Package "STD.ENV" does not exist in this language version.
+# -- Compiling entity tb_stallFlush
+# -- Compiling architecture mixed of tb_stallFlush
+# End time: 16:34:39 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Modified modelsim.ini
+# Modified modelsim.ini
+vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/tb_stallFlush.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:34:54 on Apr 29,2024
+# vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/tb_stallFlush.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package ENV
+# -- Compiling entity tb_stallFlush
+# -- Compiling architecture mixed of tb_stallFlush
+# End time: 16:34:54 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/stallFlush.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:34:55 on Apr 29,2024
+# vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/stallFlush.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity stallFLush
+# -- Compiling architecture structural of stallFLush
+# End time: 16:34:55 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andg2.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:35:01 on Apr 29,2024
+# vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andg2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity andg2
+# -- Compiling architecture dataflow of andg2
+# End time: 16:35:01 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andG5b.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:35:01 on Apr 29,2024
+# vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andG5b.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity andG5b
+# -- Compiling architecture dataflow of andG5b
+# End time: 16:35:01 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andG32b.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:35:01 on Apr 29,2024
+# vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andG32b.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity andG32b
+# -- Compiling architecture dataflow of andG32b
+# End time: 16:35:01 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andgN.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:35:01 on Apr 29,2024
+# vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/andgN.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity andgN
+# -- Compiling architecture structural of andgN
+# End time: 16:35:01 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/invg.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:35:01 on Apr 29,2024
+# vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/invg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity invg
+# -- Compiling architecture dataflow of invg
+# End time: 16:35:01 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1_N.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:35:01 on Apr 29,2024
+# vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2t1_N
+# -- Compiling architecture structural of mux2t1_N
+# End time: 16:35:01 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1N.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:35:01 on Apr 29,2024
+# vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2t1N
+# -- Compiling architecture structural of mux2t1N
+# End time: 16:35:01 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/org2.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:35:01 on Apr 29,2024
+# vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/org2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity org2
+# -- Compiling architecture dataflow of org2
+# End time: 16:35:01 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/org5b.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:35:01 on Apr 29,2024
+# vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/org5b.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity orG5b
+# -- Compiling architecture dataflow of orG5b
+# End time: 16:35:01 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/xorg2.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:35:01 on Apr 29,2024
+# vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/xorg2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity xorg2
+# -- Compiling architecture dataflow of xorg2
+# End time: 16:35:01 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1_17b.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:35:01 on Apr 29,2024
+# vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1_17b.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2t1_17b
+# -- Compiling architecture structural of mux2t1_17b
+# End time: 16:35:01 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:35:01 on Apr 29,2024
+# vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/mux2t1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2t1
+# -- Compiling architecture structure of mux2t1
+# End time: 16:35:01 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_stallflush -voptargs=+acc
+# vsim work.tb_stallflush -voptargs="+acc" 
+# Start time: 16:35:12 on Apr 29,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Warning: /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/stallFlush.vhd(81): (vopt-3473) Component instance "IfIdReg : dffgNN" is not bound.
+#         Region: /tb_stallFlush/DUT0
+# ** Warning: /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/stallFlush.vhd(99): (vopt-3473) Component instance "IdExReg : dffgNN" is not bound.
+#         Region: /tb_stallFlush/DUT0
+# ** Warning: /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/stallFlush.vhd(109): (vopt-3473) Component instance "ExMemReg : dffgNN" is not bound.
+#         Region: /tb_stallFlush/DUT0
+# ** Warning: /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/stallFlush.vhd(121): (vopt-3473) Component instance "MemWbReg : dffgNN" is not bound.
+#         Region: /tb_stallFlush/DUT0
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=5.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading std.env(body)
+# Loading work.tb_stallflush(mixed)#1
+# Loading work.stallflush(structural)#1
+# Loading work.mux2t1_n(structural)#1
+# Loading work.mux2t1(structure)#1
+# Loading work.invg(dataflow)#1
+# Loading work.andg2(dataflow)#1
+# Loading work.org2(dataflow)#1
+# ** Warning: (vsim-3473) Component instance "IfIdReg : dffgNN" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_stallflush/DUT0 File: /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/stallFlush.vhd
+# ** Warning: (vsim-3473) Component instance "IdExReg : dffgNN" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_stallflush/DUT0 File: /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/stallFlush.vhd
+# ** Warning: (vsim-3473) Component instance "ExMemReg : dffgNN" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_stallflush/DUT0 File: /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/stallFlush.vhd
+# ** Warning: (vsim-3473) Component instance "MemWbReg : dffgNN" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_stallflush/DUT0 File: /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/stallFlush.vhd
+# ** Warning: (vsim-8684) No drivers exist on out port /tb_stallflush/DUT0/o_dataOut, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /tb_stallflush/s_dataOut.
+quit -sim
+# End time: 16:35:38 on Apr 29,2024, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 10
+vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/register/dffg.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:35:52 on Apr 29,2024
+# vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/register/dffg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dffg
+# -- Compiling architecture mixed of dffg
+# End time: 16:35:52 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/register/dffgNF.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:35:52 on Apr 29,2024
+# vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/register/dffgNF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dffgNF
+# -- Compiling architecture mixed of dffgNF
+# End time: 16:35:52 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/register/dffgNN.vhd
+# QuestaSim-64 vcom 2023.2_2 Compiler 2023.06 Jun  9 2023
+# Start time: 16:35:52 on Apr 29,2024
+# vcom -reportprogress 300 -work work /home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/BasicGates/register/dffgNN.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dffgNN
+# -- Compiling architecture structural of dffgNN
+# End time: 16:35:52 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc work.tb_stallflush
+# vsim -voptargs="+acc" work.tb_stallflush 
+# Start time: 16:37:44 on Apr 29,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Error: (vopt-7) Failed to open  file "/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/work/@_opt/_deps" in read mode.
+# ** Warning: (vopt-56) Problem with optimized design dependency file "/home/kosice/Documents/cpre381TermProj-NEWNEWNEW/CPRE381TermProject/hwPipeline/cpre381-toolflow-hw/proj/src/TopLevel/work/@_opt/_deps" - file open failed.
+# No such file or directory. (errno = ENOENT)
+# ** Fatal: (vopt-8) Problem while reading dependency file "_deps".
+# No such file or directory. (errno = ENOENT)
+# Vopt Compiler exiting
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=2.
+# Error loading design
+# End time: 16:37:45 on Apr 29,2024, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 2
+quit -sim
+vsim -voptargs=+acc work.tb_stallflush
+# vsim -voptargs="+acc" work.tb_stallflush 
+# Start time: 16:38:07 on Apr 29,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading std.env(body)
+# Loading work.tb_stallflush(mixed)#1
+# Loading work.stallflush(structural)#1
+# Loading work.mux2t1_n(structural)#1
+# Loading work.mux2t1(structure)#1
+# Loading work.invg(dataflow)#1
+# Loading work.andg2(dataflow)#1
+# Loading work.org2(dataflow)#1
+# Loading work.dffgnn(structural)#1
+# Loading work.dffgnf(mixed)#1
+add wave sim:/tb_stallFlush/*
+run 1000
+# Causality operation skipped due to absence of debug database file
+add wave -position 8  sim:/tb_stallflush/DUT0/IfIdReg/o_Q
+add wave -position 10  sim:/tb_stallflush/DUT0/IdExReg/o_Q
+add wave -position 12  sim:/tb_stallflush/DUT0/ExMemReg/o_Q
+add wave -position end  sim:/tb_stallflush/DUT0/MemWbReg/o_Q
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+run 500\
+run 500
+# ** UI-Msg (Error): (vsim-4001) Incorrect number of arguments.
+# Usage: run [<timesteps> [<time_units>]] | -all | -continue | -next | -step | -over | -out | -init | -final
+run 500
