@@ -62,11 +62,11 @@ o_Cout <= s_carryA(N);
   -- Instantiate N mux instances.
   G_NBit_ADDER: for i in 0 to N-1 generate
     MUXI: fullAdderStruct port map(
-              i_Cin      => s_carryA(i),      -- All instances share the same select input.
+        i_Cin      => s_carryA(i),      -- All instances share the same select input.
 	      o_Cout      => s_carryA(i + 1),
-              i_D0     => i_D0(i),  -- ith instance's data 0 input hooked up to ith data 0 input.
-              i_D1     => i_D1(i),  -- ith instance's data 1 input hooked up to ith data 1 input.
-              o_O      => o_O(i));  -- ith instance's data output hooked up to ith data output.
+        i_D0     => i_D0(i),  -- ith instance's data 0 input hooked up to ith data 0 input.
+        i_D1     => i_D1(i),  -- ith instance's data 1 input hooked up to ith data 1 input.
+        o_O      => o_O(i));  -- ith instance's data output hooked up to ith data output.
   end generate G_NBit_ADDER;
   
 o_Cout31  <= s_carryA(31);

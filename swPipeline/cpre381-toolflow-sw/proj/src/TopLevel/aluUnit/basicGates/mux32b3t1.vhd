@@ -29,7 +29,7 @@ begin
 with SEL select 
     o_OUT  <= D0 when "000",
               D1 when "001",
-	      D2 when "010",
+	          D2 when "010",
               D3 when "011", 
               D4 when "100",
               D5 when "101",
