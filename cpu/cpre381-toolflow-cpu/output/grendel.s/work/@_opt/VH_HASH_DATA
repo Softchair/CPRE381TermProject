@@ -42,6 +42,8 @@
 9 mux32b3t1
 21
 9 structure
+1
+97 /home/cfergen/cpre381/CPRE381TermProject/cpu/cpre381-toolflow-cpu/containers/sim_container_0/work
 41
 14 mips_processor
 18
@@ -58,8 +60,6 @@
 5 org_n
 25
 6 norg_n
-1
-122 /home/kosice/Documents/cpre381TermProjNEW-EMIL/CPRE381TermProject/cpu/cpre381-toolflow-cpu/containers/sim_container_0/work
 17
 5 dffgn
 7
@@ -94,48 +94,6 @@
 4 i_D0
 28
 4 i_D1
-]
-[G
-1
-24
-3
-1
-4
-1
-0
-32
-0
-0 0
-0
-0
-]
-[G
-1
-23
-3
-1
-4
-1
-0
-32
-0
-0 0
-0
-0
-]
-[G
-1
-17
-3
-1
-4
-1
-0
-32
-0
-0 0
-0
-0
 ]
 [G
 1
@@ -462,33 +420,45 @@
 0
 0
 ]
-[P
+[G
 1
-41
-21
-42
-43
+24
+3
 1
+4
+1
+0
+32
+0
+0 0
 0
 0
 ]
-[P
+[G
 1
-31
+23
+3
+1
+4
+1
+0
 32
-33
-34
-1
+0
+0 0
 0
 0
 ]
-[P
+[G
 1
-31
+17
+3
+1
+4
+1
+0
 32
-35
-34
-1
+0
+0 0
 0
 0
 ]
@@ -529,6 +499,36 @@
 28
 29
 2
+0
+0
+]
+[P
+1
+41
+21
+42
+43
+1
+0
+0
+]
+[P
+1
+31
+32
+33
+34
+1
+0
+0
+]
+[P
+1
+31
+32
+35
+34
+1
 0
 0
 ]
